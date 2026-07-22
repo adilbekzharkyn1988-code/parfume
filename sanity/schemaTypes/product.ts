@@ -1,0 +1,30 @@
+import { defineField, defineType } from "sanity";
+
+export default defineType({
+  name: "product",
+  title: "Товар",
+  type: "document",
+  fields: [
+    defineField({ name: "name", title: "Название аромата", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "slug", title: "Slug (для URL)", type: "slug", options: { source: "name", maxLength: 64 }, validation: (Rule) => Rule.required() }),
+    defineField({ name: "brand", title: "Бренд", type: "string" }),
+    defineField({ name: "gender", title: "Пол", type: "string", options: { list: ["men", "women", "unisex"] } }),
+    defineField({ name: "family", title: "Семейство аромата", type: "string", options: { list: ["woody", "fresh", "oriental", "citrus", "floral", "gourmand", "musky", "spicy"] } }),
+    defineField({ name: "familyLabel", title: "Название семейства", type: "string" }),
+    defineField({ name: "concentration", title: "Концентрация", type: "string" }),
+    defineField({ name: "description", title: "Короткое описание", type: "text" }),
+    defineField({ name: "story", title: "История аромата", type: "text" }),
+    defineField({ name: "notesTop", title: "Верхние ноты", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "notesHeart", title: "Ноты сердца", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "notesBase", title: "Базовые ноты", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "price5", title: "Цена за 5 мл", type: "number" }),
+    defineField({ name: "price10", title: "Цена за 10 мл", type: "number" }),
+    defineField({ name: "rating", title: "Рейтинг", type: "number" }),
+    defineField({ name: "reviews", title: "Количество отзывов", type: "number" }),
+    defineField({ name: "badge", title: "Значок", type: "string", options: { list: ["Новинка", "Хит продаж", "Ограниченная серия"] } }),
+    defineField({ name: "sillage", title: "Шлейф (1-5)", type: "number" }),
+    defineField({ name: "longevity", title: "Стойкость (1-5)", type: "number" }),
+    defineField({ name: "image", title: "Фото флакона", type: "image", options: { hotspot: true } }),
+  ],
+  preview: { select: { title: "name", subtitle: "brand" } },
+});

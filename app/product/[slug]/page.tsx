@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products, getProduct, familyColor } from "@/lib/data";
+import { familyColor } from "@/lib/data";
+import { fetchProducts, fetchProductBySlug } from "@/sanity/lib/data";
 import BottleArt from "@/components/BottleArt";
 import NotePyramid from "@/components/NotePyramid";
 import ProductPurchasePanel from "@/components/ProductPurchasePanel";
 import ProductCard from "@/components/ProductCard";
 import { Star } from "lucide-react";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await fetchProducts();
   return products.map((p) => ({ slug: p.slug }));
 }
 
@@ -18,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProduct(slug);
+  const product = await fetchProductBySlug(slug);
   if (!product) return {};
   return {
     title: `${product.name} — ${product.brand} | ORIGINE`,
@@ -46,11 +48,12 @@ export default async function ProductPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = getProduct(slug);
+  const product = await fetchProductBySlug(slug);
   if (!product) notFound();
 
   const c = familyColor[product.family];
-  const related = products
+  const allProducts = await fetchProducts();
+  const related = allProducts
     .filter((p) => p.slug !== product.slug && (p.family === product.family || p.gender === product.gender))
     .slice(0, 4);
 

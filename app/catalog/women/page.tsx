@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CatalogGrid from "@/components/CatalogGrid";
-import { getByGender } from "@/lib/data";
+import { fetchProductsByGender } from "@/sanity/lib/data";
 
 export const metadata: Metadata = {
   title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | ORIGINE",
@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     "Женские нишевые ароматы: цветочные, гурманские и пудровые композиции. Объём 5 и 10 мл, доставка по России.",
 };
 
-export default function WomenCatalogPage() {
-  const items = getByGender("women");
+export default async function WomenCatalogPage() {
+  const items = await fetchProductsByGender("women");
   return (
     <main className="container-x py-12 md:py-16">
       <header className="mb-10 max-w-2xl">

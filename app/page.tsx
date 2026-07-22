@@ -4,12 +4,13 @@ import ProductCard from "@/components/ProductCard";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import NewsletterForm from "@/components/NewsletterForm";
-import { bestsellers, newArrivals, articles } from "@/lib/data";
+import { fetchProducts, fetchArticles } from "@/sanity/lib/data";
 
-export default function Home() {
-  const best = bestsellers().slice(0, 4);
-  const fresh = newArrivals().slice(0, 3);
-  const featuredArticles = articles.slice(0, 3);
+export default async function Home() {
+  const allProducts = await fetchProducts();
+  const best = allProducts.filter((p) => p.badge === "Хит продаж").slice(0, 4);
+  const fresh = allProducts.filter((p) => p.badge === "Новинка").slice(0, 3);
+  const featuredArticles = (await fetchArticles()).slice(0, 3);
 
   return (
     <main>

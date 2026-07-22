@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CatalogGrid from "@/components/CatalogGrid";
-import { products } from "@/lib/data";
+import { fetchProducts } from "@/sanity/lib/data";
 
 export const metadata: Metadata = {
   title: "Каталог ароматов — мужская и женская парфюмерия | ORIGINE",
@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     "Весь каталог оригинальной нишевой парфюмерии ORIGINE: мужские, женские и унисекс ароматы в объёмах 5 и 10 мл.",
 };
 
-export default function CatalogPage() {
+export default async function CatalogPage() {
+  const products = await fetchProducts();
   return (
     <main className="container-x py-12 md:py-16">
       <header className="mb-10 max-w-2xl">

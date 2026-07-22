@@ -77,15 +77,18 @@ export default function ProductCard({ product }: { product: Product }) {
           <div className="flex rounded-full border border-ink/15 p-0.5 w-fit">
             {(["5", "10"] as const).map((v) => (
               <button
-                key={v}
-                onClick={() => setVolume(v)}
-                aria-pressed={volume === v}
-                className={`px-3 py-1 rounded-full text-xs font-mono transition-colors ${
-                  volume === v ? "bg-ink text-ivory" : "text-ink/60 hover:text-ink"
-                }`}
-              >
-                {v} мл
-              </button>
+  key={v}
+  onClick={() => setVolume(v)}
+  aria-pressed={volume === v}
+  className="px-3 py-1 rounded-full text-xs font-mono transition-colors"
+  style={{
+    background: volume === v ? "#1C1712" : "transparent",
+    color: volume === v ? "#F6F1E9" : "#1C1712",
+    opacity: volume === v ? 1 : 0.6,
+  }}
+>
+  {v} мл
+</button>
             ))}
           </div>
 

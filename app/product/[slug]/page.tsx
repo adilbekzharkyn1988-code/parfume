@@ -1,3 +1,4 @@
+import { urlForImage } from "@/sanity/lib/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { articles } from "@/lib/data";
+import { fetchArticles } from "@/sanity/lib/data";
 import BottleArt from "@/components/BottleArt";
 
 export const metadata: Metadata = {
@@ -9,7 +9,8 @@ export const metadata: Metadata = {
     "Статьи о парфюмерии: как устроена ароматическая пирамида, как выбрать объём, тренды сезона и как отличить оригинал от подделки.",
 };
 
-export default function ArticlesPage() {
+export default async function ArticlesPage() {
+  const articles = await fetchArticles();
   return (
     <main className="container-x py-12 md:py-16">
       <header className="mb-10 max-w-2xl">

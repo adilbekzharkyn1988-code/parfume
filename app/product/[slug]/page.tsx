@@ -84,7 +84,15 @@ export default async function ProductPage({
               {product.badge}
             </span>
           )}
-          <BottleArt family={product.family} className="w-full h-full" />
+          {product.image ? (
+  <img
+    src={urlForImage(product.image).width(800).height(1000).url()}
+    alt={product.name}
+    className="w-full h-full object-cover"
+  />
+) : (
+  <BottleArt family={product.family} className="w-full h-full" />
+)}
         </div>
 
         <div className="flex flex-col gap-6">

@@ -5,12 +5,14 @@ import type { NextConfig } from "next";
 // not a *.github.io root repo), uncomment the two lines below and set your repo name.
 // const REPO = "/your-repo-name";
 
+const REPO = "/parfume";
+
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
-  // basePath: REPO,
-  // assetPrefix: REPO,
+  basePath: REPO,
+  assetPrefix: REPO,
 };
 
 export default nextConfig;

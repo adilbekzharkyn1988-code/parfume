@@ -28,6 +28,7 @@ export type Product = {
   badge?: "Новинка" | "Хит продаж" | "Ограниченная серия";
   sillage: number; // 1-5
   longevity: number; // 1-5
+  image?: any;
 };
 
 export const familyColor: Record<Family, { base: string; soft: string; text: string }> = {

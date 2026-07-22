@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, getArticle, products } from "@/lib/data";
+import { PortableText } from "@portabletext/react";
+import { fetchArticles, fetchArticleBySlug, fetchProducts } from "@/sanity/lib/data";
 import BottleArt from "@/components/BottleArt";
 import ProductCard from "@/components/ProductCard";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const articles = await fetchArticles();
   return articles.map((a) => ({ slug: a.slug }));
 }
 
@@ -15,12 +17,34 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = await fetchArticleBySlug(slug);
   if (!article) return {};
   return {
     title: `${article.title} | Журнал ORIGINE`,
     description: article.excerpt,
   };
+}
+
+function ArticleBody({ content }: { content: unknown }) {
+  if (!Array.isArray(content) || content.length === 0) return null;
+
+  if (typeof content[0] === "string") {
+    return (
+      <>
+        {(content as string[]).map((paragraph, i) => (
+          <p key={i} className="text-[17px] leading-[1.75] text-ink/80">
+            {paragraph}
+          </p>
+        ))}
+      </>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-5 text-[17px] leading-[1.75] text-ink/80">
+      <PortableText value={content as any} />
+    </div>
+  );
 }
 
 export default async function ArticlePage({
@@ -29,11 +53,12 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = await fetchArticleBySlug(slug);
   if (!article) notFound();
 
-  const related = articles.filter((a) => a.slug !== article.slug).slice(0, 2);
-  const recommendedProducts = products.slice(0, 4);
+  const allArticles = await fetchArticles();
+  const related = allArticles.filter((a) => a.slug !== article.slug).slice(0, 2);
+  const recommendedProducts = (await fetchProducts()).slice(0, 4);
 
   return (
     <main>
@@ -56,11 +81,7 @@ export default async function ArticlePage({
         </div>
 
         <article className="flex flex-col gap-5">
-          {article.content.map((paragraph, i) => (
-            <p key={i} className="text-[17px] leading-[1.75] text-ink/80">
-              {paragraph}
-            </p>
-          ))}
+          <ArticleBody content={article.content} />
         </article>
 
         <div className="mt-14 rounded-md bg-ink text-ivory p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

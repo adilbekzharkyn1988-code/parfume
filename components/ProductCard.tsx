@@ -1,6 +1,5 @@
 "use client";
 
-import { urlForImage } from "@/sanity/lib/image";
 import { useState } from "react";
 import Link from "next/link";
 import { Product, familyColor } from "@/lib/data";
@@ -42,17 +41,17 @@ export default function ProductCard({ product }: { product: Product }) {
           </span>
         )}
         {product.image ? (
-  <img
-    src={urlForImage(product.image).width(600).height(750).url()}
-    alt={product.name}
-    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-  />
-) : (
-  <BottleArt
-    family={product.family}
-    className="w-full h-full transition-transform duration-500 group-hover:scale-[1.04]"
-  />
-)}
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        ) : (
+          <BottleArt
+            family={product.family}
+            className="w-full h-full transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        )}
       </Link>
 
       <div className="flex flex-col flex-1 p-4 gap-2.5">
@@ -77,18 +76,18 @@ export default function ProductCard({ product }: { product: Product }) {
           <div className="flex rounded-full border border-ink/15 p-0.5 w-fit">
             {(["5", "10"] as const).map((v) => (
               <button
-  key={v}
-  onClick={() => setVolume(v)}
-  aria-pressed={volume === v}
-  className="px-3 py-1 rounded-full text-xs font-mono transition-colors"
-  style={{
-    background: volume === v ? "#1C1712" : "transparent",
-    color: volume === v ? "#F6F1E9" : "#1C1712",
-    opacity: volume === v ? 1 : 0.6,
-  }}
->
-  {v} мл
-</button>
+                key={v}
+                onClick={() => setVolume(v)}
+                aria-pressed={volume === v}
+                className="px-3 py-1 rounded-full text-xs font-mono transition-colors"
+                style={{
+                  background: volume === v ? "#1C1712" : "transparent",
+                  color: volume === v ? "#F6F1E9" : "#1C1712",
+                  opacity: volume === v ? 1 : 0.6,
+                }}
+              >
+                {v} мл
+              </button>
             ))}
           </div>
 

@@ -35,19 +35,17 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
             const p = v === "5" ? product.price5 : product.price10;
             return (
               <button
-                key={v}
-                onClick={() => setVolume(v)}
-                aria-pressed={volume === v}
-                className={`rounded-md border px-4 py-3 text-left transition-colors ${
-                  volume === v ? "border-wine bg-wine/5" : "border-ink/15 hover:border-ink/35"
-                }`}
-              >
-                <p className="font-display text-lg leading-none">{v} мл</p>
-                <p className="font-mono text-sm text-ink/60 mt-1.5">{formatPrice(p)}</p>
-                {v === "10" && (
-                  <p className="text-[11px] text-sage mt-1">выгода {savingsPct}% за мл</p>
-                )}
-              </button>
+  key={v}
+  onClick={() => setVolume(v)}
+  aria-pressed={volume === v}
+  className="rounded-md border px-4 py-3 text-left transition-colors"
+  style={{
+    borderColor: volume === v ? "#6E2A3B" : "rgba(28,23,18,0.15)",
+    background: volume === v ? "rgba(110,42,59,0.06)" : "transparent",
+  }}
+>
+  <p className="font-display text-lg leading-none" style={{ color: "#1C1712" }}>{v} мл</p>
+  <p className="font-mono text-sm mt-1.5" style={{ color: "rgba(28,23,18,0.6)" }}>{formatPrice(p)}</p>
             );
           })}
         </div>

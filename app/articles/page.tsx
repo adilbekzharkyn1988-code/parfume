@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { fetchArticles } from "@/sanity/lib/data";
+import { fetchArticles } from "@/contentful/data";
 import BottleArt from "@/components/BottleArt";
 
 export const metadata: Metadata = {

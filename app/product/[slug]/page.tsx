@@ -122,7 +122,7 @@ export default async function ProductPage({
         <div>
           <p className="eyebrow text-wine mb-2">История аромата</p>
           <h2 className="font-display text-2xl md:text-3xl mb-4">Что стоит знать перед покупкой</h2>
-
+          <RichText content={product.story} />
         </div>
         <div className="bg-ivory-dim rounded-md p-6 md:p-8">
           <p className="eyebrow text-stone mb-5 text-center">Пирамида нот</p>

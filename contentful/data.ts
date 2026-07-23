@@ -20,7 +20,8 @@ function richTextToPlain(doc: any): string {
 
 function mapProduct(item: any): Product {
   const f = item.fields;
-  const img = f.image?.fields?.file?.url;
+  const imgItem = Array.isArray(f.image) ? f.image[0] : f.image;
+  const img = imgItem?.fields?.file?.url;
   return {
     slug: f.slug,
     name: f.name,

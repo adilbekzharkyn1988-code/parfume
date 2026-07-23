@@ -75,16 +75,16 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
 
       <div className="divider-line" />
 
-      <div className="flex items-end justify-between">
-        <div>
+      <div className="flex items-end justify-between gap-3">
+        <div className="min-w-0">
           <p className="eyebrow text-stone mb-1">Итого</p>
-          <p className="font-display text-3xl">{formatPrice(totalPrice)}</p>
+          <p className="font-display text-2xl sm:text-3xl whitespace-nowrap">{formatPrice(totalPrice)}</p>
         </div>
         <button
           onClick={handleAdd}
-          className="eyebrow rounded-full px-7 py-4 bg-wine text-ivory hover:bg-wine-dark transition-colors"
+          className="eyebrow rounded-full px-4 py-3 text-[10px] sm:px-7 sm:py-4 sm:text-[11px] bg-wine text-ivory hover:bg-wine-dark transition-colors shrink-0 whitespace-nowrap"
         >
-          {added ? "Добавлено в корзину ✓" : "Добавить в корзину"}
+          {added ? "Добавлено ✓" : "Добавить в корзину"}
         </button>
       </div>
       <p className="text-[11px] text-stone -mt-2">

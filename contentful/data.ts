@@ -7,6 +7,17 @@ import {
   Gender,
 } from "@/lib/data";
 
+function richTextToPlain(doc: any): string {
+  if (!doc || typeof doc !== "object") return doc || "";
+  if (!doc.content) return "";
+  return doc.content
+    .map((node: any) =>
+      (node.content || []).map((c: any) => c.value || "").join("")
+    )
+    .join(" ")
+    .trim();
+}
+
 function mapProduct(item: any): Product {
   const f = item.fields;
   const img = f.image?.fields?.file?.url;
@@ -18,8 +29,8 @@ function mapProduct(item: any): Product {
     family: f.family,
     familyLabel: f.familyLabel,
     concentration: f.concentration,
-    description: f.description,
-    story: f.story,
+    description: richTextToPlain(f.description),
+    story: richTextToPlain(f.story),
     notes: {
       top: f.notesTop || [],
       heart: f.notesHeart || [],

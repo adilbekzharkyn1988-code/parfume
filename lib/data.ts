@@ -36,9 +36,8 @@ export type Product = {
   sillage: number; // 1-5
   longevity: number; // 1-5
   image?: any;
-  // НОВЫЕ ПОЛЯ ДЛЯ FRAGRANTICA
-  fragranticaRating?: number;
-  fragranticaReviews?: ReviewData[];
+  // Отзывы покупателей (свои, не с Fragrantica)
+  reviewsList?: ReviewData[];
 };
 
 export const familyColor: Record<Family, { base: string; soft: string; text: string }> = {

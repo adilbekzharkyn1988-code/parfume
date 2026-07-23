@@ -8,6 +8,7 @@ import NotePyramid from "@/components/NotePyramid";
 import ProductPurchasePanel from "@/components/ProductPurchasePanel";
 import ProductCard from "@/components/ProductCard";
 import ProductReviews from "@/components/ProductReviews";
+import RichText from "@/components/RichText";
 import { Star } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -121,7 +122,7 @@ export default async function ProductPage({
         <div>
           <p className="eyebrow text-wine mb-2">История аромата</p>
           <h2 className="font-display text-2xl md:text-3xl mb-4">Что стоит знать перед покупкой</h2>
-          <p className="text-ink/70 leading-relaxed">{product.story}</p>
+
         </div>
         <div className="bg-ivory-dim rounded-md p-6 md:p-8">
           <p className="eyebrow text-stone mb-5 text-center">Пирамида нот</p>

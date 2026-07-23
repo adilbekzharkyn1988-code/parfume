@@ -65,7 +65,9 @@ function mapArticle(item: any): Article {
 export async function fetchProducts(): Promise<Product[]> {
   try {
     const res = await client.getEntries({ content_type: "product", limit: 200 });
-    if (res.items.length > 0) return res.items.map(mapProduct);
+    if (res.items.length > 0) {
+      return res.items.map(mapProduct).sort((a, b) => a.name.localeCompare(b.name));
+    }
   } catch {}
   return fallbackProducts;
 }

@@ -106,6 +106,15 @@ export async function fetchProductBySlug(slug: string): Promise<Product | undefi
     if (res.items.length > 0) {
       const product = mapProduct(res.items[0]);
       product.reviewsList = await fetchReviewsForProduct(res.items[0].sys.id);
+      if (product.reviewsList.length > 0) {
+        product.reviews = product.reviewsList.length;
+        product.rating = Number(
+          (
+            product.reviewsList.reduce((sum, r) => sum + r.rating, 0) /
+            product.reviewsList.length
+          ).toFixed(1)
+        );
+      }
       return product;
     }
   } catch {}

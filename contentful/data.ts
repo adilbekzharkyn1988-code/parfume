@@ -48,6 +48,29 @@ function mapProduct(item: any): Product {
   } as Product;
 }
 
+function mapReview(item: any): import("@/lib/data").ReviewData {
+  const f = item.fields;
+  return {
+    user: f.author,
+    text: richTextToPlain(f.text) || f.text,
+    rating: f.rating,
+  };
+}
+
+async function fetchReviewsForProduct(productId: string) {
+  try {
+    const res = await client.getEntries({
+      content_type: "review",
+      "fields.product.sys.id": productId,
+      order: "-fields.date" as any,
+      limit: 50,
+    } as any);
+    return res.items.map(mapReview);
+  } catch {
+    return [];
+  }
+}
+
 function mapArticle(item: any): Article {
   const f = item.fields;
   return {
@@ -80,7 +103,11 @@ export async function fetchProductsByGender(gender: Gender): Promise<Product[]> 
 export async function fetchProductBySlug(slug: string): Promise<Product | undefined> {
   try {
     const res = await client.getEntries({ content_type: "product", "fields.slug": slug, limit: 1 } as any);
-    if (res.items.length > 0) return mapProduct(res.items[0]);
+    if (res.items.length > 0) {
+      const product = mapProduct(res.items[0]);
+      product.reviewsList = await fetchReviewsForProduct(res.items[0].sys.id);
+      return product;
+    }
   } catch {}
   return fallbackProducts.find((p) => p.slug === slug);
 }

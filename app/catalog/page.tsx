@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CatalogGrid from "@/components/CatalogGrid";
-import { fetchProducts } from "@/sanity/lib/data";
+import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
   title: "Каталог ароматов — мужская и женская парфюмерия | ORIGINE",

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PortableText } from "@portabletext/react";
-import { fetchArticles, fetchArticleBySlug, fetchProducts } from "@/sanity/lib/data";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+import { fetchArticles, fetchArticleBySlug, fetchProducts } from "@/contentful/data";
 import BottleArt from "@/components/BottleArt";
 import ProductCard from "@/components/ProductCard";
 
@@ -26,9 +27,9 @@ export async function generateMetadata({
 }
 
 function ArticleBody({ content }: { content: unknown }) {
-  if (!Array.isArray(content) || content.length === 0) return null;
+  if (!content) return null;
 
-  if (typeof content[0] === "string") {
+  if (Array.isArray(content)) {
     return (
       <>
         {(content as string[]).map((paragraph, i) => (
@@ -40,9 +41,17 @@ function ArticleBody({ content }: { content: unknown }) {
     );
   }
 
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
+        <p className="text-[17px] leading-[1.75] text-ink/80">{children}</p>
+      ),
+    },
+  };
+
   return (
-    <div className="flex flex-col gap-5 text-[17px] leading-[1.75] text-ink/80">
-      <PortableText value={content as any} />
+    <div className="flex flex-col gap-5">
+      {documentToReactComponents(content as any, options)}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import NewsletterForm from "@/components/NewsletterForm";
-import { fetchProducts, fetchArticles } from "@/sanity/lib/data";
+import { fetchProducts, fetchArticles } from "@/contentful/data";
 
 export default async function Home() {
   const allProducts = await fetchProducts();

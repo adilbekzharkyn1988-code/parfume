@@ -1,9 +1,8 @@
-import { urlForImage } from "@/sanity/lib/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { familyColor } from "@/lib/data";
-import { fetchProducts, fetchProductBySlug } from "@/sanity/lib/data";
+import { fetchProducts, fetchProductBySlug } from "@/contentful/data";
 import BottleArt from "@/components/BottleArt";
 import NotePyramid from "@/components/NotePyramid";
 import ProductPurchasePanel from "@/components/ProductPurchasePanel";
@@ -85,14 +84,14 @@ export default async function ProductPage({
             </span>
           )}
           {product.image ? (
-  <img
-    src={urlForImage(product.image).width(800).height(1000).url()}
-    alt={product.name}
-    className="w-full h-full object-cover"
-  />
-) : (
-  <BottleArt family={product.family} className="w-full h-full" />
-)}
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <BottleArt family={product.family} className="w-full h-full" />
+          )}
         </div>
 
         <div className="flex flex-col gap-6">

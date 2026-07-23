@@ -1,99 +1,73 @@
-// components/FragranticaReviews.tsx
-'use client';
+"use client";
 
 import { useState } from 'react';
-import { Review } from '@/lib/data';
-import { ChevronDown } from 'lucide-react';
+import { ReviewData } from '@/lib/data'; // Исправлено: теперь импортируется ReviewData
+import { ChevronDown, Star } from 'lucide-react';
 
 interface FragranticaReviewsProps {
   rating?: number;
-  reviews?: Review[];
+  reviews?: ReviewData[];
 }
 
 export default function FragranticaReviews({ rating, reviews }: FragranticaReviewsProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  if (!reviews || reviews.length === 0) {
-    return null;
-  }
+  if (!rating && (!reviews || reviews.length === 0)) return null;
 
   return (
-    <div className="border-t border-ink/10 py-6">
-      {/* Header с рейтингом */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between text-left transition-colors hover:text-wine"
-      >
+    <div className="mt-8 border-t border-ink/5 pt-8">
+      <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div>
-            <p className="eyebrow text-stone mb-1">Отзывы на Fragrantica</p>
-            {rating && (
-              <div className="flex items-center gap-2">
-                <span className="font-display text-lg">{rating.toFixed(2)}</span>
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`text-sm ${
-                        i < Math.round(rating) ? 'text-wine' : 'text-stone/30'
-                      }`}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <span className="text-xs text-stone">({reviews.length})</span>
-              </div>
-            )}
+          <div className="flex items-center gap-1 bg-gold/10 px-2 py-1 rounded text-gold">
+            <Star size={14} className="fill-gold" />
+            <span className="font-mono text-sm font-bold">{rating || "—"}</span>
           </div>
+          <span className="text-sm text-stone">Рейтинг на Fragrantica</span>
         </div>
-        <ChevronDown
-          size={20}
-          className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}
-        />
-      </button>
+        
+        {reviews && reviews.length > 0 && (
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center gap-2 text-sm text-wine hover:opacity-70 transition-opacity"
+          >
+            {reviews.length} отзывов
+            <ChevronDown 
+              size={16} 
+              className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+            />
+          </button>
+        )}
+      </div>
 
-      {/* Отзывы */}
-      {isOpen && (
-        <div className="mt-4 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
+      {isOpen && reviews && (
+        <div className="mt-6 space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
           {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-paper p-4 rounded-md border border-ink/5 hover:border-wine/20 transition-colors"
-            >
-              {/* Рейтинг отзыва */}
+            <div key={index} className="bg-ivory-dim p-4 rounded-md">
               <div className="flex items-center justify-between mb-2">
-                <p className="font-mono text-sm font-semibold text-ink">{review.user}</p>
+                <span className="font-bold text-sm">{review.user}</span>
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`text-xs ${
-                        i < review.rating ? 'text-wine' : 'text-stone/20'
-                      }`}
-                    >
-                      ★
-                    </span>
+                    <Star 
+                      key={i} 
+                      size={10} 
+                      className={i < review.rating ? "fill-gold text-gold" : "text-stone/20"} 
+                    />
                   ))}
                 </div>
               </div>
-
-              {/* Текст отзыва */}
-              <p className="text-sm leading-relaxed text-stone">"{review.text}"</p>
+              <p className="text-sm text-ink/80 leading-relaxed italic">
+                "{review.text}"
+              </p>
             </div>
           ))}
-
-          {/* Ссылка на Fragrantica */}
-          <div className="pt-2 border-t border-ink/5">
-            <a
-              href="https://www.fragrantica.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-stone hover:text-wine transition-colors underline"
-            >
-              Читать все отзывы на Fragrantica →
-            </a>
-          </div>
+          <a 
+            href="https://www.fragrantica.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block text-center text-[10px] text-stone uppercase tracking-widest hover:text-wine mt-4"
+          >
+            Читать больше на Fragrantica
+          </a>
         </div>
       )}
     </div>

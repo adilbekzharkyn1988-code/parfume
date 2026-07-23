@@ -237,7 +237,7 @@ export const products: Product[] = [
     familyLabel: "Гурманский ванильный",
     concentration: "Eau de Parfum",
     description:
-      "Тёрлая ваниль без приторности — скорее кашемировый плед, чем десерт. Идеален для холодного сезона.",
+      "Тёплая ваниль без приторности — скорее кашемировый плед, чем десерт. Идеален для холодного сезона.",
     story:
       "Мадагаскарская ваниль настаивается вместе с овсяным абсолютом — этот приём даёт эффект «съедобной» текстуры без сахарной ноты.",
     notes: {
@@ -291,7 +291,7 @@ export const products: Product[] = [
       "Аромат посвящён утренним рынкам юга Франции: персики в бумажных пакетах и жасминовый чай в маленьких кафе на площади.",
     notes: {
       top: ["персик", "мандарин"],
-      heart: ["жасмин", "цветок апельсина"],
+      heart: [" жасмин", "цветок апельсина"],
       base: ["белый мускус", "ветивер"],
     },
     price5: 690,
@@ -472,8 +472,4 @@ export const articles: Article[] = [
   },
 ];
 
-export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
-export const getByGender = (gender: Gender) => products.filter((p) => p.gender === gender);
-export const bestsellers = () => products.filter((p) => p.badge === "Хит продаж");
-export const newArrivals = () => products.filter((p) => p.badge === "Новинка");
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

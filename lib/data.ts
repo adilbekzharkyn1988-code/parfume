@@ -26,7 +26,7 @@ export type Product = {
   familyLabel: string;
   concentration: string;
   description: string;
-  story: string;
+  story: any; // строка (моки) или Contentful Rich Text документ
   notes: { top: string[]; heart: string[]; base: string[] };
   price5: number;
   price10: number;

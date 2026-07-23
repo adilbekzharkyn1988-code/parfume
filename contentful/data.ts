@@ -31,7 +31,7 @@ function mapProduct(item: any): Product {
     familyLabel: f.familyLabel,
     concentration: f.concentration,
     description: richTextToPlain(f.description),
-    story: richTextToPlain(f.story),
+    story: f.story,
     notes: {
       top: f.notesTop || [],
       heart: f.notesHeart || [],

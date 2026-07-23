@@ -7,6 +7,7 @@ import BottleArt from "@/components/BottleArt";
 import NotePyramid from "@/components/NotePyramid";
 import ProductPurchasePanel from "@/components/ProductPurchasePanel";
 import ProductCard from "@/components/ProductCard";
+import FragranticaReviews from "@/components/FragranticaReviews"; // 1. Импорт компонента
 import { Star } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -112,6 +113,12 @@ export default async function ProductPage({
             <Bar value={product.sillage} label="Шлейф" />
             <Bar value={product.longevity} label="Стойкость" />
           </div>
+
+          {/* 2. Добавление блока отзывов Fragrantica здесь */}
+          <FragranticaReviews 
+            rating={product.fragranticaRating} 
+            reviews={product.fragranticaReviews} 
+          />
         </div>
       </div>
 

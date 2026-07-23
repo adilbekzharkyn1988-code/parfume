@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CatalogGrid from "@/components/CatalogGrid";
-import { fetchProductsByGender } from "@/sanity/lib/data";
+import { fetchProductsByGender } from "@/contentful/data";
 
 export const metadata: Metadata = {
   title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | ORIGINE",

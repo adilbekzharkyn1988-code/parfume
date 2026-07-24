@@ -3,9 +3,9 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Каталог ароматов — мужская и женская парфюмерия | ORIGINE",
+  title: "Каталог ароматов — мужская и женская парфюмерия | JUPARFUME",
   description:
-    "Весь каталог оригинальной нишевой парфюмерии ORIGINE: мужские, женские и унисекс ароматы в объёмах 5 и 10 мл.",
+    "Весь каталог оригинальной нишевой парфюмерии JUPARFUME: мужские, женские и унисекс ароматы в объёмах 5 и 10 мл.",
 };
 
 export default async function CatalogPage() {

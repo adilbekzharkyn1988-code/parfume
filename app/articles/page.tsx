@@ -4,7 +4,7 @@ import { fetchArticles } from "@/contentful/data";
 import BottleArt from "@/components/BottleArt";
 
 export const metadata: Metadata = {
-  title: "Журнал ORIGINE — гиды по парфюмерии и трендам",
+  title: "Журнал JUPARFUME — гиды по парфюмерии и трендам",
   description:
     "Статьи о парфюмерии: как устроена ароматическая пирамида, как выбрать объём, тренды сезона и как отличить оригинал от подделки.",
 };
@@ -17,7 +17,7 @@ export default async function ArticlesPage() {
         <p className="eyebrow text-wine mb-2">Журнал</p>
         <h1 className="font-display text-4xl md:text-5xl mb-3">Читать и разбираться</h1>
         <p className="text-ink/65 leading-relaxed">
-          Гиды по парфюмерии от команды ORIGINE: как устроен аромат, как
+          Гиды по парфюмерии от команды JUPARFUME: как устроен аромат, как
           выбрать объём и не ошибиться с подделкой.
         </p>
       </header>

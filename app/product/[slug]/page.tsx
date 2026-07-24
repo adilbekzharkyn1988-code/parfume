@@ -9,6 +9,7 @@ import ProductPurchasePanel from "@/components/ProductPurchasePanel";
 import ProductCard from "@/components/ProductCard";
 import ProductReviews from "@/components/ProductReviews";
 import RichText from "@/components/RichText";
+import SeasonalityChart from "@/components/SeasonalityChart";
 import { Star } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -115,6 +116,8 @@ export default async function ProductPage({
             <Bar value={product.longevity} label="Стойкость" />
           </div>
 
+          <SeasonalityChart data={product.seasonality} />
+
         </div>
       </div>
 
@@ -129,6 +132,7 @@ export default async function ProductPage({
           <NotePyramid notes={product.notes} />
         </div>
       </section>
+
 
       <ProductReviews
         rating={product.rating}

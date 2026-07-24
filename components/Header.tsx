@@ -20,7 +20,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-ink text-ivory border-b border-line-light">
       <div className="container-x flex items-center justify-between h-16 md:h-[70px]">
         <Link href="/" className="font-display text-2xl tracking-tight">
-          ORIGINE
+          JUPARFUME
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

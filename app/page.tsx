@@ -88,7 +88,7 @@ export default async function Home() {
           {[
             { icon: BadgeCheck, text: "Проверенные партии и батч-коды" },
             { icon: FlaskConical, text: "Объёмы 5 и 10 мл на выбор" },
-            { icon: Truck, text: "Доставка СДЭК и Почтой России" },
+            { icon: Truck, text: "Доставка QAZPOST и другие" },
             { icon: ShieldCheck, text: "Возврат в течение 14 дней" },
           ].map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-center gap-3">
@@ -108,7 +108,7 @@ export default async function Home() {
           >
             <BottleArt family="floral" className="absolute right-4 top-4 w-32 md:w-40 opacity-90 group-hover:scale-105 transition-transform" />
             <div className="relative z-10">
-              <p className="eyebrow text-[#7A3C4C] mb-2">5 ароматов</p>
+              <p className="eyebrow text-[#7A3C4C] mb-2">53 аромата</p>
               <h2 className="font-display text-3xl md:text-4xl text-ink">Женская парфюмерия</h2>
               <span className="inline-flex items-center gap-2 mt-4 eyebrow text-ink group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={16} />
@@ -122,7 +122,7 @@ export default async function Home() {
           >
             <BottleArt family="woody" className="absolute right-4 top-4 w-32 md:w-40 opacity-90 group-hover:scale-105 transition-transform" />
             <div className="relative z-10">
-              <p className="eyebrow text-[#5C4726] mb-2">5 ароматов</p>
+              <p className="eyebrow text-[#5C4726] mb-2">62 аромата</p>
               <h2 className="font-display text-3xl md:text-4xl text-ink">Мужская парфюмерия</h2>
               <span className="inline-flex items-center gap-2 mt-4 eyebrow text-ink group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={16} />
@@ -208,7 +208,7 @@ export default async function Home() {
               Парфюмерия без компромиссов и переплат
             </h2>
             <p className="text-ivory/70 leading-relaxed mb-4">
-              ORIGINE — витрина независимых парфюмерных домов, которые редко
+              JUPARFUME — витрина независимых парфюмерных домов, которые редко
               попадают на полки крупных магазинов. Мы разливаем ароматы из
               проверенных оригинальных партий в объёмы 5 и 10 мл, чтобы
               находить свой аромат можно было без риска и без переплаты за
@@ -234,7 +234,7 @@ export default async function Home() {
       <section className="container-x py-16 md:py-20">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <p className="eyebrow text-wine mb-2">Журнал ORIGINE</p>
+            <p className="eyebrow text-wine mb-2">Журнал JUPARFUME</p>
             <h2 className="font-display text-3xl md:text-4xl">Читать и разбираться</h2>
           </div>
           <Link href="/articles" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
@@ -282,7 +282,7 @@ export default async function Home() {
               },
               {
                 q: "Как быстро приходит заказ?",
-                a: "В Москву и Санкт-Петербург — 1–2 дня, в другие города России — 3–7 дней в зависимости от службы доставки.",
+                a: "По Алматы день в день, в Астану и другие крупные города — 1–2 дня в зависимости от службы доставки.",
               },
               {
                 q: "Можно вернуть аромат, если не подошёл?",

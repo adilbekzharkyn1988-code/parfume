@@ -10,6 +10,7 @@ import ProductCard from "@/components/ProductCard";
 import ProductReviews from "@/components/ProductReviews";
 import RichText from "@/components/RichText";
 import SeasonalityChart from "@/components/SeasonalityChart";
+import AnimatedBar from "@/components/AnimatedBar";
 import { Star } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -29,20 +30,6 @@ export async function generateMetadata({
     title: `${product.name} — ${product.brand} | JUPARFUME`,
     description: `${product.description} Объём 5 и 10 мл. ${product.familyLabel} аромат от ${product.brand}.`,
   };
-}
-
-function Bar({ value, label }: { value: number; label: string }) {
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-1.5">
-        <span className="eyebrow text-stone">{label}</span>
-        <span className="font-mono text-xs text-stone">{value}/5</span>
-      </div>
-      <div className="h-1.5 rounded-full bg-ink/10 overflow-hidden">
-        <div className="h-full bg-wine rounded-full" style={{ width: `${(value / 5) * 100}%` }} />
-      </div>
-    </div>
-  );
 }
 
 export default async function ProductPage({
@@ -112,8 +99,8 @@ export default async function ProductPage({
           <ProductPurchasePanel product={product} />
 
           <div className="grid grid-cols-2 gap-6 pt-2">
-            <Bar value={product.sillage} label="Шлейф" />
-            <Bar value={product.longevity} label="Стойкость" />
+            <AnimatedBar value={product.sillage} label="Шлейф" />
+            <AnimatedBar value={product.longevity} label="Стойкость" delay={120} />
           </div>
 
           <SeasonalityChart data={product.seasonality} />

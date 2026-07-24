@@ -1,4 +1,7 @@
+"use client";
+
 import { Snowflake, Sprout, Umbrella, Leaf, Sun, Moon } from "lucide-react";
+import { useInView } from "@/lib/useInView";
 
 export interface SeasonalityData {
   winter?: number; // 0-100
@@ -23,25 +26,27 @@ const ITEMS: { key: keyof SeasonalityData; label: string; icon: typeof Snowflake
 ];
 
 export default function SeasonalityChart({ data }: SeasonalityChartProps) {
+  const { ref, inView } = useInView<HTMLDivElement>();
+
   if (!data) return null;
 
   const hasAny = ITEMS.some((i) => typeof data[i.key] === "number");
   if (!hasAny) return null;
 
   return (
-    <div className="bg-ivory-dim rounded-md p-6 md:p-8">
+    <div ref={ref} className="bg-ivory-dim rounded-md p-6 md:p-8">
       <p className="eyebrow text-stone mb-6 text-center">Когда носить</p>
       <div className="grid grid-cols-3 gap-x-4 gap-y-6">
-        {ITEMS.map(({ key, label, icon: Icon }) => {
-          const value = data[key] ?? 0;
+        {ITEMS.map(({ key, label, icon: Icon }, i) => {
+          const value = Math.min(100, Math.max(0, data[key] ?? 0));
           return (
             <div key={key} className="flex flex-col items-center text-center">
               <Icon size={20} className="text-wine mb-2" strokeWidth={1.5} />
               <span className="text-[11px] text-stone mb-2">{label}</span>
               <div className="w-full h-1.5 rounded-full bg-ink/10 overflow-hidden">
                 <div
-                  className="h-full bg-wine rounded-full"
-                  style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
+                  className="h-full bg-wine rounded-full transition-[width] duration-[900ms] ease-out"
+                  style={{ width: inView ? `${value}%` : "0%", transitionDelay: `${i * 70}ms` }}
                 />
               </div>
             </div>

@@ -43,7 +43,7 @@ export default function SeasonalityChart({ data }: SeasonalityChartProps) {
             <div key={key} className="flex flex-col items-center text-center">
               <Icon size={20} className="text-wine mb-2" strokeWidth={1.5} />
               <span className="text-[11px] text-stone mb-2">{label}</span>
-              <div className="w-full h-1.5 rounded-full bg-ink/10 overflow-hidden">
+              <div className="w-full h-1.5 rounded-full bg-line overflow-hidden">
                 <div
                   className="h-full bg-wine rounded-full transition-[width] duration-[900ms] ease-out"
                   style={{ width: inView ? `${value}%` : "0%", transitionDelay: `${i * 70}ms` }}

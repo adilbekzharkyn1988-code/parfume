@@ -19,7 +19,7 @@ export default function AnimatedBar({ value, max = 5, label, delay = 0 }: Animat
         <span className="eyebrow text-stone">{label}</span>
         <span className="font-mono text-xs text-stone">{value}/{max}</span>
       </div>
-      <div className="h-1.5 rounded-full bg-ink/10 overflow-hidden">
+      <div className="h-1.5 rounded-full bg-line overflow-hidden">
         <div
           className="h-full bg-wine rounded-full transition-[width] duration-[1100ms] ease-out"
           style={{ width: inView ? `${pct}%` : "0%", transitionDelay: `${delay}ms` }}

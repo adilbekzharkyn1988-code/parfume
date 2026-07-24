@@ -45,6 +45,7 @@ function mapProduct(item: any): Product {
     sillage: f.sillage,
     longevity: f.longevity,
     image: img ? `https:${img}` : undefined,
+    seasonality: f.seasonality,
   } as Product;
 }
 

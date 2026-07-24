@@ -26,7 +26,7 @@ export async function generateMetadata({
   const product = await fetchProductBySlug(slug);
   if (!product) return {};
   return {
-    title: `${product.name} — ${product.brand} | ORIGINE`,
+    title: `${product.name} — ${product.brand} | JUPARFUME`,
     description: `${product.description} Объём 5 и 10 мл. ${product.familyLabel} аромат от ${product.brand}.`,
   };
 }

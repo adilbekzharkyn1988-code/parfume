@@ -21,7 +21,7 @@ export async function generateMetadata({
   const article = await fetchArticleBySlug(slug);
   if (!article) return {};
   return {
-    title: `${article.title} | Журнал ORIGINE`,
+    title: `${article.title} | Журнал JUPARFUME`,
     description: article.excerpt,
   };
 }

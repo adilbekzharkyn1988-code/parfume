@@ -38,6 +38,15 @@ export type Product = {
   image?: any;
   // Отзывы покупателей (свои, не с Fragrantica)
   reviewsList?: ReviewData[];
+  // Когда носить: сезоны + время суток, 0-100
+  seasonality?: {
+    winter?: number;
+    spring?: number;
+    summer?: number;
+    autumn?: number;
+    day?: number;
+    evening?: number;
+  };
 };
 
 export const familyColor: Record<Family, { base: string; soft: string; text: string }> = {

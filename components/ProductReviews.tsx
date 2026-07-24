@@ -19,7 +19,7 @@ export default function ProductReviews({ rating, reviewsCount, reviews }: Produc
     <section className="mt-16 md:mt-20 border-t border-ink/5 pt-10">
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div>
-          <p className="eyebrow text-wine mb-2">Покупатели ORIGINE</p>
+          <p className="eyebrow text-wine mb-2">Покупатели JUPARFUME</p>
           <h2 className="font-display text-2xl md:text-3xl flex items-center gap-3">
             Отзывы покупателей
             {rating ? (

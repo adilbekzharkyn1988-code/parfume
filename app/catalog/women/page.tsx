@@ -3,9 +3,9 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProductsByGender } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | ORIGINE",
+  title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
   description:
-    "Женские нишевые ароматы: цветочные, гурманские и пудровые композиции. Объём 5 и 10 мл, доставка по России.",
+    "Женские нишевые ароматы: цветочные, гурманские и пудровые композиции. Объём 5 и 10 мл, доставка по РК.",
 };
 
 export default async function WomenCatalogPage() {

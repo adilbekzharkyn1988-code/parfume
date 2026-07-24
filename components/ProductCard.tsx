@@ -93,7 +93,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
           <div className="flex items-end justify-between gap-2">
             <div>
-              <p className="font-display text-lg leading-none">{formatPrice(price)}</p>
+              <p className="font-display text-2xl leading-none">{formatPrice(price)}</p>
               {volume === "10" && (
                 <p className="text-[11px] text-sage mt-1">
                   выгода {savingsPct}% за мл

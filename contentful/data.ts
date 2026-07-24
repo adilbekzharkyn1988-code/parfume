@@ -97,7 +97,7 @@ export async function fetchProducts(): Promise<Product[]> {
 
 export async function fetchProductsByGender(gender: Gender): Promise<Product[]> {
   const all = await fetchProducts();
-  return all.filter((p) => p.gender === gender);
+  return all.filter((p) => p.gender === gender || p.gender === "unisex");
 }
 
 export async function fetchProductBySlug(slug: string): Promise<Product | undefined> {

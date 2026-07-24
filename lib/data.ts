@@ -353,7 +353,8 @@ export const products: Product[] = [
 ];
 
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
-export const getByGender = (gender: Gender) => products.filter((p) => p.gender === gender);
+export const getByGender = (gender: Gender) =>
+  products.filter((p) => p.gender === gender || p.gender === "unisex");
 export const bestsellers = () => products.filter((p) => p.badge === "Хит продаж");
 export const newArrivals = () => products.filter((p) => p.badge === "Новинка");
 

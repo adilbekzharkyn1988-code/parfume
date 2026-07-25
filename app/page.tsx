@@ -4,8 +4,8 @@ import ProductCard from "@/components/ProductCard";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
-import womenPhoto from "@/public/category/women.jpg";
-import menPhoto from "@/public/category/men.jpg";
+import womenPhoto from "@/public/women.png";
+import menPhoto from "@/public/men.png";
 import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
 

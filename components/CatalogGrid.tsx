@@ -39,10 +39,10 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
   return (
     <div>
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex gap-2 overflow-x-auto snap-x snap-proximity -mx-4 px-4 pb-1 md:flex-wrap md:overflow-visible md:mx-0 md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <button
             onClick={() => setFamily("all")}
-            className={`eyebrow rounded-full px-4 py-2 border transition-colors ${
+            className={`eyebrow shrink-0 snap-start min-h-11 flex items-center rounded-full px-4 border whitespace-nowrap transition-colors ${
               family === "all" ? "bg-ink text-ivory border-ink" : "border-ink/15 text-ink/65 hover:border-ink/40"
             }`}
           >
@@ -52,7 +52,7 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
             <button
               key={f}
               onClick={() => setFamily(f)}
-              className={`eyebrow rounded-full px-4 py-2 border transition-colors ${
+              className={`eyebrow shrink-0 snap-start min-h-11 flex items-center rounded-full px-4 border whitespace-nowrap transition-colors ${
                 family === f ? "text-ivory border-transparent" : "border-ink/15 text-ink/65 hover:border-ink/40"
               }`}
               style={family === f ? { background: familyColor[f].text } : {}}
@@ -62,12 +62,12 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
           ))}
         </div>
 
-        <label className="flex items-center gap-2 text-sm">
+        <label className="flex items-center gap-2 text-sm shrink-0">
           <span className="eyebrow text-stone">Сортировка</span>
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as Sort)}
-            className="border border-ink/15 rounded-full px-3 py-2 bg-paper text-sm font-mono"
+            className="min-h-11 border border-ink/15 rounded-full px-3.5 bg-paper text-sm font-mono"
           >
             <option value="popular">Популярные</option>
             <option value="new">Сначала новинки</option>

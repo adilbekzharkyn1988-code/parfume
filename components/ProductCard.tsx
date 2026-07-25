@@ -79,7 +79,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 key={v}
                 onClick={() => setVolume(v)}
                 aria-pressed={volume === v}
-                className="px-3 py-1 rounded-full text-xs font-mono transition-colors"
+                className="min-h-11 min-w-11 px-3.5 flex items-center justify-center rounded-full text-xs font-mono transition-colors"
                 style={{
                   background: volume === v ? "#1C1712" : "transparent",
                   color: volume === v ? "#F6F1E9" : "#1C1712",
@@ -102,7 +102,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </div>
             <button
               onClick={handleAdd}
-              className="eyebrow rounded-full px-4 py-2.5 bg-wine text-ivory hover:bg-wine-dark transition-colors whitespace-nowrap"
+              className="eyebrow min-h-11 flex items-center justify-center rounded-full px-5 bg-wine text-ivory hover:bg-wine-dark transition-colors whitespace-nowrap"
             >
               {added ? "Добавлено ✓" : "В корзину"}
             </button>

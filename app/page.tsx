@@ -35,7 +35,8 @@ export default async function Home() {
           fill
           priority
           className="block md:hidden object-cover"
-          style={{ objectPosition: "center -100px" }}
+          style={{ objectPosition: "center -100px, bottom: "40px"" }}
+          className="block md:hidden object-cover object-top"
         />
         <Image
           src={heroBgDesktop}
@@ -53,7 +54,7 @@ export default async function Home() {
   style={{ fontSize: "0.52rem" }}
   className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
   <span className="text-gold">⚡</span> Доставка по Алматы день в день</span>
-            <h1 className="font-display text-[1.6rem] leading-[1.3] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
+            <h1 className="font-display text-[1.4rem] leading-[1.3] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
               НИШЕВАЯ И<br className="md:hidden" /> ЛЮКСОВАЯ
               <br />
               ПАРФЮМЕРИЯ
@@ -69,7 +70,7 @@ export default async function Home() {
   день в день и <br className="md:hidden" />
   по всему Казахстану.
 </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap gap-4">
               <Link
                 href="/catalog"
                 className="eyebrow rounded-[10px] px-6 py-4 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
@@ -90,7 +91,7 @@ export default async function Home() {
         </div>
 
         {/* FLOATING TRUST CARD */}
-        <div className="container-x relative z-10 pb-2 -translate-y-[20px] md:-mt-10">
+        <div className="container-x relative z-10 pb-2 -translate-y-[50px] md:translate-y-0 md:-mt-10">
   <div className="bg-paper rounded-2xl border border-ink/10 shadow-[0_0_40px_rgba(28,23,18,0.08)] px-4 py-5 md:px-10 md:py-8 grid grid-cols-4 gap-3 md:gap-6">
     <div className="flex flex-col items-center gap-2 text-center">
       <BadgeCheck size={22} className="text-gold shrink-0" />

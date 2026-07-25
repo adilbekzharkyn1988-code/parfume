@@ -3,6 +3,9 @@ import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide
 import ProductCard from "@/components/ProductCard";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
+import Image from "next/image";
+import womenPhoto from "@/public/category/women.jpg";
+import menPhoto from "@/public/category/men.jpg";
 import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
 
@@ -106,11 +109,19 @@ export default async function Home() {
             href="/catalog/women"
             className="group relative rounded-md overflow-hidden bg-[#F5E3E8] h-72 md:h-96 flex items-end p-8"
           >
-            <BottleArt family="floral" className="absolute right-4 top-4 w-32 md:w-40 opacity-90 group-hover:scale-105 transition-transform" />
+            <Image
+              src={womenPhoto}
+              alt="Женская парфюмерия"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
-              <p className="eyebrow text-[#7A3C4C] mb-2">53 аромата</p>
-              <h2 className="font-display text-3xl md:text-4xl text-ink">Женская парфюмерия</h2>
-              <span className="inline-flex items-center gap-2 mt-4 eyebrow text-ink group-hover:gap-3 transition-all">
+              <p className="eyebrow text-ivory/85 mb-2">53 аромата</p>
+              <h2 className="font-display text-3xl md:text-4xl text-ivory">Женская парфюмерия</h2>
+              <span className="inline-flex items-center gap-2 mt-4 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={16} />
               </span>
             </div>
@@ -120,11 +131,18 @@ export default async function Home() {
             href="/catalog/men"
             className="group relative rounded-md overflow-hidden bg-[#EFE6D6] h-72 md:h-96 flex items-end p-8"
           >
-            <BottleArt family="woody" className="absolute right-4 top-4 w-32 md:w-40 opacity-90 group-hover:scale-105 transition-transform" />
+            <Image
+              src={menPhoto}
+              alt="Мужская парфюмерия"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
-              <p className="eyebrow text-[#5C4726] mb-2">62 аромата</p>
-              <h2 className="font-display text-3xl md:text-4xl text-ink">Мужская парфюмерия</h2>
-              <span className="inline-flex items-center gap-2 mt-4 eyebrow text-ink group-hover:gap-3 transition-all">
+              <p className="eyebrow text-ivory/85 mb-2">62 аромата</p>
+              <h2 className="font-display text-3xl md:text-4xl text-ivory">Мужская парфюмерия</h2>
+              <span className="inline-flex items-center gap-2 mt-4 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={16} />
               </span>
             </div>

@@ -117,7 +117,7 @@ export default async function Home() {
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
               priority
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(28,23,18,0.7)_0%,rgba(28,23,18,0)_45%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(28,23,18,0.5)_0%,rgba(28,23,18,0)_45%)]" />
             <div className="relative z-10">
               <p className="eyebrow text-ivory/85 mb-2">53 аромата</p>
               <h2 className="font-display text-3xl md:text-4xl text-ivory">Женская парфюмерия</h2>
@@ -138,7 +138,7 @@ export default async function Home() {
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(28,23,18,0.7)_0%,rgba(28,23,18,0)_45%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(28,23,18,0.5)_0%,rgba(28,23,18,0)_45%)]" />
             <div className="relative z-10">
               <p className="eyebrow text-ivory/85 mb-2">62 аромата</p>
               <h2 className="font-display text-3xl md:text-4xl text-ivory">Мужская парфюмерия</h2>

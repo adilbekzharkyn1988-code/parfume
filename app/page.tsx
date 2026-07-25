@@ -53,7 +53,7 @@ export default async function Home() {
   style={{ fontSize: "0.52rem" }}
   className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
   <span className="text-gold">⚡</span> Доставка по Алматы день в день</span>
-            <h1 className="font-display text-[2rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] text-ink">
+            <h1 className="font-display text-[2rem] leading-[1.3] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
               НИШЕВАЯ И<br className="md:hidden" /> ЛЮКСОВАЯ
               <br />
               ПАРФЮМЕРИЯ

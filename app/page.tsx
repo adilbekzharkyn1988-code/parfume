@@ -6,7 +6,7 @@ import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
-import heroBgMobile from "@/public/hero-bg-mobile.jpg";
+import heroBgMobile from "@/public/hero-bg-mobile.png";
 import heroBgDesktop from "@/public/hero-bg-desktop.jpg";
 import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
@@ -16,29 +16,6 @@ export default async function Home() {
   const best = allProducts.filter((p) => p.badge === "Хит продаж").slice(0, 4);
   const fresh = allProducts.filter((p) => p.badge === "Новинка").slice(0, 3);
   const featuredArticles = (await fetchArticles()).slice(0, 3);
-
-  const brands = [
-    "Tom Ford",
-    "Creed",
-    "Xerjoff",
-    "Kilian",
-    "Amouage",
-    "Nishane",
-    "Initio",
-    "Maison Crivelli",
-    "Marc-Antoine Barrois",
-    "Clive Christian",
-    "Louis Vuitton",
-    "Sospiro",
-    "Arabian Oud",
-    "Le Labo",
-    "Ex-Nihilo",
-    "Essential Parfums",
-    "Hormone Paris",
-    "Acqua Di Parma",
-    "Bvlgari",
-    "Roja",
-  ];
 
   return (
     <main>
@@ -57,8 +34,8 @@ export default async function Home() {
           alt=""
           fill
           priority
+          className="block md:hidden object-cover object-top"
           style={{ top: "-100px", bottom: "40px" }}
-          className="block md:hidden object-cover"
         />
         <Image
           src={heroBgDesktop}
@@ -70,36 +47,34 @@ export default async function Home() {
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
 
-        <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-2 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
-              <span className="text-gold">⚡</span> Доставка по Алматы день в день
-            </span>
-            <h1 className="font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] text-ink">
-              Нишевая и люксовая
+            <span
+  style={{ fontSize: "0.52rem" }}
+  className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
+  <span className="text-gold">⚡</span> Доставка по Алматы день в день</span>
+            <h1 className="font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
+              НИШЕВАЯ И<br className="md:hidden" /> ЛЮКСОВАЯ
               <br />
-              парфюмерия
+              ПАРФЮМЕРИЯ
               <br />
-              <span className="text-gold">более 300 оригинальных</span>
+              <span className="text-gold">БОЛЕЕ 100</span>
               <br />
-              <span className="text-gold">ароматов</span>
+              <span className="text-gold">АРОМАТОВ</span>
             </h1>
             <p className="mt-6 text-ink/65 text-base md:text-lg max-w-md leading-relaxed">
-              Распив от 5 мл и полные флаконы. Доставка по Алматы день в день
-              и по всему Казахстану.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+  Распив от 5 мл и <br className="md:hidden" />
+  полные флаконы. <br className="md:hidden" />
+  Доставка по Алматы <br className="md:hidden" />
+  день в день и <br className="md:hidden" />
+  по всему Казахстану.
+</p>
+            <div className="mt-12 flex flex-wrap gap-4">
               <Link
                 href="/catalog"
-                className="eyebrow rounded-full px-7 py-3.5 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
+                className="eyebrow rounded-[10px] px-6 py-4 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
               >
                 Перейти в каталог <ArrowRight size={15} />
-              </Link>
-              <Link
-                href="/catalog/men"
-                className="eyebrow rounded-full px-7 py-3.5 border border-ink/20 text-ink/80 hover:border-gold hover:text-wine transition-colors bg-ivory/70 backdrop-blur-sm"
-              >
-                Мужская парфюмерия
               </Link>
             </div>
           </div>
@@ -116,37 +91,68 @@ export default async function Home() {
 
         {/* FLOATING TRUST CARD */}
         <div className="container-x relative z-10 pb-2 -translate-y-[50px] md:translate-y-0 md:-mt-10">
-          <div className="bg-paper rounded-2xl border border-ink/10 shadow-lg shadow-ink/5 px-6 py-7 md:px-10 md:py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: BadgeCheck, text: "Только оригиналы" },
-              { icon: FlaskConical, text: "Распив от 5 мл" },
-              { icon: ShieldCheck, text: "Более 300 ароматов" },
-              { icon: Truck, text: "Доставка по всему Казахстану" },
-            ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex flex-col md:items-center gap-2 md:text-center">
-                <Icon size={22} className="text-gold shrink-0" />
-                <span className="text-xs md:text-sm text-ink/75 leading-snug">{text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+  <div className="bg-paper rounded-2xl border border-ink/10 shadow-[0_0_40px_rgba(28,23,18,0.08)] px-4 py-5 md:px-10 md:py-8 grid grid-cols-4 gap-3 md:gap-6">
+    <div className="flex flex-col items-center gap-2 text-center">
+      <BadgeCheck size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Только оригиналы</span>
+    </div>
+    <div className="flex flex-col items-center gap-2 text-center">
+      <FlaskConical size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Распив от 5 мл</span>
+    </div>
+    <div className="flex flex-col items-center gap-2 text-center">
+      <ShieldCheck size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Более 100 ароматов</span>
+    </div>
+    <div className="flex flex-col items-center gap-2 text-center">
+      <Truck size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Доставка по РК</span>
+    </div>
+  </div>
+</div>
       </section>
 
       {/* POPULAR BRANDS */}
       <section className="bg-ivory pb-14 md:pb-20">
         <div className="container-x">
           <p className="eyebrow text-center text-ink/50 mb-7">Популярные бренды</p>
-          <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-            <div className="flex w-max animate-marquee gap-x-14 md:gap-x-16">
-              {[...brands, ...brands].map((b, i) => (
-                <span
-                  key={`${b}-${i}`}
-                  className="font-display text-lg md:text-xl text-ink/70 tracking-wide whitespace-nowrap"
-                >
-                  {b}
-                </span>
-              ))}
-            </div>
+        </div>
+        <div className="brands-marquee">
+          <div className="brands-marquee__track">
+            {[0, 1].map((groupIndex) => (
+              <div key={groupIndex} className="brands-marquee__group" aria-hidden={groupIndex === 1}>
+                {[
+                  "Tom Ford",
+                  "Creed",
+                  "Xerjoff",
+                  "Kilian",
+                  "Amouage",
+                  "Nishane",
+                  "Initio",
+                  "Maison Crivelli",
+                  "Marc-Antoine Barrois",
+                  "Clive Christian",
+                  "Louis Vuitton",
+                  "Sospiro",
+                  "Arabian Oud",
+                  "Le Labo",
+                  "Ex-Nihilo",
+                  "Essential Parfums",
+                  "Hormone Paris",
+                  "Acqua Di Parma",
+                  "Bvlgari",
+                  "Roja",
+                ].map((b, i) => (
+                  <span
+                    key={`${groupIndex}-${b}-${i}`}
+                    className="font-display text-lg md:text-xl text-ink/70 tracking-wide shrink-0"
+                    style={{ marginRight: "20px" }}
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>

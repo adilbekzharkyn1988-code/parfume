@@ -48,9 +48,9 @@ export default async function Home() {
 
         <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-2 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
-              <span className="text-gold">⚡</span> Доставка по Алматы день в день
-            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-[0.65rem] text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
+  <span className="text-gold">⚡</span> Доставка по Алматы день в день
+</span>
             <h1 className="font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] text-ink">
               Нишевая и люксовая
               <br />

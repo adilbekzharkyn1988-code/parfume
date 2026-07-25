@@ -72,15 +72,9 @@ export default async function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/catalog"
-                className="eyebrow rounded-full px-7 py-3.5 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
+                className="eyebrow rounded-[10px] px-6 py-4 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
               >
                 Перейти в каталог <ArrowRight size={15} />
-              </Link>
-              <Link
-                href="/catalog/men"
-                className="eyebrow rounded-full px-7 py-3.5 border border-ink/20 text-ink/80 hover:border-gold hover:text-wine transition-colors bg-ivory/70 backdrop-blur-sm"
-              >
-                Мужская парфюмерия
               </Link>
             </div>
           </div>
@@ -96,21 +90,26 @@ export default async function Home() {
         </div>
 
         {/* FLOATING TRUST CARD */}
-        <div className="container-x relative z-10 md:-mt-10 pb-2">
-          <div className="bg-paper rounded-2xl border border-ink/10 shadow-lg shadow-ink/5 px-6 py-7 md:px-10 md:py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: BadgeCheck, text: "Только оригиналы" },
-              { icon: FlaskConical, text: "Распив от 5 мл" },
-              { icon: ShieldCheck, text: "Более 300 ароматов" },
-              { icon: Truck, text: "Доставка по всему Казахстану" },
-            ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex flex-col md:items-center gap-2 md:text-center">
-                <Icon size={22} className="text-gold shrink-0" />
-                <span className="text-xs md:text-sm text-ink/75 leading-snug">{text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="container-x relative z-10 pb-2 -translate-y-[20px] md:-mt-10">
+  <div className="bg-paper rounded-2xl border border-ink/10 shadow-[0_0_40px_rgba(28,23,18,0.08)] px-4 py-5 md:px-10 md:py-8 grid grid-cols-4 gap-3 md:gap-6">
+    <div className="flex flex-col items-center gap-2 text-center">
+      <BadgeCheck size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Только оригиналы</span>
+    </div>
+    <div className="flex flex-col items-center gap-2 text-center">
+      <FlaskConical size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Распив от 5 мл</span>
+    </div>
+    <div className="flex flex-col items-center gap-2 text-center">
+      <ShieldCheck size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Более 100 ароматов</span>
+    </div>
+    <div className="flex flex-col items-center gap-2 text-center">
+      <Truck size={22} className="text-gold shrink-0" />
+      <span className="text-[10px] sm:text-xs md:text-sm text-ink/75 leading-snug">Доставка по РК</span>
+    </div>
+  </div>
+</div>
       </section>
 
       {/* POPULAR BRANDS */}

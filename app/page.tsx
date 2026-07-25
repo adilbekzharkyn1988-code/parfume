@@ -47,13 +47,13 @@ export default async function Home() {
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
 
-        <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
           <div>
             <span
   style={{ fontSize: "0.52rem" }}
   className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
   <span className="text-gold">⚡</span> Доставка по Алматы день в день</span>
-            <h1 className="font-display text-[2rem] leading-[1.3] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
+            <h1 className="font-display text-[1.6rem] leading-[1.3] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
               НИШЕВАЯ И<br className="md:hidden" /> ЛЮКСОВАЯ
               <br />
               ПАРФЮМЕРИЯ

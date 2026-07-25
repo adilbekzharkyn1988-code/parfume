@@ -18,87 +18,76 @@ export default async function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="bg-ink text-ivory relative overflow-hidden">
-        <div className="container-x py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <section className="bg-ivory relative overflow-hidden">
+        <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <p className="eyebrow text-gold-soft mb-5">Оригинальная парфюмерия · 5 и 10 мл</p>
-            <h1 className="font-display text-[2.6rem] leading-[1.05] sm:text-6xl md:text-[3.6rem]">
-              Найдите свой
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-2 eyebrow text-ink/70 mb-7">
+              <span className="text-gold">⚡</span> Доставка по Алматы день в день
+            </span>
+            <h1 className="font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] text-ink">
+              Нишевая и люксовая
               <br />
-              <span className="italic text-gold-soft">аромат-подпись</span>
+              парфюмерия
+              <br />
+              <span className="text-gold">более 300 оригинальных</span>
+              <br />
+              <span className="text-gold">ароматов</span>
             </h1>
-            <p className="mt-6 text-ivory/70 text-base md:text-lg max-w-md leading-relaxed">
-              Нишевая парфюмерия в удобных объёмах: попробуйте за 5 мл или
-              берите сразу 10 — без переплаты за полноразмерный флакон и без
-              риска ошибиться с выбором.
+            <p className="mt-6 text-ink/65 text-base md:text-lg max-w-md leading-relaxed">
+              Распив от 5 мл и полные флаконы. Доставка по Алматы день в день
+              и по всему Казахстану.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/catalog/women"
-                className="eyebrow rounded-full px-6 py-3.5 bg-ivory text-ink hover:bg-gold-soft transition-colors"
+                href="/catalog"
+                className="eyebrow rounded-full px-7 py-3.5 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
               >
-                Женская парфюмерия
+                Перейти в каталог <ArrowRight size={15} />
               </Link>
               <Link
                 href="/catalog/men"
-                className="eyebrow rounded-full px-6 py-3.5 border border-ivory/30 hover:border-gold-soft hover:text-gold-soft transition-colors"
+                className="eyebrow rounded-full px-7 py-3.5 border border-ink/20 text-ink/80 hover:border-gold hover:text-wine transition-colors"
               >
                 Мужская парфюмерия
               </Link>
             </div>
-            <dl className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-              <div>
-                <dt className="font-display text-2xl">100%</dt>
-                <dd className="text-xs text-ivory/55 mt-1">оригинал, батч-код на флаконе</dd>
-              </div>
-              <div>
-                <dt className="font-display text-2xl">12</dt>
-                <dd className="text-xs text-ivory/55 mt-1">ароматов в каталоге</dd>
-              </div>
-              <div>
-                <dt className="font-display text-2xl">1–2 дня</dt>
-                <dd className="text-xs text-ivory/55 mt-1">доставка по крупным городам</dd>
-              </div>
-            </dl>
           </div>
 
-          <div className="relative hidden md:flex justify-center">
-            <div className="absolute inset-0 rounded-full blur-3xl bg-wine/25 scale-90" aria-hidden />
-            <div className="relative w-64 rounded-md border border-ivory/15 bg-ink-soft/60 backdrop-blur p-5">
-              <p className="eyebrow text-ivory/50 mb-4 text-center">Ароматическая пирамида</p>
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-[92%] rounded-sm bg-gold/15 border border-gold/30 py-3 text-center">
-                  <p className="eyebrow text-gold-soft">верх</p>
-                </div>
-                <div className="w-[70%] rounded-sm bg-wine/25 border border-wine/40 py-3 text-center">
-                  <p className="eyebrow text-ivory/80">сердце</p>
-                </div>
-                <div className="w-[48%] rounded-sm bg-sage/30 border border-sage/50 py-3 text-center">
-                  <p className="eyebrow text-ivory/80">база</p>
-                </div>
+          <div className="relative flex justify-center">
+            <div className="absolute inset-0 rounded-full blur-3xl bg-gold/20 scale-90" aria-hidden />
+            <BottleArt family="oriental" className="relative w-48 md:w-64 h-auto drop-shadow-xl" />
+          </div>
+        </div>
+
+        {/* FLOATING TRUST CARD */}
+        <div className="container-x relative z-10 md:-mt-10 pb-2">
+          <div className="bg-paper rounded-2xl border border-ink/10 shadow-lg shadow-ink/5 px-6 py-7 md:px-10 md:py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: BadgeCheck, text: "Только оригиналы" },
+              { icon: FlaskConical, text: "Распив от 5 мл" },
+              { icon: ShieldCheck, text: "Более 300 ароматов" },
+              { icon: Truck, text: "Доставка по всему Казахстану" },
+            ].map(({ icon: Icon, text }) => (
+              <div key={text} className="flex flex-col md:items-center gap-2 md:text-center">
+                <Icon size={22} className="text-gold shrink-0" />
+                <span className="text-xs md:text-sm text-ink/75 leading-snug">{text}</span>
               </div>
-              <p className="text-[11px] text-ivory/45 mt-4 text-center leading-relaxed">
-                Каждый аромат раскрывается в три этапа — и живёт на коже до 24 часов
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-ivory-dim border-b border-ink/10">
-        <div className="container-x py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: BadgeCheck, text: "Проверенные партии и батч-коды" },
-            { icon: FlaskConical, text: "Объёмы 5 и 10 мл на выбор" },
-            { icon: Truck, text: "Доставка QAZPOST и другие" },
-            { icon: ShieldCheck, text: "Возврат в течение 14 дней" },
-          ].map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-3">
-              <Icon size={20} className="text-wine shrink-0" />
-              <span className="text-xs md:text-sm text-ink/75 leading-snug">{text}</span>
-            </div>
-          ))}
+      {/* POPULAR BRANDS */}
+      <section className="bg-ivory pb-14 md:pb-20">
+        <div className="container-x">
+          <p className="eyebrow text-center text-ink/50 mb-7">Популярные бренды</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 md:gap-x-14">
+            {["Tom Ford", "Creed", "Xerjoff", "Byredo", "Kilian", "Amouage", "Nishane"].map((b) => (
+              <span key={b} className="font-display text-lg md:text-xl text-ink/70 tracking-wide">
+                {b}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -117,7 +106,7 @@ export default async function Home() {
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
               priority
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(28,23,18,1) 5%, rgba(28,23,18,0) 55%)" }}/>
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
               <p className="eyebrow text-ivory/85 mb-2">53 аромата</p>
               <h2 className="font-display text-3xl md:text-4xl text-ivory">Женская парфюмерия</h2>
@@ -138,7 +127,7 @@ export default async function Home() {
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(28,23,18,1) 5%, rgba(28,23,18,0) 55%)" }}/>
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
               <p className="eyebrow text-ivory/85 mb-2">62 аромата</p>
               <h2 className="font-display text-3xl md:text-4xl text-ivory">Мужская парфюмерия</h2>

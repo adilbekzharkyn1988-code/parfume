@@ -35,7 +35,7 @@ export default async function Home() {
           fill
           priority
           className="block md:hidden object-cover object-top"
-          style={{ objectPosition: "center -100px, bottom 40px" }}
+          style={{ top: "-100px", bottom: "40px" }}
         />
         <Image
           src={heroBgDesktop}

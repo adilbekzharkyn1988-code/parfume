@@ -48,9 +48,10 @@ export default async function Home() {
 
         <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-[0.52rem] text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
-  <span className="text-gold">⚡</span> Доставка по Алматы день в день
-</span>
+            <span
+  style={{ fontSize: "0.65rem" }}
+  className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
+  <span className="text-gold">⚡</span> Доставка по Алматы день в день</span>
             <h1 className="font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] text-ink">
               Нишевая и люксовая
               <br />
@@ -61,9 +62,12 @@ export default async function Home() {
               <span className="text-gold">ароматов</span>
             </h1>
             <p className="mt-6 text-ink/65 text-base md:text-lg max-w-md leading-relaxed">
-              Распив от 5 мл и полные флаконы. Доставка по Алматы день в день
-              и по всему Казахстану.
-            </p>
+  Распив от 5 мл и <br className="md:hidden" />
+  полные флаконы. <br className="md:hidden" />
+  Доставка по Алматы <br className="md:hidden" />
+  день в день и <br className="md:hidden" />
+  по всему Казахстану.
+</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/catalog"

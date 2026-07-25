@@ -6,7 +6,7 @@ import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
-import heroBgMobile from "@/public/hero-bg-mobile.jpg";
+import heroBgMobile from "@/public/hero-bg-mobile.png";
 import heroBgDesktop from "@/public/hero-bg-desktop.jpg";
 import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";

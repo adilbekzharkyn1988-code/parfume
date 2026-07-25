@@ -19,9 +19,33 @@ export default async function Home() {
     <main>
       {/* HERO */}
       <section className="bg-ivory relative overflow-hidden">
+        {/*
+          ФОНОВОЕ ФОТО HERO — отдельно для мобильных и десктопа
+          1. Положи два файла в /public:
+             - public/hero-bg-mobile.jpg  (вертикальное/квадратное фото, тесный кроп)
+             - public/hero-bg-desktop.jpg (широкое фото, панорамный кроп)
+          2. object-position подбери под композицию каждого фото
+        */}
+        <Image
+          src="/hero-bg-mobile.jpg"
+          alt=""
+          fill
+          priority
+          className="block md:hidden object-cover object-top"
+        />
+        <Image
+          src="/hero-bg-desktop.jpg"
+          alt=""
+          fill
+          priority
+          className="hidden md:block object-cover object-right"
+        />
+        {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ivory via-ivory/80 to-ivory/20 md:bg-gradient-to-r md:from-ivory md:via-ivory/85 md:to-ivory/10" />
+
         <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-2 eyebrow text-ink/70 mb-7">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-2 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
               <span className="text-gold">⚡</span> Доставка по Алматы день в день
             </span>
             <h1 className="font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] text-ink">
@@ -46,17 +70,21 @@ export default async function Home() {
               </Link>
               <Link
                 href="/catalog/men"
-                className="eyebrow rounded-full px-7 py-3.5 border border-ink/20 text-ink/80 hover:border-gold hover:text-wine transition-colors"
+                className="eyebrow rounded-full px-7 py-3.5 border border-ink/20 text-ink/80 hover:border-gold hover:text-wine transition-colors bg-ivory/70 backdrop-blur-sm"
               >
                 Мужская парфюмерия
               </Link>
             </div>
           </div>
 
-          <div className="relative flex justify-center">
+          {/*
+            Правая колонка пустая (фото уже видно через фон секции).
+            Если захочешь вернуть SVG-флакон вместо/поверх фото — раскомментируй:
+          */}
+          {/* <div className="relative flex justify-center">
             <div className="absolute inset-0 rounded-full blur-3xl bg-gold/20 scale-90" aria-hidden />
             <BottleArt family="oriental" className="relative w-48 md:w-64 h-auto drop-shadow-xl" />
-          </div>
+          </div> */}
         </div>
 
         {/* FLOATING TRUST CARD */}

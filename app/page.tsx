@@ -44,7 +44,7 @@ export default async function Home() {
           className="hidden md:block object-cover object-right"
         />
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ivory via-ivory/80 to-ivory/20 md:bg-gradient-to-r md:from-ivory md:via-ivory/85 md:to-ivory/10" />
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
 
         <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>

@@ -6,6 +6,8 @@ import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
+import heroBgMobile from "@/public/hero-bg-mobile.jpg";
+import heroBgDesktop from "@/public/hero-bg-desktop.jpg";
 import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
 
@@ -21,20 +23,21 @@ export default async function Home() {
       <section className="bg-ivory relative overflow-hidden">
         {/*
           ФОНОВОЕ ФОТО HERO — отдельно для мобильных и десктопа
-          1. Положи два файла в /public:
+          Файлы должны лежать в /public:
              - public/hero-bg-mobile.jpg  (вертикальное/квадратное фото, тесный кроп)
              - public/hero-bg-desktop.jpg (широкое фото, панорамный кроп)
-          2. object-position подбери под композицию каждого фото
+          Импортируются как обычные модули сверху файла (heroBgMobile / heroBgDesktop) —
+          так путь вычисляется на этапе сборки и не ломается из-за basePath.
         */}
         <Image
-          src="/hero-bg-mobile.jpg"
+          src={heroBgMobile}
           alt=""
           fill
           priority
           className="block md:hidden object-cover object-top"
         />
         <Image
-          src="/hero-bg-desktop.jpg"
+          src={heroBgDesktop}
           alt=""
           fill
           priority

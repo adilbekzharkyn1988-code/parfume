@@ -27,14 +27,14 @@ export default async function Home() {
           2. object-position подбери под композицию каждого фото
         */}
         <Image
-          src="public/hero-bg-mobile.jpg"
+          src="/hero-bg-mobile.jpg"
           alt=""
           fill
           priority
           className="block md:hidden object-cover object-top"
         />
         <Image
-          src="public/hero-bg-desktop.jpg"
+          src="/hero-bg-desktop.jpg"
           alt=""
           fill
           priority

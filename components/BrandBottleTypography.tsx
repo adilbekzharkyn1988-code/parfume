@@ -86,7 +86,7 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
       </text>
 
       <text
-        data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="80"
+        data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="100"
         x="210" y="118" textAnchor="middle"
         style={{ fontFamily: FONT, fontSize: 48, fontWeight: 700, letterSpacing: 1, fill: GOLD }}
       >
@@ -94,7 +94,7 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
       </text>
 
       {/* декоративная завитушка */}
-      <g data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="140" style={{ fill: GOLD }}>
+      <g data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="150" style={{ fill: GOLD }}>
         <text x="210" y="150" textAnchor="middle" style={{ fontSize: 22 }}>
           ❦
         </text>
@@ -109,7 +109,7 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
       </text>
 
       <text
-        data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="260"
+        data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="250"
         x="210" y="268" textAnchor="middle"
         style={{ fontFamily: FONT, fontSize: 48, fontWeight: 700, fill: GOLD }}
       >
@@ -117,19 +117,19 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
       </text>
 
       {/* --- ПЛЕЧИКИ ФЛАКОНА (изогнутый текст) --- */}
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="320" style={{ fontFamily: FONT, fontSize: 42, fontWeight: 700, fill: INK }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="300" style={{ fontFamily: FONT, fontSize: 42, fontWeight: 700, fill: INK }}>
         <textPath href="#arcAmouage" startOffset="50%" textAnchor="middle">
           AMOUAGE
         </textPath>
       </text>
 
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="380" style={{ fontFamily: FONT, fontSize: 23, fontWeight: 600, fill: WINE, letterSpacing: 1 }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="400" style={{ fontFamily: FONT, fontSize: 23, fontWeight: 600, fill: WINE, letterSpacing: 1 }}>
         <textPath href="#arcParfums" startOffset="50%" textAnchor="middle">
           PARFUMS DE MARLY
         </textPath>
       </text>
 
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="440" style={{ fontFamily: FONT, fontSize: 46, fontWeight: 800, fill: INK }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="450" style={{ fontFamily: FONT, fontSize: 46, fontWeight: 800, fill: INK }}>
         <textPath href="#arcXerjoff" startOffset="50%" textAnchor="middle">
           XERJOFF
         </textPath>
@@ -142,7 +142,7 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
       </text>
 
       {/* декоративный перекрёстный завиток под CREED */}
-      <g data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="540" style={{ stroke: GOLD, strokeWidth: 1.5, fill: "none" }}>
+      <g data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="550" style={{ stroke: GOLD, strokeWidth: 1.5, fill: "none" }}>
         <path d="M 150,468 Q 210,478 270,468" />
         <path d="M 150,468 Q 210,458 270,468" />
       </g>
@@ -166,28 +166,28 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
       </text>
 
       {/* --- ТЕЛО ФЛАКОНА --- */}
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="660" x="120" y="500" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 600, fill: INK }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="650" x="120" y="500" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 600, fill: INK }}>
         NISHANE
       </text>
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="660" x="305" y="500" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 600, fill: GOLD }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="650" x="305" y="500" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 600, fill: GOLD }}>
         BVLGARI
       </text>
 
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="720" x="108" y="536" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, fill: NAVY }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="700" x="108" y="536" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, fill: NAVY }}>
         CHOPARD
       </text>
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="720" x="308" y="536" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 700, fill: INK }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="700" x="308" y="536" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 700, fill: INK }}>
         CLIVE CHRISTIAN
       </text>
 
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="780" x="112" y="572" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 600, fill: NAVY }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="800" x="112" y="572" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 600, fill: NAVY }}>
         HORMONI <tspan style={{ fontSize: 12 }}>PARIS</tspan>
       </text>
-      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="780" x="305" y="572" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 700, fill: WINE }}>
+      <text data-aos="fade-in" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="800" x="305" y="572" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 700, fill: WINE }}>
         KILIAN
       </text>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="840" x="210" y="608" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 700, fill: WINE }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="850" x="210" y="608" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 22, fontWeight: 700, fill: WINE }}>
         MARC-ANTOINE BARROIS
       </text>
 
@@ -198,27 +198,27 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
         EX NIHILO
       </text>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="960" x="210" y="680" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, fill: INK }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="950" x="210" y="680" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, fill: INK }}>
         ESSENTIAL PARFUMS
       </text>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1010" x="210" y="716" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 26, fontWeight: 700, fill: GOLD }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1000" x="210" y="716" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 26, fontWeight: 700, fill: GOLD }}>
         ACQUA DI PARMA
       </text>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1060" x="210" y="754" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 30, fontWeight: 700, fill: NAVY }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1050" x="210" y="754" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 30, fontWeight: 700, fill: NAVY }}>
         LOUIS VUITTON
       </text>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1110" x="210" y="790" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 28, fontWeight: 700, fill: WINE }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1100" x="210" y="790" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 28, fontWeight: 700, fill: WINE }}>
         ARABIAN OUD
       </text>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1160" x="210" y="820" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 20, fontWeight: 600, fill: INK }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1150" x="210" y="820" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 20, fontWeight: 600, fill: INK }}>
         BOADICEA THE VICTORIOUS
       </text>
 
-      <g data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1210">
+      <g data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1200">
         <text x="90" y="856" style={{ fontFamily: FONT, fontSize: 18, fill: GOLD }}>❧</text>
         <text x="210" y="858" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 30, fontWeight: 700, fill: GOLD }}>
           SOSPIRO
@@ -226,7 +226,7 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
         <text x="330" y="856" style={{ fontFamily: FONT, fontSize: 18, fill: GOLD }}>❧</text>
       </g>
 
-      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1260" x="210" y="892" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, fill: INK }}>
+      <text data-aos="fade-up" data-aos-anchor="#brand-bottle-aos-anchor" data-aos-delay="1250" x="210" y="892" textAnchor="middle" style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, fill: INK }}>
         MAISON CRIVELLI
       </text>
     </svg>

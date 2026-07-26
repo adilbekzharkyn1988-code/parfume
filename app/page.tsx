@@ -114,7 +114,7 @@ export default async function Home() {
 </div>
       </section>
 
-      {/* POPULAR BRANDS */}
+      {/* POPULAR BRANDS 
       <section className="bg-ivory pt-10 pb-14 md:pt-14 md:pb-20">
         <div className="container-x">
           <p className="eyebrow text-center text-ink/50 mb-7">Популярные бренды</p>
@@ -157,7 +157,7 @@ export default async function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* CATEGORY SPLIT 
       <section className="container-x py-16 md:py-20">

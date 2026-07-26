@@ -12,10 +12,10 @@ export default function BestsellerCard({ product }: { product: Product }) {
   const c = familyColor[product.family];
 
   return (
-    <div className="group flex flex-col shrink-0 snap-start w-[42%] sm:w-[200px] md:w-[220px]">
+    <div className="group flex flex-col shrink-0 snap-start w-[42%] sm:w-[200px] md:w-[220px] bg-paper border border-ink/10 rounded-xl overflow-hidden">
       <Link
         href={`/product/${product.slug}`}
-        className="relative block aspect-square overflow-hidden rounded-xl"
+        className="relative block aspect-square overflow-hidden"
         style={{ background: c.soft }}
       >
         <button
@@ -48,13 +48,12 @@ export default function BestsellerCard({ product }: { product: Product }) {
         )}
       </Link>
 
-      <Link href={`/product/${product.slug}`} className="mt-3 flex flex-col gap-1">
-        <h3 className="font-display text-base leading-snug line-clamp-2 min-h-[2.6em]">
-          {product.brand}
-          <br />
+      <Link href={`/product/${product.slug}`} className="p-3 flex flex-col gap-0.5">
+        <p className="text-sm text-ink/55 tracking-wide truncate">{product.brand}</p>
+        <h3 className="font-display text-base md:text-lg leading-snug line-clamp-2 min-h-[2.5em]">
           {product.name}
         </h3>
-        <p className="eyebrow text-stone text-[10px]">{product.concentration}</p>
+        <p className="eyebrow text-stone text-[10px] mt-1">{product.concentration}</p>
         <p className="font-mono text-sm text-ink/80 mt-0.5">
           от {formatPrice(product.price5)}
           <span className="text-ink/45"> / 5мл</span>

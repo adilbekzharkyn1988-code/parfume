@@ -13,7 +13,7 @@ export default function BestsellerCard({ product }: { product: Product }) {
   const displayName = stripBrandPrefix(product.name, product.brand);
 
   return (
-    <div className="group flex flex-col shrink-0 snap-start w-[42%] sm:w-[200px] md:w-[220px] bg-paper border border-ink/10 rounded-xl overflow-hidden">
+    <div className="group flex flex-col shrink-0 snap-start w-[48%] sm:w-[230px] md:w-[250px] bg-paper border border-ink/10 rounded-xl overflow-hidden">
       <Link
         href={`/product/${product.slug}`}
         className="relative block aspect-square overflow-hidden"
@@ -56,8 +56,8 @@ export default function BestsellerCard({ product }: { product: Product }) {
         </h3>
         <p className="eyebrow text-stone text-[10px] mt-1">{product.concentration}</p>
         <p className="font-mono text-sm text-ink/80 mt-0.5">
-          от {formatPrice(product.price5)}
-          <span className="text-ink/45"> / 5мл</span>
+          {formatPrice(product.price5)}{" "}
+          <span className="text-xs text-ink/40">от 5мл</span>
         </p>
       </Link>
     </div>

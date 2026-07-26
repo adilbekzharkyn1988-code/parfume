@@ -222,7 +222,7 @@ export default async function Home() {
       </section>
 
       {/* PYRAMID EXPLAINER */}
-      <section className="bg-ivory-dim py-16 md:py-20 mt-8">
+      <section className="bg-ivory-dim py-16 md:py-20">
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="eyebrow text-wine mb-2">Гид новичка</p>

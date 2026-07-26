@@ -256,10 +256,7 @@ export default async function Home() {
       </section>
 
       {/* NEW ARRIVALS */}
-      <section className="container-x py-16 md:py-20">
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <p className="eyebrow text-sage mb-2">Только что появились</p>
+      <section className="bg-white container-x py-16 md:py-20">
             <h2 className="font-display text-3xl md:text-4xl">Новинки</h2>
           </div>
         </div>
@@ -302,10 +299,7 @@ export default async function Home() {
       </section>
 
       {/* JOURNAL PREVIEW */}
-      <section className="container-x py-16 md:py-20">
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <p className="eyebrow text-wine mb-2">Журнал JUPARFUME</p>
+      <section className="bg-white container-x py-16 md:py-20">
             <h2 className="font-display text-3xl md:text-4xl">Читать и разбираться</h2>
           </div>
           <Link href="/articles" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
@@ -376,7 +370,7 @@ export default async function Home() {
       </section>
 
       {/* NEWSLETTER */}
-      <section className="container-x py-16 md:py-24">
+      <section className="bg-white container-x py-16 md:py-24">
         <div className="rounded-md bg-wine text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center">
           <p className="eyebrow text-gold-soft mb-3">Подписка</p>
           <h2 className="font-display text-3xl md:text-4xl max-w-lg">

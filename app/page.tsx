@@ -29,7 +29,7 @@ export default async function Home() {
           Импортируются как обычные модули сверху файла (heroBgMobile / heroBgDesktop) —
           так путь вычисляется на этапе сборки и не ломается из-за basePath.
         */}
-        <div className="absolute inset-x-0 top-0 h-[300px] md:h-[560px]">
+        <div className="absolute inset-x-0 top-0 h-[570px] md:h-[560px]">
           <Image
             src={heroBgMobile}
             alt=""

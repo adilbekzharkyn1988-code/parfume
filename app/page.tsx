@@ -34,7 +34,7 @@ export default async function Home() {
           alt=""
           fill
           priority
-          className="block md:hidden object-cover object-top"
+          className="block md:hidden object-cover object-top relative h-[420px] md:h-[560px]"
           style={{ top: "-100px", bottom: "40px" }}
         />
         <Image

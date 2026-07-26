@@ -70,7 +70,7 @@ export default async function Home() {
   день в день и <br className="md:hidden" />
   по всему Казахстану.
 </p>
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/catalog"
                 className="eyebrow rounded-[10px] px-6 py-4 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"

@@ -29,12 +29,13 @@ export default async function Home() {
           Импортируются как обычные модули сверху файла (heroBgMobile / heroBgDesktop) —
           так путь вычисляется на этапе сборки и не ломается из-за basePath.
         */}
+        <div className="relative h-[420px] md:h-[560px]">
         <Image
           src={heroBgMobile}
           alt=""
           fill
           priority
-          className="block md:hidden object-cover object-top relative h-[420px] md:h-[560px]"
+          className="block md:hidden object-cover object-top"
           style={{ top: "-100px", bottom: "40px" }}
         />
         <Image
@@ -44,6 +45,7 @@ export default async function Home() {
           priority
           className="hidden md:block object-cover object-right"
         />
+          </div>
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
 

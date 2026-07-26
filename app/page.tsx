@@ -48,7 +48,7 @@ export default async function Home() {
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
 
-        <div className="container-x pt-14 pb-16 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
+        <div className="container-x pt-14 pb-14 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
           <div>
             <span
   style={{ fontSize: "0.52rem" }}

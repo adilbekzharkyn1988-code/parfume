@@ -92,7 +92,7 @@ export default async function Home() {
         </div>
 
         {/* FLOATING TRUST CARD */}
-        <div className="container-x relative z-10 pb-0 -mt-[50px] md:-mt-10">
+        <div className="bg-white container-x relative z-10 pb-0 -mt-[50px] md:-mt-10">
   <div className="bg-white rounded-2xl border border-ink/10 shadow-[0_0_40px_rgba(28,23,18,0.08)] px-4 py-5 md:px-10 md:py-8 grid grid-cols-4 gap-3 md:gap-6">
     <div className="flex flex-col items-center gap-2 text-center">
       <BadgeCheck size={22} className="text-gold shrink-0" />

@@ -208,7 +208,7 @@ export default async function Home() {
       </section>*/}
 
       {/* BESTSELLERS */}
-      <section className="container-x py-8 md:py-12">
+      <section className="bg-white container-x py-8 md:py-12">
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Выбор покупателей</p>

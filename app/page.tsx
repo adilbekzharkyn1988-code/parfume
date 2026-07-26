@@ -48,7 +48,7 @@ export default async function Home() {
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
 
-        <div className="container-x pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
+        <div className="container-x pt-14 pb-16 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
           <div>
             <span
   style={{ fontSize: "0.52rem" }}
@@ -91,7 +91,7 @@ export default async function Home() {
         </div>
 
         {/* FLOATING TRUST CARD */}
-        <div className="container-x relative z-10 pb-2 -translate-y-[50px] md:translate-y-0 md:-mt-10">
+        <div className="container-x relative z-10 pb-2 -translate-y-[80px] md:translate-y-0 md:-mt-10">
   <div className="bg-paper rounded-2xl border border-ink/10 shadow-[0_0_40px_rgba(28,23,18,0.08)] px-4 py-5 md:px-10 md:py-8 grid grid-cols-4 gap-3 md:gap-6">
     <div className="flex flex-col items-center gap-2 text-center">
       <BadgeCheck size={22} className="text-gold shrink-0" />

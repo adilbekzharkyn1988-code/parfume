@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import BestsellersGallery from "@/components/BestsellersGallery";
+import BrandBottleTypography from "@/components/BrandBottleTypography";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
@@ -82,13 +83,11 @@ export default async function Home() {
           </div>
 
           {/*
-            Правая колонка пустая (фото уже видно через фон секции).
-            Если захочешь вернуть SVG-флакон вместо/поверх фото — раскомментируй:
+            Правая колонка — типографический флакон из названий брендов
           */}
-          {/* <div className="relative flex justify-center">
-            <div className="absolute inset-0 rounded-full blur-3xl bg-gold/20 scale-90" aria-hidden />
-            <BottleArt family="oriental" className="relative w-48 md:w-64 h-auto drop-shadow-xl" />
-          </div> */}
+          <div className="hidden md:flex justify-center">
+            <BrandBottleTypography className="w-full max-w-[340px] md:max-w-[380px] h-auto" />
+          </div>
         </div>
 
         {/* FLOATING TRUST CARD 
@@ -257,6 +256,9 @@ export default async function Home() {
 
       {/* NEW ARRIVALS */}
       <section className="bg-white container-x py-16 md:py-20">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="eyebrow text-sage mb-2">Только что появились</p>
             <h2 className="font-display text-3xl md:text-4xl">Новинки</h2>
           </div>
         </div>
@@ -300,6 +302,9 @@ export default async function Home() {
 
       {/* JOURNAL PREVIEW */}
       <section className="bg-white container-x py-16 md:py-20">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="eyebrow text-wine mb-2">Журнал JUPARFUME</p>
             <h2 className="font-display text-3xl md:text-4xl">Читать и разбираться</h2>
           </div>
           <Link href="/articles" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">

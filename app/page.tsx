@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import BestsellersGallery from "@/components/BestsellersGallery";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
@@ -13,7 +14,7 @@ import { fetchProducts, fetchArticles } from "@/contentful/data";
 
 export default async function Home() {
   const allProducts = await fetchProducts();
-  const best = allProducts.filter((p) => p.badge === "Хит продаж").slice(0, 4);
+  const best = allProducts.filter((p) => p.badge === "Хит продаж").slice(0, 8);
   const fresh = allProducts.filter((p) => p.badge === "Новинка").slice(0, 3);
   const featuredArticles = (await fetchArticles()).slice(0, 3);
 
@@ -217,11 +218,7 @@ export default async function Home() {
             Весь каталог <ArrowRight size={15} />
           </Link>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {best.map((p) => (
-            <ProductCard key={p.slug} product={p} />
-          ))}
-        </div>
+        <BestsellersGallery products={best} />
       </section>
 
       {/* PYRAMID EXPLAINER */}

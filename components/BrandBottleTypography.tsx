@@ -65,7 +65,7 @@ export default function BrandBottleTypography({ className = "" }: { className?: 
     <div id={AOS_ANCHOR_ID} className={className}>
     <svg
       viewBox="0 0 420 900"
-      className="w-full h-auto"
+      className="h-full w-auto max-w-none"
       role="img"
       aria-label="Флакон, собранный из названий парфюмерных брендов"
     >

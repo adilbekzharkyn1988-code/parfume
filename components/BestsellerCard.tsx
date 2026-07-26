@@ -3,13 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Product, familyColor } from "@/lib/data";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, stripBrandPrefix } from "@/lib/format";
 import BottleArt from "./BottleArt";
 import { Heart } from "lucide-react";
 
 export default function BestsellerCard({ product }: { product: Product }) {
   const [liked, setLiked] = useState(false);
   const c = familyColor[product.family];
+  const displayName = stripBrandPrefix(product.name, product.brand);
 
   return (
     <div className="group flex flex-col shrink-0 snap-start w-[42%] sm:w-[200px] md:w-[220px] bg-paper border border-ink/10 rounded-xl overflow-hidden">
@@ -49,9 +50,9 @@ export default function BestsellerCard({ product }: { product: Product }) {
       </Link>
 
       <Link href={`/product/${product.slug}`} className="p-3 flex flex-col gap-0.5">
-        <p className="text-sm text-ink/55 tracking-wide truncate">{product.brand}</p>
-        <h3 className="font-display text-base md:text-lg leading-snug line-clamp-2 min-h-[2.5em]">
-          {product.name}
+        <p className="text-xs text-ink/55 tracking-wide truncate">{product.brand}</p>
+        <h3 className="font-display text-sm md:text-base leading-snug line-clamp-2 min-h-[2.5em]">
+          {displayName}
         </h3>
         <p className="eyebrow text-stone text-[10px] mt-1">{product.concentration}</p>
         <p className="font-mono text-sm text-ink/80 mt-0.5">

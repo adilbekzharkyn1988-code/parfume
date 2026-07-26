@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="bg-ivory relative overflow-hidden">
+      <section className="bg-ivory relative overflow-hidden min-h-[570px] md:min-h-[560px]">
         {/*
           ФОНОВОЕ ФОТО HERO — отдельно для мобильных и десктопа
           Файлы должны лежать в /public:
@@ -49,6 +49,16 @@ export default async function Home() {
         </div>
         {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
+
+        {/*
+          Типографический флакон — анимация из названий брендов.
+          Показан на всех разрешениях (раньше был hidden на мобиле, из-за чего
+          AOS-анимация не запускалась вовсе, т.к. display:none элемент не имеет layout).
+          Позиция: 70% высоты херо-блока, по центру по вертикали, прижат к правому краю.
+        */}
+        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-[70%] flex items-center justify-end z-[1]">
+          <BrandBottleTypography className="h-full w-auto" />
+        </div>
 
         <div className="container-x pt-14 pb-12 md:pt-20 md:pb-16 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
           <div>
@@ -83,11 +93,11 @@ export default async function Home() {
           </div>
 
           {/*
-            Правая колонка — типографический флакон из названий брендов
+            Правая колонка на десктопе — пустая ячейка сетки, чтобы текст слева
+            не растягивался на всю ширину. Сам флакон рендерится отдельным
+            абсолютным слоем выше (см. блок с BrandBottleTypography перед контейнером).
           */}
-          <div className="hidden md:flex justify-center">
-            <BrandBottleTypography className="w-full max-w-[340px] md:max-w-[380px] h-auto" />
-          </div>
+          <div aria-hidden="true" className="hidden md:block" />
         </div>
 
         {/* FLOATING TRUST CARD 

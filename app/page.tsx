@@ -159,7 +159,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* CATEGORY SPLIT */}
+      {/* CATEGORY SPLIT 
       <section className="container-x py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-6">
           <Link
@@ -205,7 +205,7 @@ export default async function Home() {
             </div>
           </Link>
         </div>
-      </section>
+      </section>*/}
 
       {/* BESTSELLERS */}
       <section className="container-x py-8 md:py-12">

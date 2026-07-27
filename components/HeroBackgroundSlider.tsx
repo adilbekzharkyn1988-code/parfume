@@ -29,7 +29,7 @@ const SLIDES: Slide[] = [
 
 const AUTOPLAY_MS = 3000; // авто-переход каждые 3 секунды
 const FADE_MS = 1600; // длительность плавного растворения между слайдами
-const KENBURNS_MS = AUTOPLAY_MS + FADE_MS; // медленное, спокойное масштабирование
+const KENBURNS_MS = 6000; // медленное, спокойное масштабирование
 
 export default function HeroBackgroundSlider() {
   const [index, setIndex] = useState(0);
@@ -58,7 +58,7 @@ export default function HeroBackgroundSlider() {
             <div
               className="relative w-full h-full"
               style={{
-                transform: active ? "scale(1.04)" : "scale(1)",
+                transform: active ? "scale(1.06)" : "scale(1)",
                 transition: `transform ${KENBURNS_MS}ms ease-out`,
               }}
             >

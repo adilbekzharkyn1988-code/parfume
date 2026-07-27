@@ -3,15 +3,15 @@ import { AtSign, Send, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-ivory mt-24">
+    <footer className="bg-white text-ink mt-24 border-t border-line">
       <div className="container-x py-16 grid grid-cols-2 md:grid-cols-5 gap-10">
         <div className="col-span-2">
           <p className="font-display text-2xl mb-3">JUPARFUME</p>
-          <p className="text-sm text-ivory/65 max-w-xs leading-relaxed">
+          <p className="text-sm text-ink/65 max-w-xs leading-relaxed">
             Оригинальная нишевая парфюмерия в объёмах 5 и 10 мл. Тестируйте
             ароматы без переплаты за полный флакон — доставка по всему Казахстану.
           </p>
-          <div className="flex gap-4 mt-5 text-ivory/70">
+          <div className="flex gap-4 mt-5 text-ink/50">
             <AtSign size={18} />
             <Send size={18} />
             <Mail size={18} />
@@ -19,8 +19,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-ivory/50 mb-4">Каталог</p>
-          <ul className="flex flex-col gap-2.5 text-sm text-ivory/80">
+          <p className="eyebrow text-ink/50 mb-4">Каталог</p>
+          <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
             <li><Link href="/catalog">Все ароматы</Link></li>
             <li><Link href="/catalog/women">Женские</Link></li>
             <li><Link href="/catalog/men">Мужские</Link></li>
@@ -28,8 +28,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-ivory/50 mb-4">Компания</p>
-          <ul className="flex flex-col gap-2.5 text-sm text-ivory/80">
+          <p className="eyebrow text-ink/50 mb-4">Компания</p>
+          <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
             <li><Link href="/articles">Журнал</Link></li>
             <li><Link href="/#story">О нас</Link></li>
             <li><Link href="/#faq">Доставка и оплата</Link></li>
@@ -37,16 +37,16 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-ivory/50 mb-4">Контакты</p>
-          <ul className="flex flex-col gap-2.5 text-sm text-ivory/80">
+          <p className="eyebrow text-ink/50 mb-4">Контакты</p>
+          <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
             <li>+7 (999) 123-45-67</li>
             <li>hello@juparfume.example</li>
             <li>Алматы, Досмухамедова 52</li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-line-light">
-        <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-ivory/45">
+      <div className="border-t border-line">
+        <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-ink/45">
           <p>© 2026 JUPARFUME. Сайт-прототип, наполнен тестовыми данными.</p>
           <p>Оригинальная парфюмерия · 100% проверенные партии</p>
         </div>

@@ -13,7 +13,7 @@ export default function BestsellerCard({ product }: { product: Product }) {
   const displayName = stripBrandPrefix(product.name, product.brand);
 
   return (
-    <div className="group flex flex-col shrink-0 snap-start w-[48%] sm:w-[230px] md:w-[250px] bg-paper border border-ink/10 rounded-xl overflow-hidden">
+    <div className="group flex flex-col shrink-0 snap-start w-[48%] sm:w-[230px] md:w-[250px] bg-white rounded-xl overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]">
       <Link
         href={`/product/${product.slug}`}
         className="relative block aspect-square overflow-hidden"

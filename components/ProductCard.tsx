@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <div className="group flex flex-col rounded-md border border-ink/10 bg-paper overflow-hidden transition-shadow hover:shadow-[0_8px_28px_-12px_rgba(28,23,18,0.35)]">
+    <div className="group flex flex-col rounded-md bg-white overflow-hidden transition-shadow hover:shadow-[0_8px_28px_-12px_rgba(28,23,18,0.35)]">
       <Link
         href={`/product/${product.slug}`}
         className="relative block aspect-[4/5] overflow-hidden"

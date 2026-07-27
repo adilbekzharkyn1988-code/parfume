@@ -17,7 +17,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-ink text-ivory border-b border-line-light">
+    <header className="sticky top-0 z-40 bg-white text-ink border-b border-line">
       <div className="container-x flex items-center justify-between h-16 md:h-[70px]">
         <Link href="/" className="font-display text-2xl tracking-tight">
           JUPARFUME
@@ -28,7 +28,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="eyebrow text-ivory/75 hover:text-gold-soft transition-colors"
+              className="eyebrow text-ink/75 hover:text-wine transition-colors"
             >
               {l.label}
             </Link>
@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <button
             onClick={openCart}
-            className="relative flex items-center gap-2 eyebrow text-ivory/90 hover:text-gold-soft transition-colors"
+            className="relative flex items-center gap-2 eyebrow text-ink/90 hover:text-wine transition-colors"
             aria-label="Открыть корзину"
           >
             <ShoppingBag size={19} />
@@ -60,14 +60,14 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="md:hidden border-t border-line-light bg-ink">
+        <nav className="md:hidden border-t border-line bg-white">
           <div className="container-x flex flex-col py-3">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-3 border-b border-line-light/60 eyebrow text-ivory/85"
+                className="py-3 border-b border-line/60 eyebrow text-ink/85"
               >
                 {l.label}
               </Link>

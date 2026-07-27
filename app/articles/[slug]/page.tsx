@@ -93,14 +93,14 @@ export default async function ArticlePage({
           <ArticleBody content={article.content} />
         </article>
 
-        <div className="mt-14 rounded-md bg-ink text-ivory p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="mt-14 rounded-md bg-white text-ink border border-line p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <p className="eyebrow text-gold-soft mb-2">Подобрать по теме</p>
+            <p className="eyebrow text-wine mb-2">Подобрать по теме</p>
             <p className="font-display text-2xl">Посмотрите каталог ароматов</p>
           </div>
           <Link
             href="/catalog"
-            className="eyebrow rounded-full px-6 py-3.5 bg-ivory text-ink hover:bg-gold-soft transition-colors shrink-0"
+            className="eyebrow rounded-full px-6 py-3.5 bg-ink text-ivory hover:bg-wine transition-colors shrink-0"
           >
             В каталог
           </Link>

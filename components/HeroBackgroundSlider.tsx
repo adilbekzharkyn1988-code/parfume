@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image, { type StaticImageData } from "next/image";
 
+import hero1 from "@/public/hero1.png";
+import hero2 from "@/public/hero2.png";
+import hero3 from "@/public/hero3.png";
+
+type Slide = { src: StaticImageData; alt: string };
 // Полноэкранный фоновый слайдер для геро-блока.
 // 3 фото, плавное растворение (crossfade) между слайдами + лёгкий
 // эффект Ken Burns (медленное увеличение 100% -> ~104%).
@@ -10,9 +16,9 @@ import { useEffect, useState } from "react";
 type Slide = { src: string; alt: string };
 
 const SLIDES: Slide[] = [
-  { src: "/public/hero1.png", alt: "Нишевая и люксовая парфюмерия" },
-  { src: "/public/hero2.png", alt: "Женская парфюмерия" },
-  { src: "/public/hero3.png", alt: "Мужская парфюмерия" },
+  { src: hero1, alt: "Нишевая и люксовая парфюмерия" },
+  { src: hero2, alt: "Женская парфюмерия" },
+  { src: hero3, alt: "Мужская парфюмерия" },
 ];
 
 const AUTOPLAY_MS = 3000; // авто-переход каждые 3 секунды

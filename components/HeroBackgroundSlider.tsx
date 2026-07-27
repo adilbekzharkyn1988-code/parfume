@@ -40,7 +40,7 @@ const SLIDES: Slide[] = [
     src: hero2,
     alt: "Женская парфюмерия",
     // 2-й слайд: медленный сдвиг влево (лёгкий зум, чтобы не было пустых краёв)
-    effect: { transformOrigin: "center center", scaleTo: 1.1, translateXTo: -6 },
+    effect: { transformOrigin: "center center", scaleTo: 1.1, translateXTo: +6 },
   },
   {
     src: hero3,

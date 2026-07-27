@@ -3,17 +3,23 @@
 import { useEffect, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
 
-import hero1 from "@/public/hero1.png";
-import hero2 from "@/public/hero2.png";
-import hero3 from "@/public/hero3.png";
-
-type Slide = { src: StaticImageData; alt: string };
 // Полноэкранный фоновый слайдер для геро-блока.
 // 3 фото, плавное растворение (crossfade) между слайдами + лёгкий
 // эффект Ken Burns (медленное увеличение 100% -> ~104%).
 // Без стрелок, без точек, без свайпа — только автопрокрутка.
+//
+// Картинки подключены через import (а не через строку-путь) —
+// так Next.js сам оптимизирует их и знает реальные width/height.
+// Чтобы добавить/заменить фото:
+// 1. Положи файл в /public (например public/hero-1.jpg)
+// 2. Добавь import ниже: import hero1 from "@/public/hero-1.jpg";
+// 3. Пропиши его в массиве SLIDES вместо одного из текущих.
 
+import heroDesktop from "@/public/hero1.png";
+import womenPhoto from "@/public/hero2.png";
+import menPhoto from "@/public/hero3.png";
 
+type Slide = { src: StaticImageData; alt: string };
 
 const SLIDES: Slide[] = [
   { src: hero1, alt: "Нишевая и люксовая парфюмерия" },
@@ -49,15 +55,22 @@ export default function HeroBackgroundSlider() {
               transition: `opacity ${FADE_MS}ms ease-in-out`,
             }}
           >
-            <img
-              src={i}
-              alt={slide.alt}
-              className="w-full h-full object-cover"
+            <div
+              className="relative w-full h-full"
               style={{
                 transform: active ? "scale(1.04)" : "scale(1)",
                 transition: `transform ${KENBURNS_MS}ms ease-out`,
               }}
-            />
+            >
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         );
       })}

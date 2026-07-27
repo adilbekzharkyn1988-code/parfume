@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import BestsellersGallery from "@/components/BestsellersGallery";
-import HeroSlider from "@/components/HeroSlider";
+import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
@@ -19,15 +19,32 @@ export default async function Home() {
 
   return (
     <main>
-      {/* HERO */}
-      <section className="bg-white relative overflow-hidden">
-        <div className="container-x pt-14 pb-12 md:pt-20 md:pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
-          <div>
+      {/* HERO — полноэкранный слайдер (3 фото), 100vh, без границ.
+          Плавное растворение между слайдами + лёгкий Ken Burns —
+          см. components/HeroBackgroundSlider.tsx.
+          При загрузке контент появляется по очереди: фон -> заголовок -> описание -> кнопка. */}
+      <section
+        className="relative w-full overflow-hidden"
+        style={{ height: "100vh" }}
+      >
+        <div className="hero-bg-fade-in absolute inset-0">
+          <HeroBackgroundSlider />
+          {/* затемнение для читаемости текста поверх фото */}
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/35 to-ink/15" />
+        </div>
+
+        <div className="container-x relative z-10 h-full flex flex-col justify-center">
+          <div className="max-w-xl">
             <span
-  style={{ fontSize: "0.52rem" }}
-  className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ink/70 mb-7 bg-ivory/70 backdrop-blur-sm">
-  <span className="text-gold">⚡</span> Доставка по Алматы день в день</span>
-            <h1 className="font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink">
+              style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
+              className="hero-fade-in inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ivory/85 mb-7 bg-ivory/10 backdrop-blur-sm"
+            >
+              <span className="text-gold">⚡</span> Доставка по Алматы день в день
+            </span>
+            <h1
+              style={{ animationDelay: "850ms" }}
+              className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ivory"
+            >
               НИШЕВАЯ И<br className="md:hidden" /> ЛЮКСОВАЯ
               <br />
               ПАРФЮМЕРИЯ
@@ -36,29 +53,28 @@ export default async function Home() {
               <br />
               <span className="text-gold">АРОМАТОВ</span>
             </h1>
-            <p className="mt-6 text-ink/65 text-base md:text-lg max-w-md leading-relaxed">
-  Распив от 5 мл и <br className="md:hidden" />
-  полные флаконы. <br className="md:hidden" />
-  Доставка по Алматы <br className="md:hidden" />
-  день в день и <br className="md:hidden" />
-  по всему Казахстану.
-</p>
-            <div className="mt-12 flex flex-wrap gap-4">
+            <p
+              style={{ animationDelay: "1700ms" }}
+              className="hero-fade-in mt-6 text-ivory/75 text-base md:text-lg max-w-md leading-relaxed"
+            >
+              Распив от 5 мл и <br className="md:hidden" />
+              полные флаконы. <br className="md:hidden" />
+              Доставка по Алматы <br className="md:hidden" />
+              день в день и <br className="md:hidden" />
+              по всему Казахстану.
+            </p>
+            <div
+              style={{ animationDelay: "2550ms" }}
+              className="hero-fade-in mt-12 flex flex-wrap gap-4"
+            >
               <Link
                 href="/catalog"
-                className="eyebrow rounded-[10px] px-6 py-4 bg-ink text-ivory hover:bg-wine transition-colors inline-flex items-center gap-2"
+                className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
               >
                 Перейти в каталог <ArrowRight size={15} />
               </Link>
             </div>
           </div>
-
-          {/*
-            Слайдер с фото/короткими видео — 5 слайдов, у каждого своя кнопка.
-            Файлы для слайдов подключаются в lib/heroSlides.ts (см. комментарии там).
-            Показан и на мобильной, и на десктопной версии.
-          */}
-          <HeroSlider className="w-full max-w-md md:max-w-none mx-auto" />
         </div>
 
         {/* FLOATING TRUST CARD 

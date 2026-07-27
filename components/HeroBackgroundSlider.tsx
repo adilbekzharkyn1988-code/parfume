@@ -112,7 +112,7 @@ export default function HeroBackgroundSlider() {
         if (playing) {
           // Активный слайд — плавно едет к своему целевому эффекту.
           transform = `translate(${translateXTo}%, ${translateYTo}%) scale(${scaleTo})`;
-          transition = `transform ${KENBURNS_MS}ms ease-out`;
+          transition = `transform ${KENBURNS_MS}ms linear`;
         } else if (frozen) {
           // Только что стал неактивным — остаётся увеличенным без движения,
           // пока полностью не растворится.

@@ -15,9 +15,12 @@
 :root {
   --ink: #1c1712;
   --ink-soft: #2a231c;
-  --ivory: #f6f1e9;
-  --ivory-dim: #efe8db;
-  --paper: #fbf8f3;
+  /* Единый белый фон по всему сайту: ivory / ivory-dim / paper
+     сохранены как имена токенов (используются во многих компонентах),
+     но их значение теперь чистый белый, а не кремовые оттенки. */
+  --ivory: #ffffff;
+  --ivory-dim: #ffffff;
+  --paper: #ffffff;
   --wine: #6e2a3b;
   --wine-dark: #4e1e2a;
   --gold: #b08d57;

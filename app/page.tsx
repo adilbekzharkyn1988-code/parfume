@@ -2,14 +2,12 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import BestsellersGallery from "@/components/BestsellersGallery";
-import BrandBottleTypography from "@/components/BrandBottleTypography";
+import HeroSlider from "@/components/HeroSlider";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
-import heroBgMobile from "@/public/hero-bg-mobile.png";
-import heroBgDesktop from "@/public/hero-bg-desktop.jpg";
 import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
 
@@ -22,45 +20,8 @@ export default async function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="bg-ivory relative overflow-hidden min-h-[570px] md:min-h-[560px]">
-        {/*
-          ФОНОВОЕ ФОТО HERO — отдельно для мобильных и десктопа
-          Файлы должны лежать в /public:
-             - public/hero-bg-mobile.jpg  (вертикальное/квадратное фото, тесный кроп)
-             - public/hero-bg-desktop.jpg (широкое фото, панорамный кроп)
-          Импортируются как обычные модули сверху файла (heroBgMobile / heroBgDesktop) —
-          так путь вычисляется на этапе сборки и не ломается из-за basePath.
-        */}
-        <div className="absolute inset-x-0 top-0 h-[570px] md:h-[560px]">
-          <Image
-            src={heroBgMobile}
-            alt=""
-            fill
-            priority
-            className="block md:hidden object-cover object-right"
-          />
-          <Image
-            src={heroBgDesktop}
-            alt=""
-            fill
-            priority
-            className="hidden md:block object-cover object-right"
-          />
-        </div>
-        {/* градиент — снизу вверх на мобильном (текст внизу читаемее), слева направо на десктопе */}
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/10" />
-
-        {/*
-          Типографический флакон — анимация из названий брендов.
-          Показан на всех разрешениях (раньше был hidden на мобиле, из-за чего
-          AOS-анимация не запускалась вовсе, т.к. display:none элемент не имеет layout).
-          Позиция: 70% высоты херо-блока, по центру по вертикали, прижат к правому краю.
-        */}
-        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-[70%] flex items-center justify-end z-[1]">
-          <BrandBottleTypography className="h-full w-auto" />
-        </div>
-
-        <div className="container-x pt-14 pb-12 md:pt-20 md:pb-16 grid md:grid-cols-2 gap-12 items-center relative z-10 -translate-y-[20px]">
+      <section className="bg-white relative overflow-hidden">
+        <div className="container-x pt-14 pb-12 md:pt-20 md:pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
           <div>
             <span
   style={{ fontSize: "0.52rem" }}
@@ -93,11 +54,11 @@ export default async function Home() {
           </div>
 
           {/*
-            Правая колонка на десктопе — пустая ячейка сетки, чтобы текст слева
-            не растягивался на всю ширину. Сам флакон рендерится отдельным
-            абсолютным слоем выше (см. блок с BrandBottleTypography перед контейнером).
+            Слайдер с фото/короткими видео — 5 слайдов, у каждого своя кнопка.
+            Файлы для слайдов подключаются в lib/heroSlides.ts (см. комментарии там).
+            Показан и на мобильной, и на десктопной версии.
           */}
-          <div aria-hidden="true" className="hidden md:block" />
+          <HeroSlider className="w-full max-w-md md:max-w-none mx-auto" />
         </div>
 
         {/* FLOATING TRUST CARD 
@@ -280,21 +241,21 @@ export default async function Home() {
       </section>
 
       {/* STORY */}
-      <section id="story" className="bg-ink text-ivory py-16 md:py-20">
+      <section id="story" className="bg-white text-ink py-16 md:py-20 border-t border-line">
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="eyebrow text-gold-soft mb-2">О нас</p>
+            <p className="eyebrow text-wine mb-2">О нас</p>
             <h2 className="font-display text-3xl md:text-4xl mb-5">
               Парфюмерия без компромиссов и переплат
             </h2>
-            <p className="text-ivory/70 leading-relaxed mb-4">
+            <p className="text-ink/70 leading-relaxed mb-4">
               JUPARFUME — витрина независимых парфюмерных домов, которые редко
               попадают на полки крупных магазинов. Мы разливаем ароматы из
               проверенных оригинальных партий в объёмы 5 и 10 мл, чтобы
               находить свой аромат можно было без риска и без переплаты за
               флакон на всю жизнь.
             </p>
-            <p className="text-ivory/70 leading-relaxed">
+            <p className="text-ink/70 leading-relaxed">
               Каждая партия сопровождается батч-кодом, а на странице аромата
               мы честно показываем полную пирамиду нот — без маркетинговых
               обещаний, которые не подтверждаются на коже.

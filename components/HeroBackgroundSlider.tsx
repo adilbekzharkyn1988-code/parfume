@@ -42,7 +42,7 @@ export default function HeroBackgroundSlider() {
         const active = i === index;
         return (
           <div
-            key={slide.src}
+            key={i}
             className="absolute inset-0"
             style={{
               opacity: active ? 1 : 0,

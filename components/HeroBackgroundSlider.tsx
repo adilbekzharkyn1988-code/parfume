@@ -10,9 +10,9 @@ import { useEffect, useState } from "react";
 type Slide = { src: string; alt: string };
 
 const SLIDES: Slide[] = [
-  { src: "/hero-bg-desktop.jpg", alt: "Нишевая и люксовая парфюмерия" },
-  { src: "/women.avif", alt: "Женская парфюмерия" },
-  { src: "/men.avif", alt: "Мужская парфюмерия" },
+  { src: "public/hero-bg-desktop.jpg", alt: "Нишевая и люксовая парфюмерия" },
+  { src: "public/women.avif", alt: "Женская парфюмерия" },
+  { src: "public/men.avif", alt: "Мужская парфюмерия" },
 ];
 
 const AUTOPLAY_MS = 3000; // авто-переход каждые 3 секунды

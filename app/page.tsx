@@ -25,7 +25,7 @@ export default async function Home() {
           При загрузке контент появляется по очереди: фон -> заголовок -> описание -> кнопка. */}
       <section
         className="relative w-full overflow-hidden"
-        style={{ height: "100vh" }}
+        style={{ height: "80vh" }}
       >
         <div className="hero-bg-fade-in absolute inset-0">
           <HeroBackgroundSlider />

@@ -11,8 +11,8 @@ import Image, { type StaticImageData } from "next/image";
 // Картинки подключены через import (а не через строку-путь) —
 // так Next.js сам оптимизирует их и знает реальные width/height.
 // Чтобы добавить/заменить фото:
-// 1. Положи файл в /public (например public/hero-1.jpg)
-// 2. Добавь import ниже: import hero1 from "@/public/hero-1.jpg";
+// 1. Положи файл в /public (например public/hero-4.png)
+// 2. Добавь import ниже: import hero4 from "@/public/hero-4.png";
 // 3. Пропиши его в массиве SLIDES вместо одного из текущих.
 
 import hero1 from "@/public/hero1.png";
@@ -29,10 +29,24 @@ const SLIDES: Slide[] = [
 
 const AUTOPLAY_MS = 3000; // авто-переход каждые 3 секунды
 const FADE_MS = 1600; // длительность плавного растворения между слайдами
-const KENBURNS_MS = 6000; // медленное, спокойное масштабирование
+const KENBURNS_MS = AUTOPLAY_MS + FADE_MS; // медленное, спокойное масштабирование
+const ZOOM_SCALE = 1.08; // насколько увеличивается активный слайд (1.08 = +8%)
 
 export default function HeroBackgroundSlider() {
   const [index, setIndex] = useState(0);
+  // На самом первом рендере все слайды должны стоять на scale(1) —
+  // иначе первый слайд появляется СРАЗУ увеличенным и CSS-переход
+  // просто нечего анимировать (переход играет только когда значение
+  // МЕНЯЕТСЯ после того, как элемент уже на странице).
+  const [zoomStarted, setZoomStarted] = useState(false);
+
+  useEffect(() => {
+    // Запускаем зум на следующий кадр после монтирования —
+    // так браузер успевает "увидеть" стартовое scale(1) и затем
+    // анимирует переход к увеличенному состоянию.
+    const raf = requestAnimationFrame(() => setZoomStarted(true));
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   useEffect(() => {
     if (SLIDES.length <= 1) return;
@@ -46,6 +60,7 @@ export default function HeroBackgroundSlider() {
     <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
       {SLIDES.map((slide, i) => {
         const active = i === index;
+        const zoomedIn = active && zoomStarted;
         return (
           <div
             key={i}
@@ -58,7 +73,7 @@ export default function HeroBackgroundSlider() {
             <div
               className="relative w-full h-full"
               style={{
-                transform: active ? "scale(1.06)" : "scale(1)",
+                transform: zoomedIn ? `scale(${ZOOM_SCALE})` : "scale(1)",
                 transition: `transform ${KENBURNS_MS}ms ease-out`,
               }}
             >

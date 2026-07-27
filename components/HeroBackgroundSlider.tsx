@@ -13,7 +13,7 @@ type Slide = { src: StaticImageData; alt: string };
 // эффект Ken Burns (медленное увеличение 100% -> ~104%).
 // Без стрелок, без точек, без свайпа — только автопрокрутка.
 
-type Slide = { src: string; alt: string };
+
 
 const SLIDES: Slide[] = [
   { src: hero1, alt: "Нишевая и люксовая парфюмерия" },

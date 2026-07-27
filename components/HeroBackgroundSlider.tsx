@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
 
 // Полноэкранный фоновый слайдер для геро-блока.
@@ -40,7 +40,7 @@ const SLIDES: Slide[] = [
     src: hero2,
     alt: "Женская парфюмерия",
     // 2-й слайд: медленный сдвиг влево (лёгкий зум, чтобы не было пустых краёв)
-    effect: { transformOrigin: "center center", scaleTo: 1.1, translateXTo: 3 },
+    effect: { transformOrigin: "center center", scaleTo: 1.1, translateXTo: -3 },
   },
   {
     src: hero3,
@@ -53,16 +53,23 @@ const SLIDES: Slide[] = [
 const AUTOPLAY_MS = 4600; // авто-переход каждые 4.6 секунды
 const FADE_MS = 1600; // длительность плавного растворения между слайдами
 // Зум должен укладываться в AUTOPLAY_MS — иначе слайд сменится раньше,
-// чем эффект доиграет до конца, CSS-переход оборвётся на середине,
-// и это даст рывок при следующей смене.
+// чем эффект доиграет до конца, и переход оборвётся на середине.
 const KENBURNS_MS = AUTOPLAY_MS;
 
 export default function HeroBackgroundSlider() {
   const [index, setIndex] = useState(0);
   // На первом рендере все слайды должны стоять в начальном положении —
-  // иначе первый слайд появляется СРАЗУ в конечном состоянии, и
-  // CSS-переходу просто нечего анимировать.
+  // иначе первый слайд появляется СРАЗУ в конечном состоянии.
   const [effectsStarted, setEffectsStarted] = useState(false);
+
+  // Слайд, который только что перестал быть активным: он ещё растворяется
+  // (FADE_MS) и в этот момент НЕ должен уменьшаться обратно — иначе
+  // получается рывок (одновременно и фейд, и резкое "сдутие" картинки).
+  // Пока он растворяется — держим его увеличенным, "замороженным".
+  // Как только он полностью невидим — мгновенно (без анимации) сбрасываем
+  // масштаб, чтобы при следующем показе зум снова стартовал с нуля.
+  const [frozenIndex, setFrozenIndex] = useState<number | null>(null);
+  const prevIndexRef = useRef<number | null>(null);
 
   useEffect(() => {
     const raf = requestAnimationFrame(() => setEffectsStarted(true));
@@ -77,16 +84,45 @@ export default function HeroBackgroundSlider() {
     return () => clearInterval(t);
   }, []);
 
+  useEffect(() => {
+    const prev = prevIndexRef.current;
+    prevIndexRef.current = index;
+    if (prev === null) return;
+
+    setFrozenIndex(prev);
+    const t = setTimeout(() => {
+      // К этому моменту растворение уже закончилось — слайд невидим,
+      // можно безопасно сбросить масштаб без анимации.
+      setFrozenIndex((f) => (f === prev ? null : f));
+    }, FADE_MS);
+    return () => clearTimeout(t);
+  }, [index]);
+
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
       {SLIDES.map((slide, i) => {
         const active = i === index;
+        const frozen = i === frozenIndex;
         const playing = active && effectsStarted;
         const { transformOrigin, scaleTo, translateXTo = 0, translateYTo = 0 } = slide.effect;
 
-        const transform = playing
-          ? `translate(${translateXTo}%, ${translateYTo}%) scale(${scaleTo})`
-          : "translate(0%, 0%) scale(1)";
+        let transform: string;
+        let transition: string;
+
+        if (playing) {
+          // Активный слайд — плавно едет к своему целевому эффекту.
+          transform = `translate(${translateXTo}%, ${translateYTo}%) scale(${scaleTo})`;
+          transition = `transform ${KENBURNS_MS}ms ease-out`;
+        } else if (frozen) {
+          // Только что стал неактивным — остаётся увеличенным без движения,
+          // пока полностью не растворится.
+          transform = `translate(${translateXTo}%, ${translateYTo}%) scale(${scaleTo})`;
+          transition = "none";
+        } else {
+          // Уже невидим и полностью сброшен — готов к следующему показу.
+          transform = "translate(0%, 0%) scale(1)";
+          transition = "none";
+        }
 
         return (
           <div
@@ -102,7 +138,7 @@ export default function HeroBackgroundSlider() {
               style={{
                 transform,
                 transformOrigin,
-                transition: `transform ${KENBURNS_MS}ms ease-out`,
+                transition,
               }}
             >
               <Image

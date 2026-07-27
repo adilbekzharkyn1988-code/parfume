@@ -50,7 +50,7 @@ export default function HeroBackgroundSlider() {
             }}
           >
             <img
-              src={slide.src}
+              src={i}
               alt={slide.alt}
               className="w-full h-full object-cover"
               style={{

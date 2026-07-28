@@ -34,27 +34,27 @@ const SLIDES: Slide[] = [
     src: hero1,
     alt: "Нишевая и люксовая парфюмерия",
     // 1-й слайд: обычный плавный зум по центру
-    effect: { transformOrigin: "center center", scaleTo: 1.08 },
+    effect: { transformOrigin: "center center", scaleTo: 1.03 },
   },
   {
     src: hero2,
     alt: "Женская парфюмерия",
     // 2-й слайд: медленный сдвиг влево (лёгкий зум, чтобы не было пустых краёв)
-    effect: { transformOrigin: "center center", scaleTo: 1.1, translateXTo: +6 },
+    effect: { transformOrigin: "center center", scaleTo: 1.04, translateXTo: 2 },
   },
   {
     src: hero3,
     alt: "Мужская парфюмерия",
     // 3-й слайд: зум в правый нижний угол
-    effect: { transformOrigin: "right bottom", scaleTo: 1.1 },
+    effect: { transformOrigin: "right bottom", scaleTo: 1.03 },
   },
 ];
 
 const AUTOPLAY_MS = 4000; // авто-переход каждые 4.6 секунды
-const FADE_MS = 1600; // длительность плавного растворения между слайдами
+const FADE_MS = 900; // длительность плавного растворения между слайдами
 // Зум должен укладываться в AUTOPLAY_MS — иначе слайд сменится раньше,
 // чем эффект доиграет до конца, и переход оборвётся на середине.
-const KENBURNS_MS = AUTOPLAY_MS;
+const KENBURNS_MS = 3000;
 
 export default function HeroBackgroundSlider() {
   const [index, setIndex] = useState(0);
@@ -112,7 +112,7 @@ export default function HeroBackgroundSlider() {
         if (playing) {
           // Активный слайд — плавно едет к своему целевому эффекту.
           transform = `translate(${translateXTo}%, ${translateYTo}%) scale(${scaleTo})`;
-          transition = `transform ${KENBURNS_MS}ms linear`;
+          transition = `transform ${KENBURNS_MS}ms cubic-bezier(.16,1,.3,1)`;
         } else if (frozen) {
           // Только что стал неактивным — остаётся увеличенным без движения,
           // пока полностью не растворится.
@@ -130,7 +130,13 @@ export default function HeroBackgroundSlider() {
             className="absolute inset-0"
             style={{
               opacity: active ? 1 : 0,
-              transition: `opacity ${FADE_MS}ms ease-in-out`,
+              filter: active
+            ? "brightness(100%)"
+            : "brightness(95%)",
+          transition: `
+          opacity ${FADE_MS}ms ease,
+          filter ${FADE_MS}ms ease
+          `,
             }}
           >
             <div
@@ -139,7 +145,10 @@ export default function HeroBackgroundSlider() {
                 transform,
                 transformOrigin,
                 transition,
-              }}
+                willChange: "transform",
+                backfaceVisibility: "hidden",
+                transformStyle: "preserve-3d",
+                }}
             >
               <Image
                 src={slide.src}
@@ -148,6 +157,10 @@ export default function HeroBackgroundSlider() {
                 priority={i === 0}
                 sizes="100vw"
                 className="object-cover"
+              style={{
+                objectFit: "cover",
+                transform: "translate3d(0,0,0)",
+                }}
               />
             </div>
           </div>

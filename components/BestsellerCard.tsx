@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Product, familyColor } from "@/lib/data";
 import { formatPrice, stripBrandPrefix } from "@/lib/format";
 import BottleArt from "./BottleArt";
+import StarRating from "./StarRating";
 import { Heart } from "lucide-react";
 
 export default function BestsellerCard({ product }: { product: Product }) {
@@ -54,7 +55,7 @@ export default function BestsellerCard({ product }: { product: Product }) {
         <h3 className="font-display text-sm md:text-base leading-snug line-clamp-2 min-h-[2.5em]">
           {displayName}
         </h3>
-        <p className="eyebrow text-stone text-[10px] mt-1">{product.concentration}</p>
+        <StarRating rating={product.rating} size={12} className="mt-1" />
         <p className="font-mono text-sm text-ink/80 mt-0.5">
           {formatPrice(product.price5)}{" "}
           <span className="text-xs text-ink/40">от 5мл</span>

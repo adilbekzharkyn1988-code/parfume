@@ -6,7 +6,7 @@ import { Product, familyColor } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/context/CartContext";
 import BottleArt from "./BottleArt";
-import { Star } from "lucide-react";
+import StarRating from "./StarRating";
 
 export default function ProductCard({ product }: { product: Product }) {
   const [volume, setVolume] = useState<"5" | "10">("5");
@@ -65,8 +65,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className="flex items-center gap-1 text-xs text-stone">
-          <Star size={13} className="fill-gold text-gold" />
-          <span className="font-mono">{product.rating}</span>
+          <StarRating rating={product.rating} size={13} />
           <span>· {product.reviews} отзывов</span>
         </div>
 

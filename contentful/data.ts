@@ -92,7 +92,16 @@ export async function fetchProducts(): Promise<Product[]> {
     if (res.items.length > 0) {
       return res.items.map(mapProduct).sort((a, b) => a.name.localeCompare(b.name));
     }
-  } catch {}
+    // Запрос прошёл успешно, но Contentful вернул 0 записей —
+    // проверь content_type id, space/environment и что записи опубликованы.
+    console.error(
+      "[fetchProducts] Contentful вернул 0 товаров (content_type: 'product'). " +
+        "Показываю fallbackProducts (моковые данные) вместо реальных."
+    );
+  } catch (err) {
+    // Запрос упал с ошибкой — токен, space id, лимиты, сеть и т.п.
+    console.error("[fetchProducts] Ошибка запроса к Contentful:", err);
+  }
   return fallbackProducts;
 }
 

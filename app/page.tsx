@@ -2,7 +2,8 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import BestsellersGallery from "@/components/BestsellersGallery";
-import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
+import dynamic from "next/dynamic";
+const HeroDragGallery = dynamic(() => import("@/components/HeroDragGallery"), { ssr: false });
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
@@ -28,9 +29,7 @@ export default async function Home() {
         style={{ height: "80vh" }}
       >
         <div className="hero-bg-fade-in absolute inset-0">
-          <HeroBackgroundSlider />
-          {/* затемнение для читаемости текста поверх фото */}
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/35 to-ink/15" />
+          <HeroDragGallery />
         </div>
 
         <div className="container-x relative z-10 h-full flex flex-col justify-center">

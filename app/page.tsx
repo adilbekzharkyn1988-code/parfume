@@ -43,7 +43,7 @@ export default async function Home() {
               style={{ animationDelay: "850ms" }}
               className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
             >
-              НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ <span className="hero-fade-in mt-3 text-gold">БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ</span></>
+              НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ. <span className="hero-fade-in mt-3 text-gold">БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ</span>
             </h1>
             
           </div>

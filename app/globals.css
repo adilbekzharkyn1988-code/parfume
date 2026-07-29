@@ -203,3 +203,19 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* HERO CARD MARQUEE */
+.hero-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: hero-marquee-scroll 28s linear infinite;
+}
+
+@keyframes hero-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

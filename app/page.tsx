@@ -33,12 +33,12 @@ export default async function Home() {
 
         <div className="container-x relative z-10 h-full flex flex-col justify-between py-8">
           <div className="max-w-xl mx-auto text-center">
-            <span
+            {/*<span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
               className="hero-fade-in inline-flex items-center gap-1.5 rounded-full border border-ink/20 px-3 py-1.5 eyebrow text-ink/85 mb-7 bg-ink/5 backdrop-blur-sm"
             >
               <span className="text-gold">⚡</span> Доставка по Алматы день в день
-            </span>
+            </span>*/}
             <h1
               style={{ animationDelay: "850ms" }}
               className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"

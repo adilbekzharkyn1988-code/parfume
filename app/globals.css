@@ -84,7 +84,7 @@ body {
 
 .font-display {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
 }
 .font-mono {
   font-family: var(--font-mono);

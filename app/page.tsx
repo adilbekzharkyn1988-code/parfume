@@ -33,7 +33,7 @@ export default async function Home() {
 
         {/* белый градиент снизу вверх, высота 150px */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[150px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[450px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
         />
 
         <div className="container-x relative z-10 h-full flex flex-col justify-end items-start py-8 gap-7">
@@ -48,13 +48,13 @@ export default async function Home() {
               style={{ animationDelay: "850ms" }}
               className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
             >
-              НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ
+              Нишевая<br />и люксовая парфюмерия
             </h1>
             <p
               style={{ animationDelay: "1700ms" }}
-              className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-gold"
+              className="hero-fade-in font-display text-[1rem] leading-[1.4] sm:text-[1.6rem] md:text-[2rem] text-gold"
             >
-              БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
+              Более 100 оригинальный ароматов
             </p>
           </div>
 

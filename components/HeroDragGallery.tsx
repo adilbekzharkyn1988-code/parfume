@@ -7,7 +7,7 @@ import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import hero1 from "@/public/hero1.png";
 import hero2 from "@/public/hero2.png";
 import hero3 from "@/public/hero3.png";
-import women from "@/public/women.avif";
+import women from "@/public/pers.png";
 import men from "@/public/men.avif";
 
 // 5 уникальных фото — лента прокручивает их бесконечно по кругу.

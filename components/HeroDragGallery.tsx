@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
-import { motion, useMotionValue, useTransform, useAnimationFrame } from "framer-motion";
+import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 
 import hero1 from "@/public/hero1.png";
 import hero2 from "@/public/hero2.png";
@@ -10,63 +10,69 @@ import hero3 from "@/public/hero3.png";
 import women from "@/public/women.avif";
 import men from "@/public/men.avif";
 
-type Card = { src: StaticImageData };
+// 5 уникальных фото — лента прокручивает их бесконечно по кругу.
+const UNIQUE_CARDS: StaticImageData[] = [men, hero3, women, hero1, hero2];
 
-// Уникальные карточки — лента крутится по кругу через них бесконечно.
-const CARDS: Card[] = [
-  { src: men },
-  { src: hero3 },
-  { src: women },
-  { src: hero1 },
-  { src: hero2 },
-];
+// Лента — как конвейер: карточки идут через равные интервалы (жёсткая,
+// предсказуемая дистанция друг от друга — не "коробит"), а уменьшение
+// в центре / увеличение по краям делается отдельным слоем — масштабом
+// по фактическому положению на экране, а не поворотом в 3D (это и убирало
+// равномерность расстояний раньше).
+const REPEATS = 5; // сколько раз повторить набор из 5, чтобы лента была длинной и шов был далеко за кадром
+const SLOTS = UNIQUE_CARDS.length * REPEATS;
 
-const N = CARDS.length;
-const STEP_DEG = 34; // угол поворота между соседними позициями
-const STEP_Z = 90; // отдаление вглубь по Z на каждый шаг от центра
-const STEP_X = 120; // горизонтальный шаг между позициями
-const SPEED = 0.00035; // скорость движения по кругу (позиций в мс)
+const SPEED = 0.045; // px/ms — скорость движения ленты
 
-// Кратчайшее знаковое расстояние от карточки до центра по кругу из N позиций.
-function wrappedDelta(raw: number) {
-  let d = raw % N;
-  if (d > N / 2) d -= N;
-  if (d < -N / 2) d += N;
-  return d;
+function mod(n: number, m: number) {
+  return ((n % m) + m) % m;
 }
 
-function CoverflowCard({
-  card,
+type Sizes = { cardW: number; cardH: number; gap: number; maskPct: number };
+const DESKTOP: Sizes = { cardW: 120, cardH: 150, gap: 14, maskPct: 16 };
+const MOBILE: Sizes = { cardW: 78, cardH: 100, gap: 8, maskPct: 4 };
+
+function GalleryCard({
+  src,
   index,
   phase,
-  visibleSlots,
+  itemWidth,
+  slots,
+  containerHalfWidth,
+  sizes,
 }: {
-  card: Card;
+  src: StaticImageData;
   index: number;
   phase: ReturnType<typeof useMotionValue<number>>;
-  visibleSlots: number;
+  itemWidth: number;
+  slots: number;
+  containerHalfWidth: number;
+  sizes: Sizes;
 }) {
-  const transform = useTransform(phase, (p) => {
-    const delta = wrappedDelta(index - p);
-    const x = delta * STEP_X;
-    // Центр уходит вглубь (мельче), края выступают вперёд (крупнее) — вогнутая дуга.
-    const z = -(N / 2 - Math.abs(delta)) * STEP_Z;
-    const rotateY = -delta * STEP_DEG;
-    return `translateX(${x}px) translateZ(${z}px) rotateY(${rotateY}deg)`;
-  });
-  const opacity = useTransform(phase, (p) => {
-    const delta = Math.abs(wrappedDelta(index - p));
-    const threshold = Math.min(N / 2, visibleSlots / 2);
-    return delta > threshold ? 0 : 1;
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const beltWidth = itemWidth * slots;
+  const halfBelt = beltWidth / 2;
+
+  useEffect(() => {
+    return phase.on("change", (p) => {
+      const el = ref.current;
+      if (!el) return;
+      const x = mod(index * itemWidth - p + halfBelt, beltWidth) - halfBelt;
+      const norm = Math.min(Math.abs(x) / Math.max(containerHalfWidth, 1), 1);
+      const scale = 0.55 + 0.65 * norm; // центр мельче, края крупнее
+      const tilt = -Math.sign(x) * 16 * norm;
+      el.style.transform = `translateX(${x}px) translateY(-50%) rotateY(${tilt}deg) scale(${scale})`;
+      el.style.zIndex = String(Math.round(scale * 100));
+    });
+  }, [phase, index, itemWidth, beltWidth, halfBelt, containerHalfWidth]);
 
   return (
-    <motion.div
-      style={{ transform, opacity }}
-      className="absolute w-[120px] h-[150px] rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+    <div
+      ref={ref}
+      className="absolute left-1/2 top-1/2 rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+      style={{ width: sizes.cardW, height: sizes.cardH, marginLeft: -sizes.cardW / 2 }}
     >
-      <Image src={card.src} alt="" fill sizes="150px" className="object-cover" />
-    </motion.div>
+      <Image src={src} alt="" fill sizes="150px" className="object-cover" />
+    </div>
   );
 }
 
@@ -76,38 +82,51 @@ export default function HeroDragGallery() {
     phase.set(phase.get() + delta * SPEED);
   });
 
-  // На мобильных одновременно видно 4 карточки, на десктопе — все.
-  const [visibleSlots, setVisibleSlots] = useState(N);
+  const [sizes, setSizes] = useState<Sizes>(DESKTOP);
+  const [containerHalfWidth, setContainerHalfWidth] = useState(700);
+
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
-    const update = () => setVisibleSlots(mq.matches ? 4 : N);
+    const update = () => {
+      setSizes(mq.matches ? MOBILE : DESKTOP);
+      setContainerHalfWidth(window.innerWidth / 2);
+    };
     update();
     mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
+    window.addEventListener("resize", update);
+    return () => {
+      mq.removeEventListener("change", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
+
+  const itemWidth = sizes.cardW + sizes.gap;
 
   return (
     <div className="absolute inset-0 bg-black overflow-hidden">
-      {/* coverflow-лента: карточки на дуге, непрерывно движутся по кругу */}
+      {/* лента-конвейер: равные промежутки, непрерывное движение */}
       <div
-        className="absolute left-1/2 top-[24%] -translate-x-1/2"
-        style={{ perspective: "1200px" }}
+        className="absolute inset-0"
+        style={{
+          WebkitMaskImage: `linear-gradient(to right, transparent 0%, #000 ${sizes.maskPct}%, #000 ${100 - sizes.maskPct}%, transparent 100%)`,
+          maskImage: `linear-gradient(to right, transparent 0%, #000 ${sizes.maskPct}%, #000 ${100 - sizes.maskPct}%, transparent 100%)`,
+        }}
       >
-        <div className="relative" style={{ transformStyle: "preserve-3d" }}>
-          {CARDS.map((card, i) => (
-            <CoverflowCard key={i} card={card} index={i} phase={phase} visibleSlots={visibleSlots} />
+        <div className="relative w-full h-[26%] top-[22%]" style={{ perspective: "1000px" }}>
+          {Array.from({ length: SLOTS }).map((_, i) => (
+            <GalleryCard
+              key={i}
+              src={UNIQUE_CARDS[i % UNIQUE_CARDS.length]}
+              index={i}
+              phase={phase}
+              itemWidth={itemWidth}
+              slots={SLOTS}
+              containerHalfWidth={containerHalfWidth}
+              sizes={sizes}
+            />
           ))}
         </div>
       </div>
-
-      {/* fade по краям сцены */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to right, #000 0%, transparent 18%, transparent 82%, #000 100%)",
-        }}
-      />
 
       {/* центральное фото — один раз выезжает и замирает */}
       <motion.div

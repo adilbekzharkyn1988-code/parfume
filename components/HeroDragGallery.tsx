@@ -23,7 +23,7 @@ function mod(n: number, m: number) {
 
 type Sizes = { cardW: number; cardH: number; gap: number; maskPct: number };
 const DESKTOP: Sizes = { cardW: 120, cardH: 150, gap: 14, maskPct: 16 };
-const MOBILE: Sizes = { cardW: 78, cardH: 100, gap: 8, maskPct: 4 };
+const MOBILE: Sizes = { cardW: 120, cardH: 160, gap: 8, maskPct: 4 };
 
 function GalleryCard({
   src,

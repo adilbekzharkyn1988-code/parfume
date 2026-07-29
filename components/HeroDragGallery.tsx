@@ -9,53 +9,75 @@ import hero3 from "@/public/hero3.png";
 import women from "@/public/women.avif";
 import men from "@/public/men.avif";
 
-type Card = { src: StaticImageData; rotate: number };
+type Card = { src: StaticImageData };
 
-// Наклон карточек чередуется (как на референсе) — часть заваливается влево,
-// часть вправо. Ряд повторяется дважды подряд для бесшовной прокрутки.
-const BASE_CARDS: Card[] = [
-  { src: hero2, rotate: -6 },
-  { src: women, rotate: 4 },
-  { src: hero1, rotate: -3 },
-  { src: hero3, rotate: 6 },
-  { src: men, rotate: -5 },
-  { src: hero1, rotate: 3 },
+// Ряд карточек по дуге (coverflow). Порядок слева направо — от центра
+// расходятся по обе стороны, поэтому массив зеркально симметричен.
+const CARDS: Card[] = [
+  { src: men },
+  { src: hero3 },
+  { src: women },
+  { src: hero1 },
+  { src: hero2 },
+  { src: hero3 },
+  { src: men },
 ];
-const CARDS = [...BASE_CARDS, ...BASE_CARDS];
+
+const CENTER = Math.floor(CARDS.length / 2);
+const STEP_DEG = 34; // угол поворота между соседними карточками
+const STEP_Z = 90; // отдаление вглубь по Z на каждый шаг от центра
+const STEP_X = 150; // горизонтальный шаг между карточками
 
 export default function HeroDragGallery() {
   return (
     <div className="absolute inset-0 bg-black overflow-hidden">
-      {/* лента карточек — едет сама по себе бесконечно, без остановки */}
+      {/* coverflow-лента: карточки развёрнуты в 3D по дуге вокруг центра */}
       <div
-        className="absolute left-0 right-0 top-[22%] overflow-hidden"
-        style={{
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%)",
-          maskImage:
-            "linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%)",
-        }}
+        className="absolute left-1/2 top-[24%] -translate-x-1/2"
+        style={{ perspective: "1200px" }}
       >
-        <div className="hero-marquee__track items-center gap-4 md:gap-6 px-6">
-          {CARDS.map((card, i) => (
-            <div
-              key={i}
-              style={{ transform: `rotate(${card.rotate}deg)` }}
-              className="relative shrink-0 w-[170px] h-[110px] md:w-[230px] md:h-[150px] rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.55)]"
-            >
-              <Image
-                src={card.src}
-                alt=""
-                fill
-                sizes="230px"
-                className="object-cover"
-              />
-            </div>
-          ))}
+        <div
+          className="relative flex items-center justify-center"
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {CARDS.map((card, i) => {
+            const offset = i - CENTER; // -3..3
+            const angle = -offset * STEP_DEG;
+            const z = -Math.abs(offset) * STEP_Z;
+            const x = offset * STEP_X;
+
+            return (
+              <div
+                key={i}
+                className="absolute w-[190px] h-[240px] md:w-[230px] md:h-[290px] rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+                style={{
+                  transform: `translateX(${x}px) translateZ(${z}px) rotateY(${angle}deg)`,
+                  zIndex: CARDS.length - Math.abs(offset),
+                }}
+              >
+                <Image
+                  src={card.src}
+                  alt=""
+                  fill
+                  sizes="230px"
+                  className="object-cover"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      {/* центральное фото — один раз выезжает и замирает, лента продолжает ехать позади */}
+      {/* fade по краям сцены */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to right, #000 0%, transparent 18%, transparent 82%, #000 100%)",
+        }}
+      />
+
+      {/* центральное фото — один раз выезжает и замирает */}
       <motion.div
         initial={{ opacity: 0, x: 80, scale: 0.96 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}

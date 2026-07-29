@@ -112,7 +112,7 @@ export default function HeroDragGallery() {
           maskImage: `linear-gradient(to right, transparent 0%, #000 ${sizes.maskPct}%, #000 ${100 - sizes.maskPct}%, transparent 100%)`,
         }}
       >
-        <div className="relative w-full h-[26%] top-[22%]" style={{ perspective: "1000px" }}>
+        <div className="relative w-full h-[26%] top-[35%]" style={{ perspective: "1000px" }}>
           {Array.from({ length: SLOTS }).map((_, i) => (
             <GalleryCard
               key={i}

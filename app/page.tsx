@@ -31,6 +31,11 @@ export default async function Home() {
           <HeroDragGallery />
         </div>
 
+        {/* белый градиент снизу вверх, высота 150px */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-[150px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
+        />
+
         <div className="container-x relative z-10 h-full flex flex-col justify-between items-center py-8 gap-7">
           <div className="max-w-xl mx-auto text-center">
             {/*<span
@@ -47,27 +52,27 @@ export default async function Home() {
             </h1>
             
           </div>
-<div className="flex flex-col items-center gap-7">
-    <p
-      style={{ animationDelay: "1700ms" }}
-      className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-gold max-w-xl mx-auto text-center"
-    >
-      БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
-    </p>
+          <div className="flex flex-col items-center gap-7">
+            <p
+              style={{ animationDelay: "1700ms" }}
+              className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-gold max-w-xl mx-auto text-center"
+            >
+              БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
+            </p>
 
-    <div
-      style={{ animationDelay: "2550ms" }}
-      className="hero-fade-in flex justify-center"
-    >
-      <Link
-        href="/catalog"
-        className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
-      >
-        Перейти в каталог <ArrowRight size={15} />
-      </Link>
-    </div>
-  </div>
-</div>
+            <div
+              style={{ animationDelay: "2550ms" }}
+              className="hero-fade-in flex justify-center"
+            >
+              <Link
+                href="/catalog"
+                className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
+              >
+                Перейти в каталог <ArrowRight size={15} />
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* FLOATING TRUST CARD 
         <div className="bg-white container-x relative z-10 pb-0 -mt-[50px] md:-mt-10">

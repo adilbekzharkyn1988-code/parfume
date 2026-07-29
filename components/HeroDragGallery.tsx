@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, useAnimationFrame } from "framer-motion";
 
 import hero1 from "@/public/hero1.png";
 import hero2 from "@/public/hero2.png";
@@ -11,60 +12,90 @@ import men from "@/public/men.avif";
 
 type Card = { src: StaticImageData };
 
-// Ряд карточек по дуге (coverflow). Порядок слева направо — от центра
-// расходятся по обе стороны, поэтому массив зеркально симметричен.
+// Уникальные карточки — лента крутится по кругу через них бесконечно.
 const CARDS: Card[] = [
   { src: men },
   { src: hero3 },
   { src: women },
   { src: hero1 },
   { src: hero2 },
-  { src: hero3 },
-  { src: men },
 ];
 
-const CENTER = Math.floor(CARDS.length / 2);
-const STEP_DEG = 34; // угол поворота между соседними карточками
+const N = CARDS.length;
+const STEP_DEG = 34; // угол поворота между соседними позициями
 const STEP_Z = 90; // отдаление вглубь по Z на каждый шаг от центра
-const STEP_X = 150; // горизонтальный шаг между карточками
+const STEP_X = 120; // горизонтальный шаг между позициями
+const SPEED = 0.00035; // скорость движения по кругу (позиций в мс)
+
+// Кратчайшее знаковое расстояние от карточки до центра по кругу из N позиций.
+function wrappedDelta(raw: number) {
+  let d = raw % N;
+  if (d > N / 2) d -= N;
+  if (d < -N / 2) d += N;
+  return d;
+}
+
+function CoverflowCard({
+  card,
+  index,
+  phase,
+  visibleSlots,
+}: {
+  card: Card;
+  index: number;
+  phase: ReturnType<typeof useMotionValue<number>>;
+  visibleSlots: number;
+}) {
+  const transform = useTransform(phase, (p) => {
+    const delta = wrappedDelta(index - p);
+    const x = delta * STEP_X;
+    const z = -Math.abs(delta) * STEP_Z;
+    const rotateY = -delta * STEP_DEG;
+    return `translateX(${x}px) translateZ(${z}px) rotateY(${rotateY}deg)`;
+  });
+  const opacity = useTransform(phase, (p) => {
+    const delta = Math.abs(wrappedDelta(index - p));
+    const threshold = Math.min(N / 2, visibleSlots / 2) - 0.5;
+    return delta > threshold ? 0 : 1;
+  });
+
+  return (
+    <motion.div
+      style={{ transform, opacity }}
+      className="absolute w-[120px] h-[150px] rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+    >
+      <Image src={card.src} alt="" fill sizes="150px" className="object-cover" />
+    </motion.div>
+  );
+}
 
 export default function HeroDragGallery() {
+  const phase = useMotionValue(0);
+  useAnimationFrame((_, delta) => {
+    phase.set(phase.get() + delta * SPEED);
+  });
+
+  // На мобильных одновременно видно 4 карточки, на десктопе — все.
+  const [visibleSlots, setVisibleSlots] = useState(N);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    const update = () => setVisibleSlots(mq.matches ? 4 : N);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   return (
     <div className="absolute inset-0 bg-black overflow-hidden">
-      {/* coverflow-лента: карточки развёрнуты в 3D по дуге вокруг центра */}
+      {/* coverflow-лента: карточки на дуге, непрерывно движутся по кругу */}
       <div
         className="absolute left-1/2 top-[24%] -translate-x-1/2"
         style={{ perspective: "1200px" }}
       >
-        <div
-          className="relative flex items-center justify-center"
-          style={{ transformStyle: "preserve-3d" }}
-        >
-          {CARDS.map((card, i) => {
-            const offset = i - CENTER; // -3..3
-            const angle = -offset * STEP_DEG;
-            const z = -Math.abs(offset) * STEP_Z;
-            const x = offset * STEP_X;
-
-            return (
-              <div
-                key={i}
-                className="absolute w-[190px] h-[240px] md:w-[230px] md:h-[290px] rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
-                style={{
-                  transform: `translateX(${x}px) translateZ(${z}px) rotateY(${angle}deg)`,
-                  zIndex: CARDS.length - Math.abs(offset),
-                }}
-              >
-                <Image
-                  src={card.src}
-                  alt=""
-                  fill
-                  sizes="230px"
-                  className="object-cover"
-                />
-              </div>
-            );
-          })}
+        <div className="relative" style={{ transformStyle: "preserve-3d" }}>
+          {CARDS.map((card, i) => (
+            <CoverflowCard key={i} card={card} index={i} phase={phase} visibleSlots={visibleSlots} />
+          ))}
         </div>
       </div>
 
@@ -84,13 +115,13 @@ export default function HeroDragGallery() {
         transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-x-0 bottom-0 top-[8%] flex justify-center z-10"
       >
-        <div className="relative w-[280px] md:w-[420px] h-full">
+        <div className="relative w-[210px] md:w-[300px] h-full">
           <Image
             src={women}
             alt="Парфюмерия"
             fill
             priority
-            sizes="(max-width: 768px) 280px, 420px"
+            sizes="(max-width: 768px) 210px, 300px"
             className="object-cover object-top"
           />
         </div>

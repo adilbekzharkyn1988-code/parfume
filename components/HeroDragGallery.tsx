@@ -135,16 +135,14 @@ export default function HeroDragGallery() {
         transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-x-0 bottom-0 top-[8%] flex justify-center z-10"
       >
-        <div className="relative w-[210px] md:w-[300px] h-full">
-          <Image
-            src={women}
-            alt="Парфюмерия"
-            fill
-            priority
-            sizes="(max-width: 768px) 210px, 300px"
-            className="object-cover object-top"
-          />
-        </div>
+        <div className="relative w-[210px] md:w-[300px]">
+  <Image
+    src={women}
+    alt="Парфюмерия"
+    priority
+    className="w-full h-auto"
+  />
+</div>
       </motion.div>
 
       {/* затемнение снизу для читаемости заголовка поверх сцены */}

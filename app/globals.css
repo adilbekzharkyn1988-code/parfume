@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "@fontsource/fraunces/400.css";
-@import "@fontsource/fraunces/500.css";
-@import "@fontsource/fraunces/600.css";
-@import "@fontsource/fraunces/600-italic.css";
-@import "@fontsource/fraunces/700.css";
+@import "@fontsource/cormorant/400.css";
+@import "@fontsource/cormorant/500.css";
+@import "@fontsource/cormorant/600.css";
+@import "@fontsource/cormorant/600-italic.css";
+@import "@fontsource/cormorant/700.css";
 @import "@fontsource/manrope/400.css";
 @import "@fontsource/manrope/500.css";
 @import "@fontsource/manrope/600.css";
@@ -45,7 +45,7 @@
   --color-stone: var(--stone);
   --color-line: var(--line);
   --color-line-light: var(--line-light);
-  --font-display: "Fraunces", serif;
+  --font-display: "Cormorant", serif;
   --font-body: "Manrope", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }

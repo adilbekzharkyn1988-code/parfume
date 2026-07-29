@@ -134,9 +134,9 @@ export default function HeroDragGallery() {
         initial={{ opacity: 0, x: 80, scale: 0.96 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-x-0 bottom-[50px] top-[4%] flex justify-center items-end z-10"
+        className="absolute inset-x-0 bottom-[10px] top-[4%] flex justify-center items-end z-10"
       >
-        <div className="relative w-[210px] md:w-[480px]">
+        <div className="relative w-[510px] md:w-[480px]">
           <Image
             src={women}
             alt="Парфюмерия"

@@ -32,7 +32,7 @@ export default async function Home() {
         </div>
 
         <div className="container-x relative z-10 h-full flex flex-col justify-center">
-          <div className="max-w-xl">
+          <div className="max-w-xl mx-auto text-center">
             <span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
               className="hero-fade-in inline-flex items-center gap-1.5 rounded-full border border-gold/40 px-3 py-1.5 eyebrow text-ivory/85 mb-7 bg-ivory/10 backdrop-blur-sm"
@@ -43,27 +43,17 @@ export default async function Home() {
               style={{ animationDelay: "850ms" }}
               className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ivory"
             >
-              НИШЕВАЯ И<br className="md:hidden" /> ЛЮКСОВАЯ
-              <br />
-              ПАРФЮМЕРИЯ
-              <br />
-              <span className="text-gold">БОЛЕЕ 100</span>
-              <br />
-              <span className="text-gold">АРОМАТОВ</span>
+              НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ
             </h1>
             <p
-              style={{ animationDelay: "1700ms" }}
-              className="hero-fade-in mt-6 text-ivory/75 text-base md:text-lg max-w-md leading-relaxed"
+              style={{ animationDelay: "1700ms", fontSize: "10px" }}
+              className="hero-fade-in mt-3 text-gold"
             >
-              Распив от 5 мл и <br className="md:hidden" />
-              полные флаконы. <br className="md:hidden" />
-              Доставка по Алматы <br className="md:hidden" />
-              день в день и <br className="md:hidden" />
-              по всему Казахстану.
+              БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
             </p>
             <div
               style={{ animationDelay: "2550ms" }}
-              className="hero-fade-in mt-12 flex flex-wrap gap-4"
+              className="hero-fade-in mt-12 flex justify-center"
             >
               <Link
                 href="/catalog"

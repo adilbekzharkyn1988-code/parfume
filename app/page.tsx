@@ -33,7 +33,7 @@ export default async function Home() {
 
         {/* белый градиент снизу вверх, высота 150px */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[150px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[350px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
         />
 
         <div className="container-x relative z-10 h-full flex flex-col justify-between items-center py-8 gap-7">

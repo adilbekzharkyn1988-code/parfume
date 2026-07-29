@@ -31,7 +31,7 @@ export default async function Home() {
           <HeroDragGallery />
         </div>
 
-        <div className="container-x relative z-10 h-full flex flex-col justify-between py-16">
+        <div className="container-x relative z-10 h-full flex flex-col justify-between py-8">
           <div className="max-w-xl mx-auto text-center">
             <span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}

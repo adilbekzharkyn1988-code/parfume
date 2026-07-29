@@ -10,19 +10,12 @@ import hero3 from "@/public/hero3.png";
 import women from "@/public/pers.png";
 import men from "@/public/men.avif";
 
-// Уникальные фото — лента прокручивает их бесконечно по кругу.
-// women убран отсюда: он используется только как отдельное статичное центральное фото ниже.
 const UNIQUE_CARDS: StaticImageData[] = [men, hero3, hero1, hero2];
 
-// Лента — как конвейер: карточки идут через равные интервалы (жёсткая,
-// предсказуемая дистанция друг от друга — не "коробит"), а уменьшение
-// в центре / увеличение по краям делается отдельным слоем — масштабом
-// по фактическому положению на экране, а не поворотом в 3D (это и убирало
-// равномерность расстояний раньше).
-const REPEATS = 5; // сколько раз повторить набор, чтобы лента была длинной и шов был далеко за кадром
+const REPEATS = 5;
 const SLOTS = UNIQUE_CARDS.length * REPEATS;
 
-const SPEED = 0.015; // px/ms — скорость движения ленты
+const SPEED = 0.015;
 
 function mod(n: number, m: number) {
   return ((n % m) + m) % m;
@@ -57,10 +50,16 @@ function GalleryCard({
     return phase.on("change", (p) => {
       const el = ref.current;
       if (!el) return;
+      
       const x = mod(index * itemWidth - p + halfBelt, beltWidth) - halfBelt;
       const norm = Math.min(Math.abs(x) / Math.max(containerHalfWidth, 1), 1);
-      const scale = 0.60 + 0.30 * norm; // центр мельче, края крупнее
-      const tilt = -Math.sign(x) * 16 * norm;
+      
+      // Масштаб: центр крупнее, края мельче
+      const scale = 0.60 + 0.30 * (1 - norm);
+      
+      // Перспектива: сильнее поворот по краям
+      const tilt = -Math.sign(x) * 35 * norm;
+      
       el.style.transform = `translateX(${x}px) translateY(-50%) rotateY(${tilt}deg) scale(${scale})`;
       el.style.zIndex = String(Math.round(scale * 100));
     });
@@ -105,7 +104,6 @@ export default function HeroDragGallery() {
 
   return (
     <div className="absolute inset-0 bg-white overflow-hidden">
-      {/* лента-конвейер: равные промежутки, непрерывное движение */}
       <div
         className="absolute inset-0"
         style={{
@@ -129,7 +127,6 @@ export default function HeroDragGallery() {
         </div>
       </div>
 
-      {/* центральное фото — один раз выезжает и замирает */}
       <motion.div
         initial={{ opacity: 0, x: 80, scale: 0.96 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -146,12 +143,11 @@ export default function HeroDragGallery() {
         </div>
       </motion.div>
 
-      {/* лёгкое затемнение снизу для читаемости заголовка поверх сцены (на белом фоне — мягкий градиент вместо чёрного) */}
       <div className="absolute inset-0 pointer-events-none"
-      style={{
-        background: "linear-gradient(to top, #ffffff 0%, #ffffff 25%, rgba(255,255,255,0.1) 100%)",
-      }}
-    />
+        style={{
+          background: "linear-gradient(to top, #ffffff 0%, #ffffff 25%, rgba(255,255,255,0.1) 100%)",
+        }}
+      />
     </div>
   );
 }

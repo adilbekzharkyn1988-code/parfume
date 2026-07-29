@@ -49,7 +49,7 @@ export default async function Home() {
               className="hero-fade-in font-display text-[2.5rem] leading-[1] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
             >
               Нишевая<br />и люксовая<br />парфюмерия
-            </h1>
+            </h1><br />
             <p
               style={{ animationDelay: "1700ms" }}
               className="hero-fade-in font-display text-[1.25rem] leading-[1.4] sm:text-[1.6rem] md:text-[2rem] text-gold"

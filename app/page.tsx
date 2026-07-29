@@ -31,7 +31,7 @@ export default async function Home() {
           <HeroDragGallery />
         </div>
 
-        <div className="container-x relative z-10 h-full flex flex-col justify-center">
+        <div className="container-x relative z-10 h-full flex flex-col justify-between py-16">
           <div className="max-w-xl mx-auto text-center">
             <span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
@@ -51,17 +51,18 @@ export default async function Home() {
             >
               БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
             </p>
-            <div
-              style={{ animationDelay: "2550ms" }}
-              className="hero-fade-in mt-12 flex justify-center"
+          </div>
+
+          <div
+            style={{ animationDelay: "2550ms" }}
+            className="hero-fade-in flex justify-center"
+          >
+            <Link
+              href="/catalog"
+              className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
             >
-              <Link
-                href="/catalog"
-                className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
-              >
-                Перейти в каталог <ArrowRight size={15} />
-              </Link>
-            </div>
+              Перейти в каталог <ArrowRight size={15} />
+            </Link>
           </div>
         </div>
 

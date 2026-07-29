@@ -147,7 +147,7 @@ export default function HeroDragGallery() {
       </motion.div>
 
       {/* лёгкое затемнение снизу для читаемости заголовка поверх сцены (на белом фоне — мягкий градиент вместо чёрного) */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/90 via-white/10 to-white/30" />
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white via-white/10 to-white/30" />
     </div>
   );
 }

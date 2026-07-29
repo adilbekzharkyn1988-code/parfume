@@ -113,7 +113,7 @@ export default function HeroDragGallery() {
           maskImage: `linear-gradient(to right, transparent 0%, #000 ${sizes.maskPct}%, #000 ${100 - sizes.maskPct}%, transparent 100%)`,
         }}
       >
-        <div className="relative w-full h-[26%] top-[20%]" style={{ perspective: "1000px" }}>
+        <div className="relative w-full h-[26%] top-[35%]" style={{ perspective: "1000px" }}>
           {Array.from({ length: SLOTS }).map((_, i) => (
             <GalleryCard
               key={i}
@@ -136,7 +136,7 @@ export default function HeroDragGallery() {
         transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-x-0 bottom-[10px] top-[4%] flex justify-center items-end z-10"
       >
-        <div className="relative w-[510px] md:w-[480px]">
+        <div className="relative w-[450px] md:w-[480px]">
           <Image
             src={women}
             alt="Парфюмерия"

@@ -31,7 +31,7 @@ export default async function Home() {
           <HeroDragGallery />
         </div>
 
-        <div className="container-x relative z-10 h-full flex flex-col justify-end items-center py-8 gap-7">
+        <div className="container-x relative z-10 h-full flex flex-col justify-between items-center py-8 gap-7">
           <div className="max-w-xl mx-auto text-center">
             {/*<span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
@@ -43,23 +43,31 @@ export default async function Home() {
               style={{ animationDelay: "850ms" }}
               className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
             >
-              НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ. <span className="hero-fade-in mt-3 text-gold">БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ</span>
+              НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ
             </h1>
             
           </div>
+<div className="flex flex-col items-center gap-7">
+    <p
+      style={{ animationDelay: "1700ms" }}
+      className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-gold max-w-xl mx-auto text-center"
+    >
+      БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
+    </p>
 
-          <div
-            style={{ animationDelay: "2550ms" }}
-            className="hero-fade-in flex justify-center"
-          >
-            <Link
-              href="/catalog"
-              className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
-            >
-              Перейти в каталог <ArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
+    <div
+      style={{ animationDelay: "2550ms" }}
+      className="hero-fade-in flex justify-center"
+    >
+      <Link
+        href="/catalog"
+        className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
+      >
+        Перейти в каталог <ArrowRight size={15} />
+      </Link>
+    </div>
+  </div>
+</div>
 
         {/* FLOATING TRUST CARD 
         <div className="bg-white container-x relative z-10 pb-0 -mt-[50px] md:-mt-10">

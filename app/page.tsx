@@ -33,7 +33,7 @@ export default async function Home() {
 
         {/* белый градиент снизу вверх, высота 150px */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[250px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[300px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
           style={{
             background:
               "linear-gradient(to top, #fff 0%, #fff 55%, rgba(255,255,255,.95) 70%, rgba(255,255,255,.6) 85%, transparent 100%)",
@@ -56,7 +56,7 @@ export default async function Home() {
             </h1><br />
             <p
               style={{ animationDelay: "1700ms" }}
-              className="hero-fade-in font-body text-[1.25rem] leading-[1.4] sm:text-[1.6rem] md:text-[2rem] text-gold"
+              className="hero-fade-in font-body text-[1rem] leading-[1.4] sm:text-[1.6rem] md:text-[2rem] text-gold"
             >
               БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
             </p>

@@ -142,12 +142,6 @@ export default function HeroDragGallery() {
           />
         </div>
       </motion.div>
-
-      //<div className="absolute inset-0 pointer-events-none"
-       // style={{
-          //background: "linear-gradient(to top, #ffffff 0%, #ffffff 25%, rgba(255,255,255,0.1) 100%)",
-       // }}
-  //    />
     </div>
   );
 }

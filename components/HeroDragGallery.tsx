@@ -55,7 +55,7 @@ function GalleryCard({
       const norm = Math.min(Math.abs(x) / Math.max(containerHalfWidth, 1), 1);
       
       // Масштаб: центр крупнее, края мельче
-      const scale = 0.60 + 0.30 * (1 - norm);
+      const scale = 0.60 + 0.30 * norm;
       
       // Перспектива: сильнее поворот по краям
       const tilt = -Math.sign(x) * 35 * norm;

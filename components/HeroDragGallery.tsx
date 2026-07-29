@@ -10,15 +10,16 @@ import hero3 from "@/public/hero3.png";
 import women from "@/public/pers.png";
 import men from "@/public/men.avif";
 
-// 5 уникальных фото — лента прокручивает их бесконечно по кругу.
-const UNIQUE_CARDS: StaticImageData[] = [men, hero3, women, hero1, hero2];
+// Уникальные фото — лента прокручивает их бесконечно по кругу.
+// women убран отсюда: он используется только как отдельное статичное центральное фото ниже.
+const UNIQUE_CARDS: StaticImageData[] = [men, hero3, hero1, hero2];
 
 // Лента — как конвейер: карточки идут через равные интервалы (жёсткая,
 // предсказуемая дистанция друг от друга — не "коробит"), а уменьшение
 // в центре / увеличение по краям делается отдельным слоем — масштабом
 // по фактическому положению на экране, а не поворотом в 3D (это и убирало
 // равномерность расстояний раньше).
-const REPEATS = 5; // сколько раз повторить набор из 5, чтобы лента была длинной и шов был далеко за кадром
+const REPEATS = 5; // сколько раз повторить набор, чтобы лента была длинной и шов был далеко за кадром
 const SLOTS = UNIQUE_CARDS.length * REPEATS;
 
 const SPEED = 0.045; // px/ms — скорость движения ленты
@@ -68,7 +69,7 @@ function GalleryCard({
   return (
     <div
       ref={ref}
-      className="absolute left-1/2 top-1/2 rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+      className="absolute left-1/2 top-1/2 rounded-xl overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.15)]"
       style={{ width: sizes.cardW, height: sizes.cardH, marginLeft: -sizes.cardW / 2 }}
     >
       <Image src={src} alt="" fill sizes="150px" className="object-cover" />
@@ -103,7 +104,7 @@ export default function HeroDragGallery() {
   const itemWidth = sizes.cardW + sizes.gap;
 
   return (
-    <div className="absolute inset-0 bg-black overflow-hidden">
+    <div className="absolute inset-0 bg-white overflow-hidden">
       {/* лента-конвейер: равные промежутки, непрерывное движение */}
       <div
         className="absolute inset-0"
@@ -112,7 +113,7 @@ export default function HeroDragGallery() {
           maskImage: `linear-gradient(to right, transparent 0%, #000 ${sizes.maskPct}%, #000 ${100 - sizes.maskPct}%, transparent 100%)`,
         }}
       >
-        <div className="relative w-full h-[26%] top-[40%]" style={{ perspective: "1000px" }}>
+        <div className="relative w-full h-[26%] top-[35%]" style={{ perspective: "1000px" }}>
           {Array.from({ length: SLOTS }).map((_, i) => (
             <GalleryCard
               key={i}
@@ -133,20 +134,20 @@ export default function HeroDragGallery() {
         initial={{ opacity: 0, x: 80, scale: 0.96 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-x-0 bottom-[70px] top-[8%] flex justify-center items-end z-10"
+        className="absolute inset-x-0 bottom-[10px] top-[8%] flex justify-center items-end z-10"
       >
-        <div className="relative w-[210px] md:w-[350px]">
-  <Image
-    src={women}
-    alt="Парфюмерия"
-    priority
-    className="w-full h-auto"
-  />
-</div>
+        <div className="relative w-[210px] md:w-[300px]">
+          <Image
+            src={women}
+            alt="Парфюмерия"
+            priority
+            className="w-full h-auto"
+          />
+        </div>
       </motion.div>
 
-      {/* затемнение снизу для читаемости заголовка поверх сцены */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/85 via-black/20 to-black/40" />
+      {/* лёгкое затемнение снизу для читаемости заголовка поверх сцены (на белом фоне — мягкий градиент вместо чёрного) */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/90 via-white/10 to-white/30" />
     </div>
   );
 }

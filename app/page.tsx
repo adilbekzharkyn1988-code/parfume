@@ -33,11 +33,11 @@ export default async function Home() {
 
         {/* белый градиент снизу вверх, высота 150px */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[450px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[150px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
         />
 
-        <div className="container-x relative z-10 h-full flex flex-col justify-between items-center py-8 gap-7">
-          <div className="max-w-xl mx-auto text-center">
+        <div className="container-x relative z-10 h-full flex flex-col justify-end items-start py-8 gap-7">
+          <div className="max-w-xl text-left">
             {/*<span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
               className="hero-fade-in inline-flex items-center gap-1.5 rounded-full border border-ink/20 px-3 py-1.5 eyebrow text-ink/85 mb-7 bg-ink/5 backdrop-blur-sm"
@@ -50,27 +50,24 @@ export default async function Home() {
             >
               НИШЕВАЯ И ЛЮКСОВАЯ ПАРФЮМЕРИЯ
             </h1>
-            
-          </div>
-          <div className="flex flex-col items-center gap-7">
             <p
               style={{ animationDelay: "1700ms" }}
-              className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-gold max-w-xl mx-auto text-center"
+              className="hero-fade-in font-display text-[1.6rem] leading-[1.5] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-gold"
             >
               БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
             </p>
+          </div>
 
-            <div
-              style={{ animationDelay: "2550ms" }}
-              className="hero-fade-in flex justify-center"
+          <div
+            style={{ animationDelay: "2550ms" }}
+            className="hero-fade-in flex justify-start"
+          >
+            <Link
+              href="/catalog"
+              className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
             >
-              <Link
-                href="/catalog"
-                className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
-              >
-                Перейти в каталог <ArrowRight size={15} />
-              </Link>
-            </div>
+              Перейти в каталог <ArrowRight size={15} />
+            </Link>
           </div>
         </div>
 

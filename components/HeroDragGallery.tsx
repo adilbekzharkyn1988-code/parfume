@@ -22,7 +22,7 @@ const UNIQUE_CARDS: StaticImageData[] = [men, hero3, hero1, hero2];
 const REPEATS = 5; // сколько раз повторить набор, чтобы лента была длинной и шов был далеко за кадром
 const SLOTS = UNIQUE_CARDS.length * REPEATS;
 
-const SPEED = 0.025; // px/ms — скорость движения ленты
+const SPEED = 0.015; // px/ms — скорость движения ленты
 
 function mod(n: number, m: number) {
   return ((n % m) + m) % m;
@@ -59,7 +59,7 @@ function GalleryCard({
       if (!el) return;
       const x = mod(index * itemWidth - p + halfBelt, beltWidth) - halfBelt;
       const norm = Math.min(Math.abs(x) / Math.max(containerHalfWidth, 1), 1);
-      const scale = 0.60 + 0.65 * norm; // центр мельче, края крупнее
+      const scale = 0.60 + 0.30 * norm; // центр мельче, края крупнее
       const tilt = -Math.sign(x) * 16 * norm;
       el.style.transform = `translateX(${x}px) translateY(-50%) rotateY(${tilt}deg) scale(${scale})`;
       el.style.zIndex = String(Math.round(scale * 100));

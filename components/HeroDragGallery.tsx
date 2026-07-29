@@ -49,13 +49,14 @@ function CoverflowCard({
   const transform = useTransform(phase, (p) => {
     const delta = wrappedDelta(index - p);
     const x = delta * STEP_X;
-    const z = -Math.abs(delta) * STEP_Z;
+    // Центр уходит вглубь (мельче), края выступают вперёд (крупнее) — вогнутая дуга.
+    const z = -(N / 2 - Math.abs(delta)) * STEP_Z;
     const rotateY = -delta * STEP_DEG;
     return `translateX(${x}px) translateZ(${z}px) rotateY(${rotateY}deg)`;
   });
   const opacity = useTransform(phase, (p) => {
     const delta = Math.abs(wrappedDelta(index - p));
-    const threshold = Math.min(N / 2, visibleSlots / 2) - 0.5;
+    const threshold = Math.min(N / 2, visibleSlots / 2);
     return delta > threshold ? 0 : 1;
   });
 

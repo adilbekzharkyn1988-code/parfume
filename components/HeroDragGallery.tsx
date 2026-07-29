@@ -148,6 +148,6 @@ export default function HeroDragGallery() {
           //background: "linear-gradient(to top, #ffffff 0%, #ffffff 25%, rgba(255,255,255,0.1) 100%)",
        // }}
   //    />
-//    </div>
-//  );
+    </div>
+  );
 }

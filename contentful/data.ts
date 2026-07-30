@@ -1,4 +1,3 @@
-import { client } from "./client";
 import {
   products as fallbackProducts,
   articles as fallbackArticles,
@@ -7,101 +6,43 @@ import {
   Gender,
 } from "@/lib/data";
 
-function richTextToPlain(doc: any): string {
-  if (!doc || typeof doc !== "object") return doc || "";
-  if (!doc.content) return "";
-  return doc.content
-    .map((node: any) =>
-      (node.content || []).map((c: any) => c.value || "").join("")
-    )
-    .join(" ")
-    .trim();
-}
+/**
+ * ВАЖНО: этот файл больше НЕ ходит в Contentful напрямую.
+ *
+ * Данные читаются из локального contentful/cache.json, который
+ * генерируется вручную командой `npm run sync:contentful`
+ * (см. scripts/sync-contentful.ts) — тогда обычный `next build`
+ * (даже сотни раз в день во время разработки) не делает ни одного
+ * запроса к Contentful.
+ *
+ * Если cache.json ещё не сгенерирован (например, при первом клоне
+ * репозитория до первого запуска sync), используются моковые данные
+ * из lib/data.ts — билд никогда не падает из-за отсутствия кэша или сети.
+ */
 
-function mapProduct(item: any): Product {
-  const f = item.fields;
-  const imgItem = Array.isArray(f.image) ? f.image[0] : f.image;
-  const img = imgItem?.fields?.file?.url;
-  return {
-    slug: f.slug,
-    name: f.name,
-    brand: f.brand,
-    gender: f.gender,
-    family: f.family,
-    familyLabel: f.familyLabel,
-    concentration: f.concentration,
-    description: richTextToPlain(f.description),
-    story: f.story,
-    notes: {
-      top: f.notesTop || [],
-      heart: f.notesHeart || [],
-      base: f.notesBase || [],
-    },
-    price5: f.price5,
-    price10: f.price10,
-    rating: f.rating,
-    reviews: f.reviews,
-    badge: f.badge,
-    sillage: f.sillage,
-    longevity: f.longevity,
-    image: img ? `https:${img}` : undefined,
-    seasonality: f.seasonality,
-  } as Product;
-}
+type Cache = {
+  generatedAt: string;
+  products: Product[];
+  articles: Article[];
+};
 
-function mapReview(item: any): import("@/lib/data").ReviewData {
-  const f = item.fields;
-  return {
-    user: f.author,
-    text: richTextToPlain(f.text) || f.text,
-    rating: f.rating,
-  };
-}
+let cache: Cache | null = null;
 
-async function fetchReviewsForProduct(productId: string) {
+function loadCache(): Cache | null {
+  if (cache) return cache;
   try {
-    const res = await client.getEntries({
-      content_type: "review",
-      "fields.product.sys.id": productId,
-      order: "-fields.date" as any,
-      limit: 50,
-    } as any);
-    return res.items.map(mapReview);
+    // require вместо import — файл может отсутствовать до первого sync,
+    // и мы не хотим, чтобы сборка падала на этапе резолва модулей.
+    cache = require("./cache.json") as Cache;
   } catch {
-    return [];
+    cache = null;
   }
-}
-
-function mapArticle(item: any): Article {
-  const f = item.fields;
-  return {
-    slug: f.slug,
-    title: f.title,
-    excerpt: f.excerpt,
-    category: f.category,
-    readTime: f.readTime,
-    date: f.date,
-    cover: f.cover,
-    content: f.content,
-  } as Article;
+  return cache;
 }
 
 export async function fetchProducts(): Promise<Product[]> {
-  try {
-    const res = await client.getEntries({ content_type: "product", limit: 200 });
-    if (res.items.length > 0) {
-      return res.items.map(mapProduct).sort((a, b) => a.name.localeCompare(b.name));
-    }
-    // Запрос прошёл успешно, но Contentful вернул 0 записей —
-    // проверь content_type id, space/environment и что записи опубликованы.
-    console.error(
-      "[fetchProducts] Contentful вернул 0 товаров (content_type: 'product'). " +
-        "Показываю fallbackProducts (моковые данные) вместо реальных."
-    );
-  } catch (err) {
-    // Запрос упал с ошибкой — токен, space id, лимиты, сеть и т.п.
-    console.error("[fetchProducts] Ошибка запроса к Contentful:", err);
-  }
+  const c = loadCache();
+  if (c && c.products.length > 0) return c.products;
   return fallbackProducts;
 }
 
@@ -111,38 +52,17 @@ export async function fetchProductsByGender(gender: Gender): Promise<Product[]> 
 }
 
 export async function fetchProductBySlug(slug: string): Promise<Product | undefined> {
-  try {
-    const res = await client.getEntries({ content_type: "product", "fields.slug": slug, limit: 1 } as any);
-    if (res.items.length > 0) {
-      const product = mapProduct(res.items[0]);
-      product.reviewsList = await fetchReviewsForProduct(res.items[0].sys.id);
-      if (product.reviewsList.length > 0) {
-        product.reviews = product.reviewsList.length;
-        product.rating = Number(
-          (
-            product.reviewsList.reduce((sum, r) => sum + r.rating, 0) /
-            product.reviewsList.length
-          ).toFixed(1)
-        );
-      }
-      return product;
-    }
-  } catch {}
-  return fallbackProducts.find((p) => p.slug === slug);
+  const all = await fetchProducts();
+  return all.find((p) => p.slug === slug);
 }
 
 export async function fetchArticles(): Promise<Article[]> {
-  try {
-    const res = await client.getEntries({ content_type: "article", limit: 200 });
-    if (res.items.length > 0) return res.items.map(mapArticle);
-  } catch {}
+  const c = loadCache();
+  if (c && c.articles.length > 0) return c.articles;
   return fallbackArticles;
 }
 
 export async function fetchArticleBySlug(slug: string): Promise<Article | undefined> {
-  try {
-    const res = await client.getEntries({ content_type: "article", "fields.slug": slug, limit: 1 } as any);
-    if (res.items.length > 0) return mapArticle(res.items[0]);
-  } catch {}
-  return fallbackArticles.find((a) => a.slug === slug);
+  const all = await fetchArticles();
+  return all.find((a) => a.slug === slug);
 }

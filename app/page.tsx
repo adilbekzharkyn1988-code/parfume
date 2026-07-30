@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, Gift } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, Gift, CreditCard } from "lucide-react";
 import BestsellersGallery from "@/components/BestsellersGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
 import NotePyramid from "@/components/NotePyramid";
@@ -282,6 +282,30 @@ export default async function Home() {
               </span>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* WHY US */}
+      <section className="bg-ivory-dim py-6 md:py-10">
+        <div className="container-x">
+          <div className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+              <BadgeCheck size={20} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Только оригинальные ароматы</span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+              <FlaskConical size={20} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Распив от 5 мл</span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+              <CreditCard size={20} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Удобная оплата</span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+              <Truck size={20} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Доставка по РК</span>
+            </div>
+          </div>
         </div>
       </section>
 

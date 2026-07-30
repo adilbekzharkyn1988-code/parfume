@@ -52,13 +52,13 @@ export default function BestsellerCard({ product }: { product: Product }) {
 
       <Link href={`/product/${product.slug}`} className="p-3 flex flex-col gap-0.5">
         <p className="text-xs text-ink/55 tracking-wide truncate">{product.brand}</p>
-        <h3 className="font-display text-sm md:text-base leading-snug line-clamp-2 min-h-[2.5em]">
+        <h3 className="font-body font-semibold text-sm md:text-base leading-snug line-clamp-2 min-h-[2.5em]">
           {displayName}
         </h3>
         <StarRating rating={product.rating} size={12} className="mt-1" />
-        <p className="font-mono text-sm text-ink/80 mt-0.5">
+        <p className="font-body font-semibold text-sm text-ink/80 mt-0.5">
           {formatPrice(product.price5)}{" "}
-          <span className="text-xs text-ink/40">от 5мл</span>
+          <span className="font-normal text-xs text-ink/40">от 5мл</span>
         </p>
       </Link>
     </div>

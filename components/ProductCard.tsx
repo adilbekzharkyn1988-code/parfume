@@ -58,7 +58,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div>
           <p className="eyebrow text-stone">{product.brand} · {product.familyLabel}</p>
           <Link href={`/product/${product.slug}`}>
-            <h3 className="font-display text-xl leading-tight mt-0.5 hover:text-wine transition-colors">
+            <h3 className="font-body font-semibold text-lg leading-tight mt-0.5 hover:text-wine transition-colors">
               {product.name}
             </h3>
           </Link>
@@ -92,7 +92,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
           <div className="flex items-end justify-between gap-2">
             <div>
-              <p className="font-display text-2xl leading-none">{formatPrice(price)}</p>
+              <p className="font-body font-bold text-2xl leading-none">{formatPrice(price)}</p>
               {volume === "10" && (
                 <p className="text-[11px] text-sage mt-1">
                   выгода {savingsPct}% за мл

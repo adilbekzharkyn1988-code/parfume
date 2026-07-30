@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, Gift, CreditCard } from "lucide-react";
 import BestsellersGallery from "@/components/BestsellersGallery";
+import TestimonialsGallery from "@/components/TestimonialsGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
 import NotePyramid from "@/components/NotePyramid";
 import BottleArt from "@/components/BottleArt";
@@ -286,8 +287,12 @@ export default async function Home() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-ivory-dim py-6 md:py-10">
+      <section className="bg-ivory-dim py-8 md:py-12">
         <div className="container-x">
+          <div className="mb-6 md:mb-8">
+            <p className="eyebrow text-wine mb-2">Наши преимущества</p>
+            <h2 className="font-display text-2xl md:text-3xl">Почему выбирают нас</h2>
+          </div>
           <div className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8">
             <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
               <BadgeCheck size={20} className="text-gold shrink-0 sm:size-6" />
@@ -307,6 +312,15 @@ export default async function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-white container-x py-8 md:py-12">
+        <div className="mb-8">
+          <p className="eyebrow text-wine mb-2">Нам доверяют</p>
+          <h2 className="font-display text-2xl md:text-3xl">Отзывы покупателей</h2>
+        </div>
+        <TestimonialsGallery />
       </section>
 
       {/* PYRAMID EXPLAINER */}

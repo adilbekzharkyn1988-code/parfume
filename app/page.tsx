@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, Gift } from "lucide-react";
 import BestsellersGallery from "@/components/BestsellersGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
 import NotePyramid from "@/components/NotePyramid";
@@ -216,6 +216,73 @@ export default async function Home() {
           </Link>
         </div>
         <BestsellersGallery products={fresh} />
+      </section>
+
+      {/* CATEGORIES */}
+      <section className="bg-white container-x py-8 md:py-12">
+        <div className="mb-8">
+          <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
+          <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Link
+            href="/catalog/women"
+            className="group relative rounded-md overflow-hidden bg-[#F5E3E8] h-72 md:h-80 flex items-end p-7"
+          >
+            <Image
+              src={womenPhoto}
+              alt="Женская парфюмерия"
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
+            <div className="relative z-10">
+              <h3 className="font-display text-2xl text-ivory">Женская парфюмерия</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+                Смотреть каталог <ArrowRight size={15} />
+              </span>
+            </div>
+          </Link>
+
+          <Link
+            href="/catalog/men"
+            className="group relative rounded-md overflow-hidden bg-[#EFE6D6] h-72 md:h-80 flex items-end p-7"
+          >
+            <Image
+              src={menPhoto}
+              alt="Мужская парфюмерия"
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
+            <div className="relative z-10">
+              <h3 className="font-display text-2xl text-ivory">Мужская парфюмерия</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+                Смотреть каталог <ArrowRight size={15} />
+              </span>
+            </div>
+          </Link>
+
+          <Link
+            href="/catalog/sets"
+            className="group relative rounded-md overflow-hidden bg-wine h-72 md:h-80 flex items-end p-7"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <Gift
+              size={64}
+              strokeWidth={1}
+              className="absolute top-7 right-7 text-ivory/25 group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="relative z-10">
+              <h3 className="font-display text-2xl text-ivory">Наборы</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+                Смотреть каталог <ArrowRight size={15} />
+              </span>
+            </div>
+          </Link>
+        </div>
       </section>
 
       {/* PYRAMID EXPLAINER */}

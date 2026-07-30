@@ -196,10 +196,10 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Выбор покупателей</p>
-            <h2 className="font-display text-3xl md:text-4xl">Хиты продаж</h2>
+            <h2 className="font-display text-2xl md:text-3xl">Хиты продаж</h2>
           </div>
-          <Link href="/catalog" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
-            Весь каталог <ArrowRight size={15} />
+          <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+            Смотреть все <ArrowRight size={15} />
           </Link>
         </div>
         <BestsellersGallery products={best} />

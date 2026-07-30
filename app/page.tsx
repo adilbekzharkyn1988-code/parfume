@@ -224,22 +224,22 @@ export default async function Home() {
           <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
           <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-3 md:gap-6">
           <Link
             href="/catalog/women"
-            className="group relative rounded-md overflow-hidden bg-[#F5E3E8] h-72 md:h-80 flex items-end p-7"
+            className="group relative rounded-md overflow-hidden bg-[#F5E3E8] h-40 sm:h-56 md:h-80 flex items-end p-3 sm:p-5 md:p-7"
           >
             <Image
               src={womenPhoto}
               alt="Женская парфюмерия"
               fill
-              sizes="(min-width: 768px) 33vw, 100vw"
+              sizes="(min-width: 768px) 33vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
-              <h3 className="font-display text-2xl text-ivory">Женская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+              <h3 className="font-display text-sm sm:text-xl md:text-2xl text-ivory leading-tight">Женская парфюмерия</h3>
+              <span className="hidden sm:inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -247,19 +247,19 @@ export default async function Home() {
 
           <Link
             href="/catalog/men"
-            className="group relative rounded-md overflow-hidden bg-[#EFE6D6] h-72 md:h-80 flex items-end p-7"
+            className="group relative rounded-md overflow-hidden bg-[#EFE6D6] h-40 sm:h-56 md:h-80 flex items-end p-3 sm:p-5 md:p-7"
           >
             <Image
               src={menPhoto}
               alt="Мужская парфюмерия"
               fill
-              sizes="(min-width: 768px) 33vw, 100vw"
+              sizes="(min-width: 768px) 33vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
-              <h3 className="font-display text-2xl text-ivory">Мужская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+              <h3 className="font-display text-sm sm:text-xl md:text-2xl text-ivory leading-tight">Мужская парфюмерия</h3>
+              <span className="hidden sm:inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -267,17 +267,17 @@ export default async function Home() {
 
           <Link
             href="/catalog/sets"
-            className="group relative rounded-md overflow-hidden bg-wine h-72 md:h-80 flex items-end p-7"
+            className="group relative rounded-md overflow-hidden bg-wine h-40 sm:h-56 md:h-80 flex items-end p-3 sm:p-5 md:p-7"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <Gift
               size={64}
               strokeWidth={1}
-              className="absolute top-7 right-7 text-ivory/25 group-hover:scale-105 transition-transform duration-500"
+              className="hidden sm:block absolute top-7 right-7 text-ivory/25 group-hover:scale-105 transition-transform duration-500"
             />
             <div className="relative z-10">
-              <h3 className="font-display text-2xl text-ivory">Наборы</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+              <h3 className="font-display text-sm sm:text-xl md:text-2xl text-ivory leading-tight">Наборы</h3>
+              <span className="hidden sm:inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>

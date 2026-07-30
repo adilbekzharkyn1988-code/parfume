@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import { CartProvider } from "@/context/CartContext";
+import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
   title: "JUPARFUME — оригинальная нишевая парфюмерия в объёмах 5 и 10 мл",
@@ -27,14 +28,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // Лёгкий индекс для поиска в шапке — только slug/название/бренд,
+  // без картинок, описаний и пирамиды нот, чтобы не раздувать бандл.
+  const allProducts = await fetchProducts();
+  const searchIndex = allProducts.map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    brand: p.brand,
+  }));
+
   return (
     <html lang="ru">
       <body className="font-body antialiased">
         <CartProvider>
-          <Header />
+          <Header searchIndex={searchIndex} />
           {children}
           <Footer />
           <CartDrawer />

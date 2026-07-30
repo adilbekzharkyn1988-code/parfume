@@ -127,7 +127,7 @@ export default function Header({ searchIndex = [] as SearchItem[] }: { searchInd
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Название аромата..."
-                className="w-full rounded-full border border-ink/15 bg-paper pl-10 pr-4 py-3 text-sm outline-none focus:border-wine transition-colors"
+                className="w-full rounded-full border border-ink/15 bg-paper pl-10 pr-4 py-3 text-base outline-none focus:border-wine transition-colors"
               />
             </div>
 

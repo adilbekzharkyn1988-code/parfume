@@ -87,7 +87,7 @@ export default async function ProductPage({
         <div className="flex flex-col gap-6">
           <div>
             <p className="eyebrow text-wine mb-2">{product.brand} · {product.concentration}</p>
-            <h1 className="font-display text-4xl md:text-5xl leading-tight">{product.name}</h1>
+            <h1 className="font-body font-semibold text-3xl md:text-4xl leading-tight">{product.name}</h1>
             <div className="flex items-center gap-2 mt-3">
               <Star size={15} className="fill-gold text-gold" />
               <span className="font-mono text-sm">{product.rating}</span>

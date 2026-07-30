@@ -44,8 +44,8 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                   background: volume === v ? "rgba(110,42,59,0.06)" : "transparent",
                 }}
               >
-                <p className="font-display text-lg leading-none" style={{ color: "#1C1712" }}>{v} мл</p>
-                <p className="font-mono text-sm mt-1.5" style={{ color: "rgba(28,23,18,0.6)" }}>{formatPrice(p)}</p>
+                <p className="font-body font-semibold text-lg leading-none" style={{ color: "#1C1712" }}>{v} мл</p>
+                <p className="font-body text-sm mt-1.5" style={{ color: "rgba(28,23,18,0.6)" }}>{formatPrice(p)}</p>
               </button>
             );
           })}
@@ -78,7 +78,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
       <div className="flex items-end justify-between gap-3">
         <div className="min-w-0">
           <p className="eyebrow text-stone mb-1">Итого</p>
-          <p className="font-display text-2xl sm:text-3xl whitespace-nowrap">{formatPrice(totalPrice)}</p>
+          <p className="font-body font-bold text-2xl sm:text-3xl whitespace-nowrap">{formatPrice(totalPrice)}</p>
         </div>
         <button
           onClick={handleAdd}

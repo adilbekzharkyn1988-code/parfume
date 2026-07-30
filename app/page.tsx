@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck } from "lucide-react";
-import ProductCard from "@/components/ProductCard";
 import BestsellersGallery from "@/components/BestsellersGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
 import NotePyramid from "@/components/NotePyramid";
@@ -14,7 +13,7 @@ import { fetchProducts, fetchArticles } from "@/contentful/data";
 export default async function Home() {
   const allProducts = await fetchProducts();
   const best = allProducts.filter((p) => p.badge === "Хит продаж").slice(0, 8);
-  const fresh = allProducts.filter((p) => p.badge === "Новинка").slice(0, 3);
+  const fresh = allProducts.filter((p) => p.badge === "Новинка").slice(0, 8);
   const featuredArticles = (await fetchArticles()).slice(0, 3);
 
   return (
@@ -205,6 +204,20 @@ export default async function Home() {
         <BestsellersGallery products={best} />
       </section>
 
+      {/* NEW ARRIVALS */}
+      <section className="bg-white container-x py-8 md:py-12">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="eyebrow text-sage mb-2">Только что появились</p>
+            <h2 className="font-display text-2xl md:text-3xl">Новинки</h2>
+          </div>
+          <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+            Смотреть все <ArrowRight size={15} />
+          </Link>
+        </div>
+        <BestsellersGallery products={fresh} />
+      </section>
+
       {/* PYRAMID EXPLAINER */}
       <section className="bg-ivory-dim py-16 md:py-20">
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
@@ -236,21 +249,6 @@ export default async function Home() {
               }}
             />
           </div>
-        </div>
-      </section>
-
-      {/* NEW ARRIVALS */}
-      <section className="bg-white container-x py-16 md:py-20">
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <p className="eyebrow text-sage mb-2">Только что появились</p>
-            <h2 className="font-display text-3xl md:text-4xl">Новинки</h2>
-          </div>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {fresh.map((p) => (
-            <ProductCard key={p.slug} product={p} />
-          ))}
         </div>
       </section>
 

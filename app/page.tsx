@@ -451,7 +451,7 @@ export default async function Home() {
                 key={item.q}
                 className="group rounded-md border border-ink/10 bg-paper px-5 py-4 open:pb-4"
               >
-                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-display text-lg">
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-body font-semibold text-lg">
                   {item.q}
                   <span className="shrink-0 text-stone transition-transform group-open:rotate-45 font-mono text-xl">+</span>
                 </summary>

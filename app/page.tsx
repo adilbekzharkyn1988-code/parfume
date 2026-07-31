@@ -1,5 +1,26 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, CreditCard, Phone, MessageCircle, MapPin, Clock, ExternalLink, Instagram, Music2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, CreditCard, Phone, MessageCircle, MapPin, Clock, ExternalLink, Music2 } from "lucide-react";
+
+// lucide-react v1 убрал брендовые иконки (Instagram, Facebook, Twitter и т.д.),
+// поэтому используем собственный SVG вместо импорта из lucide-react
+function InstagramIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 import BestsellersGallery from "@/components/BestsellersGallery";
 import TestimonialsGallery from "@/components/TestimonialsGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
@@ -541,7 +562,7 @@ export default async function Home() {
               aria-label="Instagram"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <Instagram size={18} />
+              <InstagramIcon size={18} />
             </a>
             <a
               href="https://tiktok.com"

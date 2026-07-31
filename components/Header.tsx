@@ -142,11 +142,11 @@ export default function Header({ searchIndex = [] as SearchItem[] }: { searchInd
                       className="py-3 border-b border-line/60 flex flex-col hover:text-wine transition-colors"
                     >
                       <span className="font-body font-semibold text-sm">{p.name}</span>
-                      <span className="text-xs text-ink/50">{p.brand}</span>
+                      <span className="text-xs text-ink/60">{p.brand}</span>
                     </Link>
                   ))
                 ) : (
-                  <p className="py-4 text-sm text-ink/55">Таких ароматов нет</p>
+                  <p className="py-4 text-sm text-ink/70">Таких ароматов нет</p>
                 )}
               </div>
             )}

@@ -88,7 +88,7 @@ export default function TestimonialsGallery() {
         {testimonials.map((t, i) => (
           <div
             key={i}
-            className="group flex flex-col shrink-0 snap-start w-[85%] sm:w-[380px] md:w-[420px] bg-white rounded-md border border-ink/10 p-6 gap-4"
+            className="group flex flex-col shrink-0 snap-start w-[85%] sm:w-[380px] md:w-[420px] bg-white rounded-lg p-6 gap-4 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
           >
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-full bg-wine text-ivory flex items-center justify-center font-display text-lg shrink-0">

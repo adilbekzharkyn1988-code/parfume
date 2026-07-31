@@ -17,7 +17,7 @@ export default function NewsletterForm() {
         type="email"
         required
         placeholder="Ваш email"
-        className="flex-1 rounded-full px-5 py-3.5 bg-ivory text-ink placeholder:text-ink/40 outline-none"
+        className="flex-1 rounded-full px-5 py-3.5 bg-ivory text-ink placeholder:text-ink/55 outline-none"
       />
       <button className="eyebrow rounded-full px-6 py-3.5 bg-ink hover:bg-ink-soft transition-colors">
         {submitted ? "Готово ✓" : "Подписаться"}

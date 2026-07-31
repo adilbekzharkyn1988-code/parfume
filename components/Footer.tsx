@@ -11,7 +11,7 @@ export default function Footer() {
             Оригинальная нишевая парфюмерия в объёмах 5 и 10 мл. Тестируйте
             ароматы без переплаты за полный флакон — доставка по всему Казахстану.
           </p>
-          <div className="flex gap-4 mt-5 text-ink/50">
+          <div className="flex gap-4 mt-5 text-ink/60">
             <AtSign size={18} />
             <Send size={18} />
             <Mail size={18} />
@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-ink/50 mb-4">Каталог</p>
+          <p className="eyebrow text-ink/60 mb-4">Каталог</p>
           <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
             <li><Link href="/catalog">Все ароматы</Link></li>
             <li><Link href="/catalog/women">Женские</Link></li>
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-ink/50 mb-4">Компания</p>
+          <p className="eyebrow text-ink/60 mb-4">Компания</p>
           <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
             <li><Link href="/articles">Журнал</Link></li>
             <li><Link href="/#story">О нас</Link></li>
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-ink/50 mb-4">Контакты</p>
+          <p className="eyebrow text-ink/60 mb-4">Контакты</p>
           <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
             <li>+7 (999) 123-45-67</li>
             <li>hello@juparfume.example</li>
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-line">
-        <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-ink/45">
+        <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-ink/60">
           <p>© 2026 JUPARFUME. Сайт-прототип, наполнен тестовыми данными.</p>
           <p>Оригинальная парфюмерия · 100% проверенные партии</p>
         </div>

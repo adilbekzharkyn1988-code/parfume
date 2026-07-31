@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <div className="group flex flex-col rounded-md bg-white overflow-hidden transition-shadow hover:shadow-[0_8px_28px_-12px_rgba(28,23,18,0.35)]">
+    <div className="group flex flex-col rounded-lg bg-white overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] hover:shadow-[0_8px_28px_-12px_rgba(28,23,18,0.35)] transition-shadow">
       <Link
         href={`/product/${product.slug}`}
         className="relative block aspect-[4/5] overflow-hidden"
@@ -78,7 +78,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 key={v}
                 onClick={() => setVolume(v)}
                 aria-pressed={volume === v}
-                className="min-h-11 min-w-11 px-3.5 flex items-center justify-center rounded-full text-xs font-mono transition-colors"
+                className="min-h-11 min-w-11 px-3.5 flex items-center justify-center rounded-full text-sm font-mono transition-colors"
                 style={{
                   background: volume === v ? "#1C1712" : "transparent",
                   color: volume === v ? "#F6F1E9" : "#1C1712",

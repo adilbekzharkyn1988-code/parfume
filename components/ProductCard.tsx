@@ -1,19 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Product, familyColor } from "@/lib/data";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, stripBrandPrefix } from "@/lib/format";
 import BottleArt from "./BottleArt";
 import StarRating from "./StarRating";
+import { Heart } from "lucide-react";
 
 export default function ProductCard({ product }: { product: Product }) {
+  const [liked, setLiked] = useState(false);
   const c = familyColor[product.family];
+  const displayName = stripBrandPrefix(product.name, product.brand);
 
   return (
-    <div className="group flex flex-col rounded-lg bg-white overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] hover:shadow-[0_8px_28px_-12px_rgba(28,23,18,0.35)] transition-shadow">
+    <div className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]">
       <Link
         href={`/product/${product.slug}`}
-        className="relative block aspect-[4/5] overflow-hidden"
+        className="relative block aspect-square overflow-hidden"
         style={{ background: c.soft }}
       >
         {product.badge && (
@@ -24,6 +28,23 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.badge}
           </span>
         )}
+
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setLiked((v) => !v);
+          }}
+          aria-label={liked ? "Убрать из избранного" : "В избранное"}
+          className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-paper/90 backdrop-blur-sm flex items-center justify-center shadow-sm"
+        >
+          <Heart
+            size={16}
+            className={liked ? "fill-wine text-wine" : "text-ink/60"}
+          />
+        </button>
+
         {product.image ? (
           <img
             src={product.image}
@@ -38,25 +59,17 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
       </Link>
 
-      <div className="flex flex-col flex-1 p-4 gap-2.5">
-        <div>
-          <p className="eyebrow text-stone">{product.brand} · {product.familyLabel}</p>
-          <Link href={`/product/${product.slug}`}>
-            <h3 className="font-body font-semibold text-lg leading-tight mt-0.5 hover:text-wine transition-colors">
-              {product.name}
-            </h3>
-          </Link>
-        </div>
-
-        <div className="flex items-center gap-1 text-xs text-stone">
-          <StarRating rating={product.rating} size={13} />
-          <span>· {product.reviews} отзывов</span>
-        </div>
-
-        <p className="mt-auto pt-2 font-body font-bold text-2xl leading-none">
-          от {formatPrice(product.price5)}
+      <Link href={`/product/${product.slug}`} className="p-3 flex flex-col gap-0.5">
+        <p className="text-xs text-ink/55 tracking-wide truncate">{product.brand}</p>
+        <h3 className="font-body font-semibold text-sm md:text-base leading-snug line-clamp-2 min-h-[2.5em]">
+          {displayName}
+        </h3>
+        <StarRating rating={product.rating} size={12} className="mt-1" />
+        <p className="font-body font-semibold text-sm text-ink/80 mt-0.5">
+          {formatPrice(product.price5)}{" "}
+          <span className="font-normal text-xs text-ink/40">от 5мл</span>
         </p>
-      </div>
+      </Link>
     </div>
   );
 }

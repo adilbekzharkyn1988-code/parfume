@@ -46,6 +46,9 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
               >
                 <p className="font-body font-semibold text-lg leading-none" style={{ color: "#1C1712" }}>{v} мл</p>
                 <p className="font-body text-sm mt-1.5" style={{ color: "rgba(28,23,18,0.6)" }}>{formatPrice(p)}</p>
+                {v === "10" && (
+                  <p className="text-[11px] text-sage mt-1">Выгода {savingsPct}%</p>
+                )}
               </button>
             );
           })}

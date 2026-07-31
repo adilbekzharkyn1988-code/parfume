@@ -1,29 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { Product, familyColor } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
-import { useCart } from "@/context/CartContext";
 import BottleArt from "./BottleArt";
 import StarRating from "./StarRating";
 
 export default function ProductCard({ product }: { product: Product }) {
-  const [volume, setVolume] = useState<"5" | "10">("5");
-  const [added, setAdded] = useState(false);
-  const { addItem } = useCart();
   const c = familyColor[product.family];
-
-  const price = volume === "5" ? product.price5 : product.price10;
-  const perMl5 = product.price5 / 5;
-  const perMl10 = product.price10 / 10;
-  const savingsPct = Math.round((1 - perMl10 / perMl5) * 100);
-
-  function handleAdd() {
-    addItem({ slug: product.slug, name: product.name, brand: product.brand, volume, price });
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1600);
-  }
 
   return (
     <div className="group flex flex-col rounded-lg bg-white overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] hover:shadow-[0_8px_28px_-12px_rgba(28,23,18,0.35)] transition-shadow">
@@ -69,44 +53,9 @@ export default function ProductCard({ product }: { product: Product }) {
           <span>· {product.reviews} отзывов</span>
         </div>
 
-        <p className="text-sm text-ink/70 leading-snug line-clamp-2">{product.description}</p>
-
-        <div className="mt-auto pt-2 flex flex-col gap-3">
-          <div className="flex rounded-full border border-ink/15 p-0.5 w-fit">
-            {(["5", "10"] as const).map((v) => (
-              <button
-                key={v}
-                onClick={() => setVolume(v)}
-                aria-pressed={volume === v}
-                className="min-h-11 min-w-11 px-3.5 flex items-center justify-center rounded-full text-sm font-mono transition-colors"
-                style={{
-                  background: volume === v ? "#1C1712" : "transparent",
-                  color: volume === v ? "#F6F1E9" : "#1C1712",
-                  opacity: volume === v ? 1 : 0.6,
-                }}
-              >
-                {v} мл
-              </button>
-            ))}
-          </div>
-
-          <div className="flex items-end justify-between gap-2">
-            <div>
-              <p className="font-body font-bold text-2xl leading-none">{formatPrice(price)}</p>
-              {volume === "10" && (
-                <p className="text-[11px] text-sage mt-1">
-                  выгода {savingsPct}% за мл
-                </p>
-              )}
-            </div>
-            <button
-              onClick={handleAdd}
-              className="eyebrow min-h-11 flex items-center justify-center rounded-full px-5 bg-wine text-ivory hover:bg-wine-dark transition-colors whitespace-nowrap"
-            >
-              {added ? "Добавлено ✓" : "В корзину"}
-            </button>
-          </div>
-        </div>
+        <p className="mt-auto pt-2 font-body font-bold text-2xl leading-none">
+          от {formatPrice(product.price5)}
+        </p>
       </div>
     </div>
   );

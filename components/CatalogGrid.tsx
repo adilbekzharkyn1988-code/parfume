@@ -80,7 +80,7 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
       {filtered.length === 0 ? (
         <p className="text-stone py-16 text-center">В этой категории пока нет ароматов.</p>
       ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
           {filtered.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}

@@ -50,7 +50,7 @@ export default async function Home() {
             </span>*/}
             <h1
               style={{ animationDelay: "850ms" }}
-              className="hero-fade-in font-display text-[2.5rem] leading-[1] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
+              className="hero-fade-in font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
             >
               НИШЕВАЯ<br />И ЛЮКСОВАЯ<br />ПАРФЮМЕРИЯ
             </h1><br />
@@ -101,7 +101,7 @@ export default async function Home() {
       {/* POPULAR BRANDS 
       <section className="bg-ivory pt-10 pb-14 md:pt-14 md:pb-20">
         <div className="container-x">
-          <p className="eyebrow text-center text-ink/50 mb-7">Популярные бренды</p>
+          <p className="eyebrow text-center text-ink/60 mb-7">Популярные бренды</p>
         </div>
         <div className="brands-marquee">
           <div className="brands-marquee__track">
@@ -225,22 +225,22 @@ export default async function Home() {
           <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
           <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
         </div>
-        <div className="grid grid-cols-3 gap-3 md:gap-6">
+        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 pb-1 sm:mx-0 sm:px-0 sm:pb-0 sm:grid sm:grid-cols-3 sm:gap-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <Link
             href="/catalog/women"
-            className="group relative rounded-md overflow-hidden bg-[#F5E3E8] h-40 sm:h-56 md:h-80 flex items-end p-3 sm:p-5 md:p-7"
+            className="group relative shrink-0 snap-start w-[78%] sm:w-auto rounded-lg overflow-hidden bg-[#F5E3E8] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
           >
             <Image
               src={womenPhoto}
               alt="Женская парфюмерия"
               fill
-              sizes="(min-width: 768px) 33vw, 33vw"
+              sizes="(min-width: 768px) 33vw, 78vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
-              <h3 className="font-display text-sm sm:text-xl md:text-2xl text-ivory leading-tight">Женская парфюмерия</h3>
-              <span className="hidden sm:inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+              <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Женская парфюмерия</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -248,19 +248,19 @@ export default async function Home() {
 
           <Link
             href="/catalog/men"
-            className="group relative rounded-md overflow-hidden bg-[#EFE6D6] h-40 sm:h-56 md:h-80 flex items-end p-3 sm:p-5 md:p-7"
+            className="group relative shrink-0 snap-start w-[78%] sm:w-auto rounded-lg overflow-hidden bg-[#EFE6D6] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
           >
             <Image
               src={menPhoto}
               alt="Мужская парфюмерия"
               fill
-              sizes="(min-width: 768px) 33vw, 33vw"
+              sizes="(min-width: 768px) 33vw, 78vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
-              <h3 className="font-display text-sm sm:text-xl md:text-2xl text-ivory leading-tight">Мужская парфюмерия</h3>
-              <span className="hidden sm:inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+              <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Мужская парфюмерия</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -268,17 +268,17 @@ export default async function Home() {
 
           <Link
             href="/catalog/sets"
-            className="group relative rounded-md overflow-hidden bg-wine h-40 sm:h-56 md:h-80 flex items-end p-3 sm:p-5 md:p-7"
+            className="group relative shrink-0 snap-start w-[78%] sm:w-auto rounded-lg overflow-hidden bg-wine h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <Gift
               size={64}
               strokeWidth={1}
-              className="hidden sm:block absolute top-7 right-7 text-ivory/25 group-hover:scale-105 transition-transform duration-500"
+              className="absolute top-5 right-5 text-ivory/25 group-hover:scale-105 transition-transform duration-500"
             />
             <div className="relative z-10">
-              <h3 className="font-display text-sm sm:text-xl md:text-2xl text-ivory leading-tight">Наборы</h3>
-              <span className="hidden sm:inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+              <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Наборы</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -328,7 +328,7 @@ export default async function Home() {
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="eyebrow text-wine mb-2">Гид новичка</p>
-            <h2 className="font-display text-3xl md:text-4xl mb-5">
+            <h2 className="font-display text-2xl md:text-3xl mb-5">
               Как устроен аромат
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
@@ -362,7 +362,7 @@ export default async function Home() {
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="eyebrow text-wine mb-2">О нас</p>
-            <h2 className="font-display text-3xl md:text-4xl mb-5">
+            <h2 className="font-display text-2xl md:text-3xl mb-5">
               Парфюмерия без компромиссов и переплат
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
@@ -393,7 +393,7 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Журнал JUPARFUME</p>
-            <h2 className="font-display text-3xl md:text-4xl">Читать и разбираться</h2>
+            <h2 className="font-display text-2xl md:text-3xl">Читать и разбираться</h2>
           </div>
           <Link href="/articles" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Все статьи <ArrowRight size={15} />
@@ -425,7 +425,7 @@ export default async function Home() {
       <section id="faq" className="bg-ivory-dim py-16 md:py-20">
         <div className="container-x max-w-3xl">
           <p className="eyebrow text-wine mb-2 text-center">Вопросы и ответы</p>
-          <h2 className="font-display text-3xl md:text-4xl mb-10 text-center">
+          <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">
             Доставка, оплата, оригинальность
           </h2>
           <div className="flex flex-col gap-3">
@@ -466,7 +466,7 @@ export default async function Home() {
       <section className="bg-white container-x py-16 md:py-24">
         <div className="rounded-md bg-wine text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center">
           <p className="eyebrow text-gold-soft mb-3">Подписка</p>
-          <h2 className="font-display text-3xl md:text-4xl max-w-lg">
+          <h2 className="font-display text-2xl md:text-3xl max-w-lg">
             Получайте гид по ароматам и доступ к новинкам первыми
           </h2>
           <NewsletterForm />

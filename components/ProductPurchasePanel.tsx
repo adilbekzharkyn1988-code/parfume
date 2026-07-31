@@ -54,9 +54,13 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                 </div>
                 <Icon
                   iconNode={bottlePerfume}
-                  size={v === "10" ? 30 : 18}
-                  className="shrink-0"
-                  style={{ color: volume === v ? "#6E2A3B" : "rgba(28,23,18,0.35)" }}
+                  size={v === "10" ? 28 : 20}
+                  className="shrink-0 transition-all duration-300"
+                  style={{
+                    color: "#6E2A3B",
+                    opacity: volume === v ? 1 : 0,
+                    transform: volume === v ? "scale(1)" : "scale(0.6)",
+                  }}
                 />
               </button>
             );
@@ -84,12 +88,12 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
               <Plus size={15} />
             </button>
           </div>
-          <div className="flex items-center gap-1 justify-end">
+          <div className="flex flex-wrap items-center gap-1 justify-end min-w-0 max-w-[45%]">
             {Array.from({ length: qty }).map((_, i) => (
               <Icon
                 key={i}
                 iconNode={bottlePerfume}
-                size={volume === "10" ? 20 : 14}
+                size={volume === "10" ? 15 : 12}
                 className="text-wine shrink-0"
               />
             ))}

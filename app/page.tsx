@@ -501,7 +501,7 @@ export default async function Home() {
         <div className="rounded-md bg-wine text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center">
           <p className="eyebrow text-gold-soft mb-3">Свяжитесь с нами</p>
           <h2 className="font-display text-2xl md:text-3xl max-w-lg mb-8">
-            Контакты <span className="font-display-accent">JUPARFUME</span>
+            Контакты JUPARFUME
           </h2>
 
           <div className="flex flex-col gap-3 text-sm text-ivory/90 mb-6">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, CreditCard } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, CreditCard, Phone, MessageCircle, MapPin, Clock, ExternalLink, Instagram, Music2 } from "lucide-react";
 import BestsellersGallery from "@/components/BestsellersGallery";
 import TestimonialsGallery from "@/components/TestimonialsGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
@@ -8,7 +8,6 @@ import BottleArt from "@/components/BottleArt";
 import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
-import NewsletterForm from "@/components/NewsletterForm";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
 
 export default async function Home() {
@@ -475,17 +474,95 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* NEWSLETTER */}
+      {/* CONTACTS */}
       <section className="bg-white container-x py-16 md:py-24">
         <div className="rounded-md bg-wine text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center">
-          <p className="eyebrow text-gold-soft mb-3">Подписка</p>
-          <h2 className="font-display text-2xl md:text-3xl max-w-lg">
-            Получайте гид по ароматам и доступ к <span className="font-display-accent">новинкам</span> первыми
+          <p className="eyebrow text-gold-soft mb-3">Свяжитесь с нами</p>
+          <h2 className="font-display text-2xl md:text-3xl max-w-lg mb-8">
+            Контакты <span className="font-display-accent">JUPARFUME</span>
           </h2>
-          <NewsletterForm />
-          <p className="text-[11px] text-ivory/55 mt-4">
-            Прототип: форма ничего не отправляет
-          </p>
+
+          <div className="flex flex-col gap-3 text-sm text-ivory/90 mb-6">
+            <a
+              href="tel:+79991234567"
+              className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
+            >
+              <Phone size={16} className="shrink-0" /> +7 (999) 123-45-67
+            </a>
+            <a
+              href="https://wa.me/79991234567"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
+            >
+              <MessageCircle size={16} className="shrink-0" /> Написать в WhatsApp
+            </a>
+            <p className="inline-flex items-center gap-2 justify-center">
+              <MapPin size={16} className="shrink-0" /> Алматы, Досмухамедова 52
+            </p>
+            <p className="inline-flex items-center gap-2 justify-center">
+              <Clock size={16} className="shrink-0" /> Ежедневно, 10:00–20:00
+            </p>
+          </div>
+
+          <div className="flex items-center gap-5 text-xs mb-7">
+            <a
+              href="https://2gis.kz"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
+            >
+              2ГИС <ExternalLink size={12} />
+            </a>
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
+            >
+              Google Maps <ExternalLink size={12} />
+            </a>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="https://wa.me/79991234567"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
+            >
+              <MessageCircle size={18} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+              className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
+            >
+              <Music2 size={18} />
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-md overflow-hidden border border-ink/10 h-64 md:h-80">
+          <iframe
+            src="https://www.google.com/maps?q=Алматы,+Досмухамедова+52&output=embed"
+            className="w-full h-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Карта — где нас найти"
+          />
         </div>
       </section>
     </main>

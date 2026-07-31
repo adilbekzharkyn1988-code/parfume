@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Product } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/context/CartContext";
-import { Minus, Plus } from "lucide-react";
+import { Minus, Plus, FlaskConical } from "lucide-react";
 
 export default function ProductPurchasePanel({ product }: { product: Product }) {
   const [volume, setVolume] = useState<"5" | "10">("5");
@@ -55,24 +55,35 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
-        <p className="eyebrow text-stone">Количество</p>
-        <div className="flex items-center gap-3 border border-ink/15 rounded-full px-2 py-1.5">
-          <button
-            onClick={() => setQty((q) => Math.max(1, q - 1))}
-            aria-label="Уменьшить количество"
-            className="p-1 hover:text-wine transition-colors"
-          >
-            <Minus size={15} />
-          </button>
-          <span className="font-mono w-5 text-center">{qty}</span>
-          <button
-            onClick={() => setQty((q) => Math.min(9, q + 1))}
-            aria-label="Увеличить количество"
-            className="p-1 hover:text-wine transition-colors"
-          >
-            <Plus size={15} />
-          </button>
+      <div>
+        <p className="eyebrow text-stone mb-2">Количество</p>
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3 border border-ink/15 rounded-full px-2 py-1.5 shrink-0">
+            <button
+              onClick={() => setQty((q) => Math.max(1, q - 1))}
+              aria-label="Уменьшить количество"
+              className="p-1 hover:text-wine transition-colors"
+            >
+              <Minus size={15} />
+            </button>
+            <span className="font-mono w-5 text-center">{qty}</span>
+            <button
+              onClick={() => setQty((q) => Math.min(9, q + 1))}
+              aria-label="Увеличить количество"
+              className="p-1 hover:text-wine transition-colors"
+            >
+              <Plus size={15} />
+            </button>
+          </div>
+          <div className="flex items-center gap-1 justify-end">
+            {Array.from({ length: qty }).map((_, i) => (
+              <FlaskConical
+                key={i}
+                size={volume === "10" ? 17 : 12}
+                className="text-wine shrink-0"
+              />
+            ))}
+          </div>
         </div>
       </div>
 

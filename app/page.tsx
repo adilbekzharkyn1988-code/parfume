@@ -73,13 +73,13 @@ export default async function Home() {
               <span className="text-gold">⚡</span> Доставка по Алматы день в день
             </span>*/}
             <h1
-              style={{ animationDelay: "850ms" }}
+              style={{ animationDelay: "150ms" }}
               className="hero-fade-in font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
             >
               НИШЕВАЯ<br />И ЛЮКСОВАЯ<br />ПАРФЮМЕРИЯ
             </h1><br />
             <p
-              style={{ animationDelay: "1700ms" }}
+              style={{ animationDelay: "350ms" }}
               className="hero-fade-in font-body text-[1rem] leading-[1.4] sm:text-[1.6rem] md:text-[2rem] text-gold"
             >
               БОЛЕЕ 100 ОРИГИНАЛЬНЫХ АРОМАТОВ
@@ -87,7 +87,7 @@ export default async function Home() {
           </div>
 
           <div
-            style={{ animationDelay: "2550ms" }}
+            style={{ animationDelay: "550ms" }}
             className="hero-fade-in flex justify-start"
           >
             <Link

@@ -131,7 +131,7 @@ export default async function ProductPage({
         <section className="mt-16 md:mt-20">
           <p className="eyebrow text-wine mb-2">Вам может понравиться</p>
           <h2 className="font-display text-2xl md:text-3xl mb-8">Похожие ароматы</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {related.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}

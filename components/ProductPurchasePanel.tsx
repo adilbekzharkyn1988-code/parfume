@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Product } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/context/CartContext";
-import { Minus, Plus, FlaskConical } from "lucide-react";
+import { Minus, Plus, Icon } from "lucide-react";
+import { bottlePerfume } from "@lucide/lab";
 
 export default function ProductPurchasePanel({ product }: { product: Product }) {
   const [volume, setVolume] = useState<"5" | "10">("5");
@@ -38,17 +39,25 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                 key={v}
                 onClick={() => setVolume(v)}
                 aria-pressed={volume === v}
-                className="rounded-md border px-4 py-3 text-left transition-colors"
+                className="rounded-md border px-4 py-3 text-left transition-colors flex items-center justify-between gap-2"
                 style={{
                   borderColor: volume === v ? "#6E2A3B" : "rgba(28,23,18,0.15)",
                   background: volume === v ? "rgba(110,42,59,0.06)" : "transparent",
                 }}
               >
-                <p className="font-body font-semibold text-lg leading-none" style={{ color: "#1C1712" }}>{v} мл</p>
-                <p className="font-body text-sm mt-1.5" style={{ color: "rgba(28,23,18,0.6)" }}>{formatPrice(p)}</p>
-                {v === "10" && (
-                  <p className="text-[11px] text-sage mt-1">Выгода {savingsPct}%</p>
-                )}
+                <div className="min-w-0">
+                  <p className="font-body font-semibold text-lg leading-none" style={{ color: "#1C1712" }}>{v} мл</p>
+                  <p className="font-body text-sm mt-1.5" style={{ color: "rgba(28,23,18,0.6)" }}>{formatPrice(p)}</p>
+                  {v === "10" && (
+                    <p className="text-[11px] text-sage mt-1">Выгода {savingsPct}%</p>
+                  )}
+                </div>
+                <Icon
+                  iconNode={bottlePerfume}
+                  size={v === "10" ? 30 : 18}
+                  className="shrink-0"
+                  style={{ color: volume === v ? "#6E2A3B" : "rgba(28,23,18,0.35)" }}
+                />
               </button>
             );
           })}
@@ -77,9 +86,10 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
           </div>
           <div className="flex items-center gap-1 justify-end">
             {Array.from({ length: qty }).map((_, i) => (
-              <FlaskConical
+              <Icon
                 key={i}
-                size={volume === "10" ? 17 : 12}
+                iconNode={bottlePerfume}
+                size={volume === "10" ? 20 : 14}
                 className="text-wine shrink-0"
               />
             ))}

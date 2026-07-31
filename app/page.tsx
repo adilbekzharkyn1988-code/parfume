@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, Gift, CreditCard } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, FlaskConical, BadgeCheck, CreditCard } from "lucide-react";
 import BestsellersGallery from "@/components/BestsellersGallery";
 import TestimonialsGallery from "@/components/TestimonialsGallery";
 import HeroDragGallery from "@/components/HeroDragGalleryClient";
@@ -15,6 +15,9 @@ export default async function Home() {
   const allProducts = await fetchProducts();
   const best = allProducts.filter((p) => p.badge === "Хит продаж").slice(0, 8);
   const fresh = allProducts.filter((p) => p.badge === "Новинка").slice(0, 8);
+  const shownSlugs = new Set([...best, ...fresh].map((p) => p.slug));
+  const restProducts = allProducts.filter((p) => !shownSlugs.has(p.slug));
+  const juparfumePick = (restProducts.length ? restProducts : allProducts).slice(0, 8);
   const featuredArticles = (await fetchArticles()).slice(0, 3);
 
   return (
@@ -219,22 +222,50 @@ export default async function Home() {
         <BestsellersGallery products={fresh} />
       </section>
 
+      {/* JUPARFUME PICK */}
+      <section className="bg-white container-x py-8 md:py-12">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="eyebrow text-wine mb-2">Рекомендуем</p>
+            <h2 className="font-display text-2xl md:text-3xl">Выбор <span className="font-display-accent">JUPARFUME</span></h2>
+          </div>
+          <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+            Смотреть все <ArrowRight size={15} />
+          </Link>
+        </div>
+        <BestsellersGallery products={juparfumePick} />
+      </section>
+
+      {/* SETS */}
+      <section className="bg-white container-x py-8 md:py-12">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="eyebrow text-wine mb-2">Подарочный формат</p>
+            <h2 className="font-display text-2xl md:text-3xl">Наборы</h2>
+          </div>
+          <Link href="/catalog/sets" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+            Смотреть все <ArrowRight size={15} />
+          </Link>
+        </div>
+        <BestsellersGallery products={best} />
+      </section>
+
       {/* CATEGORIES */}
       <section className="bg-white container-x py-8 md:py-12">
         <div className="mb-8">
           <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
           <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
         </div>
-        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 pb-1 sm:mx-0 sm:px-0 sm:pb-0 sm:grid sm:grid-cols-3 sm:gap-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6">
           <Link
             href="/catalog/women"
-            className="group relative shrink-0 snap-start w-[78%] sm:w-auto rounded-lg overflow-hidden bg-[#F5E3E8] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
+            className="group relative rounded-lg overflow-hidden bg-[#F5E3E8] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
           >
             <Image
               src={womenPhoto}
               alt="Женская парфюмерия"
               fill
-              sizes="(min-width: 768px) 33vw, 78vw"
+              sizes="(min-width: 768px) 50vw, 50vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
@@ -248,36 +279,18 @@ export default async function Home() {
 
           <Link
             href="/catalog/men"
-            className="group relative shrink-0 snap-start w-[78%] sm:w-auto rounded-lg overflow-hidden bg-[#EFE6D6] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
+            className="group relative rounded-lg overflow-hidden bg-[#EFE6D6] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
           >
             <Image
               src={menPhoto}
               alt="Мужская парфюмерия"
               fill
-              sizes="(min-width: 768px) 33vw, 78vw"
+              sizes="(min-width: 768px) 50vw, 50vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="relative z-10">
               <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Мужская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
-                Смотреть каталог <ArrowRight size={15} />
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="/catalog/sets"
-            className="group relative shrink-0 snap-start w-[78%] sm:w-auto rounded-lg overflow-hidden bg-wine h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            <Gift
-              size={64}
-              strokeWidth={1}
-              className="absolute top-5 right-5 text-ivory/25 group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="relative z-10">
-              <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Наборы</h3>
               <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>

@@ -291,24 +291,24 @@ export default async function Home() {
         <div className="container-x">
           <div className="mb-6 md:mb-8">
             <p className="eyebrow text-wine mb-2">Наши преимущества</p>
-            <h2 className="font-display text-2xl md:text-3xl">Почему выбирают нас</h2>
+            <h2 className="font-display text-2xl md:text-3xl">Почему выбирают <span className="font-display-accent">нас</span></h2>
           </div>
-          <div className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8">
-            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
-              <BadgeCheck size={20} className="text-gold shrink-0 sm:size-6" />
-              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Только оригинальные ароматы</span>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
+            <div className="flex flex-col items-center text-center gap-3 rounded-md border border-ink/10 bg-paper px-4 py-6 sm:flex-row sm:text-left sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:gap-3">
+              <BadgeCheck size={28} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-xs sm:text-sm md:text-base text-ink/80 leading-snug">Только оригинальные ароматы</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
-              <FlaskConical size={20} className="text-gold shrink-0 sm:size-6" />
-              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Распив от 5 мл</span>
+            <div className="flex flex-col items-center text-center gap-3 rounded-md border border-ink/10 bg-paper px-4 py-6 sm:flex-row sm:text-left sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:gap-3">
+              <FlaskConical size={28} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-xs sm:text-sm md:text-base text-ink/80 leading-snug">Распив от 5 мл</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
-              <CreditCard size={20} className="text-gold shrink-0 sm:size-6" />
-              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Удобная оплата</span>
+            <div className="flex flex-col items-center text-center gap-3 rounded-md border border-ink/10 bg-paper px-4 py-6 sm:flex-row sm:text-left sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:gap-3">
+              <CreditCard size={28} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-xs sm:text-sm md:text-base text-ink/80 leading-snug">Удобная оплата</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
-              <Truck size={20} className="text-gold shrink-0 sm:size-6" />
-              <span className="text-[10px] sm:text-sm md:text-base text-ink/80 leading-snug">Доставка по РК</span>
+            <div className="flex flex-col items-center text-center gap-3 rounded-md border border-ink/10 bg-paper px-4 py-6 sm:flex-row sm:text-left sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:gap-3">
+              <Truck size={28} className="text-gold shrink-0 sm:size-6" />
+              <span className="text-xs sm:text-sm md:text-base text-ink/80 leading-snug">Доставка по РК</span>
             </div>
           </div>
         </div>
@@ -363,7 +363,7 @@ export default async function Home() {
           <div>
             <p className="eyebrow text-wine mb-2">О нас</p>
             <h2 className="font-display text-2xl md:text-3xl mb-5">
-              Парфюмерия без компромиссов и переплат
+              Парфюмерия без <span className="font-display-accent">компромиссов</span> и переплат
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
               JUPARFUME — витрина независимых парфюмерных домов, которые редко
@@ -393,7 +393,7 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Журнал JUPARFUME</p>
-            <h2 className="font-display text-2xl md:text-3xl">Читать и разбираться</h2>
+            <h2 className="font-display text-2xl md:text-3xl">Читать и <span className="font-display-accent">разбираться</span></h2>
           </div>
           <Link href="/articles" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Все статьи <ArrowRight size={15} />
@@ -426,7 +426,7 @@ export default async function Home() {
         <div className="container-x max-w-3xl">
           <p className="eyebrow text-wine mb-2 text-center">Вопросы и ответы</p>
           <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">
-            Доставка, оплата, оригинальность
+            Доставка, оплата, <span className="font-display-accent">оригинальность</span>
           </h2>
           <div className="flex flex-col gap-3">
             {[
@@ -467,7 +467,7 @@ export default async function Home() {
         <div className="rounded-md bg-wine text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center">
           <p className="eyebrow text-gold-soft mb-3">Подписка</p>
           <h2 className="font-display text-2xl md:text-3xl max-w-lg">
-            Получайте гид по ароматам и доступ к новинкам первыми
+            Получайте гид по ароматам и доступ к <span className="font-display-accent">новинкам</span> первыми
           </h2>
           <NewsletterForm />
           <p className="text-[11px] text-ivory/55 mt-4">

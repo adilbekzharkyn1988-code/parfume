@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource/cormorant/400.css";
 @import "@fontsource/cormorant/500.css";
+@import "@fontsource/cormorant/500-italic.css";
 @import "@fontsource/cormorant/600.css";
 @import "@fontsource/cormorant/600-italic.css";
 @import "@fontsource/cormorant/700.css";
@@ -84,7 +85,12 @@ body {
 
 .font-display {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
+}
+.font-display-accent {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--wine);
 }
 .font-mono {
   font-family: var(--font-mono);

@@ -196,7 +196,7 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Выбор покупателей</p>
-            <h2 className="font-display text-2xl md:text-3xl">Хиты продаж</h2>
+            <h2 className="font-display text-2xl md:text-3xl">Хиты <span className="font-display-accent">продаж</span></h2>
           </div>
           <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Смотреть все <ArrowRight size={15} />
@@ -318,7 +318,7 @@ export default async function Home() {
       <section className="bg-white container-x py-8 md:py-12">
         <div className="mb-8">
           <p className="eyebrow text-wine mb-2">Нам доверяют</p>
-          <h2 className="font-display text-2xl md:text-3xl">Отзывы покупателей</h2>
+          <h2 className="font-display text-2xl md:text-3xl">Отзывы <span className="font-display-accent">покупателей</span></h2>
         </div>
         <TestimonialsGallery />
       </section>
@@ -329,7 +329,7 @@ export default async function Home() {
           <div>
             <p className="eyebrow text-wine mb-2">Гид новичка</p>
             <h2 className="font-display text-2xl md:text-3xl mb-5">
-              Как устроен аромат
+              Как устроен <span className="font-display-accent">аромат</span>
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
               Любой сложный парфюм раскрывается поэтапно: верхние ноты вы

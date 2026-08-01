@@ -108,6 +108,12 @@ export default async function ProductPage({
         </div>
       </div>
 
+      <ProductReviews
+        rating={product.rating}
+        reviewsCount={product.reviews}
+        reviews={product.reviewsList}
+      />
+
       <section className="grid md:grid-cols-2 gap-10 md:gap-14 mt-16 md:mt-20 items-start">
         <div>
           <p className="eyebrow text-wine mb-2">История аромата</p>
@@ -120,12 +126,6 @@ export default async function ProductPage({
         </div>
       </section>
 
-
-      <ProductReviews
-        rating={product.rating}
-        reviewsCount={product.reviews}
-        reviews={product.reviewsList}
-      />
 
       {related.length > 0 && (
         <section className="mt-16 md:mt-20">

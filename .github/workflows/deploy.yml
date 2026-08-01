@@ -24,6 +24,8 @@ jobs:
           node-version: 22
       - run: npm install
       - run: npm run build
+        env:
+          NEXT_PUBLIC_LEADS_ENDPOINT: ${{ secrets.LEADS_ENDPOINT }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out

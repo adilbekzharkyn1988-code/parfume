@@ -54,7 +54,7 @@ export default function AdminPage() {
             value={login}
             onChange={(e) => setLogin(e.target.value)}
             placeholder="Логин"
-            className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-transparent focus:border-wine/30 transition-colors"
+            className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-ink/15 focus:border-wine transition-colors"
           />
           <input
             required
@@ -62,7 +62,7 @@ export default function AdminPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Пароль"
-            className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-transparent focus:border-wine/30 transition-colors"
+            className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-ink/15 focus:border-wine transition-colors"
           />
           {error && <p className="text-sm text-wine text-center">{error}</p>}
           <button

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/format";
 import { submitOrder } from "@/lib/leads";
+import { formatPhoneInput, isPhoneComplete } from "@/lib/phone";
 import { X, Trash2, Check } from "lucide-react";
 import Link from "next/link";
 
@@ -11,7 +12,8 @@ export default function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, clearCart, total } = useCart();
   const [step, setStep] = useState<"cart" | "form">("cart");
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+7");
+  const [phoneError, setPhoneError] = useState("");
   const [comment, setComment] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -22,13 +24,21 @@ export default function CartDrawer() {
       setStep("cart");
       setStatus("idle");
       setName("");
-      setPhone("");
+      setPhone("+7");
+      setPhoneError("");
       setComment("");
     }, 300);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isPhoneComplete(phone)) {
+      setPhoneError("Введите номер полностью");
+      return;
+    }
+    setPhoneError("");
+
     setStatus("sending");
     const res = await submitOrder({
       name,
@@ -160,7 +170,7 @@ export default function CartDrawer() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Как к вам обращаться"
-                className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-transparent focus:border-wine/30 transition-colors"
+                className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-ink/15 focus:border-wine transition-colors"
               />
             </div>
             <div>
@@ -168,11 +178,32 @@ export default function CartDrawer() {
               <input
                 required
                 type="tel"
+                inputMode="numeric"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => {
+                  setPhone(formatPhoneInput(e.target.value));
+                  if (phoneError) setPhoneError("");
+                }}
+                onKeyDown={(e) => {
+                  // Не даём стереть "+7" в начале
+                  if (
+                    (e.key === "Backspace" || e.key === "Delete") &&
+                    phone.length <= 2
+                  ) {
+                    e.preventDefault();
+                  }
+                }}
+                onBlur={() => {
+                  if (phone !== "+7" && !isPhoneComplete(phone)) {
+                    setPhoneError("Введите номер полностью");
+                  }
+                }}
                 placeholder="+7 (___) ___-__-__"
-                className="w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border border-transparent focus:border-wine/30 transition-colors"
+                className={`w-full rounded-full px-5 py-3 bg-ivory-dim outline-none border transition-colors ${
+                  phoneError ? "border-wine" : "border-ink/15 focus:border-wine"
+                }`}
               />
+              {phoneError && <p className="text-xs text-wine mt-1.5 ml-5">{phoneError}</p>}
             </div>
             <div>
               <label className="text-xs text-stone mb-1.5 block">Комментарий (необязательно)</label>
@@ -181,7 +212,7 @@ export default function CartDrawer() {
                 onChange={(e) => setComment(e.target.value)}
                 placeholder="Удобное время для связи, пожелания к доставке"
                 rows={3}
-                className="w-full rounded-md px-5 py-3 bg-ivory-dim outline-none border border-transparent focus:border-wine/30 transition-colors resize-none"
+                className="w-full rounded-md px-5 py-3 bg-ivory-dim outline-none border border-ink/15 focus:border-wine transition-colors resize-none"
               />
             </div>
 

@@ -18,10 +18,19 @@ import { createClient } from "contentful";
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 
-const spaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "e8y2nngpr6yc";
-const accessToken =
-  process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN ||
-  "upNLkRBWF2F3B_I_LkpJsd09KxfJh7_N2G2Fp_awRxY";
+const spaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
+const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
+
+if (!spaceId || !accessToken) {
+  console.error(
+    "\n❌ Не заданы переменные окружения NEXT_PUBLIC_CONTENTFUL_SPACE_ID и/или NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN.\n" +
+      "   Локально: создайте .env.local с этими переменными (см. .env.example).\n" +
+      "   В GitHub Actions: проверьте секреты CONTENTFUL_SPACE_ID и CONTENTFUL_ACCESS_TOKEN в " +
+      "Settings → Secrets and variables → Actions.\n" +
+      "   Токен должен быть именно 'Content Delivery API - access token' из Contentful (Settings → API keys).\n"
+  );
+  process.exit(1);
+}
 
 const client = createClient({ space: spaceId, accessToken });
 

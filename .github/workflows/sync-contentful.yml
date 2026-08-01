@@ -18,6 +18,13 @@ jobs:
 
       - run: npm install
 
+      - name: Check Contentful secrets are set
+        run: |
+          if [ -z "${{ secrets.CONTENTFUL_SPACE_ID }}" ] || [ -z "${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" ]; then
+            echo "::error::Секреты CONTENTFUL_SPACE_ID и/или CONTENTFUL_ACCESS_TOKEN не заданы в Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
       - run: npm run sync:contentful
         env:
           NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}

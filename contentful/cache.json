@@ -1,5 +1,4156 @@
 {
-  "generatedAt": null,
-  "products": [],
+  "generatedAt": "2026-08-01T07:16:54.110Z",
+  "products": [
+    {
+      "slug": "acqua-di-parma-colonia-c-l-u-b",
+      "name": "Acqua di Parma Colonia C.L.U.B.",
+      "brand": "Acqua di Parma",
+      "gender": "men",
+      "family": "spicy",
+      "concentration": "Eau de Parfum",
+      "description": "свежий цитрусово-зелёный аромат с пряной чистотой. Ощущается аккуратно, современно и очень «чисто».",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Италия Парфюмер: Olivier Cresp — официальный Год создания: 2022 Ноты: бергамот, лимон, розовый перец, чёрный перец, шисо, розмарин, кедр, мускус Для кого: мужской / свежий ароматический Куда: день, весна/лето, офис, повседневное ношение По ощущениям: свежий цитрусово-зелёный аромат с пряной чистотой. Ощущается аккуратно, современно и очень «чисто».",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "лимон"
+        ],
+        "heart": [
+          "розовый перец",
+          "чёрный перец"
+        ],
+        "base": [
+          "шисо",
+          "розмарин",
+          "кедр",
+          "мускус"
+        ]
+      },
+      "price5": 10000,
+      "price10": 18000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5GaLVKtLxXfP8w6YxK5kDo/8acfc9de471bc63ebd3550668f1bb22f/29cf36cf893c81d18905d9201d3a9db4.png",
+      "seasonality": {
+        "winter": 20,
+        "spring": 75,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 30
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "al-fareed-arabian-oud",
+      "name": "Al Fareed Arabian Oud",
+      "brand": "Arabian Oud",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "густой тёмный уд с амбровой сладостью и сухими специями; звучит мощно, насыщенно и «плотно восточно», с сильным шлейфом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Saudi Arabia Парфюмер: не раскрыт брендом Год создания: не указан официально Ноты: уд, амбра, мускус, специи, древесные аккорды (официальная пирамида брендом не полностью раскрывается) Для кого: унисекс с masculine уклоном Куда: вечер, осень/зима, мероприятия, холодная погода, статусный восточный аромат По ощущениям: густой тёмный уд с амбровой сладостью и сухими специями; звучит мощно, насыщенно и «плотно восточно», с сильным шлейфом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "уд"
+        ],
+        "heart": [
+          "амбра"
+        ],
+        "base": [
+          "мускус",
+          "специи",
+          "древесные аккорды (официальная пирамида брендом не полностью раскрывается)"
+        ]
+      },
+      "price5": 10000,
+      "price10": 18000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/24entVhFGfn4QJdzgI9TwO/be5cb57836c9fd09269eb893b6f4d9f2/a191409cc5e086c615dd1d88e5f4f39b.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 30,
+        "summer": 15,
+        "autumn": 65,
+        "day": 25,
+        "evening": 85
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "amouage-epic-man",
+      "name": "Amouage Epic Man",
+      "brand": "Amouage",
+      "gender": "men",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "очень тёмный пряно-удовый аромат с мощным ладаном и смолами; ощущается густо, сухо и «имперски», как дорогой восточный дым с кожано-древесной глубиной",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Amouage — Оман Парфюмер: Randa Hammami Год создания: 2009  Ноты: розовый перец, ладан, шафран, кардамон, мирра, уд, кожа, пачули, кедр, мускус  Для кого: мужской, smoky oriental woody  Куда: вечер, осень/зима, костюм, мероприятия, статусный выход По ощущениям: очень тёмный пряно-удовый аромат с мощным ладаном и смолами; ощущается густо, сухо и «имперски», как дорогой восточный дым с кожано-древесной глубиной",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "розовый перец",
+          "ладан",
+          "шафран"
+        ],
+        "heart": [
+          "кардамон",
+          "мирра",
+          "уд"
+        ],
+        "base": [
+          "кожа",
+          "пачули",
+          "кедр",
+          "мускус"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4EDASOPpvgOGbNC1GzwY8G/34114b35fff568c564387f84949b1687/1d047a26da79e5a9182db7f3f02b4468.png",
+      "seasonality": {
+        "winter": 75,
+        "spring": 40,
+        "summer": 20,
+        "autumn": 70,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "amouage-guidance",
+      "name": "Amouage Guidance",
+      "brand": "Amouage",
+      "gender": "women",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "сливочно-цветочный аромат с грушей и ореховой мягкостью, тёплой ванилью и амбровой базой; звучит мягко, обволакивающе и очень «люксово-пудрово»",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Amouage — Оман Парфюмер: Quentin Bisch Год создания: 2023 Ноты: груша, лесной орех, шафран, османтус, роза Sambac, жасмин самбак, сандал, ваниль, амбра, Akigalawood Для кого: женский / feminine creamy floral amber Куда: вечер, свидания, мероприятия, осень/зима, luxury everyday scent По ощущениям: сливочно-цветочный аромат с грушей и ореховой мягкостью, тёплой ванилью и амбровой базой; звучит мягко, обволакивающе и очень «люксово-пудрово»",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "груша",
+          "лесной орех",
+          "шафран"
+        ],
+        "heart": [
+          "османтус",
+          "роза Sambac",
+          "жасмин самбак"
+        ],
+        "base": [
+          "сандал",
+          "ваниль",
+          "амбра",
+          "Akigalawood"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5LMf9yB7BBVpRSpGOM5fx/49a1d9701d4519fce513e9b190dc9fb5/14f37d1c5e6819657ee6fc848e28f913.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "amouage-guidance-46",
+      "name": "Amouage Guidance 46",
+      "brand": "Amouage",
+      "gender": "women",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "более насыщенная и «воздушно-цветочная» версия Guidance с розовой водой и усиленной кремово-амбровой базой; звучит мягко, густо и очень обволакивающе",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Amouage — Оман Парфюмер: Quentin Bisch Год создания: 2024  Ноты: груша, розовая вода, лесной орех, ладан, шафран, жасмин самбак, османтус, сандал, ваниль, амбра, Akigalawood  Для кого: унисекс, creamy floral woody extrait с feminine уклоном  Куда: вечер, свидания, мероприятия, осень/зима, luxury signature scent По ощущениям: более насыщенная и «воздушно-цветочная» версия Guidance с розовой водой и усиленной кремово-амбровой базой; звучит мягко, густо и очень обволакивающе",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "груша",
+          "розовая вода",
+          "лесной орех"
+        ],
+        "heart": [
+          "ладан",
+          "шафран",
+          "жасмин самбак"
+        ],
+        "base": [
+          "османтус",
+          "сандал",
+          "ваниль",
+          "амбра",
+          "Akigalawood"
+        ]
+      },
+      "price5": 20000,
+      "price10": 38000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7Dhv1hxoUAPZqZyiiBesy7/24c602025defa89a7658d609f10a1c13/892af8a507d339a9d78eb0ad8415f023.png",
+      "seasonality": {
+        "winter": 55,
+        "spring": 60,
+        "summer": 40,
+        "autumn": 55,
+        "day": 55,
+        "evening": 65
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "amouage-outlands",
+      "name": "Amouage Outlands",
+      "brand": "Amouage",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "густой смолисто-пряный восточный аромат с ладаном и шафраном, цитрусовым стартом и тёмной амброво-удовой базой; звучит мощно, многослойно и «дорого дымно»",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Amouage — Оман Парфюмер: Cécile Zarokian Год создания: 2024 Ноты: ладан, кардамон, цитрусы, пачули, шафран, роза, амбра, бензоин, ваниль, уд Для кого: унисекс, с уклоном в masculine Куда: вечер, осень/зима, мероприятия, свидания, вечерний город По ощущениям: густой смолисто-пряный восточный аромат с ладаном и шафраном, цитрусовым стартом и тёмной амброво-удовой базой; звучит мощно, многослойно и «дорого дымно»",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ладан",
+          "кардамон",
+          "цитрусы"
+        ],
+        "heart": [
+          "пачули",
+          "шафран",
+          "роза"
+        ],
+        "base": [
+          "амбра",
+          "бензоин",
+          "ваниль",
+          "уд"
+        ]
+      },
+      "price5": 22500,
+      "price10": 40000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/718Eynuis23GPeJTNiIEvP/ed5ee9851d7a8bb98c6e778f0d6c9908/037d98cdae5c3a36e0db6355d3e83b04.webp",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "amouage-portrayal-man",
+      "name": "Amouage Portrayal Man",
+      "brand": "Amouage",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "зелёный фиалково-древесный аромат с сухим можжевельником и ветивером; звучит минималистично, холодно и слегка ретро-элегантно",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Amouage — Оман Парфюмер: Pierre Negrin Год создания: 2019 Ноты: фиалковые листья, можжевельник, ветивер Для кого: мужской, green aromatic woody Куда: день/вечер, весна/осень, офис, smart casual, творческие мероприятия По ощущениям: зелёный фиалково-древесный аромат с сухим можжевельником и ветивером; звучит минималистично, холодно и слегка ретро-элегантно",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "фиалковые листья"
+        ],
+        "heart": [
+          "можжевельник"
+        ],
+        "base": [
+          "ветивер"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1a3n3LYwxWHJsMHPz79hRF/ebecbf27b35aed9f25597f6a56162528/bc0c71c0958d621655df8a25d6f84827.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "boadicea-the-victorious-hanuman",
+      "name": "Boadicea The Victorious Hanuman",
+      "brand": "На мероприятие",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "тёплый восточно-цветочный уд с шафраном и амбровой сладостью; звучит густо, дорого и насыщенно, с мягкой кремовой древесной базой",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Boadicea the Victorious — Великобритания Парфюмер: не раскрыт брендом Год создания: 2016 Ноты: апельсин, бергамот, шафран, жасмин, роза, уд, сандал, амбра, мускус, ваниль Для кого: унисекс, oriental woody floral Куда: вечер, мероприятия, осень/зима, luxury outings, статусный scent По ощущениям: тёплый восточно-цветочный уд с шафраном и амбровой сладостью; звучит густо, дорого и насыщенно, с мягкой кремовой древесной базой",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "апельсин",
+          "бергамот",
+          "шафран"
+        ],
+        "heart": [
+          "жасмин",
+          "роза",
+          "уд"
+        ],
+        "base": [
+          "сандал",
+          "амбра",
+          "мускус",
+          "ваниль"
+        ]
+      },
+      "price5": 30000,
+      "price10": 60000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4RDIGUO7pCvcI5G3ilZUlt/77aa35f6234ca1826cb5986c1e8d99e3/30ab826cb32f50fe5b93e2e48593ec15.webp",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "bvlgari-tygar",
+      "name": "Bvlgari Tygar",
+      "brand": "Bvlgary",
+      "gender": "unisex",
+      "family": "spicy",
+      "concentration": "Eau de Parfum",
+      "description": "очень яркий сочный грейпфрут с имбирной остротой и чистой амброксановой базой; звучит минималистично, дорого и «искристо-свежо»",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Bvlgari — Италия Парфюмер: Jacques Cavallier Год создания: 2016 Ноты: грейпфрут, амброксан, имбирь Для кого: унисекс с masculine уклоном, fresh woody citrus Куда: день, весна/лето, офис, путешествия, everyday luxury scent По ощущениям: очень яркий сочный грейпфрут с имбирной остротой и чистой амброксановой базой; звучит минималистично, дорого и «искристо-свежо»",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут"
+        ],
+        "heart": [
+          "амброксан"
+        ],
+        "base": [
+          "имбирь"
+        ]
+      },
+      "price5": 17500,
+      "price10": 30000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2JYz25vs191AQQayqmcqYp/1c3f2824c874ba49f96ccc05a50e3447/58d19f9a3291e30358c44d7059c5559e.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "chopard-vetiver",
+      "name": "Chopard Vetiver",
+      "brand": "Chopard",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "сухой зелёно-древесный ветивер с лёгкой табачной горчинкой; звучит строго, чисто и минималистично, с классическим «мужским» характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Chopard — Швейцария Парфюмер: Alberto Morillas Год создания: 2017 Ноты: ветивер, зелёные ноты, древесные ноты, табак Для кого: мужской / masculine woody vetiver Куда: день, офис, весна/осень, спокойный повседневный аромат По ощущениям: сухой зелёно-древесный ветивер с лёгкой табачной горчинкой; звучит строго, чисто и минималистично, с классическим «мужским» характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ветивер"
+        ],
+        "heart": [
+          "зелёные ноты"
+        ],
+        "base": [
+          "древесные ноты",
+          "табак"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6IPZCvwwN4MHMY4A4Ilvsc/d8cc523c4a227a6a704c4f051f7f1b8b/1009f66a12c609cd7f3a97d270589ca8.png",
+      "seasonality": {
+        "winter": 40,
+        "spring": 60,
+        "summer": 65,
+        "autumn": 45,
+        "day": 70,
+        "evening": 40
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-150",
+      "name": "Clive Christian 150",
+      "brand": "Clive Christian",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "Это стильный и спокойный аромат без лишней громкости. В начале чувствуется сладковатая ежевика с пряными и зелеными оттенками. Затем появляются теплые древесные ноты и немного специй, а в конце раскры",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Великобритания Парфюмер: Angela Stavrevska Год создания: 2022 Ноты: Ежевика, герань, фиалка, черный перец, кедр, мускатный орех, дубовый мох, аккорд выдержанного виски. Для кого: Унисекс. Подойдет и мужчинам, и женщинам, которые любят необычные древесные ароматы с легкой ягодной свежестью. Куда: Хороший выбор для работы, прогулок, встреч, ресторанов и вечерних выходов. Особенно красиво звучит в теплую погоду и межсезонье. По ощущениям: Это стильный и спокойный аромат без лишней громкости. В начале чувствуется сладковатая ежевика с пряными и зелеными оттенками. Затем появляются теплые древесные ноты и немного специй, а в конце раскрываются дубовый мох и мягкий аккорд выдержанного виски. Аромат создает впечатление дорогого, уверенного и ухоженного человека. Он не пытается привлечь внимание любой ценой, а подчеркивает хороший вкус и индивидуальность.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "Ежевика",
+          "герань"
+        ],
+        "heart": [
+          "фиалка",
+          "черный перец"
+        ],
+        "base": [
+          "кедр",
+          "мускатный орех",
+          "дубовый мох",
+          "аккорд выдержанного виски."
+        ]
+      },
+      "price5": 30000,
+      "price10": 54000,
+      "rating": 5,
+      "reviews": 1,
+      "badge": "Новинка",
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2y3uLnWBXMMU5mGl7HdwCt/c7524fdc9b8abaae75406e2bd5c29698/3daae2526c4eeed6e370d71b69e7d292.avif",
+      "seasonality": {
+        "winter": 65,
+        "spring": 40,
+        "summer": 30,
+        "autumn": 65,
+        "day": 45,
+        "evening": 70
+      },
+      "reviewsList": [
+        {
+          "user": "Данияр С.",
+          "text": "Клайв Кристиан — это отдельная лига. Аромат плотный, дорогой, чувствуется с первой минуты и держится до вечера. Брал 5 мл на пробу — теперь понимаю, почему все хвалят. Один из лучших в коллекции.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "slug": "clive-christian-1872",
+      "name": "Clive Christian 1872",
+      "brand": "На мероприятие",
+      "gender": "men",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусовый старт с травяной зеленью и мягкими специями; дальше становится более гладким, древесно-амбровым и «джентльменским», чистым и классически дорогим, без тяжести или сладости",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Великобритания Парфюмер: Geza Schoen (официально для версии For Men 2001) Год создания: 2001 Ноты: верх: бергамот, лайм, грейпфрут, мандарин, лаванда, розмарин, галбанум, перец, ананас, персик, мускатный орехсердце: шалфей, жасмин, фрезия, ноготкибаза: кедр, пачули, мускус, амбра, ладан, лабданумДля кого: мужской / классический citrus aromatic Куда: день, весна/лето, офис, повседневное ношение, элегантный fresh scent По ощущениям: яркий цитрусовый старт с травяной зеленью и мягкими специями; дальше становится более гладким, древесно-амбровым и «джентльменским», чистым и классически дорогим, без тяжести или сладости",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "верх: бергамот",
+          "лайм",
+          "грейпфрут",
+          "мандарин",
+          "лаванда",
+          "розмарин"
+        ],
+        "heart": [
+          "галбанум",
+          "перец",
+          "ананас",
+          "персик",
+          "мускатный орехсердце: шалфей",
+          "жасмин"
+        ],
+        "base": [
+          "фрезия",
+          "ноготкибаза: кедр",
+          "пачули",
+          "мускус",
+          "амбра",
+          "ладан",
+          "лабданумДля кого: мужской / классический citrus aromatic"
+        ]
+      },
+      "price5": 30000,
+      "price10": 55000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4tnV8MwNiPD2Ueo9Q5tigB/29cf487e7c37e84697e7cef81c36f055/3835d8072cd4a78caf4f2d4f86ccfe4c.webp",
+      "seasonality": {
+        "winter": 35,
+        "spring": 70,
+        "summer": 55,
+        "autumn": 40,
+        "day": 65,
+        "evening": 45
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-blonde-amber",
+      "name": "Clive Christian Blonde Amber",
+      "brand": "Clive Christian",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "тёплый амброво-табачный аромат с цитрусовым стартом и мягкой сладостью тонка; звучит густо, бархатно и «золотисто», с дорогим вечерним характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Clive Christian — Великобритания Парфюмер: Vincent Ricord Год создания: 2022 Ноты: горький апельсин, табак (blonde tobacco), бобы тонка, амбра, древесные аккорды Для кого: унисекс Куда: вечер, осень/зима, мероприятия, formal occasions, luxury night scent По ощущениям: тёплый амброво-табачный аромат с цитрусовым стартом и мягкой сладостью тонка; звучит густо, бархатно и «золотисто», с дорогим вечерним характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "горький апельсин"
+        ],
+        "heart": [
+          "табак (blonde tobacco)"
+        ],
+        "base": [
+          "бобы тонка",
+          "амбра",
+          "древесные аккорды"
+        ]
+      },
+      "price5": 40000,
+      "price10": 80000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2yW9u0jvqXUf4s6KrrxRWC/169bf74884fe84b046409d5d2bac68f3/60e7cbdb9b15654503565d40cb8d59bb.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 35,
+        "summer": 20,
+        "autumn": 70,
+        "day": 25,
+        "evening": 85
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-crab-apple-blossom",
+      "name": "Clive Christian Crab Apple Blossom",
+      "brand": "На день",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "нежный цветочно-фруктовый аромат с лёгкой кислинкой ревеня и мягкой древесной базой; звучит воздушно, свежо и очень «чисто весенне», без тяжести",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Clive Christian — Великобритания Парфюмер: Kamila Lelakova Год создания: 2020 Ноты: цветок яблони, ревень, сандал Для кого: унисекс Куда: день, весна/лето, прогулки, отпуск, повседневное luxury-ношение По ощущениям: нежный цветочно-фруктовый аромат с лёгкой кислинкой ревеня и мягкой древесной базой; звучит воздушно, свежо и очень «чисто весенне», без тяжести",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "цветок яблони"
+        ],
+        "heart": [
+          "ревень"
+        ],
+        "base": [
+          "сандал"
+        ]
+      },
+      "price5": 30000,
+      "price10": 55000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6SpH6ClKtI4T15oSFM6sDE/29ff5d88aca3d2d97bc725e1dbb2c29d/f9004c4bd61b6edffbcb80bf962b12dd.webp",
+      "seasonality": {
+        "winter": 15,
+        "spring": 85,
+        "summer": 60,
+        "autumn": 15,
+        "day": 75,
+        "evening": 25
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-hedonistic",
+      "name": "Clive Christian Hedonistic",
+      "brand": "Clive Christian",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "тёплый табачно-смолистый аромат с зелёной горечью мате; звучит густо, слегка дымно и очень «интеллектуально сухо», без сладости, с глубоким вечерним характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Clive Christian — Великобритания Парфюмер: не раскрыт брендом Год создания: 2017 Ноты: чай мате, табак, лабданум Для кого: унисекс Куда: вечер, мероприятия, осень/зима, luxury evening scent По ощущениям: тёплый табачно-смолистый аромат с зелёной горечью мате; звучит густо, слегка дымно и очень «интеллектуально сухо», без сладости, с глубоким вечерним характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "чай мате"
+        ],
+        "heart": [
+          "табак"
+        ],
+        "base": [
+          "лабданум"
+        ]
+      },
+      "price5": 35000,
+      "price10": 60000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5kgyYctvETh1KSgWz93e8H/3ef807560c9b6697875aecaf8fedb56a/0e4d356204ea06a80a889d3b4a0a6323.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-matsukita",
+      "name": "Clive Christian Matsukita",
+      "brand": "Clive Christian",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "зелёно-пряный аромат с чайной горечью мате и цветочной прозрачностью жасмина; звучит свежо, сухо и элегантно, с древесно-амбровой глубиной в базе",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Великобритания Парфюмер: не раскрыт брендом Год создания: 2021 Ноты: бергамот, розовый перец, мускатный орех, чай мате, китайский жасмин, жасмин самбак, гваяковое дерево, амбра, мускус, древесные ноты Для кого: унисекс Куда: вечер, весна/осень, мероприятия, signature scent По ощущениям: зелёно-пряный аромат с чайной горечью мате и цветочной прозрачностью жасмина; звучит свежо, сухо и элегантно, с древесно-амбровой глубиной в базе",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "розовый перец",
+          "мускатный орех"
+        ],
+        "heart": [
+          "чай мате",
+          "китайский жасмин",
+          "жасмин самбак"
+        ],
+        "base": [
+          "гваяковое дерево",
+          "амбра",
+          "мускус",
+          "древесные ноты"
+        ]
+      },
+      "price5": 40000,
+      "price10": 70000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/CNZPllVr7eZNqrohDPuWT/5c9978f227afe0b635047fe3ca184086/5e31e9d827872d7eb532cd116d3fe83c.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-red-tea-vetiver",
+      "name": "Clive Christian Red tea Vetiver",
+      "brand": "Clive Christian",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "свежий цитрусово-чайный аромат с лёгкой древесной сухостью ветивера; звучит чисто, воздушно и «спокойно минималистично», без сладости и тяжести",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Clive Christian — Великобритания Парфюмер: не раскрыт брендом Год создания: 2025  Ноты: лимон Primofiore, бергамот, ройбуш (красный чай), ветивер, сандал, мускус  Для кого: унисекс  Куда: день, весна/лето, офис, прогулки, спокойный luxury fresh scent По ощущениям: свежий цитрусово-чайный аромат с лёгкой древесной сухостью ветивера; звучит чисто, воздушно и «спокойно минималистично», без сладости и тяжести",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "лимон Primofiore",
+          "бергамот"
+        ],
+        "heart": [
+          "ройбуш (красный чай)",
+          "ветивер"
+        ],
+        "base": [
+          "сандал",
+          "мускус"
+        ]
+      },
+      "price5": 30000,
+      "price10": 55000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/153KSNeZKFviRwZrUYlXfC/8fd599d81376e3e64c952a247e809a1a/73c1faa375f17257b9f71820dea80e0f.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "clive-christian-town-and-country",
+      "name": "Clive Christian Town and Country",
+      "brand": "Clive Christian",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Clive Christian — Великобритания Парфюмер: официально не раскрыт брендом Год создания: 2023 Ноты: мускатный шалфей, сандал, серая амбра (grey amber)  Для кого: унисекс Куда: день/вечер, весна/осень, офис, smart casual, elegant signature scent Дополнительно: аромат основан на архивной формуле Crown Perfumery 1925 года и ассоциируется с Winston Churchill.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "мускатный шалфей"
+        ],
+        "heart": [
+          "сандал"
+        ],
+        "base": [
+          "серая амбра (grey amber)"
+        ]
+      },
+      "price5": 30000,
+      "price10": 55000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7AC24ornDM6zZ8SSPFL8BO/4074d1de4922928d5b45d32f37b19cf5/098f55979ae14b56285a9c7283721b16.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "creed-aventus",
+      "name": "Creed Aventus",
+      "brand": "Creed",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "сочный ананасово-цитрусовый старт с дымной берёзовой древесностью и амброво-мускусной базой; звучит уверенно, дорого и харизматично, с узнаваемым «статусным» шлейфом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Creed — Франция Парфюмер: официально не раскрыт брендом Год создания: 2010 Ноты: ананас, бергамот, чёрная смородина, яблоко, берёза, пачули, жасмин, мускус, дубовый мох, амбра, ваниль Для кого: мужской Куда: универсально — офис, встречи, вечер, свидания, весна/осень, signature scent По ощущениям: сочный ананасово-цитрусовый старт с дымной берёзовой древесностью и амброво-мускусной базой; звучит уверенно, дорого и харизматично, с узнаваемым «статусным» шлейфом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ананас",
+          "бергамот",
+          "чёрная смородина"
+        ],
+        "heart": [
+          "яблоко",
+          "берёза",
+          "пачули"
+        ],
+        "base": [
+          "жасмин",
+          "мускус",
+          "дубовый мох",
+          "амбра",
+          "ваниль"
+        ]
+      },
+      "price5": 12500,
+      "price10": 25000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4ybzJDZpFdCm6SVZsP9mkF/5337bf171948627c4c5e8850e2194f2d/b3d51847b71f2871385440611d3b8bef.png",
+      "seasonality": {
+        "winter": 55,
+        "spring": 80,
+        "summer": 55,
+        "autumn": 80,
+        "day": 60,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "creed-aventus-absolu",
+      "name": "Creed Aventus Absolu",
+      "brand": "Creed",
+      "gender": "men",
+      "family": "spicy",
+      "concentration": "Eau de Parfum",
+      "description": "более пряная и тёплая версия Aventus с усиленной специями (имбирь, корица) и менее «фруктовым» звучанием; ощущается плотнее, суше и более зрелым, с сохранением фирменной цитрусовой свежести",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Creed — Франция Парфюмер: официально не раскрыт брендом Год создания: 2023 Ноты: грейпфрут, бергамот, чёрная смородина, имбирь, корица, цитрон, пачули, ветивер, розовый перец Для кого: мужской Куда: вечер, весна/осень, мероприятия, статусный modern fresh scent По ощущениям: более пряная и тёплая версия Aventus с усиленной специями (имбирь, корица) и менее «фруктовым» звучанием; ощущается плотнее, суше и более зрелым, с сохранением фирменной цитрусовой свежести",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут",
+          "бергамот",
+          "чёрная смородина"
+        ],
+        "heart": [
+          "имбирь",
+          "корица",
+          "цитрон"
+        ],
+        "base": [
+          "пачули",
+          "ветивер",
+          "розовый перец"
+        ]
+      },
+      "price5": 20000,
+      "price10": 38000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/3zXav6EJhA2Mo5kfxtjMv/e2d606dfec95c482b133fe15e6d371e2/55b53c868885f0fa18dcefb8ddd6f16e.png",
+      "seasonality": {
+        "winter": 70,
+        "spring": 65,
+        "summer": 35,
+        "autumn": 75,
+        "day": 55,
+        "evening": 70
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "creed-oud-zarian",
+      "name": "Creed Oud Zarian",
+      "brand": "Creed",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "глубокий пряно-смолистый уд с тёплым ладаном и мягкой сладостью амбры; звучит насыщенно, дорого и «густо восточно», с современной более гладкой подачей уда",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Creed — Франция Парфюмер: официально не раскрыт брендом Год создания: 2025 Ноты: бергамот, ладан, имбирь, spice accord, Rose Centifolia, 80-летний oud, пачули, сандал, мирра, корень лакрицы, тонка Для кого: унисекс Куда: вечер, осень/зима, мероприятия, luxury oud scent, холодная погода По ощущениям: глубокий пряно-смолистый уд с тёплым ладаном и мягкой сладостью амбры; звучит насыщенно, дорого и «густо восточно», с современной более гладкой подачей уда",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "ладан",
+          "имбирь"
+        ],
+        "heart": [
+          "spice accord",
+          "Rose Centifolia",
+          "80-летний oud"
+        ],
+        "base": [
+          "пачули",
+          "сандал",
+          "мирра",
+          "корень лакрицы",
+          "тонка"
+        ]
+      },
+      "price5": 20000,
+      "price10": 38000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7ELD818n0gVoa9y3YR9vgF/79cae1eaad45adee3e5c358ecfb3f0d8/3cff5448af4bb125e03a9fb5e54e3bb5.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "creed-silver-mountain-water",
+      "name": "Creed Silver Mountain Water",
+      "brand": "Creed",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "холодный «металлический» цитрус с зелёным чаем и чистым мускусом; звучит очень свежо, воздушно и минималистично, с ощущением горного воздуха и стерильной чистоты",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Creed — Франция Парфюмер: Olivier Creed Год создания: 1995 Ноты: бергамот, чёрная смородина, гальбанум, апельсин, чай, ozonic accord, мускус, сандал  Для кого: унисекс Куда: день, весна/лето, офис, прогулки, clean luxury scent, everyday wear По ощущениям: холодный «металлический» цитрус с зелёным чаем и чистым мускусом; звучит очень свежо, воздушно и минималистично, с ощущением горного воздуха и стерильной чистоты",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "чёрная смородина"
+        ],
+        "heart": [
+          "гальбанум",
+          "апельсин"
+        ],
+        "base": [
+          "чай",
+          "ozonic accord",
+          "мускус",
+          "сандал"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "badge": "Хит продаж",
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/46vdiSFWYd7c0QSnzZEMeo/0a5e6826261f98e8b7337645890ec07f/b7f9236ad61493ee996d9a8b25d5392e.png",
+      "seasonality": {
+        "day": 80,
+        "autumn": 25,
+        "spring": 80,
+        "summer": 80,
+        "winter": 25,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "essential-parfums-bois-imperial",
+      "name": "Essential Parfums Bois Imperial",
+      "brand": "Essential Parfums",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "сухой пряно-древесный аромат с острым перцем тимут и фирменным «минеральным деревом» Akigalawood; звучит современно, чисто и немного колко, с очень узнаваемым технологичным шлейфом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Essential Parfums — Франция Парфюмер: Quentin Bisch Год создания: 2020 Ноты: тайский базилик, перец тимур, грейпфрут, петалия, ветивер, Akigalawood, пачули, амброкс Для кого: унисекс Куда: день, офис, весна/лето, повседневное ношение, modern woody fresh scent По ощущениям: сухой пряно-древесный аромат с острым перцем тимут и фирменным «минеральным деревом» Akigalawood; звучит современно, чисто и немного колко, с очень узнаваемым технологичным шлейфом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "тайский базилик",
+          "перец тимур"
+        ],
+        "heart": [
+          "грейпфрут",
+          "петалия"
+        ],
+        "base": [
+          "ветивер",
+          "Akigalawood",
+          "пачули",
+          "амброкс"
+        ]
+      },
+      "price5": 7500,
+      "price10": 15000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2QfcK1pOQXKh2ZhVo0wz0K/91a90b408407bedb9618b26f11ae4f04/38ff648eeb73e3f7281624ef73cc960e.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "ex-nihilo-blue-talisman-extrait",
+      "name": "Ex-Nihilo Blue Talisman Extrait",
+      "brand": "Ex Nihilo",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "очень чистый фруктово-цитрусовый старт с мягкой древесно-амбровой базой; звучит гладко, воздушно и «сияюще», с ощущением дорогой минималистичной свежести",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Ex Nihilo — Франция Парфюмер: официально не раскрыт брендом Год создания: 2025 Ноты: бергамот, груша, мандарин, цветок апельсина, Georgywood, мускус, Ambrofix Для кого: унисекс Куда: день/вечер, весна/лето, путешествия, мероприятия, luxury fresh signature scent По ощущениям: очень чистый фруктово-цитрусовый старт с мягкой древесно-амбровой базой; звучит гладко, воздушно и «сияюще», с ощущением дорогой минималистичной свежести",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "груша"
+        ],
+        "heart": [
+          "мандарин",
+          "цветок апельсина"
+        ],
+        "base": [
+          "Georgywood",
+          "мускус",
+          "Ambrofix"
+        ]
+      },
+      "price5": 20000,
+      "price10": 38000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/DYU6aHHJcVxVriywnuwmB/cc5106d8cbf2f2f7de374a8bc72fe0c4/39ff57381f7a05a9c04f067039651daf.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "ex-nihilo-the-hedonist",
+      "name": "Ex-Nihilo The Hedonist",
+      "brand": "Ex Nihilo",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "свежий, древесно-фруктовый аромат с ярким цитрусовым стартом и сочным личи. Постепенно становится более сухим, древесным и мускусным благодаря акигалавуду и ветиверу. Звучит чисто, дорого и современно",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Ex Nihilo — Франция Парфюмер: Жорди Фернандес (Jordi Fernández) Год создания: 2021 Ноты: бергамот, имбирь, личи, акигалавуд (Akigalawood), кедр, ветивер, бобы тонка, мускус Для кого: унисекс Куда: каждый день, офис, прогулки, встречи, весна/лето, тёплая осень, современный lifestyle scent По ощущениям: свежий, древесно-фруктовый аромат с ярким цитрусовым стартом и сочным личи. Постепенно становится более сухим, древесным и мускусным благодаря акигалавуду и ветиверу. Звучит чисто, дорого и современно, сочетая свежесть с мягкой древесной глубиной и элегантным шлейфом.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "имбирь"
+        ],
+        "heart": [
+          "личи",
+          "акигалавуд (Akigalawood)"
+        ],
+        "base": [
+          "кедр",
+          "ветивер",
+          "бобы тонка",
+          "мускус"
+        ]
+      },
+      "price5": 15000,
+      "price10": 27000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/GDkyOBxZz1M5VsNAbHfA1/96b07ba658addbf503cfe533fd5ee14e/2e8171110523d0b863fdbfec9ad83140.avif",
+      "seasonality": {
+        "winter": 55,
+        "spring": 65,
+        "summer": 55,
+        "autumn": 50,
+        "day": 65,
+        "evening": 45
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "herm-s-terre-d-herm-s",
+      "name": "Hermès Terre d’Hermès",
+      "brand": "Hermès",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "сухой цитрусово-минеральный аромат с землисто-каменной базой и древесной теплотой; звучит строго, элегантно и «архитектурно», с ощущением чистого камня и свежего воздуха",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Hermès — Франция Парфюмер: Jean-Claude Ellena Год создания: 2006  Ноты: апельсин, грейпфрут, перец, герань, кремень (flint), ветивер, кедр, пачули, бензоин  Для кого: мужской Куда: офис, повседневное ношение, весна/осень, day-to-day signature scent По ощущениям: сухой цитрусово-минеральный аромат с землисто-каменной базой и древесной теплотой; звучит строго, элегантно и «архитектурно», с ощущением чистого камня и свежего воздуха",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "апельсин",
+          "грейпфрут",
+          "перец"
+        ],
+        "heart": [
+          "герань",
+          "кремень (flint)",
+          "ветивер"
+        ],
+        "base": [
+          "кедр",
+          "пачули",
+          "бензоин"
+        ]
+      },
+      "price5": 7500,
+      "price10": 15000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2NRVWGPfFN01WaSC9lAbqi/c427f870f37a358e18fc0a1d254ffae8/ad2d20117b3e786851f3847aff794aa9.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "hfc-devil-s-intrigue",
+      "name": "HFC Devil's Intrigue",
+      "brand": "HFC",
+      "gender": "women",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "кремово-цветочный аромат с османтусом и белым чаем, мягкой ванилью и древесной базой; звучит тёпло, интимно и слегка «пудрово-косметически», с эффектом дорогого уютного шлейфа",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Haute Fragrance Company — Франция Парфюмер: Benoît Bergia  Год создания: 2018  Ноты: османтус, белый чай, цветок апельсина, сандал, ваниль, кашмеран, древесные ноты  Для кого: женский с возможностью унисекс-восприятия  Куда: вечер, свидания, осень/зима, уютный sensual scent По ощущениям: кремово-цветочный аромат с османтусом и белым чаем, мягкой ванилью и древесной базой; звучит тёпло, интимно и слегка «пудрово-косметически», с эффектом дорогого уютного шлейфа",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "османтус",
+          "белый чай"
+        ],
+        "heart": [
+          "цветок апельсина",
+          "сандал"
+        ],
+        "base": [
+          "ваниль",
+          "кашмеран",
+          "древесные ноты"
+        ]
+      },
+      "price5": 17500,
+      "price10": 35000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6DAj9aczWPMZCsCSUAJzIW/0b92d08a9d6a3651f398ee26d103bd62/394561d75338beaadada22833692adf8.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "hormone-paris-gaba",
+      "name": "Hormone Paris Gaba",
+      "brand": "Hormone Paris",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусово-цветочный старт с мягкой лавандовой свежестью и амброво-древесной базой; звучит чисто, современно и слегка «молекулярно», с ощущением свежего воздуха после душа",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Hormone Paris — Франция Парфюмер: не раскрыт брендом Год создания: 2023  Ноты: итальянский мандарин, апельсин, лаванда, жасмин самбак, османтус, Akigalawood, Ambroxan, мускус  Для кого: унисекс Куда: день/вечер, весна/лето, повседневное ношение, clean modern niche scent По ощущениям: яркий цитрусово-цветочный старт с мягкой лавандовой свежестью и амброво-древесной базой; звучит чисто, современно и слегка «молекулярно», с ощущением свежего воздуха после душа",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "итальянский мандарин",
+          "апельсин"
+        ],
+        "heart": [
+          "лаванда",
+          "жасмин самбак"
+        ],
+        "base": [
+          "османтус",
+          "Akigalawood",
+          "Ambroxan",
+          "мускус"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/YnZJFjE04Ukj5Ixcpo0tH/5f2062295b455b917f7f2468f2f5ec54/2db72a86fed7dffeed2910931012b3ff.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "hormone-paris-testosterone",
+      "name": "Hormone Paris Testosterone",
+      "brand": "Hormone Paris",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "сладко-пряный древесный аромат с ванилью, корицей и мягкой амбровой базой; звучит тёпло, густо и «соблазнительно», с выраженным gourmand характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Hormone Paris — Франция Парфюмер: Kevin Mathys Год создания: 2025 Ноты: грейпфрут, кардамон, корица, гваяковое дерево, ваниль, жасмин, сандал, Amberwood, пралине, мускус Для кого: унисекс с мужским уклоном Куда: вечер, осень/зима, свидания, мероприятия, sensual woody scent По ощущениям: сладко-пряный древесный аромат с ванилью, корицей и мягкой амбровой базой; звучит тёпло, густо и «соблазнительно», с выраженным gourmand характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут",
+          "кардамон",
+          "корица"
+        ],
+        "heart": [
+          "гваяковое дерево",
+          "ваниль",
+          "жасмин"
+        ],
+        "base": [
+          "сандал",
+          "Amberwood",
+          "пралине",
+          "мускус"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1dpMWmYC4RGTKQdqCeVroP/94def3bdfe311ddde4dcf6e48ca27b3f/09862a2bd3135fea869626ffe5f2cdb5.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "initio-musk-therapy",
+      "name": "Initio Musk Therapy",
+      "brand": "Initio",
+      "gender": "women",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "очень мягкий кремово-мускусный аромат с цитрусовой свежестью и лёгкой цветочной прозрачностью; звучит чисто, «успокаивающе» и как дорогой эффект свежего тела после душа",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Initio Parfums Privés — Франция Парфюмер: не раскрыт брендом Год создания: 2021 Ноты: белый мускус, розовый мускус, бергамот, мандарин, чёрная смородина, магнолия, белый сандал, Hedione  Для кого: унисекс, с feminine leaning для многих людей  Куда: день, весна/лето, повседневное ношение, clean skin scent, офис, after-shower vibe  По ощущениям: очень мягкий кремово-мускусный аромат с цитрусовой свежестью и лёгкой цветочной прозрачностью; звучит чисто, «успокаивающе» и как дорогой эффект свежего тела после душа",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "белый мускус",
+          "розовый мускус"
+        ],
+        "heart": [
+          "бергамот",
+          "мандарин"
+        ],
+        "base": [
+          "чёрная смородина",
+          "магнолия",
+          "белый сандал",
+          "Hedione"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7E8w9IrOfO5Ptsk2EhnRRl/50267c0b9b959c86da4193e9adb8693d/37c68ffdd57af8ffd6cda74802bec601.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "initio-narcotic-delight",
+      "name": "Initio Narcotic Delight",
+      "brand": "Initio",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Initio Parfums Privés — Франция Парфюмер: официально не раскрыт брендом (неофициально часто приписывают Christian Provenzano)  Год создания: 2024  Ноты: вишня, розовый перец, чёрный перец, коньяк, Hedione, роза, табак, ваниль, бобы тонка, кедр, пачули  Для кого: унисекс  Куда: вечер, свидания, осень/зима, мероприятия, sensual gourmand scent По ощущениям людей: густая вишня, коньяк, табак и ваниль; часто сравнивают с Side Effect и Angel’s Share",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "вишня",
+          "розовый перец",
+          "чёрный перец"
+        ],
+        "heart": [
+          "коньяк",
+          "Hedione",
+          "роза"
+        ],
+        "base": [
+          "табак",
+          "ваниль",
+          "бобы тонка",
+          "кедр",
+          "пачули"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5XMTDSpYoc7MmIHuqvQxYQ/61ea4f7047753e377d4e22481a10ac33/5cf2d8563f8f14d6babad14777af9cb3.png",
+      "seasonality": {
+        "winter": 70,
+        "spring": 30,
+        "summer": 20,
+        "autumn": 65,
+        "day": 25,
+        "evening": 85
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "initio-oud-for-greatness",
+      "name": "Initio Oud for Greatness",
+      "brand": "Initio",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "мощный пряно-удовый аромат с шафраном и лавандовой свежестью на старте; звучит густо, громко и «королевски», с тёмной древесно-амбровой базой и сильным шлейфом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Initio Parfums Privés — Франция Парфюмер: официально не раскрыт брендом (неофициально часто приписывают Pierre Gueros)  Год создания: 2018  Ноты: шафран, мускатный орех, лаванда, уд, пачули, мускус  Для кого: унисекс  Куда: вечер, осень/зима, мероприятия, статусный oud scent, холодная погода По ощущениям: мощный пряно-удовый аромат с шафраном и лавандовой свежестью на старте; звучит густо, громко и «королевски», с тёмной древесно-амбровой базой и сильным шлейфом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "шафран",
+          "мускатный орех"
+        ],
+        "heart": [
+          "лаванда",
+          "уд"
+        ],
+        "base": [
+          "пачули",
+          "мускус"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2ltoGKUlz44OM2dD2T6DL3/f70c02b34d3e24edff53ce9267a19854/fcd0d5c297cf42dee52366d53a5e2e3b.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "initio-psychodelic-love",
+      "name": "Initio Psychodelic Love",
+      "brand": "Initio",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Initio Parfums Privés — Франция Парфюмер: официально не раскрыт брендом Год создания: 2017  Ноты: бергамот, роза, мирра, ваниль, пачули, гелиотропин, Hedione (официальные main notes бренда)  Для кого: унисекс  Куда: вечер, свидания, осень/зима, sensual floral woody scent По ощущениям людей: пудровый, сливочно-цветочный, гипнотический; многие ощущают гелиотроп, мирру и «дорогую косметическую» сладость",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "роза"
+        ],
+        "heart": [
+          "мирра",
+          "ваниль"
+        ],
+        "base": [
+          "пачули",
+          "гелиотропин",
+          "Hedione (официальные main notes бренда)"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5o95xYOKsl9D2xVcwhfWLw/f630ef483ff07fca54ae9b9f976530ef/14d80dc6421fbd76f913df573305e203.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "initio-side-effect",
+      "name": "Initio Side Effect",
+      "brand": "Initio",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Initio Parfums Privés — Франция Парфюмер: официально не раскрыт брендом (неофициально часто приписывают Maurice Roucel)  Год создания: 2016  Ноты: ром, табак, корица, шафран, сандал, Hedione  Для кого: унисекс  Куда: вечер, свидания, осень/зима, клубы, мероприятия, sensual boozy scent По ощущениям людей: сладкий ром, табак, ванильная дымность и «пьяный» gourmand-эффект; многие считают его самым комплиментарным Initio",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ром",
+          "табак"
+        ],
+        "heart": [
+          "корица",
+          "шафран"
+        ],
+        "base": [
+          "сандал",
+          "Hedione"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/B4u1ixVTsZ16MYmZIcwaR/453083b7257bf059ec44925828e264a3/9acdf3b35896e34c5b6a2461f0cd0bde.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "kilian-angels-share",
+      "name": "Kilian Angels Share",
+      "brand": "Kilian",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Kilian Paris — Франция Парфюмер: Benoist Lapouza (официально)  Год создания: 2020  Ноты: коньяк, корица, дуб, бобы тонка, пралине, ваниль, сандал  Для кого: унисекс  Куда: вечер, осень/зима, свидания, бары, мероприятия, gourmand luxury scent По ощущениям людей: яблочный пирог, коньяк, корица и сладкая древесность; часто называют одним из лучших boozy gourmand ароматов",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "коньяк",
+          "корица"
+        ],
+        "heart": [
+          "дуб",
+          "бобы тонка"
+        ],
+        "base": [
+          "пралине",
+          "ваниль",
+          "сандал"
+        ]
+      },
+      "price5": 17500,
+      "price10": 30000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6hDJGCLTWXUviMy7TI5eLj/491ef889a6dd62520fc526ed69639076/367bd69a85c41c162540885a70c426df.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "kilian-black-phantom",
+      "name": "Kilian Black Phantom",
+      "brand": "Kilian",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Kilian Paris — Франция Парфюмер: Sidonie Lancesseur (официально)  Год создания: 2017  Ноты: ром, кофе, сандал (официальные main notes бренда); также упоминаются сахарный тростник, cyanide accord, ветивер  Для кого: унисекс  Куда: вечер, осень/зима, бары, свидания, мероприятия, gourmand luxury scent По ощущениям людей: тёмный ром, кофе, шоколадно-карамельная сладость и «пиратский» boozy vibe; многие считают его одним из самых узнаваемых gourmand ароматов Kilian",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ром"
+        ],
+        "heart": [
+          "кофе"
+        ],
+        "base": [
+          "сандал (официальные main notes бренда); также упоминаются сахарный тростник",
+          "cyanide accord",
+          "ветивер"
+        ]
+      },
+      "price5": 20000,
+      "price10": 38000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2OdlX3zouNMOVSAkfGxSQU/6bee10b5d3bcd56b149800bc469b5293/9ef3a242cf78b96eda27abc4930d157f.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "kilian-good-girl-gone-bad",
+      "name": "Kilian Good Girl Gone Bad",
+      "brand": "Kilian",
+      "gender": "women",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Kilian Paris — Франция Парфюмер: Alberto Morillas (официально)  Год создания: 2012 Ноты: османтус, жасмин самбак, майская роза, тубероза, нарцисс, амбра, кедр (официальные main notes бренда)  Для кого: женский / feminine floral Куда: день/вечер, весна/лето, свидания, мероприятия, romantic luxury scent По ощущениям людей: кремово-белые цветы, сладкий османтус и «дорогой женственный» vibe; один из самых популярных floral ароматов Kilian",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "османтус",
+          "жасмин самбак"
+        ],
+        "heart": [
+          "майская роза",
+          "тубероза"
+        ],
+        "base": [
+          "нарцисс",
+          "амбра",
+          "кедр (официальные main notes бренда)"
+        ]
+      },
+      "price5": 17500,
+      "price10": 32000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/59aoYsrbgJQ2gvaM8sGMPv/45d2fa325a8300fbc9fd2382b8936575/d3fe9ba71ac653ca30ba04d72814a57b.png",
+      "seasonality": {
+        "winter": 45,
+        "spring": 55,
+        "summer": 55,
+        "autumn": 45,
+        "day": 50,
+        "evening": 75
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "kilian-smoking-hot",
+      "name": "Kilian Smoking Hot",
+      "brand": "Kilian",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Kilian Paris — Франция Парфюмер: Mathieu Nardin (официально)  Год создания: 2023 Ноты: яблочный кальвадос, корица, бурбонская ваниль, табак, Iso E Super, Orcanox (официальные main notes бренда)  Для кого: унисекс Куда: вечер, осень/зима, бары, свидания, мероприятия, boozy smoky gourmand scent По ощущениям людей: копчёное яблоко, ваниль, табак и сладкая древесность; многие называют его более дымной версией Angel’s Share",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "яблочный кальвадос",
+          "корица"
+        ],
+        "heart": [
+          "бурбонская ваниль",
+          "табак"
+        ],
+        "base": [
+          "Iso E Super",
+          "Orcanox (официальные main notes бренда)"
+        ]
+      },
+      "price5": 20000,
+      "price10": 38000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/3ivpxh2Bf9Be3Gc1OloO3f/97484e60a6101c5a7f23b16770c3795a/eb488913c910222fb2fda6e94f4c2b08.png",
+      "seasonality": {
+        "winter": 60,
+        "spring": 30,
+        "summer": 20,
+        "autumn": 80,
+        "day": 30,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "le-labo-another-13",
+      "name": "Le Labo Another 13",
+      "brand": "Мужская парфюмерия",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "Это классический «skin scent» — аромат, который не столько пахнет духами, сколько создаёт ощущение «твоей кожи, но лучше». Тёплый, чистый, слегка пудровый и мускусный, с едва уловимой сладостью груши",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Франция Парфюмер: Натали Лорсон Год создания: 2010 (создан как коллаборация с журналом AnOther Magazine) Ноты: Амброксан (амбра), груша, жасмин, мох, семена амбретты, сухой амбер, яблоко, лайм и другие ингредиенты (всего 13, отсюда и название) Для кого: Унисекс — подходит как мужчинам, так и женщинам, ценящим сдержанные, «чистые» молекулярные ароматы Куда: На каждый день, офис, повседневная носка; особенно хорош осенью и зимой, но благодаря лёгкости может носиться круглый год По ощущениям: Это классический «skin scent» — аромат, который не столько пахнет духами, сколько создаёт ощущение «твоей кожи, но лучше». Тёплый, чистый, слегка пудровый и мускусный, с едва уловимой сладостью груши и яблока. Не кричащий и не навязчивый — скорее интимный и обволакивающий, раскрывается близко к телу и воспринимается окружающими не как парфюм, а как естественный приятный запах человека.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "Амброксан (амбра)",
+          "груша",
+          "жасмин"
+        ],
+        "heart": [
+          "мох",
+          "семена амбретты",
+          "сухой амбер"
+        ],
+        "base": [
+          "яблоко",
+          "лайм и другие ингредиенты (всего 13",
+          "отсюда и название)"
+        ]
+      },
+      "price5": 17500,
+      "price10": 32500,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1vs4BU1rPYlywAvg5zKYTb/f380f885781c6a8fa0099ef3912fcc8a/70aa7df98dd72eacd6fca30e22d1da15.avif",
+      "seasonality": {
+        "winter": 55,
+        "spring": 55,
+        "summer": 55,
+        "autumn": 55,
+        "day": 55,
+        "evening": 55
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "louis-vuitton-afternoon-swim",
+      "name": "Louis Vuitton Afternoon Swim",
+      "brand": "Louis Vuitton",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "сочный апельсиновый фреш, солнечный, очень чистый и воздушный летний аромат с эффектом «дорогого цитрусового напитка»",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Louis Vuitton — Франция Парфюмер: Jacques Cavallier Belletrud (официально) Год создания: 2019 Ноты: апельсин, бергамот, мандарин, имбирь, амброкс Для кого: унисекс Куда: день, весна/лето, жара, отпуск, прогулки, fresh citrus luxury scent По ощущениям: сочный апельсиновый фреш, солнечный, очень чистый и воздушный летний аромат с эффектом «дорогого цитрусового напитка»",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "апельсин"
+        ],
+        "heart": [
+          "бергамот"
+        ],
+        "base": [
+          "мандарин",
+          "имбирь",
+          "амброкс"
+        ]
+      },
+      "price5": 17500,
+      "price10": 35000,
+      "rating": 5,
+      "reviews": 0,
+      "badge": "Хит продаж",
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1lyyHlvDmoCkVgj6Dr4PLF/961b55a5ebe7a916edcd563709429388/1161d031d6d4646a682f62882d30c011.avif",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "louis-vuitton-imagination",
+      "name": "Louis Vuitton Imagination",
+      "brand": "Louis Vuitton",
+      "gender": "unisex",
+      "family": "spicy",
+      "concentration": "Eau de Parfum",
+      "description": "чистый люксовый свежак с мыльно-чайным эффектом, цитрусами и амброксановой воздушностью; многие считают его одним из самых универсальных и комплиментарных LV",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Louis Vuitton — Франция Парфюмер: Jacques Cavallier Belletrud (официально) Год создания: 2021 Ноты: цитрон, калабрийский бергамот, сицилийский апельсин, нероли, имбирь, корица, чёрный чай, Ambrox Для кого: унисекс с лёгким masculine leaning Куда: день, офис, весна/лето, путешествия, everyday luxury scent По ощущениям: чистый люксовый свежак с мыльно-чайным эффектом, цитрусами и амброксановой воздушностью; многие считают его одним из самых универсальных и комплиментарных LV",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "цитрон",
+          "калабрийский бергамот"
+        ],
+        "heart": [
+          "сицилийский апельсин",
+          "нероли"
+        ],
+        "base": [
+          "имбирь",
+          "корица",
+          "чёрный чай",
+          "Ambrox"
+        ]
+      },
+      "price5": 17500,
+      "price10": 35000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1dIk9UQJ8050YY6s5QydAE/910afd4be001ed993f047e92797f9348/53cadda63fda7eb5a7cb1a307af93880.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "louis-vuitton-l-immensit",
+      "name": "Louis Vuitton L’Immensité",
+      "brand": "Louis Vuitton",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "свежий имбирно-грейпфрутовый аромат с морским воздухом и чистой амброксановой базой; ощущается очень современно, дорого и «clean»",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Louis Vuitton — Франция Парфюмер: Jacques Cavallier Belletrud (официально) Год создания: 2018 Ноты: грейпфрут, имбирь, бергамот, водные ноты, розмарин, шалфей, лабданум, Ambrox Для кого: унисекс с masculine leaning Куда: день, офис, весна/лето, поездки, повседневное ношение По ощущениям: свежий имбирно-грейпфрутовый аромат с морским воздухом и чистой амброксановой базой; ощущается очень современно, дорого и «clean»",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут",
+          "имбирь"
+        ],
+        "heart": [
+          "бергамот",
+          "водные ноты"
+        ],
+        "base": [
+          "розмарин",
+          "шалфей",
+          "лабданум",
+          "Ambrox"
+        ]
+      },
+      "price5": 17500,
+      "price10": 35000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5iz2AccXDCJmvqcWVSdphg/a83a0fb03d04f6dd1e95a607d278513a/a3551fcf8a278354e1bc1321892b31f0.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "louis-vuitton-meteore",
+      "name": "Louis Vuitton Meteore",
+      "brand": "Louis Vuitton",
+      "gender": "men",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусово-пряный аромат с мыльной чистотой, нероли и свежим «после душа» эффектом; многим напоминает дорогой luxury shower gel",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Louis Vuitton — Франция Парфюмер: Jacques Cavallier Belletrud (официально) Год создания: 2020 Ноты: мандарин, бергамот, сицилийский апельсин, розовый перец, нероли, кардамон, ветивер Для кого: мужской / masculine fresh spicy Куда: день, офис, весна/лето, повседневное ношение, clean luxury scent По ощущениям: яркий цитрусово-пряный аромат с мыльной чистотой, нероли и свежим «после душа» эффектом; многим напоминает дорогой luxury shower gel",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "мандарин",
+          "бергамот"
+        ],
+        "heart": [
+          "сицилийский апельсин",
+          "розовый перец"
+        ],
+        "base": [
+          "нероли",
+          "кардамон",
+          "ветивер"
+        ]
+      },
+      "price5": 17500,
+      "price10": 35000,
+      "rating": 5,
+      "reviews": 0,
+      "badge": "Хит продаж",
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/3LyJ87BidFFYuqOuabrw3H/f35fb239272e8b513ef5bde181d93300/c33f22d86f0dd075d4d0dee82566a36d.png",
+      "seasonality": {
+        "day": 80,
+        "autumn": 35,
+        "spring": 65,
+        "summer": 80,
+        "winter": 30,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "louis-vuitton-pacific-chill",
+      "name": "Louis Vuitton Pacific Chill",
+      "brand": "Louis Vuitton",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "очень сочный фруктово-минеральный «детокс-смузи» аромат с мятной свежестью и лёгкой сладостью фруктов; ощущается максимально расслабленно и летне",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Louis Vuitton — Франция Парфюмер: Jacques Cavallier Belletrud (официально) Год создания: 2023 Ноты: лимон, апельсин, мята, базилик, чёрная смородина, инжир, абрикос, амбретта Для кого: унисекс Куда: день, весна/лето, жара, отдых, спорт-лайт, прогулки, beach vibe По ощущениям: очень сочный фруктово-минеральный «детокс-смузи» аромат с мятной свежестью и лёгкой сладостью фруктов; ощущается максимально расслабленно и летне",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "лимон",
+          "апельсин"
+        ],
+        "heart": [
+          "мята",
+          "базилик"
+        ],
+        "base": [
+          "чёрная смородина",
+          "инжир",
+          "абрикос",
+          "амбретта"
+        ]
+      },
+      "price5": 17500,
+      "price10": 35000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2fbOO2ztZkVxag2wNw5AbS/d1f644e154ca16b4dea0661f1bf1801a/8120d67ddbe3db324af3c55928d953b8.avif",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "louis-vuitton-symphony",
+      "name": "Louis Vuitton Symphony",
+      "brand": "Мужская парфюмерия",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "максимально яркий цитрусовый взрыв с имбирной остротой и чистой амброксановой базой; ощущается как очень дорогой, «искрящийся» апельсиново-имбирный фреш с сильным эффектом свежести",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Louis Vuitton — Франция Парфюмер: Jacques Cavallier Belletrud (официально) Год создания: 2021 Ноты: грейпфрут, имбирь, апельсин, бергамот, амброкс Для кого: унисекс Куда: день, весна/лето, жаркая погода, путешествия, лёгкий luxury fresh scent По ощущениям: максимально яркий цитрусовый взрыв с имбирной остротой и чистой амброксановой базой; ощущается как очень дорогой, «искрящийся» апельсиново-имбирный фреш с сильным эффектом свежести",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут"
+        ],
+        "heart": [
+          "имбирь"
+        ],
+        "base": [
+          "апельсин",
+          "бергамот",
+          "амброкс"
+        ]
+      },
+      "price5": 32500,
+      "price10": 60000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6Pn2CHFROhmPtKgZbO4mfG/86032cb8c1df91b59d149ccbf0991edd/1e06dd239a1df9feb8e968f099b26a3c.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "maison-crivelli-hibiscus-mahajat",
+      "name": "Maison Crivelli Hibiscus Mahajat",
+      "brand": "Maison Crivelli",
+      "gender": "unisex",
+      "family": "spicy",
+      "concentration": "Eau de Parfum",
+      "description": "тропический фруктово-цветочный аромат с пряной корицей и кремовой ванилью; ощущается как сладкий экзотический коктейль с тёплой специей и лёгкой кожаной глубиной",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Maison Crivelli — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2021 Ноты: гибискус, корица, розовый перец, личи, манго, ваниль, сандал, кожа Для кого: унисекс Куда: вечер/день, весна/лето, тёплая погода, мероприятия, яркий niche signature scent По ощущениям: тропический фруктово-цветочный аромат с пряной корицей и кремовой ванилью; ощущается как сладкий экзотический коктейль с тёплой специей и лёгкой кожаной глубиной",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "гибискус",
+          "корица"
+        ],
+        "heart": [
+          "розовый перец",
+          "личи"
+        ],
+        "base": [
+          "манго",
+          "ваниль",
+          "сандал",
+          "кожа"
+        ]
+      },
+      "price5": 20000,
+      "price10": 40000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7kDupTWwI4382fqfuYVwGs/c92ec411ed9d42296b2ac378b0037442/2148873d7aeaa639922f774ec1cbf54f.webp",
+      "seasonality": {
+        "winter": 40,
+        "spring": 65,
+        "summer": 70,
+        "autumn": 40,
+        "day": 60,
+        "evening": 55
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "maison-crivelli-oud-maracuja",
+      "name": "Maison Crivelli Oud Maracuja",
+      "brand": "Maison Crivelli",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "яркий кислосладкий маракуйя-старт с мощным удом и кожей в базе; контрастный, «дорогой фруктовый уд» с тропической свежестью и тёмной глубиной",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Maison Crivelli — Франция Парфюмер: Jordi Fernández (официально) Год создания: 2023 Ноты: маракуйя, уд, шафран, роза, кожа, ваниль, бензоин, амбра Для кого: унисекс Куда: вечер, осень/зима, мероприятия, свидания, нишевый статусный аромат По ощущениям: яркий кислосладкий маракуйя-старт с мощным удом и кожей в базе; контрастный, «дорогой фруктовый уд» с тропической свежестью и тёмной глубиной",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "маракуйя",
+          "уд"
+        ],
+        "heart": [
+          "шафран",
+          "роза"
+        ],
+        "base": [
+          "кожа",
+          "ваниль",
+          "бензоин",
+          "амбра"
+        ]
+      },
+      "price5": 25000,
+      "price10": 45000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1jrr4a0rXETE9JdTqosNT9/46a09b1ac4509c8fc8a98e1d626b5921/b7341f4894053e2b73882ebda6a93533.png",
+      "seasonality": {
+        "winter": 75,
+        "spring": 45,
+        "summer": 25,
+        "autumn": 75,
+        "day": 30,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "maison-crivelli-shafran-secret",
+      "name": "Maison Crivelli Shafran Secret",
+      "brand": "Maison Crivelli",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "тёплый шафраново-кожаный уд с пряной сухостью и амбровой глубиной; ощущается тёмно, дорого и «плотно», без сладости, больше про специи и кожу",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Maison Crivelli — Франция Парфюмер: Gaël Montero (официально) Год создания: 2022 Ноты: шафран, кожа, уд, роза, амбра, специи, древесные ноты Для кого: унисекс Куда: вечер, осень/зима, мероприятия, холодная погода, нишевый статусный аромат По ощущениям: тёплый шафраново-кожаный уд с пряной сухостью и амбровой глубиной; ощущается тёмно, дорого и «плотно», без сладости, больше про специи и кожу",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "шафран",
+          "кожа"
+        ],
+        "heart": [
+          "уд",
+          "роза"
+        ],
+        "base": [
+          "амбра",
+          "специи",
+          "древесные ноты"
+        ]
+      },
+      "price5": 25000,
+      "price10": 45000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/128dh58aL9bbo4bAXe58bU/8729ea7ef296f958f1e012bcf52818a7/d9ca8674705b4349431268177d971614.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "marc-antoine-barrois-aldebaran",
+      "name": "Marc-Antoine Barrois Aldebaran",
+      "brand": "Marc Antione Barrios",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2024 Ноты: тубероза, мате, бобы тонка, мандарин, перец, древесные аккорды Для кого: унисекс с floral-leaning характером Куда: вечер/день, весна/лето, мероприятия, свидания, нишевый signature scent По ощущениям: кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "тубероза",
+          "мате"
+        ],
+        "heart": [
+          "бобы тонка",
+          "мандарин"
+        ],
+        "base": [
+          "перец",
+          "древесные аккорды"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/61VQjmS4ThYN1B1VAvF6NA/94c416c9589d09e7edf924982d41fa50/cf3341d0c8c3387fe95e68f805bff5e4.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "marc-antoine-barrois-ganymede",
+      "name": "Marc-Antoine Barrois Ganymede",
+      "brand": "Marc Antione Barrios",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2019 Ноты: мандарин, шафран, османтус, бессмертник, минеральные аккорды, Akigalawood Для кого: унисекс Куда: день/вечер, весна/осень, офис, мероприятия, нишевый signature scent По ощущениям: минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "мандарин",
+          "шафран"
+        ],
+        "heart": [
+          "османтус",
+          "бессмертник"
+        ],
+        "base": [
+          "минеральные аккорды",
+          "Akigalawood"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4rsSjMgFshTDhGKzTx2A8F/f04e7bfc2f9388ab245815cd28bd3045/12b42d1009a1d8730d2795cef2e79824.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "marc-antoine-barrois-tilia",
+      "name": "Marc-Antoine Barrois Tilia",
+      "brand": "Marc Antione Barrios",
+      "gender": "women",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2024 Ноты: липовый цвет (tilia), жасмин, гелиотроп, ветивер, амброксан Для кого: унисекс, с лёгким feminine leaning Куда: день, весна/лето, тёплая погода, прогулки, офис, мягкий everyday niche scent По ощущениям: мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "липовый цвет (tilia)"
+        ],
+        "heart": [
+          "жасмин"
+        ],
+        "base": [
+          "гелиотроп",
+          "ветивер",
+          "амброксан"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4DIilUsz3Nx6Am4xhSGG5C/22f571b224e1c6639ea3a7ea0e628650/ce0b752a897f1349990c9c16f07c1dfe.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "miss-dior-blooming-bouquet",
+      "name": "Miss Dior Blooming Bouquet",
+      "brand": "Dior",
+      "gender": "women",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "очень нежный пудрово-цветочный аромат с акцентом на пионы и розу; ощущается чисто, воздушно и «ухоженно», как свежий букет в тёплый весенний день",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Dior — Франция Парфюмер: François Demachy (официально) Год создания: 2014 Ноты: сицилийский мандарин, пион, дамасская роза, абрикос, белый мускус Для кого: женский Куда: день, весна/лето, офис, прогулки, свидания, лёгкий романтичный аромат По ощущениям: очень нежный пудрово-цветочный аромат с акцентом на пионы и розу; ощущается чисто, воздушно и «ухоженно», как свежий букет в тёплый весенний день",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "сицилийский мандарин"
+        ],
+        "heart": [
+          "пион"
+        ],
+        "base": [
+          "дамасская роза",
+          "абрикос",
+          "белый мускус"
+        ]
+      },
+      "price5": 7500,
+      "price10": 15000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/79xKSt01cZ42sP2K4eVTBo/7d416fc4a2d72519fe440354d08e97b9/6e58983e96c7f8f6e22b5ec06f92a70a.png",
+      "seasonality": {
+        "winter": 20,
+        "spring": 85,
+        "summer": 70,
+        "autumn": 20,
+        "day": 80,
+        "evening": 25
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "nishane-ani-x-extrait",
+      "name": "Nishane Ani X Extrait",
+      "brand": "Nishane",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "более свежая и воздушная версия Ani — ванильная сладость с пряным кардамоном и имбирём, но легче и «чище», с ярким цитрусово-зелёным стартом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Nishane — Турция Парфюмер: Cécile Zarokian (официально) Год создания: 2023 Ноты: бергамот, зелёные ноты, кардамон, имбирь, чёрная смородина, роза, ваниль, сандал, кедр, бензоин, амбра, мускус Для кого: унисекс Куда: вечер/день, осень/зима, свидания, мероприятия, нишевый signature scent По ощущениям: более свежая и воздушная версия Ani — ванильная сладость с пряным кардамоном и имбирём, но легче и «чище», с ярким цитрусово-зелёным стартом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "зелёные ноты",
+          "кардамон",
+          "имбирь"
+        ],
+        "heart": [
+          "чёрная смородина",
+          "роза",
+          "ваниль",
+          "сандал"
+        ],
+        "base": [
+          "кедр",
+          "бензоин",
+          "амбра",
+          "мускус"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4H3HUjhjl1scHAeXQfDZlj/2f64cb9751f096353d963a8ff5144b96/e26ef542c64723008aa25bab490f0555.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "nishane-hacivat",
+      "name": "Nishane Hacivat",
+      "brand": "Nishane",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "«Ананас, который слышно за версту.» Забудьте про слащавые фруктовые одеколоны. Hacivat — это#nbsp;взрыв тропического ананаса, смешанного с терпким грейпфрутом и бергамотом. Это «ананасовая атака», после которой вы уже никогда не вернётесь к скучным цитрусам. Через 15 минут фрукты отступают, уступая место#nbsp;сердцу из жасмина, белого кедра и диких пачули. Это придаёт аромату мужской, уверенный характер. Но главное — база.#nbsp;Дубовый мох и сухая древесина#nbsp;создают тот самый «дорогой» шипровый шлейф, за который Hacivat и полюбили во всём мире. Ключевые особенности: Стойкость:#nbsp;Феноменальная — держится 12+ часов, на одежде — до нескольких дней.Шлейф:#nbsp;Огромный. Один пшик заполняет комнату.Для кого:#nbsp;Унисекс. На мужчине звучит статусно, на женщине — дерзко.Сравнение:#nbsp;Часто называют лучшей альтернативой Creed Aventus, но с более мощным и долгим звучанием.Пирамида нот: Верхние ноты:#nbsp;Ананас, Бергамот, ГрейпфрутНоты сердца:#nbsp;Жасмин, Белый кедр, ПачулиБазовые ноты:#nbsp;Дубовый мох, Клирвуд, Сухое дерево#nbsp;",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": []
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2mFEyZR7omKM31h0lxCBd2/2f60109b1ac4cb0c175f18f254b19de5/63f010d4c874c71e710b440f3811a3b1.png",
+      "seasonality": {
+        "winter": 45,
+        "spring": 75,
+        "summer": 75,
+        "autumn": 45,
+        "day": 65,
+        "evening": 55
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "parfums-de-marly-altha-r",
+      "name": "Parfums de Marly Althaïr",
+      "brand": "Parfums de Marly",
+      "gender": "men",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "тёплая ваниль с пряной корицей и кардамоном, сладкий, но не «сахарный»; ощущается как дорогой ванильно-древесный десерт с мягким амбровым шлейфом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Parfums de Marly — Франция Парфюмер: Hamid Merati-Kashani (официально) Год создания: 2023 Ноты: ваниль, корица, кардамон, бергамот, апельсиновый цвет, элеми, бобы тонка, амбра, мускус, древесные ноты Для кого: мужской / мягкий gourmand-ориентированный Куда: вечер/день, осень/зима, свидания, мероприятия, уютный luxury scent По ощущениям: тёплая ваниль с пряной корицей и кардамоном, сладкий, но не «сахарный»; ощущается как дорогой ванильно-древесный десерт с мягким амбровым шлейфом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ваниль",
+          "корица",
+          "кардамон"
+        ],
+        "heart": [
+          "бергамот",
+          "апельсиновый цвет",
+          "элеми"
+        ],
+        "base": [
+          "бобы тонка",
+          "амбра",
+          "мускус",
+          "древесные ноты"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2MZ4FIiXOezuvTWluQy3PC/e90f516f46f4a2ee4986e401996e9126/1cf6012d42d9b0b5cd3f1b00934b47c0.png",
+      "seasonality": {
+        "winter": 75,
+        "spring": 40,
+        "summer": 20,
+        "autumn": 65,
+        "day": 40,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "parfums-de-marly-greenley",
+      "name": "Parfums de Marly Greenley",
+      "brand": "Парфюмы",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "очень свежий зелёно-яблочный аромат с цитрусами и древесной чистотой; ощущается как прохладный «зелёный воздух» с лёгкой кремовой базой",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Parfums de Marly — Франция Парфюмер: Nathalie Lorson (официально) Год создания: 2020 Ноты: зелёное яблоко, бергамот, мандарин, кедр, петитгрейн, кашмеран, дубовый мох, мускус Для кого: унисекс с masculine leaning Куда: день, весна/лето, офис, прогулки, спорт-лайт, fresh everyday scent По ощущениям: очень свежий зелёно-яблочный аромат с цитрусами и древесной чистотой; ощущается как прохладный «зелёный воздух» с лёгкой кремовой базой",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "зелёное яблоко",
+          "бергамот"
+        ],
+        "heart": [
+          "мандарин",
+          "кедр"
+        ],
+        "base": [
+          "петитгрейн",
+          "кашмеран",
+          "дубовый мох",
+          "мускус"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1JWRsDaiaCAEhOAlaWJKpf/21cc9c9fe228e435f36d5393db2cf330/fa2e128bb8b5e7050cf47672c065f5ba.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "parfums-de-marly-haltane",
+      "name": "Parfums de Marly Haltane",
+      "brand": "Parfums de Marly",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "тёплый древесно-удовый аромат с мягкой сладостью пралине и пряным шафраном; ощущается дорого, сухо и «бархатно», без резкой тяжести уда",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Parfums de Marly — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2021 Ноты: бергамот, лаванда, шалфей, шафран, пралине, уд, кедр, ветивер, мускус Для кого: мужской / masculine woody aromatic Куда: вечер/день, осень/зима, мероприятия, офис, статусный signature scent По ощущениям: тёплый древесно-удовый аромат с мягкой сладостью пралине и пряным шафраном; ощущается дорого, сухо и «бархатно», без резкой тяжести уда",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "лаванда",
+          "шалфей"
+        ],
+        "heart": [
+          "шафран",
+          "пралине",
+          "уд"
+        ],
+        "base": [
+          "кедр",
+          "ветивер",
+          "мускус"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/25Zg5gOttHcGM4QsvfJ0v7/f101a5666018b9392b1a8015cac96d7b/fa925fbe21fb026eb20e30691d734c08.png",
+      "seasonality": {
+        "winter": 85,
+        "spring": 30,
+        "summer": 15,
+        "autumn": 65,
+        "day": 30,
+        "evening": 85
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "parfums-de-marly-sedley",
+      "name": "Parfums de Marly Sedley",
+      "brand": "Parfums de Marly",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "очень чистый цитрусово-мятный «ледяной» старт с мыльно-древесной базой; ощущается свежо, современно и максимально «дорого и аккуратно»",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Parfums de Marly — Франция Парфюмер: Hamid Merati-Kashani (официально) Год создания: 2019 Ноты: бергамот, мята, лимон, герань, розмарин, лаванда, кедр, ветивер, сандал, кашмеран, амброксан Для кого: унисекс с masculine leaning Куда: день, весна/лето, офис, жара, спорт-лайт, свежий everyday luxury scent По ощущениям: очень чистый цитрусово-мятный «ледяной» старт с мыльно-древесной базой; ощущается свежо, современно и максимально «дорого и аккуратно»",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "мята",
+          "лимон"
+        ],
+        "heart": [
+          "герань",
+          "розмарин",
+          "лаванда"
+        ],
+        "base": [
+          "кедр",
+          "ветивер",
+          "сандал",
+          "кашмеран",
+          "амброксан"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/3n0GJdqrlRPWdNQZqdUz86/3254c24924535209ca64a2749d2722ea/ae670d569e37c0c5d96153f18d454e7d.png",
+      "seasonality": {
+        "winter": 20,
+        "spring": 80,
+        "summer": 85,
+        "autumn": 25,
+        "day": 80,
+        "evening": 30
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "parfums-de-marly-valaya",
+      "name": "Parfums de Marly Valaya",
+      "brand": "Parfums de Marly",
+      "gender": "women",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "очень чистый «кремовый мускус» с мягкими фруктами и цветами; ощущается как дорогая белая рубашка, свежесть после душа и лёгкий воздушный шлейф",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Parfums de Marly — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2023 Ноты: белый персик, бергамот, мандарин, ландыш, апельсиновый цвет, ветивер, мускус, амброксан, Akigalawood Для кого: женский / feminine musky floral Куда: день/вечер, весна/лето, офис, свидания, чистый luxury everyday scent По ощущениям: очень чистый «кремовый мускус» с мягкими фруктами и цветами; ощущается как дорогая белая рубашка, свежесть после душа и лёгкий воздушный шлейф",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "белый персик",
+          "бергамот",
+          "мандарин"
+        ],
+        "heart": [
+          "ландыш",
+          "апельсиновый цвет",
+          "ветивер"
+        ],
+        "base": [
+          "мускус",
+          "амброксан",
+          "Akigalawood"
+        ]
+      },
+      "price5": 15000,
+      "price10": 30000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/605EbxlVQ12xiaL4oLoZNB/aa57f1e627ac9326ce1a6b64e7d09bd7/b32b74d0b1b602e64b2ee4eeb70caefa.png",
+      "seasonality": {
+        "winter": 60,
+        "spring": 55,
+        "summer": 40,
+        "autumn": 60,
+        "day": 55,
+        "evening": 70
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "roja-apex",
+      "name": "Roja Apex",
+      "brand": "Roja",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "свежий ананасово-цитрусовый старт с мощной ароматической травяной базой и кожано-амбровой глубиной; ощущается как дорогой «чистый, но плотный» мужской аромат с характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Roja Parfums — Великобритания Парфюмер: Roja Dove (официально) Год создания: 2022 Ноты: ананас, бергамот, лимон, лаванда, розмарин, жасмин, пачули, ветивер, кедр, лабданум, амбра, мускус, кожа Для кого: мужской / masculine aromatic woody Куда: день/вечер, осень/весна, офис, мероприятия, статусный luxury scent По ощущениям: свежий ананасово-цитрусовый старт с мощной ароматической травяной базой и кожано-амбровой глубиной; ощущается как дорогой «чистый, но плотный» мужской аромат с характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ананас",
+          "бергамот",
+          "лимон",
+          "лаванда"
+        ],
+        "heart": [
+          "розмарин",
+          "жасмин",
+          "пачули",
+          "ветивер"
+        ],
+        "base": [
+          "кедр",
+          "лабданум",
+          "амбра",
+          "мускус",
+          "кожа"
+        ]
+      },
+      "price5": 15000,
+      "price10": 30000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7A9ap9Rc3kTAQ101bWEFLO/d13468892c19c8665f18ff83c40887c8/fc02ad33047bc07e927cafae378f261e.png",
+      "seasonality": {
+        "winter": 40,
+        "spring": 70,
+        "summer": 55,
+        "autumn": 55,
+        "day": 55,
+        "evening": 55
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "roja-burlington",
+      "name": "Roja Burlington",
+      "brand": "Roja",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "цитрусово-ароматический старт с тёплой пряной и слегка сладкой древесной базой; ощущается очень «британски классически» — дорого, элегантно и структурно",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Roja Parfums — Великобритания Парфюмер: Roja Dove (официально) Год создания: 2013 Ноты: лимон, бергамот, мандарин, лаванда, розмарин, гвоздика, жасмин, иланг-иланг, пачули, ветивер, кедр, лабданум, ваниль, мускус Для кого: унисекс с masculine leaning Куда: день/вечер, весна/осень, офис, мероприятия, классический luxury scent По ощущениям: цитрусово-ароматический старт с тёплой пряной и слегка сладкой древесной базой; ощущается очень «британски классически» — дорого, элегантно и структурно",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "лимон",
+          "бергамот",
+          "мандарин",
+          "лаванда"
+        ],
+        "heart": [
+          "розмарин",
+          "гвоздика",
+          "жасмин",
+          "иланг-иланг"
+        ],
+        "base": [
+          "пачули",
+          "ветивер",
+          "кедр",
+          "лабданум",
+          "ваниль",
+          "мускус"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/W59js8QDDqeVK7onsannf/c6a6fba5d62160bdc4687c94b905572e/f3d558ca13a23a848ce9450eb8ab3f66.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "roja-elysium",
+      "name": "Roja Elysium",
+      "brand": "Roja",
+      "gender": "men",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "очень яркий цитрусово-зелёный старт с чистой ароматической базой; ощущается свежо, дорого и «отполированно», как премиальный классический фужер с современной мягкостью",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Roja Parfums — Великобритания Парфюмер: Roja Dove (официально) Год создания: 2017 Ноты: грейпфрут, лимон, бергамот, лайм, яблоко, можжевельник, тимьян, роза, жасмин, ландыш, гальбанум, ветивер, кедр, амбра, мускус, ваниль Для кого: мужской / fresh aromatic woody Куда: день, весна/лето, офис, бизнес, повседневное ношение, luxury fresh scent По ощущениям: очень яркий цитрусово-зелёный старт с чистой ароматической базой; ощущается свежо, дорого и «отполированно», как премиальный классический фужер с современной мягкостью",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут",
+          "лимон",
+          "бергамот",
+          "лайм",
+          "яблоко"
+        ],
+        "heart": [
+          "можжевельник",
+          "тимьян",
+          "роза",
+          "жасмин",
+          "ландыш"
+        ],
+        "base": [
+          "гальбанум",
+          "ветивер",
+          "кедр",
+          "амбра",
+          "мускус",
+          "ваниль"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6DShppQ51EPITTxh9knn5R/50cc0d019fd8d9273a591750f2af95a0/b0693390a8a8ba0bfac6c015cb34ff0c.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "roja-isola-blue",
+      "name": "Roja Isola Blue",
+      "brand": "Roja",
+      "gender": "unisex",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусово-фруктовый «морской» свежак с кремовой древесной базой; ощущается как дорогой летний воздух у воды, лёгкий, чистый и очень солнечный",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Roja Parfums — Великобритания Парфюмер: Roja Dove (официально) Год создания: 2021 Ноты: бергамот, лимон, мандарин, лайм, яблоко, ананас, жасмин, роза, иланг-иланг, лаванда, розмарин, ветивер, кедр, сандал, мускус, амбра Для кого: унисекс с masculine leaning Куда: день, весна/лето, море/отпуск, прогулки, luxury fresh blue scent По ощущениям: яркий цитрусово-фруктовый «морской» свежак с кремовой древесной базой; ощущается как дорогой летний воздух у воды, лёгкий, чистый и очень солнечный",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "бергамот",
+          "лимон",
+          "мандарин",
+          "лайм",
+          "яблоко"
+        ],
+        "heart": [
+          "ананас",
+          "жасмин",
+          "роза",
+          "иланг-иланг",
+          "лаванда"
+        ],
+        "base": [
+          "розмарин",
+          "ветивер",
+          "кедр",
+          "сандал",
+          "мускус",
+          "амбра"
+        ]
+      },
+      "price5": 25000,
+      "price10": 45000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5viCrVYJ7IIklAbtLkdv9y/8e1dbf354561a1af9196ae2b73948c09/dd4fbf7f9f84ae24c9c71eb0512b3219.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "roja-oceania",
+      "name": "Roja Oceania",
+      "brand": "Roja",
+      "gender": "unisex",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "очень чистый цитрусово-цветочный «океанический» аромат с мягкой кремовой древесной базой; ощущается как тёплый морской бриз, свежесть и лёгкая цветочная элегантность",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Roja Parfums — Великобритания Парфюмер: Roja Dove (официально) Год создания: 2021 Ноты: лимон, бергамот, лайм, мандарин, грейпфрут, жасмин, герань, иланг-иланг, лаванда, роза, фиалка, сандал, ветивер, кедр, мускус, амбра Для кого: унисекс Куда: день, весна/лето, жаркая погода, море/отпуск, прогулки, luxury fresh aquatic По ощущениям: очень чистый цитрусово-цветочный «океанический» аромат с мягкой кремовой древесной базой; ощущается как тёплый морской бриз, свежесть и лёгкая цветочная элегантность",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "лимон",
+          "бергамот",
+          "лайм",
+          "мандарин",
+          "грейпфрут"
+        ],
+        "heart": [
+          "жасмин",
+          "герань",
+          "иланг-иланг",
+          "лаванда",
+          "роза"
+        ],
+        "base": [
+          "фиалка",
+          "сандал",
+          "ветивер",
+          "кедр",
+          "мускус",
+          "амбра"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/b6jzaTPNdHNz1m2suqIEq/2aded4598092cdf81a843be912cd3700/3cbabfa45967e5fbd2aabcca4c4d9495.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 35
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "sospiro-vibrato",
+      "name": "Sospiro Vibrato",
+      "brand": "Sospiro",
+      "gender": "unisex",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "очень яркий цитрусово-зелёный старт с имбирной остротой и чистой мускусной базой; ощущается свежо, «воздушно» и дорого, с эффектом чистого люксового сияния",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Sospiro — Италия Парфюмер: Christian Provenzano (официально) Год создания: 2022 Ноты: грейпфрут, бергамот, имбирь, зелёные ноты, магнолия, ирис, жасмин, мускус, кедр, пачули, амбра Для кого: унисекс Куда: день/вечер, весна/лето, офис, прогулки, modern niche fresh scent По ощущениям: очень яркий цитрусово-зелёный старт с имбирной остротой и чистой мускусной базой; ощущается свежо, «воздушно» и дорого, с эффектом чистого люксового сияния",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "грейпфрут",
+          "бергамот",
+          "имбирь"
+        ],
+        "heart": [
+          "зелёные ноты",
+          "магнолия",
+          "ирис"
+        ],
+        "base": [
+          "жасмин",
+          "мускус",
+          "кедр",
+          "пачули",
+          "амбра"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5Y4UX4KexoFBhv7PLP2fPP/dda4328f6c8e03a698372bf06e96d4a0/038409c79d282e719bb86f2041ca4477.png",
+      "seasonality": {
+        "winter": 25,
+        "spring": 80,
+        "summer": 80,
+        "autumn": 25,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "sultani-arabian-oud",
+      "name": "Sultani Arabian Oud",
+      "brand": "Arabian Oud",
+      "gender": "unisex",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "густой тёмный уд с амбровой сладостью и пряной древесностью; ощущается мощно, «густо» и очень восточно, с сильным шлейфом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Arabian Oud — Саудовская Аравия Парфюмер: не раскрыт брендом Год создания: не подтверждён официально (точная дата брендом не указана) Ноты: уд, амбра, специи, древесные ноты, мускус (официально детальная пирамида не раскрывается полностью) Для кого: унисекс с masculine уклоном Куда: вечер, осень/зима, мероприятия, холодная погода, статусный восточный аромат По ощущениям: густой тёмный уд с амбровой сладостью и пряной древесностью; ощущается мощно, «густо» и очень восточно, с сильным шлейфом",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "уд"
+        ],
+        "heart": [
+          "амбра"
+        ],
+        "base": [
+          "специи",
+          "древесные ноты",
+          "мускус (официально детальная пирамида не раскрывается полностью)"
+        ]
+      },
+      "price5": 10000,
+      "price10": 18000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/6olqRwnQc7aMF9YGB1s4PQ/5139fe14ab21bca9320edf46c394ab1a/86cfeb5baa371d4aa74d33c1346c1ab0.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "tom-ford-ombre-leather",
+      "name": "Tom Ford Ombre Leather",
+      "brand": "Tom Ford",
+      "gender": "men",
+      "family": "oriental",
+      "concentration": "Eau de Parfum",
+      "description": "сухая чёрная кожа с лёгкой цветочной сладостью и пряным кардамоном; ощущается дорого, «плотно» и очень уверенно, как новая кожаная куртка в тёплом помещении",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Tom Ford — США Парфюмер: Sonia Constant (официально) Год создания: 2018 Ноты: кожа, жасмин самбак, кардамон, пачули, амбра, мох Для кого: унисекс с masculine leaning Куда: вечер/день, осень/зима, мероприятия, офис (осторожно), кожаный signature scent По ощущениям: сухая чёрная кожа с лёгкой цветочной сладостью и пряным кардамоном; ощущается дорого, «плотно» и очень уверенно, как новая кожаная куртка в тёплом помещении",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "кожа",
+          "жасмин самбак"
+        ],
+        "heart": [
+          "кардамон",
+          "пачули"
+        ],
+        "base": [
+          "амбра",
+          "мох"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1vQo5oTYn9QAinMh9dfc3h/1de7ee89f643bfdff49bbf12c028c760/70bdb4ce183fdfdca0d5006e6897277b.png",
+      "seasonality": {
+        "winter": 80,
+        "spring": 25,
+        "summer": 25,
+        "autumn": 80,
+        "day": 80,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "xerjoff-naxos",
+      "name": "Xerjoff Naxos",
+      "brand": "Xerjoff",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "тёплый медово-табачный аромат с пряной корицей и кремовой ванилью; ощущается сладко, густо и «дорого уютно», как тёплый десерт с табачной глубиной",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Xerjoff — Италия Парфюмер: не раскрыт брендом Год создания: 2015 Ноты: лаванда, бергамот, лимон, мёд, корица, жасмин самбак, кашмеран, табак, бобы тонка, ваниль Для кого: унисекс с masculine уклоном Куда: вечер/день, осень/зима, свидания, мероприятия, уютный luxury gourmand По ощущениям: тёплый медово-табачный аромат с пряной корицей и кремовой ванилью; ощущается сладко, густо и «дорого уютно», как тёплый десерт с табачной глубиной",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "лаванда",
+          "бергамот",
+          "лимон"
+        ],
+        "heart": [
+          "мёд",
+          "корица",
+          "жасмин самбак"
+        ],
+        "base": [
+          "кашмеран",
+          "табак",
+          "бобы тонка",
+          "ваниль"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/437GAn8iPreNYG4mq426y/01570ff64356a7fc26008af5057dc501/56fe3ebbf84127fc17b5a1082d71fc4f.png",
+      "seasonality": {
+        "winter": 75,
+        "spring": 55,
+        "summer": 25,
+        "autumn": 70,
+        "day": 35,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "xerjoff-torino-21",
+      "name": "Xerjoff Torino 21",
+      "brand": "Xerjoff",
+      "gender": "unisex",
+      "family": "floral",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусово-травяной аромат с насыщенной мятной свежестью и зелёными акцентами. В начале бодрит прохладой лимона и мяты, затем раскрывается ароматными травами и мягким жасмином. В базе становится",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Xerjoff — Италия Парфюмер: официально не раскрыт брендом Год создания: 2021 Ноты: мята, лимон, базилик, тимьян, чёрная смородина, жасмин, лаванда, розмарин, мускус, вербена Для кого: унисекс Куда: каждый день, офис, спорт, прогулки, лето, весна, отпуск, свежий signature scent По ощущениям: яркий цитрусово-травяной аромат с насыщенной мятной свежестью и зелёными акцентами. В начале бодрит прохладой лимона и мяты, затем раскрывается ароматными травами и мягким жасмином. В базе становится чистым, мускусным и очень освежающим. Звучит дорого, естественно и элегантно, словно прохладный ветер в жаркий летний день.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "мята",
+          "лимон",
+          "базилик"
+        ],
+        "heart": [
+          "тимьян",
+          "чёрная смородина",
+          "жасмин"
+        ],
+        "base": [
+          "лаванда",
+          "розмарин",
+          "мускус",
+          "вербена"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "badge": "Хит продаж",
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/58QcNVialEvfuwOYdWhNsR/14d0a75be27a0ee6f259593ab1d2cb5c/3bf0d6b8e55e11ece885aad6a7a5ca71.webp",
+      "seasonality": {
+        "day": 60,
+        "autumn": 55,
+        "spring": 55,
+        "summer": 55,
+        "winter": 45,
+        "evening": 50
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "ysl-y",
+      "name": "YSL Y",
+      "brand": "Мужская парфюмерия",
+      "gender": "men",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "современный древесно-фужерный аромат с ярким яблочно-имбирным стартом и чистым древесным шлейфом. Сочетает свежесть, лёгкую сладость и пряные оттенки, постепенно раскрываясь теплыми нотами амбры и боб",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Yves Saint Laurent — Франция Парфюмер: Доминик Ропьон (Dominique Ropion) Год создания: 2018 Ноты: яблоко, бергамот, имбирь, можжевельник, шалфей, герань, ветивер, кедр, амбра, бобы тонка, олибанум Для кого: мужской Куда: каждый день, офис, свидание, вечер, осень/зима, весна, универсальный signature scent По ощущениям: современный древесно-фужерный аромат с ярким яблочно-имбирным стартом и чистым древесным шлейфом. Сочетает свежесть, лёгкую сладость и пряные оттенки, постепенно раскрываясь теплыми нотами амбры и бобов тонка. Звучит стильно, дорого и универсально, одинаково уместен как в деловой обстановке, так и на вечерних встречах.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "яблоко",
+          "бергамот",
+          "имбирь"
+        ],
+        "heart": [
+          "можжевельник",
+          "шалфей",
+          "герань"
+        ],
+        "base": [
+          "ветивер",
+          "кедр",
+          "амбра",
+          "бобы тонка",
+          "олибанум"
+        ]
+      },
+      "price5": 8500,
+      "price10": 15000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5aEtHZjs7eZr3ESZ9d7E2J/b771986d199a5f6e40495e6c596aa35f/2e02c8feb447accc664ed84f9d83cf19.avif",
+      "seasonality": {
+        "winter": 30,
+        "spring": 65,
+        "summer": 60,
+        "autumn": 40,
+        "day": 70,
+        "evening": 40
+      },
+      "reviewsList": []
+    }
+  ],
   "articles": []
 }

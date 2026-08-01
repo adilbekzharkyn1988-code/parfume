@@ -11,7 +11,7 @@
  * сколько у вас товаров и статей:
  *   1. все продукты (content_type "product")
  *   2. все отзывы (content_type "review") — одним запросом, а не по одному на товар
- *   3. все статьи (content_type "article")
+ *   3. все статьи (content_type "Article")
  */
 
 import { createClient } from "contentful";
@@ -105,7 +105,7 @@ async function main() {
   const [productsRes, reviewsRes, articlesRes] = await Promise.all([
     client.getEntries({ content_type: "product", limit: 1000 }),
     client.getEntries({ content_type: "review", limit: 1000 } as any),
-    client.getEntries({ content_type: "article", limit: 1000 }),
+    client.getEntries({ content_type: "Article", limit: 1000 }),
   ]);
 
   const reviewsByProduct = new Map<string, any[]>();

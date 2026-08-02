@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T07:16:54.110Z",
+  "generatedAt": "2026-08-02T19:43:35.812Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -418,7 +418,7 @@
     {
       "slug": "boadicea-the-victorious-hanuman",
       "name": "Boadicea The Victorious Hanuman",
-      "brand": "На мероприятие",
+      "brand": "Boadicea The Victorious",
       "gender": "unisex",
       "family": "oriental",
       "concentration": "Eau de Parfum",
@@ -467,11 +467,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/4RDIGUO7pCvcI5G3ilZUlt/77aa35f6234ca1826cb5986c1e8d99e3/30ab826cb32f50fe5b93e2e48593ec15.webp",
       "seasonality": {
-        "winter": 80,
+        "day": 35,
+        "autumn": 80,
         "spring": 25,
         "summer": 25,
-        "autumn": 80,
-        "day": 35,
+        "winter": 80,
         "evening": 80
       },
       "reviewsList": []
@@ -479,7 +479,7 @@
     {
       "slug": "bvlgari-tygar",
       "name": "Bvlgari Tygar",
-      "brand": "Bvlgary",
+      "brand": "Bvlgari",
       "gender": "unisex",
       "family": "spicy",
       "concentration": "Eau de Parfum",
@@ -521,11 +521,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/2JYz25vs191AQQayqmcqYp/1c3f2824c874ba49f96ccc05a50e3447/58d19f9a3291e30358c44d7059c5559e.png",
       "seasonality": {
-        "winter": 25,
+        "day": 80,
+        "autumn": 25,
         "spring": 80,
         "summer": 80,
-        "autumn": 25,
-        "day": 80,
+        "winter": 25,
         "evening": 35
       },
       "reviewsList": []
@@ -587,7 +587,7 @@
     },
     {
       "slug": "clive-christian-150",
-      "name": "Clive Christian 150",
+      "name": "Clive Christian 150 Contemporary",
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "woody",
@@ -636,11 +636,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/2y3uLnWBXMMU5mGl7HdwCt/c7524fdc9b8abaae75406e2bd5c29698/3daae2526c4eeed6e370d71b69e7d292.avif",
       "seasonality": {
-        "winter": 65,
+        "day": 45,
+        "autumn": 65,
         "spring": 40,
         "summer": 30,
-        "autumn": 65,
-        "day": 45,
+        "winter": 65,
         "evening": 70
       },
       "reviewsList": [
@@ -654,7 +654,7 @@
     {
       "slug": "clive-christian-1872",
       "name": "Clive Christian 1872",
-      "brand": "На мероприятие",
+      "brand": "Clive Christian",
       "gender": "men",
       "family": "oriental",
       "concentration": "Eau de Parfum",
@@ -712,11 +712,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/4tnV8MwNiPD2Ueo9Q5tigB/29cf487e7c37e84697e7cef81c36f055/3835d8072cd4a78caf4f2d4f86ccfe4c.webp",
       "seasonality": {
-        "winter": 35,
+        "day": 65,
+        "autumn": 40,
         "spring": 70,
         "summer": 55,
-        "autumn": 40,
-        "day": 65,
+        "winter": 35,
         "evening": 45
       },
       "reviewsList": []
@@ -780,7 +780,7 @@
     {
       "slug": "clive-christian-crab-apple-blossom",
       "name": "Clive Christian Crab Apple Blossom",
-      "brand": "На день",
+      "brand": "Clive Christian",
       "gender": "unisex",
       "family": "woody",
       "concentration": "Eau de Parfum",
@@ -822,11 +822,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/6SpH6ClKtI4T15oSFM6sDE/29ff5d88aca3d2d97bc725e1dbb2c29d/f9004c4bd61b6edffbcb80bf962b12dd.webp",
       "seasonality": {
-        "winter": 15,
+        "day": 75,
+        "autumn": 15,
         "spring": 85,
         "summer": 60,
-        "autumn": 15,
-        "day": 75,
+        "winter": 15,
         "evening": 25
       },
       "reviewsList": []
@@ -2240,7 +2240,7 @@
     {
       "slug": "le-labo-another-13",
       "name": "Le Labo Another 13",
-      "brand": "Мужская парфюмерия",
+      "brand": "Le Labo",
       "gender": "unisex",
       "family": "oriental",
       "concentration": "Eau de Parfum",
@@ -2288,11 +2288,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/1vs4BU1rPYlywAvg5zKYTb/f380f885781c6a8fa0099ef3912fcc8a/70aa7df98dd72eacd6fca30e22d1da15.avif",
       "seasonality": {
-        "winter": 55,
+        "day": 55,
+        "autumn": 55,
         "spring": 55,
         "summer": 55,
-        "autumn": 55,
-        "day": 55,
+        "winter": 55,
         "evening": 55
       },
       "reviewsList": []
@@ -2593,7 +2593,7 @@
     {
       "slug": "louis-vuitton-symphony",
       "name": "Louis Vuitton Symphony",
-      "brand": "Мужская парфюмерия",
+      "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "citrus",
       "concentration": "Eau de Parfum",
@@ -2637,11 +2637,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/6Pn2CHFROhmPtKgZbO4mfG/86032cb8c1df91b59d149ccbf0991edd/1e06dd239a1df9feb8e968f099b26a3c.png",
       "seasonality": {
-        "winter": 25,
+        "day": 80,
+        "autumn": 25,
         "spring": 80,
         "summer": 80,
-        "autumn": 25,
-        "day": 80,
+        "winter": 25,
         "evening": 35
       },
       "reviewsList": []
@@ -3223,7 +3223,7 @@
     {
       "slug": "parfums-de-marly-greenley",
       "name": "Parfums de Marly Greenley",
-      "brand": "Парфюмы",
+      "brand": "Parfums de Marly",
       "gender": "unisex",
       "family": "woody",
       "concentration": "Eau de Parfum",
@@ -3270,11 +3270,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/1JWRsDaiaCAEhOAlaWJKpf/21cc9c9fe228e435f36d5393db2cf330/fa2e128bb8b5e7050cf47672c065f5ba.png",
       "seasonality": {
-        "winter": 25,
+        "day": 80,
+        "autumn": 25,
         "spring": 80,
         "summer": 80,
-        "autumn": 25,
-        "day": 80,
+        "winter": 25,
         "evening": 35
       },
       "reviewsList": []
@@ -4092,7 +4092,7 @@
     {
       "slug": "ysl-y",
       "name": "YSL Y",
-      "brand": "Мужская парфюмерия",
+      "brand": "Yves Saint Laurent",
       "gender": "men",
       "family": "woody",
       "concentration": "Eau de Parfum",
@@ -4142,11 +4142,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/5aEtHZjs7eZr3ESZ9d7E2J/b771986d199a5f6e40495e6c596aa35f/2e02c8feb447accc664ed84f9d83cf19.avif",
       "seasonality": {
-        "winter": 30,
+        "day": 70,
+        "autumn": 40,
         "spring": 65,
         "summer": 60,
-        "autumn": 40,
-        "day": 70,
+        "winter": 30,
         "evening": 40
       },
       "reviewsList": []

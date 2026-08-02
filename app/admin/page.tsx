@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { fetchLeads, leadsEndpointConfigured, LeadRecord } from "@/lib/leads";
+import { fetchLeads, verifyAdminLogin, leadsEndpointConfigured, LeadRecord } from "@/lib/leads";
 import { RefreshCw, LogOut, Phone, MessageSquare } from "lucide-react";
 
 export default function AdminPage() {
@@ -9,25 +9,38 @@ export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [authed, setAuthed] = useState(false);
   const [leads, setLeads] = useState<LeadRecord[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [authLoading, setAuthLoading] = useState(false);
+  const [leadsLoading, setLeadsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const load = async (l: string, p: string) => {
-    setLoading(true);
+  // Подгружает список заявок отдельно от логина — может занять больше
+  // времени (особенно на холодном старте Apps Script), но панель к этому
+  // моменту уже открыта, пользователь не смотрит на пустой экран входа.
+  const loadLeads = async (l: string, p: string) => {
+    setLeadsLoading(true);
     setError("");
     const res = await fetchLeads(l, p);
-    setLoading(false);
+    setLeadsLoading(false);
     if (res.ok) {
       setLeads(res.leads || []);
-      setAuthed(true);
     } else {
       setError(res.error || "Ошибка");
     }
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    load(login, password);
+    setAuthLoading(true);
+    setError("");
+    const res = await verifyAdminLogin(login, password);
+    setAuthLoading(false);
+    if (!res.ok) {
+      setError(res.error || "Ошибка");
+      return;
+    }
+    // Пароль верный — сразу пускаем в панель, список заявок подтянется следом.
+    setAuthed(true);
+    loadLeads(login, password);
   };
 
   if (!leadsEndpointConfigured()) {
@@ -67,10 +80,10 @@ export default function AdminPage() {
           {error && <p className="text-sm text-wine text-center">{error}</p>}
           <button
             type="submit"
-            disabled={loading}
+            disabled={authLoading}
             className="eyebrow w-full rounded-full py-3.5 bg-wine text-ivory hover:bg-wine-dark transition-colors disabled:opacity-60"
           >
-            {loading ? "Проверяем…" : "Войти"}
+            {authLoading ? "Проверяем…" : "Войти"}
           </button>
         </form>
       </div>
@@ -86,17 +99,18 @@ export default function AdminPage() {
         </div>
         <div className="flex items-center gap-3">
           <button
-            onClick={() => load(login, password)}
-            disabled={loading}
+            onClick={() => loadLeads(login, password)}
+            disabled={leadsLoading}
             className="flex items-center gap-2 text-sm border border-ink/15 rounded-full px-4 py-2 hover:bg-ivory-dim transition-colors"
           >
-            <RefreshCw size={14} className={loading ? "animate-spin" : ""} />
+            <RefreshCw size={14} className={leadsLoading ? "animate-spin" : ""} />
             Обновить
           </button>
           <button
             onClick={() => {
               setAuthed(false);
               setPassword("");
+              setLeads([]);
             }}
             className="flex items-center gap-2 text-sm border border-ink/15 rounded-full px-4 py-2 hover:bg-ivory-dim transition-colors"
           >
@@ -106,7 +120,11 @@ export default function AdminPage() {
         </div>
       </div>
 
-      {leads.length === 0 ? (
+      {error && <p className="text-sm text-wine text-center mb-4">{error}</p>}
+
+      {leadsLoading && leads.length === 0 ? (
+        <p className="text-stone text-center py-20">Загружаем заявки…</p>
+      ) : leads.length === 0 ? (
         <p className="text-stone text-center py-20">Заявок пока нет</p>
       ) : (
         <div className="flex flex-col gap-4">

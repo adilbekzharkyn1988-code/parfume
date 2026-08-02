@@ -15,7 +15,7 @@
  *
  * 2. В этой таблице: Расширения → Apps Script.
  *    Откроется редактор кода — удалите всё, что там есть по умолчанию,
- *    и вставьте целиком код ниже (весь файл, кроме этого шапки-комментария
+ *    и вставьте целиком код ниже (весь файл, кроме этой шапки-комментария
  *    можно оставить, он не мешает).
  *
  * 3. Создайте Telegram-бота (если ещё нет):
@@ -46,22 +46,26 @@
  *    билда) как:
  *      NEXT_PUBLIC_LEADS_ENDPOINT=https://script.google.com/macros/s/XXXXXXX/exec
  *
- * 7. ВАЖНО ДЛЯ СКОРОСТИ: чтобы заявки на сайте отправлялись быстро,
- *    Telegram-уведомления отправляются не сразу внутри запроса с сайта,
- *    а отдельным фоновым заданием раз в минуту. Настройте это один раз:
+ * 7. TELEGRAM ТЕПЕРЬ ОТПРАВЛЯЕТСЯ МГНОВЕННО, прямо внутри запроса с сайта —
+ *    отдельный триггер для этого больше не обязателен для скорости. Но
+ *    полезно подстраховаться на случай, если в момент заявки Telegram
+ *    будет недоступен (сеть/лимиты) — тогда уведомление "зависнет"
+ *    непосланным (telegramSent = FALSE), и его нужно кому-то отправить
+ *    позже. Настройте один раз резервный триггер:
  *      - Слева в редакторе Apps Script — значок часов "Triggers"
  *      - "+ Add Trigger"
  *      - Function to run: sendPendingTelegramNotifications
  *      - Event source: Time-driven
  *      - Type of time based trigger: Minutes timer
- *      - Every minute
+ *      - Every 5 minutes (чаще уже не нужно — это только страховка)
  *      - Save
- *    Без этого шага заявки будут сохраняться и показываться в /admin,
- *    но в Telegram сообщения приходить не будут.
+ *    Если раньше у вас уже стоял триггер "каждую минуту" — можно оставить
+ *    как есть, он не помешает, просто уже не критичен для скорости.
  *
- * Готово — заявки с сайта начнут прилетать в Telegram (с задержкой до
- * 1 минуты) и сохраняться в таблице, а страница /admin на сайте сможет
- * их читать (с кэшем на 30 секунд для более быстрой загрузки).
+ * Готово — заявки с сайта теперь прилетают в Telegram практически сразу
+ * (за секунду-две — это время самого запроса к Telegram API), сохраняются
+ * в таблице, а страница /admin на сайте сможет их читать (с кэшем на
+ * 30 секунд для более быстрой загрузки).
  *
  * Если позже поменяете что-то в коде ниже — нужно снова:
  * Deploy → Manage deployments → редактировать (карандаш) → New version → Deploy.
@@ -79,6 +83,16 @@ const SHEET_HEADERS = [
   "status",
   "telegramSent",
 ];
+
+/**
+ * Google Таблицы автоматически превращают введённый текст "TRUE"/"FALSE"
+ * в настоящее логическое значение (boolean), а не оставляют как текст.
+ * Эта функция корректно понимает оба варианта — и boolean true,
+ * и текстовые "TRUE"/"true" — чтобы сравнение не ломалось.
+ */
+function isTrueValue(v) {
+  return v === true || String(v).toUpperCase() === "TRUE";
+}
 
 function doPost(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
@@ -103,20 +117,77 @@ function doPost(e) {
   const total = Number(data.total || 0);
   const page = String(data.page || "").slice(0, 300);
 
-  // Только запись в таблицу — без ожидания Telegram, поэтому ответ
-  // сайту приходит быстро. Telegram отправится отдельно, по таймеру.
-  sheet.appendRow([id, createdAt, name, "'" + phone, comment, itemsText, total, page, "new", "FALSE"]);
+  sheet.appendRow([id, createdAt, name, "'" + phone, comment, itemsText, total, page, "new", false]);
 
-  // Кэш списка заявок устарел — очищаем, чтобы админка сразу увидела новую заявку
   CacheService.getScriptCache().remove("leads_json");
+
+  // Отправляем именно эту заявку в Telegram сразу же, не дожидаясь
+  // фонового триггера — так уведомление приходит за секунду-две,
+  // а не за минуту (или больше, если триггер стоял реже).
+  const sent = sendTelegramMessage({ name, phone, comment, itemsText, total });
+  if (sent) {
+    // Строка, которую мы только что дописали, — последняя в таблице.
+    sheet.getRange(sheet.getLastRow(), 10).setValue(true);
+  }
+  // Если sent === false (Telegram недоступен/ошибка) — telegramSent
+  // остаётся false, и запасной триггер sendPendingTelegramNotifications
+  // подхватит и отправит эту заявку при следующем запуске.
 
   return jsonResponse({ ok: true, id: id });
 }
 
 /**
- * Запускается по таймеру раз в минуту (см. пункт 7 инструкции выше).
- * Находит все заявки, по которым ещё не отправлено уведомление
- * в Telegram, и отправляет их одной пачкой.
+ * Отправляет одно уведомление в Telegram. Возвращает true, если Telegram
+ * подтвердил доставку (ok:true в ответе API), иначе false.
+ */
+function sendTelegramMessage(lead) {
+  const props = PropertiesService.getScriptProperties();
+  const botToken = props.getProperty("TELEGRAM_BOT_TOKEN");
+  const chatId = props.getProperty("TELEGRAM_CHAT_ID");
+  if (!botToken || !chatId) return false;
+
+  const text =
+    `🛍 Новая заявка с сайта\n\n` +
+    `Имя: ${lead.name}\n` +
+    `Телефон: ${lead.phone}\n` +
+    (lead.comment ? `Комментарий: ${lead.comment}\n` : "") +
+    `\nТовары:\n${lead.itemsText || "—"}\n\n` +
+    `Итого: ${lead.total} ₸`;
+
+  try {
+    const resp = UrlFetchApp.fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: "post",
+      contentType: "application/json",
+      payload: JSON.stringify({ chat_id: chatId, text: text }),
+      muteHttpExceptions: true,
+    });
+    const json = JSON.parse(resp.getContentText());
+    return json && json.ok === true;
+  } catch (err) {
+    return false;
+  }
+}
+
+/**
+ * РАЗОВАЯ функция — запустите её ОДИН РАЗ вручную (кнопка ▷ Run в редакторе,
+ * выбрав в списке функций "markExistingAsSent"), если после добавления
+ * колонки telegramSent бот вдруг разослал в Telegram старые заявки разом.
+ */
+function markExistingAsSent() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return;
+
+  const range = sheet.getRange(2, 10, lastRow - 1, 1);
+  const values = range.getValues().map(() => [true]);
+  range.setValues(values);
+}
+
+/**
+ * ЗАПАСНОЙ механизм — запускается по резервному триггеру (см. пункт 7
+ * инструкции выше). Нужен только для заявок, которые не удалось отправить
+ * в Telegram синхронно внутри doPost (например, была временная ошибка сети).
+ * В обычной ситуации эта функция почти всегда не находит ничего для отправки.
  */
 function sendPendingTelegramNotifications() {
   const props = PropertiesService.getScriptProperties();
@@ -130,28 +201,13 @@ function sendPendingTelegramNotifications() {
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
     const telegramSent = row[9];
-    if (String(telegramSent) === "TRUE") continue;
-    if (!row[0]) continue; // пустая строка
+    if (isTrueValue(telegramSent)) continue;
+    if (!row[0]) continue;
 
-    const [, createdAt, name, phone, comment, itemsText, total] = row;
-    const text =
-      `🛍 Новая заявка с сайта\n\n` +
-      `Имя: ${name}\n` +
-      `Телефон: ${phone}\n` +
-      (comment ? `Комментарий: ${comment}\n` : "") +
-      `\nТовары:\n${itemsText || "—"}\n\n` +
-      `Итого: ${total} ₸`;
-
-    try {
-      UrlFetchApp.fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "post",
-        contentType: "application/json",
-        payload: JSON.stringify({ chat_id: chatId, text: text }),
-        muteHttpExceptions: true,
-      });
-      sheet.getRange(i + 1, 10).setValue("TRUE"); // столбец J = telegramSent
-    } catch (err) {
-      // Попробуем снова через минуту на следующем запуске триггера
+    const [, , name, phone, comment, itemsText, total] = row;
+    const sent = sendTelegramMessage({ name, phone, comment, itemsText, total });
+    if (sent) {
+      sheet.getRange(i + 1, 10).setValue(true);
     }
   }
 }
@@ -169,9 +225,6 @@ function doGet(e) {
     return jsonResponse({ ok: false, error: "Неверный логин или пароль" });
   }
 
-  // Режим "auth" — только проверка логина/пароля, без чтения таблицы.
-  // Используется для быстрого входа в админку; список заявок сайт
-  // запрашивает отдельным вызовом (mode=list) уже после входа.
   if (mode === "auth") {
     return jsonResponse({ ok: true });
   }
@@ -184,10 +237,10 @@ function doGet(e) {
 
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
   const rows = sheet.getDataRange().getValues();
-  const [, ...body] = rows; // первая строка — заголовки, пропускаем
+  const [, ...body] = rows;
 
   const leads = body
-    .filter((r) => r[0]) // непустые строки
+    .filter((r) => r[0])
     .map((r) => ({
       id: r[0],
       createdAt: r[1],
@@ -199,10 +252,8 @@ function doGet(e) {
       page: r[7],
       status: r[8],
     }))
-    .reverse(); // новые сверху
+    .reverse();
 
-  // Кэшируем на 30 секунд — повторные заходы/обновления в админке
-  // будут отдаваться мгновенно из кэша, а не читать таблицу заново.
   cache.put("leads_json", JSON.stringify(leads), 30);
 
   return jsonResponse({ ok: true, leads: leads });

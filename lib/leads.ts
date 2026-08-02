@@ -53,6 +53,56 @@ export async function submitOrder(order: OrderPayload): Promise<{ ok: boolean; e
   }
 }
 
+/**
+ * "Выстрелил и забыл": отправляет заявку в фоне, НЕ дожидаясь ответа сервера.
+ * Используется в форме заказа, чтобы сайт мог мгновенно показать
+ * "Заявка отправлена", не дожидаясь ответа Apps Script (запись в таблицу
+ * и отправка в Telegram при этом всё равно происходят — просто уже после
+ * того, как пользователь увидел подтверждение).
+ *
+ * Приоритет — navigator.sendBeacon: браузер гарантированно попытается
+ * отправить запрос, даже если пользователь тут же закроет вкладку или
+ * перейдёт на другую страницу (обычный fetch без ожидания в этот момент
+ * может быть прерван). Если sendBeacon недоступен или не принял запрос —
+ * используется fetch с keepalive: true как запасной вариант.
+ *
+ * Возвращает true, если удалось хотя бы поставить запрос в очередь на
+ * отправку (это НЕ подтверждение, что заявка дошла и записалась —
+ * такой гарантии при fire-and-forget не бывает в принципе).
+ */
+export function submitOrderInBackground(order: OrderPayload): boolean {
+  if (!ENDPOINT) return false;
+
+  const payload = JSON.stringify({
+    type: "order",
+    ...order,
+    page: order.page ?? (typeof window !== "undefined" ? window.location.href : ""),
+    createdAt: new Date().toISOString(),
+  });
+
+  if (typeof navigator !== "undefined" && "sendBeacon" in navigator) {
+    try {
+      const blob = new Blob([payload], { type: "text/plain;charset=utf-8" });
+      const queued = navigator.sendBeacon(ENDPOINT, blob);
+      if (queued) return true;
+    } catch {
+      // падаем ниже на fetch-фолбэк
+    }
+  }
+
+  try {
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: payload,
+      keepalive: true,
+    }).catch(() => {});
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export type LeadRecord = {
   id: string;
   createdAt: string;

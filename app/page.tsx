@@ -220,7 +220,7 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Выбор покупателей</p>
-            <h2 className="font-display text-2xl md:text-3xl">Хиты <span className="font-display-accent">продаж</span></h2>
+            <h2 className="font-display text-2xl md:text-3xl">Хиты <span className="font-display-accent-plain">продаж</span></h2>
           </div>
           <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Смотреть все <ArrowRight size={15} />
@@ -248,7 +248,7 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Рекомендуем</p>
-            <h2 className="font-display text-2xl md:text-3xl">Выбор <span className="font-display-accent">JUPARFUME</span></h2>
+            <h2 className="font-display text-2xl md:text-3xl">Наш <span className="font-display-accent-plain">выбор</span></h2>
           </div>
           <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Смотреть все <ArrowRight size={15} />
@@ -325,7 +325,7 @@ export default async function Home() {
         <div className="container-x">
           <div className="mb-6 md:mb-8">
             <p className="eyebrow text-wine mb-2">Наши преимущества</p>
-            <h2 className="font-display text-2xl md:text-3xl">Почему выбирают <span className="font-display-accent">нас</span></h2>
+            <h2 className="font-display text-2xl md:text-3xl">Почему выбирают <span className="font-display-accent-plain">нас</span></h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
             <div className="flex flex-col items-center text-center gap-3 rounded-md border border-ink/10 bg-paper px-4 py-6 sm:flex-row sm:text-left sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:gap-3">
@@ -352,7 +352,7 @@ export default async function Home() {
       <section className="bg-white container-x py-8 md:py-12">
         <div className="mb-8">
           <p className="eyebrow text-wine mb-2">Нам доверяют</p>
-          <h2 className="font-display text-2xl md:text-3xl">Отзывы <span className="font-display-accent">покупателей</span></h2>
+          <h2 className="font-display text-2xl md:text-3xl">Отзывы <span className="font-display-accent-plain">покупателей</span></h2>
         </div>
         <TestimonialsGallery />
       </section>
@@ -363,7 +363,7 @@ export default async function Home() {
           <div>
             <p className="eyebrow text-wine mb-2">Гид новичка</p>
             <h2 className="font-display text-2xl md:text-3xl mb-5">
-              Как устроен <span className="font-display-accent">аромат</span>
+              Как устроен <span className="font-display-accent-plain">аромат</span>
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
               Любой сложный парфюм раскрывается поэтапно: верхние ноты вы
@@ -397,7 +397,7 @@ export default async function Home() {
           <div>
             <p className="eyebrow text-wine mb-2">О нас</p>
             <h2 className="font-display text-2xl md:text-3xl mb-5">
-              Парфюмерия без <span className="font-display-accent">компромиссов</span> и переплат
+              Парфюмерия без <span className="font-display-accent-plain">компромиссов</span> и переплат
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
               JUPARFUME — витрина независимых парфюмерных домов, которые редко
@@ -427,7 +427,7 @@ export default async function Home() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="eyebrow text-wine mb-2">Журнал JUPARFUME</p>
-            <h2 className="font-display text-2xl md:text-3xl">Читать и <span className="font-display-accent">разбираться</span></h2>
+            <h2 className="font-display text-2xl md:text-3xl">Читать и <span className="font-display-accent-plain">разбираться</span></h2>
           </div>
           <Link href="/articles" className="hidden sm:inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Все статьи <ArrowRight size={15} />
@@ -460,7 +460,7 @@ export default async function Home() {
         <div className="container-x max-w-3xl">
           <p className="eyebrow text-wine mb-2 text-center">Вопросы и ответы</p>
           <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">
-            Доставка, оплата, <span className="font-display-accent">оригинальность</span>
+            Доставка, оплата, <span className="font-display-accent-plain">оригинальность</span>
           </h2>
           <div className="flex flex-col gap-3">
             {[

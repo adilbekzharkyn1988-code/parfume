@@ -115,6 +115,37 @@ export type LeadRecord = {
   status?: string;
 };
 
+/**
+ * Только проверка логина/пароля — mode=auth в Apps Script не читает
+ * таблицу с заявками, поэтому отвечает быстро. Используется для входа
+ * в админку: пускаем внутрь сразу после проверки пароля, а список
+ * заявок (может быть медленнее, особенно на холодном старте Apps Script)
+ * подгружаем уже отдельным вызовом fetchLeads после того, как экран
+ * логина сменился на панель.
+ */
+export async function verifyAdminLogin(
+  login: string,
+  password: string
+): Promise<{ ok: boolean; error?: string }> {
+  if (!ENDPOINT) {
+    return { ok: false, error: "NEXT_PUBLIC_LEADS_ENDPOINT не настроен." };
+  }
+  try {
+    const url = new URL(ENDPOINT);
+    url.searchParams.set("login", login);
+    url.searchParams.set("password", password);
+    url.searchParams.set("mode", "auth");
+    const res = await fetch(url.toString(), { method: "GET" });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data?.ok) {
+      return { ok: false, error: data?.error || "Неверный логин или пароль." };
+    }
+    return { ok: true };
+  } catch {
+    return { ok: false, error: "Не удалось проверить логин. Проверьте соединение." };
+  }
+}
+
 export async function fetchLeads(
   login: string,
   password: string

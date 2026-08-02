@@ -36,7 +36,7 @@ export default function SeasonalityChart({ data }: SeasonalityChartProps) {
   return (
     <div ref={ref} className="bg-ivory-dim rounded-md p-6 md:p-8">
       <p className="eyebrow text-stone mb-6 text-center">Когда носить</p>
-      <div className="grid grid-cols-3 gap-x-4 gap-y-6">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-6">
         {ITEMS.map(({ key, label, icon: Icon }, i) => {
           const value = Math.min(100, Math.max(0, data[key] ?? 0));
           return (

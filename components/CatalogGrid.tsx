@@ -15,11 +15,11 @@ const familyLabels: Partial<Record<Family, string>> = {
   spicy: "Пряные",
 };
 
-type Sort = "popular" | "price-asc" | "price-desc" | "new";
+type Sort = "alphabet" | "popular" | "price-asc" | "price-desc" | "new";
 
 export default function CatalogGrid({ products }: { products: Product[] }) {
   const [family, setFamily] = useState<Family | "all">("all");
-  const [sort, setSort] = useState<Sort>("popular");
+  const [sort, setSort] = useState<Sort>("alphabet");
 
   const availableFamilies = useMemo(
     () => Array.from(new Set(products.map((p) => p.family))),
@@ -29,7 +29,11 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
   const filtered = useMemo(() => {
     let list = family === "all" ? products : products.filter((p) => p.family === family);
     list = [...list];
-    if (sort === "price-asc") list.sort((a, b) => a.price5 - b.price5);
+    if (sort === "alphabet") {
+      list.sort((a, b) =>
+        (a.brand + " " + a.name).localeCompare(b.brand + " " + b.name, "ru")
+      );
+    } else if (sort === "price-asc") list.sort((a, b) => a.price5 - b.price5);
     else if (sort === "price-desc") list.sort((a, b) => b.price5 - a.price5);
     else if (sort === "new") list.sort((a, b) => (b.badge === "Новинка" ? 1 : 0) - (a.badge === "Новинка" ? 1 : 0));
     else list.sort((a, b) => b.rating * b.reviews - a.rating * a.reviews);
@@ -69,6 +73,7 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
             onChange={(e) => setSort(e.target.value as Sort)}
             className="min-h-11 border border-ink/15 rounded-full px-3.5 bg-paper text-sm font-mono"
           >
+            <option value="alphabet">По алфавиту</option>
             <option value="popular">Популярные</option>
             <option value="new">Сначала новинки</option>
             <option value="price-asc">Дешевле сначала</option>

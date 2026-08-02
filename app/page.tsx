@@ -64,7 +64,7 @@ export default async function Home() {
             }}
         />
 
-        <div className="container-x relative z-10 h-full flex flex-col justify-end items-start py-8 gap-7">
+        <div className="container-x relative z-10 h-full flex flex-col justify-end items-start pt-8 pb-3 md:pb-5 gap-7">
           <div className="max-w-xl text-left">
             {/*<span
               style={{ fontSize: "0.52rem", animationDelay: "150ms" }}
@@ -74,7 +74,7 @@ export default async function Home() {
             </span>*/}
             <h1
               style={{ animationDelay: "150ms" }}
-              className="hero-fade-in font-display text-[2.5rem] leading-[1.08] sm:text-5xl md:text-[3.1rem] md:leading-[1.15] text-ink"
+              className="hero-fade-in font-display text-[2.2rem] leading-[1.08] sm:text-4xl md:text-[2.7rem] md:leading-[1.15] text-ink"
             >
               НИШЕВАЯ<br />И ЛЮКСОВАЯ<br />ПАРФЮМЕРИЯ
             </h1><br />
@@ -92,7 +92,7 @@ export default async function Home() {
           >
             <Link
               href="/catalog"
-              className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-ink hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
+              className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-white hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
             >
               Перейти в каталог <ArrowRight size={15} />
             </Link>

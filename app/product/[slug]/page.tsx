@@ -103,9 +103,15 @@ export default async function ProductPage({
             <AnimatedBar value={product.longevity} label="Стойкость" delay={120} />
           </div>
 
-          <SeasonalityChart data={product.seasonality} />
+          <div className="md:hidden">
+            <SeasonalityChart data={product.seasonality} />
+          </div>
 
         </div>
+      </div>
+
+      <div className="hidden md:block mt-10 md:mt-14">
+        <SeasonalityChart data={product.seasonality} />
       </div>
 
       <ProductReviews

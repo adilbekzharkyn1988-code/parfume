@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T19:43:35.812Z",
+  "generatedAt": "2026-08-02T19:52:21.524Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -113,6 +113,63 @@
         "autumn": 65,
         "day": 25,
         "evening": 85
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "marc-antoine-barrois-aldebaran",
+      "name": "Aldebaran",
+      "brand": "Marc Antione Barrios",
+      "gender": "unisex",
+      "family": "gourmand",
+      "concentration": "Eau de Parfum",
+      "description": "кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2024 Ноты: тубероза, мате, бобы тонка, мандарин, перец, древесные аккорды Для кого: унисекс с floral-leaning характером Куда: вечер/день, весна/лето, мероприятия, свидания, нишевый signature scent По ощущениям: кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "тубероза",
+          "мате"
+        ],
+        "heart": [
+          "бобы тонка",
+          "мандарин"
+        ],
+        "base": [
+          "перец",
+          "древесные аккорды"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/61VQjmS4ThYN1B1VAvF6NA/94c416c9589d09e7edf924982d41fa50/cf3341d0c8c3387fe95e68f805bff5e4.png",
+      "seasonality": {
+        "day": 80,
+        "autumn": 25,
+        "spring": 80,
+        "summer": 80,
+        "winter": 25,
+        "evening": 80
       },
       "reviewsList": []
     },
@@ -1478,6 +1535,63 @@
       "reviewsList": []
     },
     {
+      "slug": "marc-antoine-barrois-ganymede",
+      "name": "Ganymede",
+      "brand": "Marc Antione Barrios",
+      "gender": "unisex",
+      "family": "citrus",
+      "concentration": "Eau de Parfum",
+      "description": "минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2019 Ноты: мандарин, шафран, османтус, бессмертник, минеральные аккорды, Akigalawood Для кого: унисекс Куда: день/вечер, весна/осень, офис, мероприятия, нишевый signature scent По ощущениям: минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "мандарин",
+          "шафран"
+        ],
+        "heart": [
+          "османтус",
+          "бессмертник"
+        ],
+        "base": [
+          "минеральные аккорды",
+          "Akigalawood"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4rsSjMgFshTDhGKzTx2A8F/f04e7bfc2f9388ab245815cd28bd3045/12b42d1009a1d8730d2795cef2e79824.png",
+      "seasonality": {
+        "day": 80,
+        "autumn": 80,
+        "spring": 80,
+        "summer": 25,
+        "winter": 25,
+        "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
       "slug": "herm-s-terre-d-herm-s",
       "name": "Hermès Terre d’Hermès",
       "brand": "Hermès",
@@ -2823,178 +2937,8 @@
       "reviewsList": []
     },
     {
-      "slug": "marc-antoine-barrois-aldebaran",
-      "name": "Marc-Antoine Barrois Aldebaran",
-      "brand": "Marc Antione Barrios",
-      "gender": "unisex",
-      "family": "gourmand",
-      "concentration": "Eau de Parfum",
-      "description": "кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
-      "story": {
-        "data": {},
-        "content": [
-          {
-            "data": {},
-            "content": [
-              {
-                "data": {},
-                "marks": [],
-                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2024 Ноты: тубероза, мате, бобы тонка, мандарин, перец, древесные аккорды Для кого: унисекс с floral-leaning характером Куда: вечер/день, весна/лето, мероприятия, свидания, нишевый signature scent По ощущениям: кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
-                "nodeType": "text"
-              }
-            ],
-            "nodeType": "paragraph"
-          }
-        ],
-        "nodeType": "document"
-      },
-      "notes": {
-        "top": [
-          "тубероза",
-          "мате"
-        ],
-        "heart": [
-          "бобы тонка",
-          "мандарин"
-        ],
-        "base": [
-          "перец",
-          "древесные аккорды"
-        ]
-      },
-      "price5": 12500,
-      "price10": 23000,
-      "rating": 5,
-      "reviews": 0,
-      "sillage": 4,
-      "longevity": 4,
-      "image": "https://images.ctfassets.net/e8y2nngpr6yc/61VQjmS4ThYN1B1VAvF6NA/94c416c9589d09e7edf924982d41fa50/cf3341d0c8c3387fe95e68f805bff5e4.png",
-      "seasonality": {
-        "winter": 25,
-        "spring": 80,
-        "summer": 80,
-        "autumn": 25,
-        "day": 80,
-        "evening": 80
-      },
-      "reviewsList": []
-    },
-    {
-      "slug": "marc-antoine-barrois-ganymede",
-      "name": "Marc-Antoine Barrois Ganymede",
-      "brand": "Marc Antione Barrios",
-      "gender": "unisex",
-      "family": "citrus",
-      "concentration": "Eau de Parfum",
-      "description": "минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
-      "story": {
-        "data": {},
-        "content": [
-          {
-            "data": {},
-            "content": [
-              {
-                "data": {},
-                "marks": [],
-                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2019 Ноты: мандарин, шафран, османтус, бессмертник, минеральные аккорды, Akigalawood Для кого: унисекс Куда: день/вечер, весна/осень, офис, мероприятия, нишевый signature scent По ощущениям: минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
-                "nodeType": "text"
-              }
-            ],
-            "nodeType": "paragraph"
-          }
-        ],
-        "nodeType": "document"
-      },
-      "notes": {
-        "top": [
-          "мандарин",
-          "шафран"
-        ],
-        "heart": [
-          "османтус",
-          "бессмертник"
-        ],
-        "base": [
-          "минеральные аккорды",
-          "Akigalawood"
-        ]
-      },
-      "price5": 12500,
-      "price10": 23000,
-      "rating": 5,
-      "reviews": 0,
-      "sillage": 4,
-      "longevity": 4,
-      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4rsSjMgFshTDhGKzTx2A8F/f04e7bfc2f9388ab245815cd28bd3045/12b42d1009a1d8730d2795cef2e79824.png",
-      "seasonality": {
-        "winter": 25,
-        "spring": 80,
-        "summer": 25,
-        "autumn": 80,
-        "day": 80,
-        "evening": 80
-      },
-      "reviewsList": []
-    },
-    {
-      "slug": "marc-antoine-barrois-tilia",
-      "name": "Marc-Antoine Barrois Tilia",
-      "brand": "Marc Antione Barrios",
-      "gender": "women",
-      "family": "woody",
-      "concentration": "Eau de Parfum",
-      "description": "мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
-      "story": {
-        "data": {},
-        "content": [
-          {
-            "data": {},
-            "content": [
-              {
-                "data": {},
-                "marks": [],
-                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2024 Ноты: липовый цвет (tilia), жасмин, гелиотроп, ветивер, амброксан Для кого: унисекс, с лёгким feminine leaning Куда: день, весна/лето, тёплая погода, прогулки, офис, мягкий everyday niche scent По ощущениям: мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
-                "nodeType": "text"
-              }
-            ],
-            "nodeType": "paragraph"
-          }
-        ],
-        "nodeType": "document"
-      },
-      "notes": {
-        "top": [
-          "липовый цвет (tilia)"
-        ],
-        "heart": [
-          "жасмин"
-        ],
-        "base": [
-          "гелиотроп",
-          "ветивер",
-          "амброксан"
-        ]
-      },
-      "price5": 12500,
-      "price10": 23000,
-      "rating": 5,
-      "reviews": 0,
-      "sillage": 4,
-      "longevity": 4,
-      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4DIilUsz3Nx6Am4xhSGG5C/22f571b224e1c6639ea3a7ea0e628650/ce0b752a897f1349990c9c16f07c1dfe.png",
-      "seasonality": {
-        "winter": 25,
-        "spring": 80,
-        "summer": 80,
-        "autumn": 25,
-        "day": 80,
-        "evening": 35
-      },
-      "reviewsList": []
-    },
-    {
       "slug": "miss-dior-blooming-bouquet",
-      "name": "Miss Dior Blooming Bouquet",
+      "name": "Miss Dior",
       "brand": "Dior",
       "gender": "women",
       "family": "floral",
@@ -3039,11 +2983,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/79xKSt01cZ42sP2K4eVTBo/7d416fc4a2d72519fe440354d08e97b9/6e58983e96c7f8f6e22b5ec06f92a70a.png",
       "seasonality": {
-        "winter": 20,
+        "day": 80,
+        "autumn": 20,
         "spring": 85,
         "summer": 70,
-        "autumn": 20,
-        "day": 80,
+        "winter": 20,
         "evening": 25
       },
       "reviewsList": []
@@ -3527,7 +3471,7 @@
     },
     {
       "slug": "roja-burlington",
-      "name": "Roja Burlington",
+      "name": "Roja Burlington 1819",
       "brand": "Roja",
       "gender": "men",
       "family": "woody",
@@ -3581,11 +3525,11 @@
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/W59js8QDDqeVK7onsannf/c6a6fba5d62160bdc4687c94b905572e/f3d558ca13a23a848ce9450eb8ab3f66.png",
       "seasonality": {
-        "winter": 25,
+        "day": 80,
+        "autumn": 80,
         "spring": 80,
         "summer": 25,
-        "autumn": 80,
-        "day": 80,
+        "winter": 25,
         "evening": 80
       },
       "reviewsList": []
@@ -3906,6 +3850,62 @@
         "autumn": 80,
         "day": 35,
         "evening": 80
+      },
+      "reviewsList": []
+    },
+    {
+      "slug": "marc-antoine-barrois-tilia",
+      "name": "Tilia",
+      "brand": "Marc Antione Barrios",
+      "gender": "women",
+      "family": "woody",
+      "concentration": "Eau de Parfum",
+      "description": "мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Страна: Marc-Antoine Barrois — Франция Парфюмер: Quentin Bisch (официально) Год создания: 2024 Ноты: липовый цвет (tilia), жасмин, гелиотроп, ветивер, амброксан Для кого: унисекс, с лёгким feminine leaning Куда: день, весна/лето, тёплая погода, прогулки, офис, мягкий everyday niche scent По ощущениям: мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "липовый цвет (tilia)"
+        ],
+        "heart": [
+          "жасмин"
+        ],
+        "base": [
+          "гелиотроп",
+          "ветивер",
+          "амброксан"
+        ]
+      },
+      "price5": 12500,
+      "price10": 23000,
+      "rating": 5,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4DIilUsz3Nx6Am4xhSGG5C/22f571b224e1c6639ea3a7ea0e628650/ce0b752a897f1349990c9c16f07c1dfe.png",
+      "seasonality": {
+        "day": 80,
+        "autumn": 25,
+        "spring": 80,
+        "summer": 80,
+        "winter": 25,
+        "evening": 35
       },
       "reviewsList": []
     },

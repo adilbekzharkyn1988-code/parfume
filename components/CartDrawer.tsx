@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/format";
-import { submitOrder } from "@/lib/leads";
+import { submitOrderInBackground, leadsEndpointConfigured } from "@/lib/leads";
 import { formatPhoneInput, isPhoneComplete } from "@/lib/phone";
 import { X, Trash2, Check } from "lucide-react";
 import Link from "next/link";
@@ -39,8 +39,15 @@ export default function CartDrawer() {
     }
     setPhoneError("");
 
-    setStatus("sending");
-    const res = await submitOrder({
+    if (!leadsEndpointConfigured()) {
+      setStatus("error");
+      setErrorMsg("Приём заявок ещё не настроен.");
+      return;
+    }
+
+    // Заявка уходит в фоне (см. submitOrderInBackground) — не ждём ответа
+    // сервера, поэтому "Заявка отправлена" показывается сразу же.
+    submitOrderInBackground({
       name,
       phone,
       comment: comment || undefined,
@@ -53,13 +60,8 @@ export default function CartDrawer() {
       })),
       total,
     });
-    if (res.ok) {
-      setStatus("sent");
-      clearCart();
-    } else {
-      setStatus("error");
-      setErrorMsg(res.error || "Не удалось отправить заявку");
-    }
+    setStatus("sent");
+    clearCart();
   };
 
   return (

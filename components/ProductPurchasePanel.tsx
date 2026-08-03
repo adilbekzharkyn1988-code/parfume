@@ -104,7 +104,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
       <div className="flex items-end justify-between gap-3">
         <div className="min-w-0">
           <p className="eyebrow text-stone mb-1">Итого</p>
-          <p className="font-body font-bold text-2xl sm:text-3xl whitespace-nowrap">{formatPrice(totalPrice)}</p>
+          <p className="font-body font-bold text-xl sm:text-3xl whitespace-nowrap">{formatPrice(totalPrice)}</p>
         </div>
         <button
           onClick={handleAdd}

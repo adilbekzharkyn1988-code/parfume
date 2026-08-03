@@ -4,13 +4,18 @@ import { useEffect, useRef, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 
-import hero1 from "@/public/hero1.png";
-import hero2 from "@/public/hero2.png";
-import hero3 from "@/public/hero3.png";
-import women from "@/public/pers.png";
-import men from "@/public/men.avif";
+import amouage from "@/public/amouage.webp";
+import initio from "@/public/initio.webp";
+import xerjoff from "@/public/xerjoff.webp";
+import ex-nihilo from "@/public/ex-nihilo.webp";
+import clive-christian from "@/public/clive-christian.webp";
+import creed from "@/public/creed.webp";
+import kilian from "@/public/kilian.webp";
+import lv from "@/public/lv.webp";
+import pdm from "@/public/pdm.webp";
+import roja from "@/public/roja.webp";
 
-const UNIQUE_CARDS: StaticImageData[] = [men, hero3, hero1, hero2];
+const UNIQUE_CARDS: StaticImageData[] = [amouage, initio, xerjoff, e-nihilo, clive-christian, creed, kilian, lv, pdm, roja];
 
 const REPEATS = 5;
 const SLOTS = UNIQUE_CARDS.length * REPEATS;

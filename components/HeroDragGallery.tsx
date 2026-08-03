@@ -7,15 +7,15 @@ import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import amouage from "@/public/amouage.webp";
 import initio from "@/public/initio.webp";
 import xerjoff from "@/public/xerjoff.webp";
-import ex-nihilo from "@/public/ex-nihilo.webp";
-import clive-christian from "@/public/clive-christian.webp";
+import exnihilo from "@/public/ex-nihilo.webp";
+import clivechristian from "@/public/clive-christian.webp";
 import creed from "@/public/creed.webp";
 import kilian from "@/public/kilian.webp";
 import lv from "@/public/lv.webp";
 import pdm from "@/public/pdm.webp";
 import roja from "@/public/roja.webp";
 
-const UNIQUE_CARDS: StaticImageData[] = [amouage, initio, xerjoff, e-nihilo, clive-christian, creed, kilian, lv, pdm, roja];
+const UNIQUE_CARDS: StaticImageData[] = [amouage, initio, xerjoff, exnihilo, clivechristian, creed, kilian, lv, pdm, roja];
 
 const REPEATS = 5;
 const SLOTS = UNIQUE_CARDS.length * REPEATS;

@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Product } from "@/lib/data";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/context/CartContext";
-import { Minus, Plus, Icon } from "lucide-react";
-import { bottlePerfume } from "@lucide/lab";
+import { Minus, Plus } from "lucide-react";
+import PerfumeBottleIcon from "./icons/PerfumeBottleIcon";
 
 export default function ProductPurchasePanel({ product }: { product: Product }) {
   const [volume, setVolume] = useState<"5" | "10">("5");
@@ -52,9 +52,8 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                     <p className="text-[11px] text-sage mt-1">Выгода {savingsPct}%</p>
                   )}
                 </div>
-                <Icon
-                  iconNode={bottlePerfume}
-                  size={v === "10" ? 28 : 20}
+                <PerfumeBottleIcon
+                  size={v === "10" ? 24 : 17}
                   className="shrink-0 transition-all duration-300"
                   style={{
                     color: "#6E2A3B",
@@ -88,13 +87,14 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
               <Plus size={15} />
             </button>
           </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <Icon
-              iconNode={bottlePerfume}
-              size={volume === "10" ? 18 : 15}
-              className="text-wine shrink-0"
-            />
-            <span className="font-mono text-sm text-ink/70">× {qty}</span>
+          <div className="flex-1 min-w-0 flex flex-wrap items-center gap-1 justify-end">
+            {Array.from({ length: qty }).map((_, i) => (
+              <PerfumeBottleIcon
+                key={i}
+                size={volume === "10" ? 13 : 10}
+                className="text-wine shrink-0"
+              />
+            ))}
           </div>
         </div>
       </div>

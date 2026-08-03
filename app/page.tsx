@@ -333,10 +333,11 @@ export default async function Home() {
                 ].map((b, i) => (
                   <span
                     key={`${groupIndex}-${b}-${i}`}
-                    className="font-display text-lg md:text-xl text-ink/70 tracking-wide shrink-0"
+                    className="font-display font-[300] text-lg md:text-xl text-ink/70 tracking-wide shrink-0"
                     style={{ marginRight: "20px" }}
                   >
                     {b}
+                    <span className="text-ink/30 ml-5">•</span>
                   </span>
                 ))}
               </div>

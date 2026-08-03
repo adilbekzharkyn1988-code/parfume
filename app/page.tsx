@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, BadgeCheck, CreditCard, Phone, MessageCircle, MapPin, Clock, ExternalLink, Music2, Icon } from "lucide-react";
-import { bottlePerfume } from "@lucide/lab";
+import { bottlePerfume, dress, tuxedo } from "@lucide/lab";
 
 // lucide-react v1 убрал брендовые иконки (Instagram, Facebook, Twitter и т.д.),
 // поэтому используем собственный SVG вместо импорта из lucide-react
@@ -309,19 +309,17 @@ export default async function Home() {
         <div className="grid grid-cols-2 gap-3 sm:gap-6">
           <Link
             href="/catalog/women"
-            className="group relative rounded-lg overflow-hidden bg-[#F5E3E8] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
+            className="group relative rounded-lg overflow-hidden bg-[#F5E3E8] h-56 sm:h-64 md:h-80 flex flex-col items-center justify-center gap-4 p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
           >
-            <Image
-              src={womenPhoto}
-              alt="Женская парфюмерия"
-              fill
-              sizes="(min-width: 768px) 50vw, 50vw"
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            <Icon
+              iconNode={dress}
+              size={64}
+              strokeWidth={1.2}
+              className="text-wine/70 transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
-            <div className="relative z-10">
-              <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Женская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+            <div className="relative z-10 text-center">
+              <h3 className="font-display text-xl md:text-2xl text-ink leading-tight">Женская парфюмерия</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ink/70 group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -329,19 +327,17 @@ export default async function Home() {
 
           <Link
             href="/catalog/men"
-            className="group relative rounded-lg overflow-hidden bg-[#EFE6D6] h-56 sm:h-64 md:h-80 flex items-end p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)]"
+            className="group relative rounded-lg overflow-hidden bg-[#EFE6D6] h-56 sm:h-64 md:h-80 flex flex-col items-center justify-center gap-4 p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
           >
-            <Image
-              src={menPhoto}
-              alt="Мужская парфюмерия"
-              fill
-              sizes="(min-width: 768px) 50vw, 50vw"
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            <Icon
+              iconNode={tuxedo}
+              size={64}
+              strokeWidth={1.2}
+              className="text-ink/60 transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
-            <div className="relative z-10">
-              <h3 className="font-display text-xl md:text-2xl text-ivory leading-tight">Мужская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ivory group-hover:gap-3 transition-all">
+            <div className="relative z-10 text-center">
+              <h3 className="font-display text-xl md:text-2xl text-ink leading-tight">Мужская парфюмерия</h3>
+              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ink/70 group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>

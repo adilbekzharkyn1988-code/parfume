@@ -108,9 +108,9 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
         </div>
         <button
           onClick={handleAdd}
-          className="eyebrow rounded-full px-4 py-3 text-[10px] sm:px-7 sm:py-4 sm:text-[11px] bg-wine text-ivory hover:bg-wine-dark transition-colors shrink-0 whitespace-nowrap"
+          className="eyebrow rounded-2xl px-3.5 py-2.5 text-[10px] sm:px-5 sm:py-3 sm:text-[11px] bg-wine text-ivory hover:bg-wine-dark transition-colors shrink-0 leading-relaxed text-center"
         >
-          {added ? "Добавлено ✓" : "Добавить в корзину"}
+          {added ? "Добавлено ✓" : <>Добавить<br />в корзину</>}
         </button>
       </div>
       <p className="text-[11px] text-stone -mt-2">

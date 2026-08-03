@@ -92,7 +92,7 @@ export default async function Home() {
           >
             <Link
               href="/catalog"
-              className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-white hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
+              className="eyebrow md:!text-[1rem] rounded-[10px] px-6 py-4 bg-gold text-white hover:bg-gold-soft transition-colors inline-flex items-center gap-2"
             >
               Перейти в каталог <ArrowRight size={15} />
             </Link>

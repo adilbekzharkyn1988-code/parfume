@@ -14,6 +14,7 @@ import kilian from "@/public/kilian.webp";
 import lv from "@/public/lv.webp";
 import pdm from "@/public/pdm.webp";
 import roja from "@/public/roja.webp";
+import pers from "@/public/pers.png";
 
 const UNIQUE_CARDS: StaticImageData[] = [amouage, initio, xerjoff, exnihilo, clivechristian, creed, kilian, lv, pdm, roja];
 
@@ -140,7 +141,7 @@ export default function HeroDragGallery() {
       >
         <div className="relative w-[320px] md:w-[360px]">
           <Image
-            src={women}
+            src={pers}
             alt="Парфюмерия"
             priority
             className="w-full h-auto"

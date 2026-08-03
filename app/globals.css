@@ -178,7 +178,7 @@ body {
 .brands-marquee__track {
   display: flex;
   width: max-content;
-  animation: brands-marquee-scroll 45s linear infinite;
+  animation: brands-marquee-scroll 90s linear infinite;
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;

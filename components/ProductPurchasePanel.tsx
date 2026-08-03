@@ -28,7 +28,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
   }
 
   return (
-    <div className="rounded-md border border-ink/12 p-6 md:p-7 bg-paper flex flex-col gap-6">
+    <div className="rounded-2xl p-6 md:p-7 bg-white shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] flex flex-col gap-6">
       <div>
         <p className="eyebrow text-stone mb-2">Выберите объём</p>
         <div className="grid grid-cols-2 gap-3">
@@ -39,7 +39,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                 key={v}
                 onClick={() => setVolume(v)}
                 aria-pressed={volume === v}
-                className="rounded-md border px-4 py-3 text-left transition-colors flex items-center justify-between gap-2"
+                className="rounded-xl border px-4 py-3 text-left transition-colors flex items-center justify-between gap-2"
                 style={{
                   borderColor: volume === v ? "#6E2A3B" : "rgba(28,23,18,0.15)",
                   background: volume === v ? "rgba(110,42,59,0.06)" : "transparent",
@@ -88,15 +88,13 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
               <Plus size={15} />
             </button>
           </div>
-          <div className="flex flex-wrap items-center gap-1 justify-end min-w-0 max-w-[45%]">
-            {Array.from({ length: qty }).map((_, i) => (
-              <Icon
-                key={i}
-                iconNode={bottlePerfume}
-                size={volume === "10" ? 15 : 12}
-                className="text-wine shrink-0"
-              />
-            ))}
+          <div className="flex items-center gap-2 shrink-0">
+            <Icon
+              iconNode={bottlePerfume}
+              size={volume === "10" ? 18 : 15}
+              className="text-wine shrink-0"
+            />
+            <span className="font-mono text-sm text-ink/70">× {qty}</span>
           </div>
         </div>
       </div>

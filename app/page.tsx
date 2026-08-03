@@ -55,12 +55,21 @@ export default async function Home() {
           <HeroDragGallery />
         </div>
 
-        {/* белый градиент снизу вверх, высота 150px */}
+        {/* белый градиент снизу вверх — мобильная версия (без изменений) */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[300px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
+          className="md:hidden absolute inset-x-0 bottom-0 h-[300px] bg-gradient-to-t from-white to-transparent z-[5] pointer-events-none"
           style={{
             background:
               "linear-gradient(to top, #fff 0%, #fff 55%, rgba(255,255,255,.95) 70%, rgba(255,255,255,.6) 85%, transparent 100%)",
+            }}
+        />
+
+        {/* белый градиент снизу вверх — десктопная версия (уменьшенный) */}
+        <div
+          className="hidden md:block absolute inset-x-0 bottom-0 h-[150px] z-[5] pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to top, #fff 0%, #fff 25%, rgba(255,255,255,.85) 55%, rgba(255,255,255,.4) 80%, transparent 100%)",
             }}
         />
 

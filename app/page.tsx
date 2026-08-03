@@ -131,51 +131,6 @@ export default async function Home() {
 </div>*/}
       </section>
 
-      {/* POPULAR BRANDS 
-      <section className="bg-ivory pt-10 pb-14 md:pt-14 md:pb-20">
-        <div className="container-x">
-          <p className="eyebrow text-center text-ink/60 mb-7">Популярные бренды</p>
-        </div>
-        <div className="brands-marquee">
-          <div className="brands-marquee__track">
-            {[0, 1].map((groupIndex) => (
-              <div key={groupIndex} className="brands-marquee__group" aria-hidden={groupIndex === 1}>
-                {[
-                  "Tom Ford",
-                  "Creed",
-                  "Xerjoff",
-                  "Kilian",
-                  "Amouage",
-                  "Nishane",
-                  "Initio",
-                  "Maison Crivelli",
-                  "Marc-Antoine Barrois",
-                  "Clive Christian",
-                  "Louis Vuitton",
-                  "Sospiro",
-                  "Arabian Oud",
-                  "Le Labo",
-                  "Ex-Nihilo",
-                  "Essential Parfums",
-                  "Hormone Paris",
-                  "Acqua Di Parma",
-                  "Bvlgari",
-                  "Roja",
-                ].map((b, i) => (
-                  <span
-                    key={`${groupIndex}-${b}-${i}`}
-                    className="font-display text-lg md:text-xl text-ink/70 tracking-wide shrink-0"
-                    style={{ marginRight: "20px" }}
-                  >
-                    {b}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>*/}
-
       {/* CATEGORY SPLIT 
       <section className="container-x py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-6">
@@ -342,6 +297,51 @@ export default async function Home() {
               </span>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* POPULAR BRANDS */}
+      <section className="bg-ivory w-full pt-10 pb-14 md:pt-14 md:pb-20">
+        <div className="container-x">
+          <p className="eyebrow text-center text-ink/60 mb-7">Популярные бренды</p>
+        </div>
+        <div className="brands-marquee">
+          <div className="brands-marquee__track">
+            {[0, 1].map((groupIndex) => (
+              <div key={groupIndex} className="brands-marquee__group" aria-hidden={groupIndex === 1}>
+                {[
+                  "Tom Ford",
+                  "Creed",
+                  "Xerjoff",
+                  "Kilian",
+                  "Amouage",
+                  "Nishane",
+                  "Initio",
+                  "Maison Crivelli",
+                  "Marc-Antoine Barrois",
+                  "Clive Christian",
+                  "Louis Vuitton",
+                  "Sospiro",
+                  "Arabian Oud",
+                  "Le Labo",
+                  "Ex-Nihilo",
+                  "Essential Parfums",
+                  "Hormone Paris",
+                  "Acqua Di Parma",
+                  "Bvlgari",
+                  "Roja",
+                ].map((b, i) => (
+                  <span
+                    key={`${groupIndex}-${b}-${i}`}
+                    className="font-display text-lg md:text-xl text-ink/70 tracking-wide shrink-0"
+                    style={{ marginRight: "20px" }}
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

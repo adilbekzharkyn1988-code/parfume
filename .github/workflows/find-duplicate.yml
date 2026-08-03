@@ -1,0 +1,29 @@
+name: Find duplicate product slugs
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  find-duplicates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Check Contentful secrets are set
+        run: |
+          if [ -z "${{ secrets.CONTENTFUL_SPACE_ID }}" ] || [ -z "${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" ]; then
+            echo "::error::Секреты CONTENTFUL_SPACE_ID и/или CONTENTFUL_ACCESS_TOKEN не заданы в Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Run find-duplicate-slugs
+        run: npx tsx scripts/find-duplicate-slugs.ts
+        env:
+          NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}

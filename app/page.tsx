@@ -266,6 +266,26 @@ export default async function Home() {
         <BestsellersGallery products={juparfumePick} />
       </section>
 
+      {/* CATALOG CTA — на всю ширину окна */}
+      <section className="bg-ink w-full">
+        <div className="container-x py-10 md:py-14 flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-8 text-center md:text-left">
+          <div>
+            <h3 className="font-display text-xl md:text-2xl text-white mb-2">
+              Более 100 оригинальных ароматов
+            </h3>
+            <p className="font-body text-white/60 text-sm md:text-base">
+              Ниша и люкс, распив от 5 мл — весь ассортимент в одном каталоге
+            </p>
+          </div>
+          <Link
+            href="/catalog"
+            className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-white hover:bg-gold-soft transition-colors inline-flex items-center gap-2 shrink-0"
+          >
+            Перейти в каталог <ArrowRight size={15} />
+          </Link>
+        </div>
+      </section>
+
       {/* SETS */}
       <section className="bg-white container-x py-8 md:py-12">
         <div className="flex items-end justify-between mb-8">

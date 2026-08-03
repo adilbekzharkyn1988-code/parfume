@@ -83,9 +83,9 @@ export default async function Home() {
             </span>*/}
             <h1
               style={{ animationDelay: "150ms" }}
-              className="hero-fade-in font-display text-[2.2rem] leading-[1.08] sm:text-4xl md:text-[2rem] md:leading-[1.15] text-ink"
+              className="hero-fade-in font-body text-[2.2rem] leading-[1.08] sm:text-4xl md:text-[2.5rem] md:leading-[1.15] text-ink"
             >
-              НИШЕВАЯ<br />И ЛЮКСОВАЯ<br />ПАРФЮМЕРИЯ
+              НИШЕВАЯ И ЛЮКСОВАЯ<br />ПАРФЮМЕРИЯ
             </h1><br />
             <p
               style={{ animationDelay: "350ms" }}

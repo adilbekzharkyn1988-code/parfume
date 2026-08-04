@@ -1,0 +1,70 @@
+name: 2. Залить отзывы и разделы в Contentful
+
+# Запускается вручную ПОСЛЕ того, как data/bulk-import.json
+# сгенерирован (workflow "1. Подготовить отзывы и разделы") и проверен/
+# поправлен вами в браузере на GitHub.
+#
+# Что делает:
+#   1. Берёт ТЕКУЩУЮ версию data/bulk-import.json из репозитория
+#      (как есть — со всеми вашими правками)
+#   2. Заливает в Contentful: обновляет badge у товаров, создаёт отзывы
+#   3. Подтягивает результат обратно в contentful/cache.json и коммитит
+#
+# Ничего не генерирует заново — если нужен новый черновик, сначала
+# снова запустите workflow "1".
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Check secrets are set
+        run: |
+          missing=""
+          [ -z "${{ secrets.CONTENTFUL_SPACE_ID }}" ] && missing="$missing CONTENTFUL_SPACE_ID"
+          [ -z "${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" ] && missing="$missing CONTENTFUL_ACCESS_TOKEN"
+          [ -z "${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}" ] && missing="$missing CONTENTFUL_MANAGEMENT_TOKEN"
+          if [ -n "$missing" ]; then
+            echo "::error::Не заданы секреты:$missing — добавьте в Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Проверить, что черновик существует
+        run: |
+          if [ ! -f data/bulk-import.json ]; then
+            echo "::error::Не найден data/bulk-import.json. Сначала запустите workflow '1. Подготовить отзывы и разделы'."
+            exit 1
+          fi
+
+      - name: Залить отзывы и badge в Contentful
+        run: npm run push:contentful
+        env:
+          NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_MANAGEMENT_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}
+
+      - name: Подтянуть результат обратно
+        run: npm run sync:contentful
+        env:
+          NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+
+      - name: Закоммитить обновлённый cache.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add contentful/cache.json
+          git diff --staged --quiet || git commit -m "chore: bulk import reviews & badges"
+          git push

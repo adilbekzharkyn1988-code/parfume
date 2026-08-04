@@ -1,0 +1,69 @@
+name: 1. Подготовить отзывы и разделы (черновик)
+
+# Запускается вручную: Actions → "1. Подготовить отзывы и разделы" → Run workflow.
+#
+# Что делает:
+#   1. Подтягивает актуальные товары из Contentful
+#   2. Генерирует data/bulk-import.json — черновик: 3-5 отзывов на товар +
+#      поле "badge" (раздел: "Хит продаж" / "Новинка" / "Ограниченная
+#      серия" / null) — СЕЙЧАС это то же значение, что уже стоит в
+#      Contentful, скрипт ничего не придумывает сам.
+#   3. Коммитит этот файл в репозиторий — НИЧЕГО в Contentful не пишет.
+#
+# После запуска откройте data/bulk-import.json прямо на GitHub, найдите
+# нужный товар (по полю "name") и поправьте:
+#   - "badge": "Хит продаж"   — чтобы товар попал в раздел «Хиты продаж»
+#   - "badge": "Новинка"      — чтобы попал в «Новинки»
+#   - "badge": null           — чтобы убрать из обоих разделов
+# Тексты и рейтинги отзывов внутри "reviewsToAdd" тоже можно поправить
+# или удалить лишние.
+#
+# Когда файл проверен и сохранён (Commit changes прямо в браузере) —
+# запустите второй workflow: "2. Залить отзывы и разделы в Contentful".
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Check secrets are set
+        run: |
+          if [ -z "${{ secrets.CONTENTFUL_SPACE_ID }}" ] || [ -z "${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" ]; then
+            echo "::error::Секреты CONTENTFUL_SPACE_ID и/или CONTENTFUL_ACCESS_TOKEN не заданы в Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Подтянуть актуальные товары
+        run: npm run sync:contentful
+        env:
+          NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+
+      - name: Сгенерировать data/bulk-import.json
+        run: npm run generate:bulk
+
+      - name: Закоммитить черновик для проверки
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/bulk-import.json contentful/cache.json
+          git diff --staged --quiet && echo "Нет изменений" || git commit -m "chore: draft bulk-import.json for review"
+          git push
+
+      - name: Что дальше
+        run: |
+          echo "Готово. Откройте data/bulk-import.json в репозитории, проверьте/поправьте поля badge и тексты отзывов, сохраните (Commit changes)."
+          echo "Затем запустите workflow: '2. Залить отзывы и разделы в Contentful'."

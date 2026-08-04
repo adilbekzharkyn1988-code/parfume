@@ -2,7 +2,7 @@
   {
     "slug": "acqua-di-parma-colonia-c-l-u-b",
     "name": "Acqua di Parma Colonia C.L.U.B.",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Тимур",
@@ -29,7 +29,7 @@
   {
     "slug": "al-fareed-arabian-oud",
     "name": "Arabian Oud Al Fareed Arabian Oud",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Гульнара",
@@ -61,7 +61,7 @@
   {
     "slug": "marc-antoine-barrois-aldebaran",
     "name": "Marc Antione Barrios Aldebaran",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Жанна",
@@ -88,9 +88,7 @@
   {
     "slug": "amouage-epic-man",
     "name": "Amouage Epic Man",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -122,9 +120,7 @@
   {
     "slug": "amouage-guidance",
     "name": "Amouage Guidance",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Ержан",
@@ -151,10 +147,7 @@
   {
     "slug": "amouage-guidance-46",
     "name": "Amouage Guidance 46",
-    "badge": [
-      "Хит продаж",
-      "Наш выбор"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Дмитрий",
@@ -186,10 +179,7 @@
   {
     "slug": "amouage-outlands",
     "name": "Amouage Outlands",
-    "badge": [
-      "Новинка",
-      "Наш выбор"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Дмитрий",
@@ -221,7 +211,7 @@
   {
     "slug": "amouage-portrayal-man",
     "name": "Amouage Portrayal Man",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Алия",
@@ -248,10 +238,7 @@
   {
     "slug": "boadicea-the-victorious-hanuman",
     "name": "Boadicea The Victorious Hanuman",
-    "badge": [
-      "Новинка",
-      "Наш выбор"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Дмитрий",
@@ -278,7 +265,7 @@
   {
     "slug": "bvlgari-tygar",
     "name": "Bvlgari Tygar",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Салтанат",
@@ -305,7 +292,7 @@
   {
     "slug": "chopard-vetiver",
     "name": "Chopard Vetiver",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Жанна",
@@ -327,11 +314,7 @@
   {
     "slug": "clive-christian-150",
     "name": "Clive Christian 150 Contemporary",
-    "badge": [
-      "Новинка",
-      "Хит продаж",
-      "Наш выбор"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Бекзат",
@@ -358,9 +341,7 @@
   {
     "slug": "clive-christian-1872",
     "name": "Clive Christian 1872",
-    "badge": [
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Максим",
@@ -387,9 +368,7 @@
   {
     "slug": "clive-christian-blonde-amber",
     "name": "Clive Christian Blonde Amber",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Тимур",
@@ -421,10 +400,7 @@
   {
     "slug": "clive-christian-crab-apple-blossom",
     "name": "Clive Christian Crab Apple Blossom",
-    "badge": [
-      "Новинка",
-      "Наш выбор"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Данияр",
@@ -446,7 +422,7 @@
   {
     "slug": "clive-christian-hedonistic",
     "name": "Clive Christian Hedonistic",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Нурлан",
@@ -473,7 +449,7 @@
   {
     "slug": "clive-christian-matsukita",
     "name": "Clive Christian Matsukita",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Жанна",
@@ -505,7 +481,7 @@
   {
     "slug": "clive-christian-red-tea-vetiver",
     "name": "Clive Christian Red tea Vetiver",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Диана",
@@ -537,9 +513,7 @@
   {
     "slug": "clive-christian-town-and-country",
     "name": "Clive Christian Town and Country",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Тимур",
@@ -571,9 +545,7 @@
   {
     "slug": "creed-aventus",
     "name": "Creed Aventus",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Камила",
@@ -600,9 +572,7 @@
   {
     "slug": "creed-aventus-absolu",
     "name": "Creed Aventus Absolu",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -634,7 +604,7 @@
   {
     "slug": "creed-oud-zarian",
     "name": "Creed Oud Zarian",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Ержан",
@@ -661,10 +631,7 @@
   {
     "slug": "creed-silver-mountain-water",
     "name": "Creed Silver Mountain Water",
-    "badge": [
-      "Хит продаж",
-      "Наш выбор"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Максим",
@@ -691,7 +658,7 @@
   {
     "slug": "essential-parfums-bois-imperial",
     "name": "Essential Parfums Bois Imperial",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Ержан",
@@ -713,9 +680,7 @@
   {
     "slug": "ex-nihilo-blue-talisman-extrait",
     "name": "Ex Nihilo Ex-Nihilo Blue Talisman Extrait",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Тимур",
@@ -737,10 +702,7 @@
   {
     "slug": "ex-nihilo-the-hedonist",
     "name": "Ex Nihilo Ex-Nihilo The Hedonist",
-    "badge": [
-      "Хит продаж",
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -767,7 +729,7 @@
   {
     "slug": "marc-antoine-barrois-ganymede",
     "name": "Marc Antione Barrios Ganymede",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Жанна",
@@ -799,7 +761,7 @@
   {
     "slug": "herm-s-terre-d-herm-s",
     "name": "Hermès Terre d’Hermès",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Оксана",
@@ -821,7 +783,7 @@
   {
     "slug": "hfc-devil-s-intrigue",
     "name": "HFC Devil's Intrigue",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Максим",
@@ -853,7 +815,7 @@
   {
     "slug": "hormone-paris-gaba",
     "name": "Hormone Paris Gaba",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Оксана",
@@ -875,7 +837,7 @@
   {
     "slug": "hormone-paris-testosterone",
     "name": "Hormone Paris Testosterone",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -897,7 +859,7 @@
   {
     "slug": "initio-musk-therapy",
     "name": "Initio Musk Therapy",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Дмитрий",
@@ -919,7 +881,7 @@
   {
     "slug": "initio-narcotic-delight",
     "name": "Initio Narcotic Delight",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Тимур",
@@ -951,7 +913,7 @@
   {
     "slug": "initio-oud-for-greatness",
     "name": "Initio Oud for Greatness",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Виктория",
@@ -978,7 +940,7 @@
   {
     "slug": "initio-psychodelic-love",
     "name": "Initio Psychodelic Love",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -1010,7 +972,7 @@
   {
     "slug": "initio-side-effect",
     "name": "Initio Side Effect",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Алия",
@@ -1032,9 +994,7 @@
   {
     "slug": "kilian-angels-share",
     "name": "Kilian Angels Share",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Ержан",
@@ -1056,7 +1016,7 @@
   {
     "slug": "kilian-black-phantom",
     "name": "Kilian Black Phantom",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Диана",
@@ -1083,7 +1043,7 @@
   {
     "slug": "kilian-good-girl-gone-bad",
     "name": "Kilian Good Girl Gone Bad",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Асель",
@@ -1115,7 +1075,7 @@
   {
     "slug": "kilian-smoking-hot",
     "name": "Kilian Smoking Hot",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Дмитрий",
@@ -1147,9 +1107,7 @@
   {
     "slug": "le-labo-another-13",
     "name": "Le Labo Another 13",
-    "badge": [
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Мадина",
@@ -1171,10 +1129,7 @@
   {
     "slug": "louis-vuitton-afternoon-swim",
     "name": "Louis Vuitton Afternoon Swim",
-    "badge": [
-      "Хит продаж",
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Диана",
@@ -1196,9 +1151,7 @@
   {
     "slug": "louis-vuitton-imagination",
     "name": "Louis Vuitton Imagination",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Данияр",
@@ -1220,7 +1173,7 @@
   {
     "slug": "louis-vuitton-l-immensit",
     "name": "Louis Vuitton L’Immensité",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Нурлан",
@@ -1252,9 +1205,7 @@
   {
     "slug": "louis-vuitton-meteore",
     "name": "Louis Vuitton Meteore",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Дмитрий",
@@ -1276,9 +1227,7 @@
   {
     "slug": "louis-vuitton-pacific-chill",
     "name": "Louis Vuitton Pacific Chill",
-    "badge": [
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Данияр",
@@ -1300,9 +1249,7 @@
   {
     "slug": "louis-vuitton-symphony",
     "name": "Louis Vuitton Symphony",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Камила",
@@ -1324,9 +1271,7 @@
   {
     "slug": "maison-crivelli-hibiscus-mahajat",
     "name": "Maison Crivelli Hibiscus Mahajat",
-    "badge": [
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Асель",
@@ -1348,7 +1293,7 @@
   {
     "slug": "maison-crivelli-oud-maracuja",
     "name": "Maison Crivelli Oud Maracuja",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Данияр",
@@ -1375,7 +1320,7 @@
   {
     "slug": "maison-crivelli-shafran-secret",
     "name": "Maison Crivelli Shafran Secret",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Салтанат",
@@ -1397,7 +1342,7 @@
   {
     "slug": "miss-dior-blooming-bouquet",
     "name": "Dior Miss Dior",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Оксана",
@@ -1429,9 +1374,7 @@
   {
     "slug": "nishane-ani-x-extrait",
     "name": "Nishane Ani X Extrait",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Нурлан",
@@ -1458,9 +1401,7 @@
   {
     "slug": "nishane-hacivat",
     "name": "Nishane Hacivat",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Ержан",
@@ -1482,7 +1423,7 @@
   {
     "slug": "parfums-de-marly-altha-r",
     "name": "Parfums de Marly Althaïr",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Гульнара",
@@ -1514,7 +1455,7 @@
   {
     "slug": "parfums-de-marly-greenley",
     "name": "Parfums de Marly Greenley",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Максим",
@@ -1541,9 +1482,7 @@
   {
     "slug": "parfums-de-marly-haltane",
     "name": "Parfums de Marly Haltane",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Данияр",
@@ -1570,9 +1509,7 @@
   {
     "slug": "parfums-de-marly-sedley",
     "name": "Parfums de Marly Sedley",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Максим",
@@ -1604,9 +1541,7 @@
   {
     "slug": "parfums-de-marly-valaya",
     "name": "Parfums de Marly Valaya",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -1628,9 +1563,7 @@
   {
     "slug": "roja-apex",
     "name": "Roja Apex",
-    "badge": [
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Данияр",
@@ -1662,11 +1595,7 @@
   {
     "slug": "roja-burlington",
     "name": "Roja Burlington 1819",
-    "badge": [
-      "Хит продаж",
-      "Новинка",
-      "Наш выбор"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Алия",
@@ -1693,9 +1622,7 @@
   {
     "slug": "roja-elysium",
     "name": "Roja Elysium",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Диана",
@@ -1727,9 +1654,7 @@
   {
     "slug": "roja-isola-blue",
     "name": "Roja Isola Blue",
-    "badge": [
-      "Хит продаж"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Гульнара",
@@ -1761,7 +1686,7 @@
   {
     "slug": "roja-oceania",
     "name": "Roja Oceania",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Арман",
@@ -1793,10 +1718,7 @@
   {
     "slug": "sospiro-vibrato",
     "name": "Sospiro Vibrato",
-    "badge": [
-      "Хит продаж",
-      "Наш выбор"
-    ],
+    "badge": "Хит продаж",
     "reviewsToAdd": [
       {
         "author": "Бекзат",
@@ -1828,7 +1750,7 @@
   {
     "slug": "sultani-arabian-oud",
     "name": "Arabian Oud Sultani Arabian Oud",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Айгерим",
@@ -1855,7 +1777,7 @@
   {
     "slug": "marc-antoine-barrois-tilia",
     "name": "Marc Antione Barrios Tilia",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Оксана",
@@ -1882,7 +1804,7 @@
   {
     "slug": "tom-ford-ombre-leather",
     "name": "Tom Ford Ombre Leather",
-    "badge": [],
+    "badge": null,
     "reviewsToAdd": [
       {
         "author": "Айгерим",
@@ -1914,9 +1836,7 @@
   {
     "slug": "xerjoff-naxos",
     "name": "Xerjoff Naxos",
-    "badge": [
-      "Наш выбор"
-    ],
+    "badge": "Наш выбор",
     "reviewsToAdd": [
       {
         "author": "Жанна",
@@ -1948,11 +1868,7 @@
   {
     "slug": "xerjoff-torino-21",
     "name": "Xerjoff Torino 21",
-    "badge": [
-      "Хит продаж",
-      "Новинка",
-      "Наш выбор"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Ержан",
@@ -1974,9 +1890,7 @@
   {
     "slug": "ysl-y",
     "name": "Yves Saint Laurent YSL Y",
-    "badge": [
-      "Новинка"
-    ],
+    "badge": "Новинка",
     "reviewsToAdd": [
       {
         "author": "Данияр",

@@ -41,8 +41,8 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                 aria-pressed={volume === v}
                 className="rounded-xl border px-4 py-3 text-left transition-colors flex items-center justify-between gap-2"
                 style={{
-                  borderColor: volume === v ? "#6E2A3B" : "rgba(28,23,18,0.15)",
-                  background: volume === v ? "rgba(110,42,59,0.06)" : "transparent",
+                  borderColor: volume === v ? "#B08D57" : "rgba(28,23,18,0.15)",
+                  background: volume === v ? "rgba(176,141,87,0.08)" : "transparent",
                 }}
               >
                 <div className="min-w-0">
@@ -56,7 +56,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
                   size={v === "10" ? 24 : 17}
                   className="shrink-0 transition-all duration-300"
                   style={{
-                    color: "#6E2A3B",
+                    color: "#B08D57",
                     opacity: volume === v ? 1 : 0,
                     transform: volume === v ? "scale(1)" : "scale(0.6)",
                   }}
@@ -74,7 +74,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
             <button
               onClick={() => setQty((q) => Math.max(1, q - 1))}
               aria-label="Уменьшить количество"
-              className="p-1 hover:text-wine transition-colors"
+              className="p-1 hover:text-gold transition-colors"
             >
               <Minus size={15} />
             </button>
@@ -82,7 +82,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
             <button
               onClick={() => setQty((q) => Math.min(9, q + 1))}
               aria-label="Увеличить количество"
-              className="p-1 hover:text-wine transition-colors"
+              className="p-1 hover:text-gold transition-colors"
             >
               <Plus size={15} />
             </button>
@@ -92,7 +92,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
               <PerfumeBottleIcon
                 key={i}
                 size={volume === "10" ? 13 : 10}
-                className="text-wine shrink-0"
+                className="text-gold shrink-0"
               />
             ))}
           </div>
@@ -108,7 +108,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
         </div>
         <button
           onClick={handleAdd}
-          className="eyebrow rounded-2xl px-3.5 py-2.5 text-[10px] sm:px-5 sm:py-3 sm:text-[11px] bg-wine text-ivory hover:bg-wine-dark transition-colors shrink-0 leading-relaxed text-center"
+          className="eyebrow rounded-2xl px-3.5 py-2.5 text-[10px] sm:px-5 sm:py-3 sm:text-[11px] bg-gold text-white hover:bg-gold-soft transition-colors shrink-0 leading-relaxed text-center"
         >
           {added ? "Добавлено ✓" : <>Добавить<br />в корзину</>}
         </button>

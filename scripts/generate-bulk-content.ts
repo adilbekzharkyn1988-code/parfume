@@ -11,8 +11,8 @@
  *   npm run generate:bulk
  */
 
-import { writeFileSync, existsSync } from "fs";
-import { resolve } from "path";
+import { writeFileSync, existsSync, mkdirSync } from "fs";
+import { resolve, dirname } from "path";
 import { stripBrandPrefix } from "../lib/format";
 
 type CacheProduct = {
@@ -111,6 +111,7 @@ const output = products.map((p) => {
 });
 
 const outPath = resolve(__dirname, "../data/bulk-import.json");
+mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(output, null, 2), "utf-8");
 
 const totalReviews = output.reduce((s, p) => s + p.reviewsToAdd.length, 0);

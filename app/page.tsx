@@ -40,6 +40,9 @@ export default async function Home() {
   const restProducts = allProducts.filter((p) => !shownSlugs.has(p.slug));
   const juparfumePick = (restProducts.length ? restProducts : allProducts).slice(0, 8);
   const featuredArticles = (await fetchArticles()).slice(0, 3);
+  const popularBrands = Array.from(new Set(allProducts.map((p) => p.brand))).sort((a, b) =>
+    a.localeCompare(b, "ru")
+  );
 
   return (
     <main>
@@ -309,36 +312,17 @@ export default async function Home() {
           <div className="brands-marquee__track">
             {[0, 1].map((groupIndex) => (
               <div key={groupIndex} className="brands-marquee__group" aria-hidden={groupIndex === 1}>
-                {[
-                  "Tom Ford",
-                  "Creed",
-                  "Xerjoff",
-                  "Kilian",
-                  "Amouage",
-                  "Nishane",
-                  "Initio",
-                  "Maison Crivelli",
-                  "Marc-Antoine Barrois",
-                  "Clive Christian",
-                  "Louis Vuitton",
-                  "Sospiro",
-                  "Arabian Oud",
-                  "Le Labo",
-                  "Ex-Nihilo",
-                  "Essential Parfums",
-                  "Hormone Paris",
-                  "Acqua Di Parma",
-                  "Bvlgari",
-                  "Roja",
-                ].map((b, i) => (
-                  <span
+                {popularBrands.map((b, i) => (
+                  <Link
                     key={`${groupIndex}-${b}-${i}`}
-                    className="font-body font-[300] text-lg md:text-xl text-ink/70 tracking-wide shrink-0"
+                    href={`/catalog?brand=${encodeURIComponent(b)}`}
+                    className="font-body font-[300] text-lg md:text-xl text-ink/70 tracking-wide shrink-0 hover:text-wine transition-colors"
                     style={{ marginRight: "20px" }}
+                    tabIndex={groupIndex === 1 ? -1 : 0}
                   >
                     {b}
                     <span className="text-ink/30 ml-5">•</span>
-                  </span>
+                  </Link>
                 ))}
               </div>
             ))}

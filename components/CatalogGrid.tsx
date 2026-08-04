@@ -1,33 +1,59 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Product, Family, familyColor } from "@/lib/data";
+import { Suspense, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { ChevronDown } from "lucide-react";
+import { Product } from "@/lib/data";
 import ProductCard from "./ProductCard";
-
-const familyLabels: Partial<Record<Family, string>> = {
-  woody: "Древесные",
-  fresh: "Свежие",
-  oriental: "Восточные",
-  citrus: "Цитрусовые",
-  floral: "Цветочные",
-  gourmand: "Гурманские",
-  musky: "Мускусные",
-  spicy: "Пряные",
-};
 
 type Sort = "alphabet" | "popular" | "price-asc" | "price-desc" | "new";
 
-export default function CatalogGrid({ products }: { products: Product[] }) {
-  const [family, setFamily] = useState<Family | "all">("all");
-  const [sort, setSort] = useState<Sort>("alphabet");
+type PricePreset = "all" | "under-15" | "15-30" | "over-30";
 
-  const availableFamilies = useMemo(
-    () => Array.from(new Set(products.map((p) => p.family))),
-    [products]
+const pricePresets: { value: PricePreset; label: string; test: (price5: number) => boolean }[] = [
+  { value: "all", label: "Любая цена", test: () => true },
+  { value: "under-15", label: "До 15 000 ₸", test: (p) => p < 15000 },
+  { value: "15-30", label: "15 000–30 000 ₸", test: (p) => p >= 15000 && p < 30000 },
+  { value: "over-30", label: "От 30 000 ₸", test: (p) => p >= 30000 },
+];
+
+export default function CatalogGrid({ products }: { products: Product[] }) {
+  return (
+    <Suspense fallback={<CatalogGridInner products={products} initialBrand="all" />}>
+      <CatalogGridWithParams products={products} />
+    </Suspense>
   );
+}
+
+function CatalogGridWithParams({ products }: { products: Product[] }) {
+  const searchParams = useSearchParams();
+  const initialBrand = searchParams.get("brand") ?? "all";
+  return <CatalogGridInner products={products} initialBrand={initialBrand} />;
+}
+
+function CatalogGridInner({
+  products,
+  initialBrand,
+}: {
+  products: Product[];
+  initialBrand: string;
+}) {
+  const [brand, setBrand] = useState<string>(initialBrand);
+  const [price, setPrice] = useState<PricePreset>("all");
+  const [sort, setSort] = useState<Sort>("alphabet");
+  const [brandOpen, setBrandOpen] = useState(false);
+
+  const brandCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const p of products) counts.set(p.brand, (counts.get(p.brand) ?? 0) + 1);
+    return Array.from(counts.entries()).sort((a, b) => a[0].localeCompare(b[0], "ru"));
+  }, [products]);
 
   const filtered = useMemo(() => {
-    let list = family === "all" ? products : products.filter((p) => p.family === family);
+    const priceTest = pricePresets.find((p) => p.value === price)?.test ?? (() => true);
+    let list = products.filter(
+      (p) => (brand === "all" || p.brand === brand) && priceTest(p.price5)
+    );
     list = [...list];
     if (sort === "alphabet") {
       list.sort((a, b) =>
@@ -38,30 +64,71 @@ export default function CatalogGrid({ products }: { products: Product[] }) {
     else if (sort === "new") list.sort((a, b) => (b.badge === "Новинка" ? 1 : 0) - (a.badge === "Новинка" ? 1 : 0));
     else list.sort((a, b) => b.rating * b.reviews - a.rating * a.reviews);
     return list;
-  }, [products, family, sort]);
+  }, [products, brand, price, sort]);
 
   return (
     <div>
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-        <div className="flex gap-2 overflow-x-auto snap-x snap-proximity -mx-4 px-4 pb-1 md:flex-wrap md:overflow-visible md:mx-0 md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <button
-            onClick={() => setFamily("all")}
-            className={`eyebrow shrink-0 snap-start min-h-11 flex items-center rounded-full px-4 border whitespace-nowrap transition-colors ${
-              family === "all" ? "bg-ink text-ivory border-ink" : "border-ink/15 text-ink/65 hover:border-ink/40"
-            }`}
-          >
-            Все семейства
-          </button>
-          {availableFamilies.map((f) => (
+        <div className="flex flex-wrap gap-2">
+          {/* Фильтр по бренду */}
+          <div className="relative">
             <button
-              key={f}
-              onClick={() => setFamily(f)}
-              className={`eyebrow shrink-0 snap-start min-h-11 flex items-center rounded-full px-4 border whitespace-nowrap transition-colors ${
-                family === f ? "text-ivory border-transparent" : "border-ink/15 text-ink/65 hover:border-ink/40"
+              type="button"
+              onClick={() => setBrandOpen((v) => !v)}
+              className={`eyebrow min-h-11 flex items-center gap-1.5 rounded-full px-4 border whitespace-nowrap transition-colors ${
+                brand !== "all" ? "bg-ink text-ivory border-ink" : "border-ink/15 text-ink/65 hover:border-ink/40"
               }`}
-              style={family === f ? { background: familyColor[f].text } : {}}
             >
-              {familyLabels[f]}
+              {brand === "all" ? "Все бренды" : brand}
+              <ChevronDown size={14} className={brandOpen ? "rotate-180 transition-transform" : "transition-transform"} />
+            </button>
+
+            {brandOpen && (
+              <>
+                <div className="fixed inset-0 z-20" onClick={() => setBrandOpen(false)} />
+                <div className="absolute z-30 mt-2 w-64 max-h-80 overflow-y-auto rounded-xl border border-ink/10 bg-paper shadow-[0_10px_40px_-10px_rgba(28,23,18,0.25)] p-1.5">
+                  <button
+                    onClick={() => {
+                      setBrand("all");
+                      setBrandOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 rounded-lg text-sm flex items-center justify-between ${
+                      brand === "all" ? "bg-ink text-ivory" : "hover:bg-ink/5"
+                    }`}
+                  >
+                    <span>Все бренды</span>
+                    <span className={brand === "all" ? "text-ivory/60" : "text-ink/40"}>{products.length}</span>
+                  </button>
+                  {brandCounts.map(([b, count]) => (
+                    <button
+                      key={b}
+                      onClick={() => {
+                        setBrand(b);
+                        setBrandOpen(false);
+                      }}
+                      className={`w-full text-left px-3 py-2 rounded-lg text-sm flex items-center justify-between ${
+                        brand === b ? "bg-ink text-ivory" : "hover:bg-ink/5"
+                      }`}
+                    >
+                      <span className="truncate">{b}</span>
+                      <span className={`shrink-0 ml-2 ${brand === b ? "text-ivory/60" : "text-ink/40"}`}>{count}</span>
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Пресеты по цене */}
+          {pricePresets.map((p) => (
+            <button
+              key={p.value}
+              onClick={() => setPrice(p.value)}
+              className={`eyebrow min-h-11 flex items-center rounded-full px-4 border whitespace-nowrap transition-colors ${
+                price === p.value ? "bg-ink text-ivory border-ink" : "border-ink/15 text-ink/65 hover:border-ink/40"
+              }`}
+            >
+              {p.label}
             </button>
           ))}
         </div>

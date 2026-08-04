@@ -189,7 +189,7 @@ export default async function Home() {
             <p className="eyebrow text-wine mb-2">Выбор покупателей</p>
             <h2 className="font-display text-2xl md:text-3xl">Хиты <span className="font-display-accent-plain">продаж</span></h2>
           </div>
-          <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+          <Link href="/catalog/bestsellers" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Смотреть все <ArrowRight size={15} />
           </Link>
         </div>
@@ -203,7 +203,7 @@ export default async function Home() {
             <p className="eyebrow text-sage mb-2">Только что появились</p>
             <h2 className="font-display text-2xl md:text-3xl">Новинки</h2>
           </div>
-          <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+          <Link href="/catalog/new" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Смотреть все <ArrowRight size={15} />
           </Link>
         </div>
@@ -217,7 +217,7 @@ export default async function Home() {
             <p className="eyebrow text-wine mb-2">Рекомендуем</p>
             <h2 className="font-display text-2xl md:text-3xl">Наш <span className="font-display-accent-plain">выбор</span></h2>
           </div>
-          <Link href="/catalog" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
+          <Link href="/catalog/pick" className="inline-flex items-center gap-2 eyebrow text-ink/70 hover:text-wine">
             Смотреть все <ArrowRight size={15} />
           </Link>
         </div>
@@ -255,7 +255,17 @@ export default async function Home() {
             Смотреть все <ArrowRight size={15} />
           </Link>
         </div>
-        <BestsellersGallery products={best} />
+        <Link
+          href="/catalog/sets"
+          className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-ink/15 bg-ivory-dim py-16 text-center hover:border-wine/40 transition-colors"
+        >
+          <p className="text-ink/65 max-w-sm">
+            Подарочные наборы ароматов готовятся — совсем скоро появятся здесь.
+          </p>
+          <span className="eyebrow text-wine inline-flex items-center gap-2">
+            Узнать подробнее <ArrowRight size={15} />
+          </span>
+        </Link>
       </section>
 
       {/* CATEGORIES */}

@@ -228,7 +228,7 @@ export default async function Home() {
       <section className="bg-gold-soft w-full">
         <div className="container-x py-10 md:py-14 flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-8 text-center md:text-left">
           <div>
-            <h3 className="font-display text-xl md:text-2xl text-white mb-2">
+            <h3 className="font-display text-xl md:text-2xl text-wine mb-2">
               Не нашли свой аромат?
             </h3>
             <p className="font-body text-ink/70 text-sm md:text-base">

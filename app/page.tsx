@@ -225,19 +225,19 @@ export default async function Home() {
       </section>
 
       {/* CATALOG CTA — на всю ширину окна */}
-      <section className="bg-ink w-full">
+      <section className="bg-gold-soft w-full">
         <div className="container-x py-10 md:py-14 flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-8 text-center md:text-left">
           <div>
             <h3 className="font-display text-xl md:text-2xl text-white mb-2">
-              Более 100 оригинальных ароматов
+              Не нашли свой аромат?
             </h3>
             <p className="font-body text-white/60 text-sm md:text-base">
-              Ниша и люкс, распив от 5 мл — весь ассортимент в одном каталоге
+              Ниша и люкс — весь наш ассортимент на одной странице
             </p>
           </div>
           <Link
             href="/catalog"
-            className="eyebrow rounded-[10px] px-6 py-4 bg-gold text-white hover:bg-gold-soft transition-colors inline-flex items-center gap-2 shrink-0"
+            className="eyebrow rounded-[10px] px-6 py-4 bg-ink text-white hover:bg-ink/50 transition-colors inline-flex items-center gap-2 shrink-0"
           >
             Перейти в каталог <ArrowRight size={15} />
           </Link>

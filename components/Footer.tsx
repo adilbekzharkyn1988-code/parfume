@@ -39,16 +39,14 @@ export default function Footer() {
         <div>
           <p className="eyebrow text-ink/60 mb-4">Контакты</p>
           <ul className="flex flex-col gap-2.5 text-sm text-ink/75">
-            <li>+7 (999) 123-45-67</li>
-            <li>hello@juparfume.example</li>
+            <li>+7 (705) 686-86-94</li>
             <li>Алматы, Досмухамедова 52</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-line">
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-ink/60">
-          <p>© 2026 JUPARFUME. Сайт-прототип, наполнен тестовыми данными.</p>
-          <p>Оригинальная парфюмерия · 100% проверенные партии</p>
+          <p>© 2026 JUPARFUME.</p>
         </div>
       </div>
     </footer>

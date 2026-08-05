@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Truck, BadgeCheck, CreditCard, Phone, MessageCircle, MapPin, Clock, ExternalLink, Music2, Icon } from "lucide-react";
-import { bottlePerfume, dress, tuxedo } from "@lucide/lab";
+import { bottlePerfume } from "@lucide/lab";
 
 // lucide-react v1 убрал брендовые иконки (Instagram, Facebook, Twitter и т.д.),
 // поэтому используем собственный SVG вместо импорта из lucide-react
@@ -274,20 +274,19 @@ export default async function Home() {
           <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
           <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:gap-6">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6">
           <Link
             href="/catalog/women"
-            className="group relative rounded-lg overflow-hidden bg-[#F5E3E8] h-56 sm:h-64 md:h-80 flex flex-col items-center justify-center gap-4 p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
+            className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
           >
-            <Icon
-              iconNode={dress}
-              size={64}
-              strokeWidth={1.2}
-              className="text-wine/70 transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="relative z-10 text-center">
-              <h3 className="font-display text-xl md:text-2xl text-ink leading-tight">Женская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ink/70 group-hover:gap-3 transition-all">
+            <div className="aspect-square bg-[#F5E3E8] flex items-center justify-center relative overflow-hidden">
+              <span className="text-6xl sm:text-7xl md:text-8xl transition-transform duration-500 group-hover:scale-110">♀</span>
+            </div>
+            <div className="p-4 sm:p-5 flex flex-col gap-2">
+              <h3 className="font-body font-semibold text-base sm:text-lg md:text-xl text-ink leading-tight">
+                Женская парфюмерия
+              </h3>
+              <span className="inline-flex items-center gap-2 eyebrow text-ink/70 group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>
@@ -295,17 +294,16 @@ export default async function Home() {
 
           <Link
             href="/catalog/men"
-            className="group relative rounded-lg overflow-hidden bg-[#EFE6D6] h-56 sm:h-64 md:h-80 flex flex-col items-center justify-center gap-4 p-5 md:p-7 shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
+            className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
           >
-            <Icon
-              iconNode={tuxedo}
-              size={64}
-              strokeWidth={1.2}
-              className="text-ink/60 transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="relative z-10 text-center">
-              <h3 className="font-display text-xl md:text-2xl text-ink leading-tight">Мужская парфюмерия</h3>
-              <span className="inline-flex items-center gap-2 mt-3 eyebrow text-ink/70 group-hover:gap-3 transition-all">
+            <div className="aspect-square bg-[#EFE6D6] flex items-center justify-center relative overflow-hidden">
+              <span className="text-6xl sm:text-7xl md:text-8xl transition-transform duration-500 group-hover:scale-110">♂</span>
+            </div>
+            <div className="p-4 sm:p-5 flex flex-col gap-2">
+              <h3 className="font-body font-semibold text-base sm:text-lg md:text-xl text-ink leading-tight">
+                Мужская парфюмерия
+              </h3>
+              <span className="inline-flex items-center gap-2 eyebrow text-ink/70 group-hover:gap-3 transition-all">
                 Смотреть каталог <ArrowRight size={15} />
               </span>
             </div>

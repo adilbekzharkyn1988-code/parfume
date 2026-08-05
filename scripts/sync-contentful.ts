@@ -82,6 +82,7 @@ function mapReview(item: any) {
     user: f.author,
     text: richTextToPlain(f.text) || f.text,
     rating: f.rating,
+    date: f.date || item.sys.createdAt,
   };
 }
 
@@ -112,7 +113,7 @@ async function main() {
   for (const r of reviewsRes.items.map(mapReview)) {
     if (!r.productId) continue;
     const list = reviewsByProduct.get(r.productId) || [];
-    list.push({ user: r.user, text: r.text, rating: r.rating });
+    list.push({ user: r.user, text: r.text, rating: r.rating, date: r.date });
     reviewsByProduct.set(r.productId, list);
   }
 

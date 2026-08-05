@@ -15,6 +15,7 @@ export type ReviewData = {
   user: string;
   text: string;
   rating: number;
+  date?: string;
 };
 
 export type Product = {

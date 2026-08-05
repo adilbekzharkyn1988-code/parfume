@@ -503,7 +503,7 @@ export default async function Home() {
                 key={item.q}
                 className="group rounded-md border border-ink/10 bg-paper px-5 py-4 open:pb-4"
               >
-                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-body font-bold text-sm">
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-body text-sm">
                   {item.q}
                   <span className="shrink-0 text-stone transition-transform group-open:rotate-45 font-mono text-xl">+</span>
                 </summary>
@@ -524,13 +524,13 @@ export default async function Home() {
 
           <div className="flex flex-col gap-3 text-sm text-ivory/90 mb-6">
             <a
-              href="tel:+79991234567"
+              href="tel:+77056868694"
               className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
             >
-              <Phone size={16} className="shrink-0" /> +7 (999) 123-45-67
+              <Phone size={16} className="shrink-0" /> +7 (705) 686-86-94
             </a>
             <a
-              href="https://wa.me/79991234567"
+              href="https://wa.me/77056868694"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
@@ -541,13 +541,13 @@ export default async function Home() {
               <MapPin size={16} className="shrink-0" /> Алматы, Досмухамедова 52
             </p>
             <p className="inline-flex items-center gap-2 justify-center">
-              <Clock size={16} className="shrink-0" /> Ежедневно, 10:00–20:00
+              <Clock size={16} className="shrink-0" /> Ежедневно, 10:00–22:00
             </p>
           </div>
 
           <div className="flex items-center gap-5 text-xs mb-7">
             <a
-              href="https://2gis.kz"
+              href="https://2gis.kz/almaty/inside/9430047375164282/firm/70000001096949165?m=76.924928%2C43.252465%2F18"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
@@ -555,7 +555,7 @@ export default async function Home() {
               2ГИС <ExternalLink size={12} />
             </a>
             <a
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/place/Juparfume/@43.247102,76.9290888,14z/data=!4m6!3m5!1s0x38836f05b222ae1d:0xd25a043f3cf9b303!8m2!3d43.252871!4d76.9243525!16s%2Fg%2F11z9d0r36b?entry=ttu&g_ep=EgoyMDI2MDgwMy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
@@ -575,7 +575,7 @@ export default async function Home() {
               <MessageCircle size={18} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/juparfume.kz"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -584,7 +584,7 @@ export default async function Home() {
               <InstagramIcon size={18} />
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://tiktok.com/@juparfume.kaz"
               target="_blank"
               rel="noreferrer"
               aria-label="TikTok"

@@ -41,7 +41,7 @@ type BulkItem = {
   slug: string;
   name: string;
   badge: "Новинка" | "Хит продаж" | "Ограниченная серия" | null;
-  reviewsToAdd: { author: string; rating: number; text: string }[];
+  reviewsToAdd: { author: string; date?: string; rating: number; text: string }[];
 };
 
 const importPath = resolve(__dirname, "../data/bulk-import.json");
@@ -121,6 +121,7 @@ async function main() {
           fields: {
             author: { [locale]: review.author },
             rating: { [locale]: review.rating },
+            date: { [locale]: review.date },
             text: { [locale]: toTextField(review.text) },
             product: {
               [locale]: { sys: { type: "Link", linkType: "Entry", id: productEntry.sys.id } },

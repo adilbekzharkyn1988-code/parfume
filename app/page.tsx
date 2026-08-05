@@ -566,13 +566,13 @@ export default async function Home() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/79991234567"
+              href="https://wa.me/77056868694"
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={18} className="text-wine"/>
             </a>
             <a
               href="https://instagram.com/juparfume.kz"
@@ -581,7 +581,7 @@ export default async function Home() {
               aria-label="Instagram"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <InstagramIcon size={18} />
+              <InstagramIcon size={18} className="text-wine" />
             </a>
             <a
               href="https://tiktok.com/@juparfume.kaz"
@@ -590,7 +590,7 @@ export default async function Home() {
               aria-label="TikTok"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <Music2 size={18} />
+              <Music2 size={18} className="text-wine"/>
             </a>
           </div>
         </div>

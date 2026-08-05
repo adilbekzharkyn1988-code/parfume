@@ -231,7 +231,7 @@ export default async function Home() {
             <h3 className="font-display text-xl md:text-2xl text-white mb-2">
               Не нашли свой аромат?
             </h3>
-            <p className="font-body text-white/60 text-sm md:text-base">
+            <p className="font-body text-ink/70 text-sm md:text-base">
               Ниша и люкс — весь наш ассортимент на одной странице
             </p>
           </div>

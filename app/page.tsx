@@ -572,7 +572,7 @@ export default async function Home() {
               aria-label="WhatsApp"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <MessageCircle size={18}  color="#722F37" />
+              <MessageCircle size={18}/>
             </a>
             <a
               href="https://instagram.com/juparfume.kz"
@@ -581,7 +581,7 @@ export default async function Home() {
               aria-label="Instagram"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <InstagramIcon size={18}  color="#722F37" />
+              <InstagramIcon size={18}/>
             </a>
             <a
               href="https://tiktok.com/@juparfume.kaz"
@@ -590,7 +590,7 @@ export default async function Home() {
               aria-label="TikTok"
               className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
             >
-              <Music2 size={18}  color="#722F37" />
+              <Music2 size={18}/>
             </a>
           </div>
         </div>

@@ -73,7 +73,12 @@ export default function ProductReviews({ rating, reviewsCount, reviews }: Produc
             className="border border-ink/15 p-5 rounded-md shrink-0 snap-start w-[78%] xs:w-[70%] sm:w-[320px]"
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="font-bold text-sm">{review.user}</span>
+              <div>
+                <span className="font-bold text-sm block">{review.user}</span>
+                {review.date && (
+                  <span className="text-xs text-stone/60 mt-1 block">{review.date}</span>
+                )}
+              </div>
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star

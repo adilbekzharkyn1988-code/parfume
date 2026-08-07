@@ -31,6 +31,7 @@ import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
+import bgReq from "@/public/bg-req.webp";
 
 export default async function Home() {
   const allProducts = await fetchProducts();
@@ -225,7 +226,12 @@ export default async function Home() {
       </section>
 
       {/* CATALOG CTA — на всю ширину окна */}
-      <section className="bg-wine w-full">
+      <section className="relative w-full" style={{
+        backgroundImage: `url(${bgReq.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
         <div className="container-x py-10 md:py-14 flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-8 text-center md:text-left">
           <div>
             <h3 className="font-display text-xl md:text-2xl text-white mb-2">

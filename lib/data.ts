@@ -376,6 +376,7 @@ export type Article = {
   readTime: string;
   date: string;
   cover: Family;
+  image?: string;
   content: string[];
 };
 

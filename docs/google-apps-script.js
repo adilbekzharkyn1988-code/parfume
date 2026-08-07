@@ -94,15 +94,39 @@ function isTrueValue(v) {
   return v === true || String(v).toUpperCase() === "TRUE";
 }
 
+/**
+ * ГЛАВНАЯ функция обработки POST-запросов.
+ * ✅ ИСПРАВЛЕНО: сначала проверяем mode, потом type
+ */
 function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-
   let data;
   try {
     data = JSON.parse(e.postData.contents);
   } catch (err) {
     return jsonResponse({ ok: false, error: "Некорректные данные" });
   }
+
+  // ✅ Сначала проверяем mode (для auth и leads)
+  if (data.mode === "auth") {
+    return handleAuthPost(data);
+  }
+  if (data.mode === "leads") {
+    return handleLeadsPost(data);
+  }
+
+  // ✅ Потом проверяем type (для обычных заявок товара)
+  if (data.type === "order") {
+    return handleOrderPost(data);
+  }
+
+  return jsonResponse({ ok: false, error: "Неизвестный тип запроса" });
+}
+
+/**
+ * Обработка POST-запроса с новой заявкой товара
+ */
+function handleOrderPost(data) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
 
   const id = Utilities.getUuid();
   const createdAt = data.createdAt || new Date().toISOString();
@@ -134,6 +158,85 @@ function doPost(e) {
   // подхватит и отправит эту заявку при следующем запуске.
 
   return jsonResponse({ ok: true, id: id });
+}
+
+/**
+ * Обработка POST-запроса для проверки логина/пароля (mode: auth)
+ */
+function handleAuthPost(data) {
+  const props = PropertiesService.getScriptProperties();
+  const login = data.login || "";
+  const password = data.password || "";
+
+  const adminLogin = props.getProperty("ADMIN_LOGIN");
+  const adminPassword = props.getProperty("ADMIN_PASSWORD");
+
+  // ✅ Rate limit: максимум 3 попыток в минуту
+  const cache = CacheService.getScriptCache();
+  const rateLimitKey = "auth_attempts_" + login;
+  const attempts = Number(cache.get(rateLimitKey) || 0);
+
+  if (attempts >= 3) {
+    return jsonResponse({ 
+      ok: false, 
+      error: "Слишком много попыток. Попробуйте через минуту." 
+    });
+  }
+
+  if (!adminLogin || !adminPassword || login !== adminLogin || password !== adminPassword) {
+    // Увеличиваем счётчик неудачных попыток
+    cache.put(rateLimitKey, String(attempts + 1), 60);
+    return jsonResponse({ ok: false, error: "Неверный логин или пароль" });
+  }
+
+  // Если пароль правильный — очищаем счётчик
+  cache.remove(rateLimitKey);
+  return jsonResponse({ ok: true });
+}
+
+/**
+ * Обработка POST-запроса для получения списка заявок (mode: leads)
+ */
+function handleLeadsPost(data) {
+  const props = PropertiesService.getScriptProperties();
+  const login = data.login || "";
+  const password = data.password || "";
+
+  const adminLogin = props.getProperty("ADMIN_LOGIN");
+  const adminPassword = props.getProperty("ADMIN_PASSWORD");
+
+  if (!adminLogin || !adminPassword || login !== adminLogin || password !== adminPassword) {
+    return jsonResponse({ ok: false, error: "Неверный логин или пароль" });
+  }
+
+  const cache = CacheService.getScriptCache();
+  const cached = cache.get("leads_json");
+  if (cached) {
+    return jsonResponse({ ok: true, leads: JSON.parse(cached) });
+  }
+
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  const rows = sheet.getDataRange().getValues();
+  const [, ...body] = rows;
+
+  const leads = body
+    .filter((r) => r[0])
+    .map((r) => ({
+      id: r[0],
+      createdAt: r[1],
+      name: r[2],
+      phone: r[3],
+      comment: r[4],
+      items: r[5],
+      total: r[6],
+      page: r[7],
+      status: r[8],
+    }))
+    .reverse();
+
+  cache.put("leads_json", JSON.stringify(leads), 30);
+
+  return jsonResponse({ ok: true, leads: leads });
 }
 
 /**
@@ -186,7 +289,7 @@ function markExistingAsSent() {
 /**
  * ЗАПАСНОЙ механизм — запускается по резервному триггеру (см. пункт 7
  * инструкции выше). Нужен только для заявок, которые не удалось отправить
- * в Telegram синхронно внутри doPost (например, была временная ошибка сети).
+ * в Telegram синхронно внутри handleOrderPost (например, была временная ошибка сети).
  * В обычной ситуации эта функция почти всегда не находит ничего для отправки.
  */
 function sendPendingTelegramNotifications() {
@@ -212,12 +315,16 @@ function sendPendingTelegramNotifications() {
   }
 }
 
+/**
+ * УСТАРЕВШИЙ: для обратной совместимости, если код ещё использует GET.
+ * Рекомендуется переходить на POST (см. lib/leads.ts).
+ */
 function doGet(e) {
-  const props = PropertiesService.getScriptProperties();
   const login = e.parameter.login || "";
   const password = e.parameter.password || "";
   const mode = e.parameter.mode || "list";
 
+  const props = PropertiesService.getScriptProperties();
   const adminLogin = props.getProperty("ADMIN_LOGIN");
   const adminPassword = props.getProperty("ADMIN_PASSWORD");
 

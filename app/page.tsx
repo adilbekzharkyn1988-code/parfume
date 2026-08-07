@@ -32,6 +32,8 @@ import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
 import bgReq from "@/public/bg-req.webp";
+import story1 from "@/public/story-1.webp";
+import story2 from "@/public/story-2.webp";
 
 export default async function Home() {
   const allProducts = await fetchProducts();
@@ -436,11 +438,23 @@ export default async function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-md overflow-hidden aspect-square">
-              <img src="/story-1.webp" alt="JUPARFUME" className="w-full h-full object-cover" />
+            <div className="relative rounded-md overflow-hidden aspect-square">
+              <Image
+                src={story1}
+                alt="Парфюм набирают в специальный шприц для распива"
+                fill
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className="object-cover"
+              />
             </div>
-            <div className="rounded-md overflow-hidden aspect-square">
-              <img src="/story-2.webp" alt="JUPARFUME" className="w-full h-full object-cover" />
+            <div className="relative rounded-md overflow-hidden aspect-square">
+              <Image
+                src={story2}
+                alt="Основатель магазина JUPARFUME"
+                fill
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className="object-cover"
+              />
             </div>
             {(["gourmand", "musky"] as const).map((f) => (
               <div key={f} className="rounded-md overflow-hidden aspect-square">

@@ -27,20 +27,12 @@ export async function generateMetadata({
   };
 }
 
+function isRichTextNode(x: unknown): x is { nodeType: string; data?: unknown; content?: unknown[] } {
+  return !!x && typeof x === "object" && typeof (x as any).nodeType === "string";
+}
+
 function ArticleBody({ content }: { content: unknown }) {
   if (!content) return null;
-
-  if (Array.isArray(content)) {
-    return (
-      <>
-        {(content as string[]).map((paragraph, i) => (
-          <p key={i} className="text-[17px] leading-[1.75] text-ink/80">
-            {paragraph}
-          </p>
-        ))}
-      </>
-    );
-  }
 
   const options = {
     renderNode: {
@@ -50,6 +42,42 @@ function ArticleBody({ content }: { content: unknown }) {
     },
   };
 
+  if (Array.isArray(content)) {
+    // Массив плоских строк — старый формат мок-данных.
+    if (content.every((item) => typeof item === "string")) {
+      return (
+        <>
+          {(content as string[]).map((paragraph, i) => (
+            <p key={i} className="text-[17px] leading-[1.75] text-ink/80">
+              {paragraph}
+            </p>
+          ))}
+        </>
+      );
+    }
+
+    // Массив rich-text узлов (например, несколько параграфов без общей
+    // обёртки "document") — оборачиваем в документ и рендерим одним разом.
+    const doc = { nodeType: "document", data: {}, content };
+    return (
+      <div className="flex flex-col gap-5">
+        {documentToReactComponents(doc as any, options)}
+      </div>
+    );
+  }
+
+  // Одиночный rich-text узел, пришедший без обёртки "document"
+  // (например, поле содержит один параграф напрямую).
+  if (isRichTextNode(content) && content.nodeType !== "document") {
+    const doc = { nodeType: "document", data: {}, content: [content] };
+    return (
+      <div className="flex flex-col gap-5">
+        {documentToReactComponents(doc as any, options)}
+      </div>
+    );
+  }
+
+  // Штатный случай: полноценный rich-text документ Contentful.
   return (
     <div className="flex flex-col gap-5">
       {documentToReactComponents(content as any, options)}

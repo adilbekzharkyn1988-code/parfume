@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { Article } from "@/lib/data";
+import { toPlainText } from "@/lib/format";
 import BottleArt from "./BottleArt";
 
 export default function RelatedArticlesSlider({ articles }: { articles: Article[] }) {
@@ -48,7 +49,7 @@ export default function RelatedArticlesSlider({ articles }: { articles: Article[
               {a.image ? (
                 <img
                   src={a.image}
-                  alt={a.title}
+                  alt={toPlainText(a.title)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               ) : (
@@ -56,9 +57,9 @@ export default function RelatedArticlesSlider({ articles }: { articles: Article[
               )}
             </div>
             <div className="p-5">
-              <p className="eyebrow text-stone mb-2">{a.category} · {a.readTime}</p>
+              <p className="eyebrow text-stone mb-2">{toPlainText(a.category)} · {toPlainText(a.readTime)}</p>
               <h3 className="font-display text-lg leading-snug group-hover:text-wine transition-colors">
-                {a.title}
+                {toPlainText(a.title)}
               </h3>
             </div>
           </Link>

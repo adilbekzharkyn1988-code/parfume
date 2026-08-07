@@ -439,7 +439,7 @@ export default async function Home() {
               обещаний, которые не подтверждаются на коже.
             </p>
           </div>
-          <div className="hidden md:grid grid-cols-2 gap-4 min-w-0">
+          <div className="grid grid-cols-2 gap-4 min-w-0">
             <div className="relative rounded-md overflow-hidden aspect-square min-w-0">
               <Image
                 src={story1}

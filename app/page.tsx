@@ -400,7 +400,7 @@ export default async function Home() {
               каталоге.
             </p>
             <Link
-              href="/articles/aromaticheskaya-piramida"
+              href="/articles/kak-ustroyena-aromaticheskaya-piramida"
               className="inline-flex items-center gap-2 eyebrow text-wine hover:gap-3 transition-all"
             >
               Читать гид по нотам <ArrowRight size={15} />

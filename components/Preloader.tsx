@@ -18,8 +18,10 @@ const PAUSE_AFTER_REVEAL = 350; // пауза после того, как тек
 // Тайминги "сборки": сначала текст стягивается в лого, и только следом,
 // с небольшим отставанием, за ним поднимается фон
 const TEXT_COLLAPSE_DURATION = 650; // сколько едет текст к позиции лого, мс
+const DISSOLVE_START = 0.55; // с какой доли пути начинает растворяться верх текста (0..1)
+const DISSOLVE_EDGE = 45; // высота мягкой растушёванной полосы растворения, в % высоты текста
 const CURTAIN_DELAY = 220; // на сколько штора стартует позже текста, мс
-const CURTAIN_RISE_DURATION = 650; // сама длительность подъёма шторы, мс
+const CURTAIN_RISE_DURATION = 780; // сама длительность подъёма шторы, мс (чуть длиннее — чтобы было видно "медленный старт")
 const CURTAIN_OVERSHOOT = 130; // насколько выше верхнего края уходит штора (в % высоты)
 const CURTAIN_BULGE = 22; // максимальная "просадка" центра относительно краёв (в % высоты)
 
@@ -29,7 +31,9 @@ const DONE_AT = COLLAPSE_AT + CURTAIN_DELAY + CURTAIN_RISE_DURATION;
 // Плавный разгон/торможение для обеих rAF-анимаций
 const easeInOutCubic = (x: number) =>
   x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-const easeOutCubic = (x: number) => 1 - Math.pow(1 - x, 3);
+// Штора: долго "стоит на низком старте", потом резко срывается вверх —
+// характерный для iOS рывок в конце вместо плавного равномерного подъёма
+const easeInQuart = (x: number) => x * x * x * x;
 
 type Phase = "start" | "visible" | "collapse" | "done";
 
@@ -37,6 +41,7 @@ export default function Preloader() {
   const [phase, setPhase] = useState<Phase>("start");
   const [target, setTarget] = useState({ x: 0, y: 0, scale: 1 });
   const [revealT, setRevealT] = useState(0); // прогресс открытия маски: 0 → 1
+  const [textT, setTextT] = useState(0); // прогресс "сборки" текста в лого: 0 → 1
   const [curtainT, setCurtainT] = useState(0); // прогресс подъёма шторы: 0 → 1
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -117,6 +122,32 @@ export default function Preloader() {
     return () => cancelAnimationFrame(raf);
   }, [phase]);
 
+  // Прогресс "сборки" текста — идёт параллельно с CSS-transition у
+  // transform (та же длительность), нужен только чтобы посчитать маску
+  // растворения верхней части текста ближе к концу пути
+  useEffect(() => {
+    if (phase !== "collapse") return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setTextT(1);
+      return;
+    }
+
+    let startTs: number | null = null;
+    let raf: number;
+
+    const tick = (ts: number) => {
+      if (startTs === null) startTs = ts;
+      const elapsed = ts - startTs;
+      const t = Math.min(1, elapsed / TEXT_COLLAPSE_DURATION);
+      setTextT(t);
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [phase]);
+
   // Анимация подъёма шторы — стартует с задержкой относительно текста
   useEffect(() => {
     if (phase !== "collapse") return;
@@ -174,13 +205,29 @@ export default function Preloader() {
   const revealPercent = easeInOutCubic(revealT) * (100 + REVEAL_EDGE);
   const maskStop2 = Math.min(100, Math.max(0, revealPercent - REVEAL_EDGE));
   const maskStop3 = Math.min(100, Math.max(0, revealPercent));
-  const maskImage = `linear-gradient(to right, #000 ${maskStop2}%, transparent ${maskStop3}%)`;
+
+  // Ближе к концу "сборки" текст растворяется сверху вниз — так стыковка
+  // с логотипом в шапке выглядит плавно, а не так, будто текст "криво
+  // встаёт" точно на его место. Растворение включается только после
+  // DISSOLVE_START доли пути, дальше мягкая полоса шириной DISSOLVE_EDGE
+  // проходит сверху вниз, и к t=1 текст полностью прозрачен.
+  const dissolveLocal = Math.min(1, Math.max(0, (textT - DISSOLVE_START) / (1 - DISSOLVE_START)));
+  const dissolveBoundary = dissolveLocal * (100 + DISSOLVE_EDGE);
+  const dissolveStopA = Math.min(100, Math.max(0, dissolveBoundary - DISSOLVE_EDGE));
+  const dissolveStopB = Math.min(100, Math.max(0, dissolveBoundary));
+
+  const maskImage =
+    phase === "collapse"
+      ? `linear-gradient(to bottom, transparent ${dissolveStopA}%, #000 ${dissolveStopB}%)`
+      : `linear-gradient(to right, #000 ${maskStop2}%, transparent ${maskStop3}%)`;
 
   // Форма шторы: прямая линия по краям (edgeY), которая уезжает вверх
   // быстрее, чем центр (centerY) — получается дуга-"улыбка", просевшая
   // в середине. К концу (t → 1) обе линии сходятся и штора уезжает за
-  // экран уже ровным краем.
-  const eased = easeOutCubic(curtainT);
+  // экран уже ровным краем. easeInQuart даёт эффект "медленно — а потом
+  // резко вверх": первую половину пути штора почти не двигается, а
+  // ближе к концу срывается с места.
+  const eased = easeInQuart(curtainT);
   const edgeY = 100 - CURTAIN_OVERSHOOT * eased;
   const bulge = CURTAIN_BULGE * Math.sin(Math.PI * curtainT);
   const centerY = edgeY + bulge;

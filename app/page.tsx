@@ -31,6 +31,7 @@ import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
+import { toPlainText } from "@/lib/format";
 import bgReq from "@/public/bg-req.webp";
 import story1 from "@/public/story-1.webp";
 import story2 from "@/public/story-2.webp";
@@ -426,31 +427,32 @@ export default async function Home() {
               Парфюмерия без <span className="font-display-accent-plain">компромиссов</span> и переплат
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
-              JUPARFUME — магазин оригинальной нишевой и люксовой парфюмерии, 
-              где собраны ароматы ведущих парфюмерных домов и работы известных парфюмеров. 
-              Мы предлагаем распив в объёмах 5 и 10 мл, чтобы вы могли познакомиться с композицией 
-              без необходимости покупать полноразмерный флакон.
+              JUPARFUME — витрина независимых парфюмерных домов, которые редко
+              попадают на полки крупных магазинов. Мы разливаем ароматы из
+              проверенных оригинальных партий в объёмы 5 и 10 мл, чтобы
+              находить свой аромат можно было без риска и без переплаты за
+              флакон на всю жизнь.
             </p>
             <p className="text-ink/70 leading-relaxed">
-              Каждый аромат разливается из оригинальных флаконов, сопровождается батч-кодом, 
-              а на странице товара представлена полная пирамида нот и честное описание звучания. 
-              Мы помогаем выбирать парфюмерию осознанно — без навязчивых обещаний и лишних переплат.
+              Каждая партия сопровождается батч-кодом, а на странице аромата
+              мы честно показываем полную пирамиду нот — без маркетинговых
+              обещаний, которые не подтверждаются на коже.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative rounded-md overflow-hidden aspect-square">
+          <div className="hidden md:grid grid-cols-2 gap-4 min-w-0">
+            <div className="relative rounded-md overflow-hidden aspect-square min-w-0">
               <Image
                 src={story1}
-                alt="Парфюм набирают в специальный шприц для распива"
+                alt="JUPARFUME"
                 fill
                 sizes="(min-width: 768px) 25vw, 50vw"
                 className="object-cover"
               />
             </div>
-            <div className="relative rounded-md overflow-hidden aspect-square">
+            <div className="relative rounded-md overflow-hidden aspect-square min-w-0">
               <Image
                 src={story2}
-                alt="Основатель магазина JUPARFUME"
+                alt="JUPARFUME"
                 fill
                 sizes="(min-width: 768px) 25vw, 50vw"
                 className="object-cover"
@@ -487,11 +489,11 @@ export default async function Home() {
                 <BottleArt family={a.cover} className="w-full h-full group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-5">
-                <p className="eyebrow text-stone mb-2">{a.category} · {a.readTime}</p>
+                <p className="eyebrow text-stone mb-2">{toPlainText(a.category)} · {toPlainText(a.readTime)}</p>
                 <h3 className="font-display text-xl leading-snug group-hover:text-wine transition-colors">
-                  {a.title}
+                  {toPlainText(a.title)}
                 </h3>
-                <p className="text-sm text-ink/65 mt-2 line-clamp-2">{a.excerpt}</p>
+                <p className="text-sm text-ink/65 mt-2 line-clamp-2">{toPlainText(a.excerpt)}</p>
               </div>
             </Link>
           ))}

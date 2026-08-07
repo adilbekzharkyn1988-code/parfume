@@ -229,10 +229,10 @@ export default async function Home() {
         <div className="container-x py-10 md:py-14 flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-8 text-center md:text-left">
           <div>
             <h3 className="font-display text-xl md:text-2xl text-white mb-2">
-              Не нашли свой аромат?
+              Исследуйте всю коллекцию
             </h3>
             <p className="font-body text-white/70 text-sm md:text-base">
-              Ниша и люкс — весь наш ассортимент на одной странице
+              Весь ассортимент оригинальной нишевой и люксовой парфюмерии ждёт вас в каталоге.
             </p>
           </div>
           <Link

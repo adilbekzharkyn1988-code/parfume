@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { Product, familyColor } from "@/lib/data";
 import { formatPrice, stripBrandPrefix } from "@/lib/format";
+import { useCart } from "@/context/CartContext";
 import BottleArt from "./BottleArt";
 import StarRating from "./StarRating";
 import { Heart } from "lucide-react";
 
 export default function BestsellerCard({ product }: { product: Product }) {
-  const [liked, setLiked] = useState(false);
+  const { toggleFavorite, isFavorited } = useCart();
+  const liked = isFavorited(product.slug);
   const c = familyColor[product.family];
   const displayName = stripBrandPrefix(product.name, product.brand);
 
@@ -25,7 +26,13 @@ export default function BestsellerCard({ product }: { product: Product }) {
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            setLiked((v) => !v);
+            toggleFavorite({
+              slug: product.slug,
+              name: product.name,
+              brand: product.brand,
+              price5: product.price5,
+              price10: product.price10,
+            });
           }}
           aria-label={liked ? "Убрать из избранного" : "В избранное"}
           className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-paper/90 backdrop-blur-sm flex items-center justify-center shadow-sm"

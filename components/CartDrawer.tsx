@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { useCart } from "@/context/CartContext";
+import { useCart, getUnitPrice } from "@/context/CartContext";
 import { formatPrice } from "@/lib/format";
 import { submitOrderInBackground, leadsEndpointConfigured } from "@/lib/leads";
 import { formatPhoneInput, isPhoneComplete } from "@/lib/phone";
-import { X, Trash2, Check } from "lucide-react";
+import { X, Trash2, Check, Heart } from "lucide-react";
 import Link from "next/link";
 
 export default function CartDrawer() {
-  const { items, isOpen, closeCart, removeItem, clearCart, total } = useCart();
+  const { items, isOpen, closeCart, removeItem, clearCart, total, setItemVolume, pendingCount } = useCart();
   const [step, setStep] = useState<"cart" | "form">("cart");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("+7");
@@ -17,6 +17,9 @@ export default function CartDrawer() {
   const [comment, setComment] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  // Позиции без выбранного объёма, на которые указали после неудачной
+  // попытки оформить заказ — подсвечиваем их в списке.
+  const [invalidSlugs, setInvalidSlugs] = useState<Set<string>>(new Set());
 
   const resetAndClose = () => {
     closeCart();
@@ -27,7 +30,18 @@ export default function CartDrawer() {
       setPhone("+7");
       setPhoneError("");
       setComment("");
+      setInvalidSlugs(new Set());
     }, 300);
+  };
+
+  const handleProceedToForm = () => {
+    const missing = items.filter((i) => i.volume === null);
+    if (missing.length > 0) {
+      setInvalidSlugs(new Set(missing.map((i) => i.slug)));
+      return;
+    }
+    setInvalidSlugs(new Set());
+    setStep("form");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -54,9 +68,11 @@ export default function CartDrawer() {
       items: items.map((i) => ({
         name: i.name,
         brand: i.brand,
-        volume: i.volume,
+        // К этому моменту оформление уже прошло проверку в handleProceedToForm,
+        // так что позиций без объёма в корзине быть не может.
+        volume: i.volume ?? "",
         qty: i.qty,
-        price: i.price,
+        price: getUnitPrice(i) ?? 0,
       })),
       total,
     });
@@ -120,30 +136,81 @@ export default function CartDrawer() {
                 </div>
               ) : (
                 <ul className="flex flex-col gap-4">
-                  {items.map((item) => (
-                    <li
-                      key={item.slug + item.volume}
-                      className="flex items-center justify-between gap-3 pb-4 border-b border-ink/10"
-                    >
-                      <div>
-                        <p className="eyebrow text-stone">{item.brand}</p>
-                        <p className="font-display text-lg leading-tight">{item.name}</p>
-                        <p className="text-xs text-ink/60 mt-0.5">
-                          {item.volume} мл · × {item.qty}
-                        </p>
-                      </div>
-                      <div className="flex flex-col items-end gap-2">
-                        <p className="font-mono text-sm">{formatPrice(item.price * item.qty)}</p>
-                        <button
-                          onClick={() => removeItem(item.slug, item.volume)}
-                          className="text-stone hover:text-wine transition-colors"
-                          aria-label={`Убрать ${item.name} из корзины`}
+                  {items.map((item) => {
+                    const key = item.slug + (item.volume ?? "pending");
+                    const isPending = item.volume === null;
+                    const isInvalid = isPending && invalidSlugs.has(item.slug);
+
+                    if (isPending) {
+                      return (
+                        <li
+                          key={key}
+                          className={`flex flex-col gap-2.5 pb-4 border-b border-ink/10 transition-colors ${
+                            isInvalid ? "ring-1 ring-wine rounded-lg p-2.5 -m-2.5 bg-wine/[0.03]" : ""
+                          }`}
                         >
-                          <Trash2 size={16} />
-                        </button>
-                      </div>
-                    </li>
-                  ))}
+                          <div className="flex items-start justify-between gap-3">
+                            <div>
+                              <p className="eyebrow text-stone">{item.brand}</p>
+                              <p className="font-display text-lg leading-tight">{item.name}</p>
+                              <p className="text-xs flex items-center gap-1 mt-0.5 text-wine">
+                                <Heart size={11} className="fill-wine" />
+                                Из избранного · выберите объём
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => removeItem(item.slug, item.volume)}
+                              className="text-stone hover:text-wine transition-colors shrink-0"
+                              aria-label={`Убрать ${item.name} из корзины`}
+                            >
+                              <Trash2 size={16} />
+                            </button>
+                          </div>
+                          <div className="flex gap-2">
+                            {(["5", "10"] as const).map((v) => (
+                              <button
+                                key={v}
+                                type="button"
+                                onClick={() => setItemVolume(item.slug, v)}
+                                className="flex-1 rounded-full border border-ink/15 px-3 py-2 text-xs text-center hover:border-wine hover:text-wine transition-colors"
+                              >
+                                {v} мл · {formatPrice(v === "5" ? item.price5 : item.price10)}
+                              </button>
+                            ))}
+                          </div>
+                          {isInvalid && (
+                            <p className="text-xs text-wine">Выберите объём, чтобы продолжить</p>
+                          )}
+                        </li>
+                      );
+                    }
+
+                    const unitPrice = getUnitPrice(item) ?? 0;
+                    return (
+                      <li
+                        key={key}
+                        className="flex items-center justify-between gap-3 pb-4 border-b border-ink/10"
+                      >
+                        <div>
+                          <p className="eyebrow text-stone">{item.brand}</p>
+                          <p className="font-display text-lg leading-tight">{item.name}</p>
+                          <p className="text-xs text-ink/60 mt-0.5">
+                            {item.volume} мл · × {item.qty}
+                          </p>
+                        </div>
+                        <div className="flex flex-col items-end gap-2">
+                          <p className="font-mono text-sm">{formatPrice(unitPrice * item.qty)}</p>
+                          <button
+                            onClick={() => removeItem(item.slug, item.volume)}
+                            className="text-stone hover:text-wine transition-colors"
+                            aria-label={`Убрать ${item.name} из корзины`}
+                          >
+                            <Trash2 size={16} />
+                          </button>
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </div>
@@ -154,8 +221,13 @@ export default function CartDrawer() {
                   <span className="eyebrow text-stone">Итого</span>
                   <span className="font-display text-2xl">{formatPrice(total)}</span>
                 </div>
+                {pendingCount > 0 && (
+                  <p className="text-xs text-wine text-center">
+                    Выберите объём для позиций из избранного ({pendingCount}), чтобы оформить заказ
+                  </p>
+                )}
                 <button
-                  onClick={() => setStep("form")}
+                  onClick={handleProceedToForm}
                   className="eyebrow w-full rounded-full py-3.5 bg-wine text-ivory hover:bg-wine-dark transition-colors"
                 >
                   Оформить заказ

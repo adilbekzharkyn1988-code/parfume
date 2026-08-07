@@ -20,9 +20,11 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
   const savingsPct = Math.round((1 - perMl10 / perMl5) * 100);
 
   function handleAdd() {
-    for (let i = 0; i < qty; i++) {
-      addItem({ slug: product.slug, name: product.name, brand: product.brand, volume, price: unitPrice });
-    }
+    addItem(
+      { slug: product.slug, name: product.name, brand: product.brand, price5: product.price5, price10: product.price10 },
+      volume,
+      qty
+    );
     setAdded(true);
     setTimeout(() => setAdded(false), 1800);
   }

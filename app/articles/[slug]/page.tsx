@@ -6,6 +6,7 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import { fetchArticles, fetchArticleBySlug, fetchProducts } from "@/contentful/data";
 import BottleArt from "@/components/BottleArt";
 import ProductCard from "@/components/ProductCard";
+import RelatedArticlesSlider from "@/components/RelatedArticlesSlider";
 
 export async function generateStaticParams() {
   const articles = await fetchArticles();
@@ -86,7 +87,11 @@ export default async function ArticlePage({
 
       <div className="container-x py-10 md:py-14 max-w-3xl">
         <div className="aspect-[21/9] rounded-md overflow-hidden mb-10">
-          <BottleArt family={article.cover} className="w-full h-full" />
+          {article.image ? (
+            <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+          ) : (
+            <BottleArt family={article.cover} className="w-full h-full" />
+          )}
         </div>
 
         <article className="flex flex-col gap-5">
@@ -110,25 +115,7 @@ export default async function ArticlePage({
           <section className="mt-16">
             <p className="eyebrow text-wine mb-2">Читать также</p>
             <h2 className="font-display text-2xl mb-6">Другие статьи</h2>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {related.map((a) => (
-                <Link
-                  key={a.slug}
-                  href={`/articles/${a.slug}`}
-                  className="group flex flex-col rounded-md border border-ink/10 overflow-hidden bg-paper"
-                >
-                  <div className="aspect-[16/9] overflow-hidden">
-                    <BottleArt family={a.cover} className="w-full h-full group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <div className="p-5">
-                    <p className="eyebrow text-stone mb-2">{a.category} · {a.readTime}</p>
-                    <h3 className="font-display text-lg leading-snug group-hover:text-wine transition-colors">
-                      {a.title}
-                    </h3>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <RelatedArticlesSlider articles={related} />
           </section>
         )}
       </div>
@@ -136,7 +123,7 @@ export default async function ArticlePage({
       <section className="container-x pb-16 md:pb-20">
         <p className="eyebrow text-wine mb-2">Из каталога</p>
         <h2 className="font-display text-2xl md:text-3xl mb-8">Может понравиться</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 gap-5">
           {recommendedProducts.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { fetchArticles } from "@/contentful/data";
 import BottleArt from "@/components/BottleArt";
+import { toPlainText } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Журнал JUPARFUME — гиды по парфюмерии и трендам",
@@ -33,7 +34,7 @@ export default async function ArticlesPage() {
               {a.image ? (
                 <img
                   src={a.image}
-                  alt={a.title}
+                  alt={toPlainText(a.title)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               ) : (
@@ -41,11 +42,13 @@ export default async function ArticlesPage() {
               )}
             </div>
             <div className="p-5 flex flex-col flex-1">
-              <p className="eyebrow text-stone mb-2">{a.category} · {a.readTime} · {a.date}</p>
+              <p className="eyebrow text-stone mb-2">
+                {toPlainText(a.category)} · {toPlainText(a.readTime)} · {toPlainText(a.date)}
+              </p>
               <h2 className="font-display text-xl leading-snug group-hover:text-wine transition-colors">
-                {a.title}
+                {toPlainText(a.title)}
               </h2>
-              <p className="text-sm text-ink/65 mt-2 line-clamp-3">{a.excerpt}</p>
+              <p className="text-sm text-ink/65 mt-2 line-clamp-3">{toPlainText(a.excerpt)}</p>
             </div>
           </Link>
         ))}

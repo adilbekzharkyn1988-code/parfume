@@ -424,20 +424,25 @@ export default async function Home() {
               Парфюмерия без <span className="font-display-accent-plain">компромиссов</span> и переплат
             </h2>
             <p className="text-ink/70 leading-relaxed mb-4">
-              JUPARFUME — витрина независимых парфюмерных домов, которые редко
-              попадают на полки крупных магазинов. Мы разливаем ароматы из
-              проверенных оригинальных партий в объёмы 5 и 10 мл, чтобы
-              находить свой аромат можно было без риска и без переплаты за
-              флакон на всю жизнь.
+              JUPARFUME — магазин оригинальной нишевой и люксовой парфюмерии, 
+              где собраны ароматы ведущих парфюмерных домов и работы известных парфюмеров. 
+              Мы предлагаем распив в объёмах 2, 5 и 10 мл, чтобы вы могли познакомиться с композицией 
+              без необходимости покупать полноразмерный флакон.
             </p>
             <p className="text-ink/70 leading-relaxed">
-              Каждая партия сопровождается батч-кодом, а на странице аромата
-              мы честно показываем полную пирамиду нот — без маркетинговых
-              обещаний, которые не подтверждаются на коже.
+              Каждый аромат разливается из оригинальных флаконов, сопровождается батч-кодом, 
+              а на странице товара представлена полная пирамида нот и честное описание звучания. 
+              Мы помогаем выбирать парфюмерию осознанно — без навязчивых обещаний и лишних переплат.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {(["oriental", "citrus", "gourmand", "musky"] as const).map((f) => (
+            <div className="rounded-md overflow-hidden aspect-square">
+              <img src="/story-1.webp" alt="JUPARFUME" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-md overflow-hidden aspect-square">
+              <img src="/story-2.webp" alt="JUPARFUME" className="w-full h-full object-cover" />
+            </div>
+            {(["gourmand", "musky"] as const).map((f) => (
               <div key={f} className="rounded-md overflow-hidden aspect-square">
                 <BottleArt family={f} className="w-full h-full" />
               </div>

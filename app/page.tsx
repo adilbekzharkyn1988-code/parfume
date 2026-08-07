@@ -371,8 +371,8 @@ export default async function Home() {
         </div>
       </section>
 
-     /* { WHY US }*/
-    /*  <section className="bg-ivory-dim py-8 md:py-12">
+      {/* WHY US 
+     <section className="bg-ivory-dim py-8 md:py-12">
         <div className="container-x">
           <div className="mb-6 md:mb-8">
             <p className="eyebrow text-wine mb-2">Наши преимущества</p>
@@ -397,7 +397,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-      </section>*/
+      </section>*/}
 
       {/* TESTIMONIALS */}
       <section className="bg-white container-x py-8 md:py-12">

@@ -30,7 +30,15 @@ export default async function ArticlesPage() {
             className="group flex flex-col rounded-md border border-ink/10 overflow-hidden bg-paper"
           >
             <div className="aspect-[16/10] overflow-hidden">
-              <BottleArt family={a.cover} className="w-full h-full group-hover:scale-105 transition-transform duration-500" />
+              {a.image ? (
+                <img
+                  src={a.image}
+                  alt={a.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <BottleArt family={a.cover} className="w-full h-full group-hover:scale-105 transition-transform duration-500" />
+              )}
             </div>
             <div className="p-5 flex flex-col flex-1">
               <p className="eyebrow text-stone mb-2">{a.category} · {a.readTime} · {a.date}</p>

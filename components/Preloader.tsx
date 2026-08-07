@@ -9,10 +9,11 @@ const SESSION_KEY = "juparfume-preloaded";
 
 const WORD = "JUPARFUME";
 
-// Тайминги эффекта печатной машинки
-const LETTER_START_DELAY = 150; // задержка перед первой буквой, мс
-const LETTER_STEP = 60; // интервал между буквами, мс
-const PAUSE_AFTER_TYPING = 350; // пауза после допечатывания слова, мс
+// Тайминги "открывания" текста градиентной маской слева направо
+const REVEAL_START_DELAY = 150; // задержка перед началом движения маски, мс
+const REVEAL_DURATION = 750; // сколько маска едет через весь текст, мс
+const REVEAL_EDGE = 16; // ширина мягкого размытого края маски, в % ширины текста
+const PAUSE_AFTER_REVEAL = 350; // пауза после того, как текст полностью открылся, мс
 
 // Тайминги "сборки": сначала текст стягивается в лого, и только следом,
 // с небольшим отставанием, за ним поднимается фон
@@ -22,12 +23,12 @@ const CURTAIN_RISE_DURATION = 650; // сама длительность подъ
 const CURTAIN_OVERSHOOT = 130; // насколько выше верхнего края уходит штора (в % высоты)
 const CURTAIN_BULGE = 22; // максимальная "просадка" центра относительно краёв (в % высоты)
 
-const TYPING_DURATION = LETTER_START_DELAY + (WORD.length - 1) * LETTER_STEP;
-const COLLAPSE_AT = TYPING_DURATION + PAUSE_AFTER_TYPING;
+const COLLAPSE_AT = REVEAL_START_DELAY + REVEAL_DURATION + PAUSE_AFTER_REVEAL;
 const DONE_AT = COLLAPSE_AT + CURTAIN_DELAY + CURTAIN_RISE_DURATION;
 
-// Плавный "разгон с замедлением" — края шторы уходят быстро в начале
-// и выравниваются к концу
+// Плавный разгон/торможение для обеих rAF-анимаций
+const easeInOutCubic = (x: number) =>
+  x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 const easeOutCubic = (x: number) => 1 - Math.pow(1 - x, 3);
 
 type Phase = "start" | "visible" | "collapse" | "done";
@@ -35,6 +36,7 @@ type Phase = "start" | "visible" | "collapse" | "done";
 export default function Preloader() {
   const [phase, setPhase] = useState<Phase>("start");
   const [target, setTarget] = useState({ x: 0, y: 0, scale: 1 });
+  const [revealT, setRevealT] = useState(0); // прогресс открытия маски: 0 → 1
   const [curtainT, setCurtainT] = useState(0); // прогресс подъёма шторы: 0 → 1
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -50,10 +52,10 @@ export default function Preloader() {
     document.body.style.overflow = "hidden";
 
     // 1) следующий кадр — включаем "визуальное" появление (fade+scale in),
-    // буквы при этом печатаются по очереди поверх этого появления
+    // текст при этом открывается слева направо градиентной маской
     const raf = requestAnimationFrame(() => setPhase("visible"));
 
-    // 2) когда слово допечаталось и выдержана пауза — измеряем, где
+    // 2) когда текст полностью открылся и выдержана пауза — измеряем, где
     // находится логотип в шапке, и запускаем "сборку": текст едет к лого,
     // фон поднимается следом с задержкой (см. эффект ниже)
     const collapseTimer = setTimeout(() => {
@@ -86,12 +88,43 @@ export default function Preloader() {
     };
   }, []);
 
-  // Анимация подъёма шторы через rAF — считаем прогресс сами, чтобы можно
-  // было независимо гнуть край в квадратичную кривую (CSS-transition тут
-  // не подходит, т.к. форма кривой нелинейная по X), и чтобы штора
-  // стартовала позже текста на CURTAIN_DELAY
+  // Анимация открытия маски (rAF, а не CSS-transition — градиенты
+  // не интерполируются надёжно между разными браузерами)
+  useEffect(() => {
+    if (phase !== "visible") return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setRevealT(1);
+      return;
+    }
+
+    let startTs: number | null = null;
+    let raf: number;
+
+    const tick = (ts: number) => {
+      if (startTs === null) startTs = ts;
+      const elapsed = ts - startTs - REVEAL_START_DELAY;
+      if (elapsed < 0) {
+        raf = requestAnimationFrame(tick);
+        return;
+      }
+      const t = Math.min(1, elapsed / REVEAL_DURATION);
+      setRevealT(t);
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [phase]);
+
+  // Анимация подъёма шторы — стартует с задержкой относительно текста
   useEffect(() => {
     if (phase !== "collapse") return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCurtainT(1);
+      return;
+    }
 
     let startTs: number | null = null;
     let raf: number;
@@ -134,13 +167,19 @@ export default function Preloader() {
           transition: "none",
         };
 
-  const showCaret = phase === "start" || phase === "visible";
+  // Градиентная маска, открывающая текст слева направо: слева от "фронта"
+  // текст полностью непрозрачен (уже открыт), дальше — мягкая растушёванная
+  // полоса шириной REVEAL_EDGE, а справа — ещё скрыто. REVEAL_EDGE добавлен
+  // к диапазону прогресса, чтобы в конце маска полностью снималась.
+  const revealPercent = easeInOutCubic(revealT) * (100 + REVEAL_EDGE);
+  const maskStop2 = Math.min(100, Math.max(0, revealPercent - REVEAL_EDGE));
+  const maskStop3 = Math.min(100, Math.max(0, revealPercent));
+  const maskImage = `linear-gradient(to right, #000 ${maskStop2}%, transparent ${maskStop3}%)`;
 
   // Форма шторы: прямая линия по краям (edgeY), которая уезжает вверх
   // быстрее, чем центр (centerY) — получается дуга-"улыбка", просевшая
   // в середине. К концу (t → 1) обе линии сходятся и штора уезжает за
-  // экран уже ровным краем. Стартует позже текста на CURTAIN_DELAY —
-  // см. useEffect выше.
+  // экран уже ровным краем.
   const eased = easeOutCubic(curtainT);
   const edgeY = 100 - CURTAIN_OVERSHOOT * eased;
   const bulge = CURTAIN_BULGE * Math.sin(Math.PI * curtainT);
@@ -166,20 +205,16 @@ export default function Preloader() {
       <div
         ref={textRef}
         className="relative font-display text-ink tracking-tight text-4xl sm:text-6xl md:text-7xl whitespace-nowrap"
-        style={{ willChange: "transform, opacity", ...textStyle }}
+        style={{
+          willChange: "transform, opacity",
+          maskImage,
+          WebkitMaskImage: maskImage,
+          maskRepeat: "no-repeat",
+          WebkitMaskRepeat: "no-repeat",
+          ...textStyle,
+        }}
       >
-        {WORD.split("").map((letter, i) => (
-          <span
-            key={i}
-            className="preloader-letter"
-            style={{
-              animationDelay: `${LETTER_START_DELAY + i * LETTER_STEP}ms`,
-            }}
-          >
-            {letter}
-          </span>
-        ))}
-        {showCaret && <span className="preloader-caret">|</span>}
+        {WORD}
       </div>
     </div>
   );

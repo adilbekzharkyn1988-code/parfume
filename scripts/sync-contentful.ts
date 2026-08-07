@@ -88,6 +88,8 @@ function mapReview(item: any) {
 
 function mapArticle(item: any) {
   const f = item.fields;
+  const imgItem = Array.isArray(f.image) ? f.image[0] : f.image;
+  const img = imgItem?.fields?.file?.url;
   return {
     slug: f.slug,
     title: f.title,
@@ -96,6 +98,7 @@ function mapArticle(item: any) {
     readTime: f.readTime,
     date: f.date,
     cover: f.cover,
+    image: img ? `https:${img}` : undefined,
     content: f.content,
   };
 }

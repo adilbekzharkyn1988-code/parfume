@@ -572,18 +572,15 @@ export default async function Home() {
 
       {/* CONTACTS */}
       <section className="bg-white container-x py-16 md:py-24">
-        <div className="relative overflow-hidden rounded-md text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center"
-  style={{
-    backgroundImage: `url(${contactsBg.src})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
- 
-
-  {/* Контент */}
-  <div className="relative z-10 flex flex-col items-center w-full">
+  <div
+    className="rounded-md text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center"
+    style={{
+      backgroundImage: `url(${contactsBg.src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
     <p className="eyebrow text-gold-soft mb-3">Свяжитесь с нами</p>
 
     <h2 className="font-display text-2xl md:text-3xl max-w-lg mb-8">
@@ -642,7 +639,7 @@ export default async function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"
-        className="w-10 h-10 rounded-full bg-ivory/10 backdrop-blur-sm flex items-center justify-center hover:bg-ivory/20 transition-colors"
+        className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
       >
         <MessageCircle size={18} />
       </a>
@@ -652,7 +649,7 @@ export default async function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="Instagram"
-        className="w-10 h-10 rounded-full bg-ivory/10 backdrop-blur-sm flex items-center justify-center hover:bg-ivory/20 transition-colors"
+        className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
       >
         <InstagramIcon size={18} />
       </a>
@@ -662,24 +659,23 @@ export default async function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="TikTok"
-        className="w-10 h-10 rounded-full bg-ivory/10 backdrop-blur-sm flex items-center justify-center hover:bg-ivory/20 transition-colors"
+        className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
       >
         <Music2 size={18} />
       </a>
     </div>
   </div>
-</div>
 
-        <div className="mt-6 rounded-md overflow-hidden border border-ink/10 h-64 md:h-80">
-          <iframe
-            src="https://www.google.com/maps?q=Алматы,+Досмухамедова+52&output=embed"
-            className="w-full h-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Карта — где нас найти"
-          />
-        </div>
-      </section>
+  <div className="mt-6 rounded-md overflow-hidden border border-ink/10 h-64 md:h-80">
+    <iframe
+      src="https://www.google.com/maps?q=Алматы,+Досмухамедова+52&output=embed"
+      className="w-full h-full border-0"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Карта — где нас найти"
+    />
+  </div>
+</section>
     </main>
   );
 }

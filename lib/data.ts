@@ -382,7 +382,7 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "aromaticheskaya-piramida",
+    slug: "kak-ustroyena-aromaticheskaya-piramida",
     title: "Топ, сердце и база: как устроена ароматическая пирамида",
     excerpt:
       "Почему один и тот же парфюм пахнет по-разному утром и вечером — разбираемся в структуре аромата на пальцах.",

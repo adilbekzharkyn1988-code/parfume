@@ -7,6 +7,7 @@ import { fetchArticles, fetchArticleBySlug, fetchProducts } from "@/contentful/d
 import BottleArt from "@/components/BottleArt";
 import ProductCard from "@/components/ProductCard";
 import RelatedArticlesSlider from "@/components/RelatedArticlesSlider";
+import { toPlainText } from "@/lib/format";
 
 export async function generateStaticParams() {
   const articles = await fetchArticles();
@@ -22,8 +23,8 @@ export async function generateMetadata({
   const article = await fetchArticleBySlug(slug);
   if (!article) return {};
   return {
-    title: `${article.title} | Журнал JUPARFUME`,
-    description: article.excerpt,
+    title: `${toPlainText(article.title)} | Журнал JUPARFUME`,
+    description: toPlainText(article.excerpt),
   };
 }
 
@@ -107,16 +108,18 @@ export default async function ArticlePage({
             <span>/</span>
             <Link href="/articles" className="hover:text-wine">Журнал</Link>
           </nav>
-          <p className="eyebrow text-wine mb-3">{article.category} · {article.readTime} · {article.date}</p>
-          <h1 className="font-display text-3xl md:text-5xl leading-tight">{article.title}</h1>
-          <p className="text-ink/65 mt-4 leading-relaxed">{article.excerpt}</p>
+          <p className="eyebrow text-wine mb-3">
+            {toPlainText(article.category)} · {toPlainText(article.readTime)} · {toPlainText(article.date)}
+          </p>
+          <h1 className="font-display text-3xl md:text-5xl leading-tight">{toPlainText(article.title)}</h1>
+          <p className="text-ink/65 mt-4 leading-relaxed">{toPlainText(article.excerpt)}</p>
         </div>
       </div>
 
       <div className="container-x py-10 md:py-14 max-w-3xl">
         <div className="aspect-[21/9] rounded-md overflow-hidden mb-10">
           {article.image ? (
-            <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+            <img src={article.image} alt={toPlainText(article.title)} className="w-full h-full object-cover" />
           ) : (
             <BottleArt family={article.cover} className="w-full h-full" />
           )}

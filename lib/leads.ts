@@ -123,7 +123,6 @@ export type LeadRecord = {
  * подгружаем уже отдельным вызовом fetchLeads после того, как экран
  * логина сменился на панель.
  */
-// lib/leads.ts, строки 126–147
 export async function verifyAdminLogin(
   login: string,
   password: string
@@ -133,8 +132,8 @@ export async function verifyAdminLogin(
   }
   try {
     const res = await fetch(ENDPOINT, {
-      method: "POST",  // ✅ Вместо GET
-      headers: { "Content-Type": "application/json" },  // ✅ JSON вместо form
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify({
         login,
         password,
@@ -151,7 +150,6 @@ export async function verifyAdminLogin(
   }
 }
 
-// То же самое в fetchLeads (строки 149–169)
 export async function fetchLeads(
   login: string,
   password: string
@@ -161,36 +159,14 @@ export async function fetchLeads(
   }
   try {
     const res = await fetch(ENDPOINT, {
-      method: "POST",  // ✅ Вместо GET
-      headers: { "Content-Type": "application/json" },
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify({
         login,
         password,
-        mode: "leads"  // ✅ Вместо отсутствия mode
+        mode: "leads"
       })
     });
-    const data = await res.json().catch(() => null);
-    if (!res.ok || !data?.ok) {
-      return { ok: false, error: data?.error || "Не удалось получить заявки." };
-    }
-    return { ok: true, leads: data.leads as LeadRecord[] };
-  } catch {
-    return { ok: false, error: "Не удалось получить заявки. Проверьте соединение." };
-  }
-}
-
-export async function fetchLeads(
-  login: string,
-  password: string
-): Promise<{ ok: boolean; leads?: LeadRecord[]; error?: string }> {
-  if (!ENDPOINT) {
-    return { ok: false, error: "NEXT_PUBLIC_LEADS_ENDPOINT не настроен." };
-  }
-  try {
-    const url = new URL(ENDPOINT);
-    url.searchParams.set("login", login);
-    url.searchParams.set("password", password);
-    const res = await fetch(url.toString(), { method: "GET" });
     const data = await res.json().catch(() => null);
     if (!res.ok || !data?.ok) {
       return { ok: false, error: data?.error || "Не удалось получить заявки." };

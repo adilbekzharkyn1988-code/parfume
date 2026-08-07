@@ -580,8 +580,7 @@ export default async function Home() {
     backgroundRepeat: "no-repeat",
   }}
 >
-  {/* Затемнение */}
-  <div className="absolute inset-0 bg-gradient-to-br from-wine/90 via-wine/75 to-black/60" />
+ 
 
   {/* Контент */}
   <div className="relative z-10 flex flex-col items-center w-full">

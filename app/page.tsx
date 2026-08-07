@@ -53,10 +53,6 @@ export default async function Home() {
 
   return (
     <main>
-      {/* HERO — полноэкранный слайдер (3 фото), 100vh, без границ.
-          Плавное растворение между слайдами + лёгкий Ken Burns —
-          см. components/HeroBackgroundSlider.tsx.
-          При загрузке контент появляется по очереди: фон -> заголовок -> описание -> кнопка. */}
       <section
         className="relative w-full overflow-hidden"
         style={{ height: "80vh" }}

@@ -37,6 +37,7 @@ import story1 from "@/public/story-1.webp";
 import story2 from "@/public/story-2.webp";
 import womenBg from "@/public/women-parf.webp";
 import menBg from "@/public/men-parf.webp";
+import contactsBg from "@/public/contacts-bg.webp";
 
 export default async function Home() {
   const allProducts = await fetchProducts();
@@ -571,84 +572,104 @@ export default async function Home() {
 
       {/* CONTACTS */}
       <section className="bg-white container-x py-16 md:py-24">
-        <div className="rounded-md bg-wine text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center">
-          <p className="eyebrow text-gold-soft mb-3">Свяжитесь с нами</p>
-          <h2 className="font-display text-2xl md:text-3xl max-w-lg mb-8">
-            Контакты JUPARFUME
-          </h2>
+        <div className="relative overflow-hidden rounded-md text-ivory px-8 py-14 md:py-16 text-center flex flex-col items-center"
+  style={{
+    backgroundImage: `url(${contactsBg.src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Затемнение */}
+  <div className="absolute inset-0 bg-gradient-to-br from-wine/90 via-wine/75 to-black/60" />
 
-          <div className="flex flex-col gap-3 text-sm text-ivory/90 mb-6">
-            <a
-              href="tel:+77056868694"
-              className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
-            >
-              <Phone size={16} className="shrink-0" /> +7 (705) 686-86-94
-            </a>
-            <a
-              href="https://wa.me/77056868694"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
-            >
-              <MessageCircle size={16} className="shrink-0" /> Написать в WhatsApp
-            </a>
-            <p className="inline-flex items-center gap-2 justify-center">
-              <MapPin size={16} className="shrink-0" /> Алматы, Досмухамедова 52
-            </p>
-            <p className="inline-flex items-center gap-2 justify-center">
-              <Clock size={16} className="shrink-0" /> Ежедневно, 10:00–22:00
-            </p>
-          </div>
+  {/* Контент */}
+  <div className="relative z-10 flex flex-col items-center w-full">
+    <p className="eyebrow text-gold-soft mb-3">Свяжитесь с нами</p>
 
-          <div className="flex items-center gap-5 text-xs mb-7">
-            <a
-              href="https://2gis.kz/almaty/inside/9430047375164282/firm/70000001096949165?m=76.924928%2C43.252465%2F18"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
-            >
-              2ГИС <ExternalLink size={12} />
-            </a>
-            <a
-              href="https://www.google.com/maps/place/Juparfume/@43.247102,76.9290888,14z/data=!4m6!3m5!1s0x38836f05b222ae1d:0xd25a043f3cf9b303!8m2!3d43.252871!4d76.9243525!16s%2Fg%2F11z9d0r36b?entry=ttu&g_ep=EgoyMDI2MDgwMy4wIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
-            >
-              Google Maps <ExternalLink size={12} />
-            </a>
-          </div>
+    <h2 className="font-display text-2xl md:text-3xl max-w-lg mb-8">
+      Контакты JUPARFUME
+    </h2>
 
-          <div className="flex items-center gap-4">
-            <a
-              href="https://wa.me/77056868694"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="WhatsApp"
-              className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
-            >
-              <MessageCircle size={18}/>
-            </a>
-            <a
-              href="https://instagram.com/juparfume.kz"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-              className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
-            >
-              <InstagramIcon size={18}/>
-            </a>
-            <a
-              href="https://tiktok.com/@juparfume.kaz"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
-              className="w-10 h-10 rounded-full bg-ivory/10 flex items-center justify-center hover:bg-ivory/20 transition-colors"
-            >
-              <Music2 size={18}/>
-            </a>
-          </div>
-        </div>
+    <div className="flex flex-col gap-3 text-sm text-ivory/90 mb-6">
+      <a
+        href="tel:+77056868694"
+        className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
+      >
+        <Phone size={16} className="shrink-0" /> +7 (705) 686-86-94
+      </a>
+
+      <a
+        href="https://wa.me/77056868694"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center gap-2 justify-center hover:text-gold-soft transition-colors"
+      >
+        <MessageCircle size={16} className="shrink-0" /> Написать в WhatsApp
+      </a>
+
+      <p className="inline-flex items-center gap-2 justify-center">
+        <MapPin size={16} className="shrink-0" /> Алматы, Досмухамедова 52
+      </p>
+
+      <p className="inline-flex items-center gap-2 justify-center">
+        <Clock size={16} className="shrink-0" /> Ежедневно, 10:00–22:00
+      </p>
+    </div>
+
+    <div className="flex items-center gap-5 text-xs mb-7">
+      <a
+        href="https://2gis.kz/almaty/inside/9430047375164282/firm/70000001096949165?m=76.924928%2C43.252465%2F18"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
+      >
+        2ГИС <ExternalLink size={12} />
+      </a>
+
+      <a
+        href="https://www.google.com/maps/place/Juparfume/@43.247102,76.9290888,14z/data=!4m6!3m5!1s0x38836f05b222ae1d:0xd25a043f3cf9b303!8m2!3d43.252871!4d76.9243525!16s%2Fg%2F11z9d0r36b?entry=ttu&g_ep=EgoyMDI2MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center gap-1.5 underline underline-offset-4 hover:text-gold-soft transition-colors"
+      >
+        Google Maps <ExternalLink size={12} />
+      </a>
+    </div>
+
+    <div className="flex items-center gap-4">
+      <a
+        href="https://wa.me/77056868694"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="WhatsApp"
+        className="w-10 h-10 rounded-full bg-ivory/10 backdrop-blur-sm flex items-center justify-center hover:bg-ivory/20 transition-colors"
+      >
+        <MessageCircle size={18} />
+      </a>
+
+      <a
+        href="https://instagram.com/juparfume.kz"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+        className="w-10 h-10 rounded-full bg-ivory/10 backdrop-blur-sm flex items-center justify-center hover:bg-ivory/20 transition-colors"
+      >
+        <InstagramIcon size={18} />
+      </a>
+
+      <a
+        href="https://tiktok.com/@juparfume.kaz"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="TikTok"
+        className="w-10 h-10 rounded-full bg-ivory/10 backdrop-blur-sm flex items-center justify-center hover:bg-ivory/20 transition-colors"
+      >
+        <Music2 size={18} />
+      </a>
+    </div>
+  </div>
+</div>
 
         <div className="mt-6 rounded-md overflow-hidden border border-ink/10 h-64 md:h-80">
           <iframe

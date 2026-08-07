@@ -70,7 +70,11 @@ export default function Header({ searchIndex = [] as SearchItem[] }: { searchInd
           </button>
         </div>
 
-        <Link href="/" className="font-display text-xl md:text-2xl tracking-tight text-center justify-self-center">
+        <Link
+          href="/"
+          id="site-logo"
+          className="font-display text-xl md:text-2xl tracking-tight text-center justify-self-center"
+        >
           JUPARFUME
         </Link>
 

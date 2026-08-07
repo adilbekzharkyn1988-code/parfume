@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCart, getUnitPrice } from "@/context/CartContext";
 import { formatPrice } from "@/lib/format";
 import { submitOrderInBackground, leadsEndpointConfigured } from "@/lib/leads";
@@ -18,11 +18,21 @@ export default function CartDrawer() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   // Позиции без выбранного объёма, на которые указали после неудачной
-  // попытки оформить заказ — подсвечиваем их в списке.
+  // попытки оформить заказ — подсвечиваем их в списке, а затем плавно
+  // гасим подсветку (1.5 c, opacity 1 → 0).
   const [invalidSlugs, setInvalidSlugs] = useState<Set<string>>(new Set());
+  const [errorFading, setErrorFading] = useState(false);
+  const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+    };
+  }, []);
 
   const resetAndClose = () => {
     closeCart();
+    if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
     setTimeout(() => {
       setStep("cart");
       setStatus("idle");
@@ -31,13 +41,29 @@ export default function CartDrawer() {
       setPhoneError("");
       setComment("");
       setInvalidSlugs(new Set());
+      setErrorFading(false);
     }, 300);
   };
 
   const handleProceedToForm = () => {
     const missing = items.filter((i) => i.volume === null);
     if (missing.length > 0) {
+      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+
+      // Показываем подсветку сразу на полной непрозрачности...
       setInvalidSlugs(new Set(missing.map((i) => i.slug)));
+      setErrorFading(false);
+
+      // ...и через кадр запускаем CSS-переход в opacity: 0 за 1.5 с.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setErrorFading(true));
+      });
+
+      // По завершении анимации убираем подсветку из разметки совсем.
+      fadeTimeoutRef.current = setTimeout(() => {
+        setInvalidSlugs(new Set());
+        setErrorFading(false);
+      }, 1500);
       return;
     }
     setInvalidSlugs(new Set());
@@ -143,13 +169,16 @@ export default function CartDrawer() {
 
                     if (isPending) {
                       return (
-                        <li
-                          key={key}
-                          className={`flex flex-col gap-2.5 pb-4 border-b border-ink/10 transition-colors ${
-                            isInvalid ? "ring-1 ring-wine rounded-lg p-2.5 -m-2.5 bg-wine/[0.03]" : ""
-                          }`}
-                        >
-                          <div className="flex items-start justify-between gap-3">
+                        <li key={key} className="relative flex flex-col gap-2.5 pb-4 border-b border-ink/10">
+                          {isInvalid && (
+                            <div
+                              aria-hidden
+                              className={`pointer-events-none absolute -inset-2.5 rounded-lg ring-1 ring-wine bg-wine/[0.05] transition-opacity duration-[1500ms] ease-out ${
+                                errorFading ? "opacity-0" : "opacity-100"
+                              }`}
+                            />
+                          )}
+                          <div className="relative flex items-start justify-between gap-3">
                             <div>
                               <p className="eyebrow text-stone">{item.brand}</p>
                               <p className="font-display text-lg leading-tight">{item.name}</p>
@@ -166,7 +195,7 @@ export default function CartDrawer() {
                               <Trash2 size={16} />
                             </button>
                           </div>
-                          <div className="flex gap-2">
+                          <div className="relative flex gap-2">
                             {(["5", "10"] as const).map((v) => (
                               <button
                                 key={v}
@@ -179,7 +208,13 @@ export default function CartDrawer() {
                             ))}
                           </div>
                           {isInvalid && (
-                            <p className="text-xs text-wine">Выберите объём, чтобы продолжить</p>
+                            <p
+                              className={`relative text-xs text-wine transition-opacity duration-[1500ms] ease-out ${
+                                errorFading ? "opacity-0" : "opacity-100"
+                              }`}
+                            >
+                              Выберите объём, чтобы продолжить
+                            </p>
                           )}
                         </li>
                       );

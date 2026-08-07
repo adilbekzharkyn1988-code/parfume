@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import Preloader from "@/components/Preloader";
 import { CartProvider } from "@/context/CartContext";
 import { fetchProducts } from "@/contentful/data";
 
@@ -49,6 +50,7 @@ export default async function RootLayout({
           <Footer />
           <CartDrawer />
         </CartProvider>
+        <Preloader />
       </body>
     </html>
   );

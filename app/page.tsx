@@ -35,6 +35,8 @@ import { toPlainText } from "@/lib/format";
 import bgReq from "@/public/bg-req.webp";
 import story1 from "@/public/story-1.webp";
 import story2 from "@/public/story-2.webp";
+import womenBg from "@/public/women-parf.webp";
+import menBg from "@/public/men-parf.webp";
 
 export default async function Home() {
   const allProducts = await fetchProducts();
@@ -279,46 +281,67 @@ export default async function Home() {
 
       {/* CATEGORIES */}
       <section className="bg-white container-x py-8 md:py-12">
-        <div className="mb-8">
-          <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
-          <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
-        </div>
-        <div className="grid grid-cols-2 gap-4 sm:gap-6">
-          <Link
-            href="/catalog/women"
-            className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
-          >
-            <div className="aspect-square bg-[#F5E3E8] flex items-center justify-center relative overflow-hidden">
-              <span className="text-6xl sm:text-7xl md:text-8xl transition-transform duration-500 group-hover:scale-110">♀</span>
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col gap-2">
-              <h3 className="font-body font-semibold text-base sm:text-lg md:text-xl text-ink leading-tight">
-                Женская парфюмерия
-              </h3>
-              <span className="inline-flex items-center gap-2 eyebrow text-ink/70 group-hover:gap-3 transition-all">
-                Смотреть каталог <ArrowRight size={15} />
-              </span>
-            </div>
-          </Link>
+  <div className="mb-8">
+    <p className="eyebrow text-wine mb-2">Выбор по категориям</p>
+    <h2 className="font-display text-2xl md:text-3xl">Категории</h2>
+  </div>
 
-          <Link
-            href="/catalog/men"
-            className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_2px_14px_-6px_rgba(28,23,18,0.18)] transition-transform duration-500 hover:scale-[1.02]"
-          >
-            <div className="aspect-square bg-[#EFE6D6] flex items-center justify-center relative overflow-hidden">
-              <span className="text-6xl sm:text-7xl md:text-8xl transition-transform duration-500 group-hover:scale-110">♂</span>
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col gap-2">
-              <h3 className="font-body font-semibold text-base sm:text-lg md:text-xl text-ink leading-tight">
-                Мужская парфюмерия
-              </h3>
-              <span className="inline-flex items-center gap-2 eyebrow text-ink/70 group-hover:gap-3 transition-all">
-                Смотреть каталог <ArrowRight size={15} />
-              </span>
-            </div>
-          </Link>
-        </div>
-      </section>
+  <div className="grid grid-cols-2 gap-4 sm:gap-6">
+    {/* Женская */}
+    <Link
+      href="/catalog/women"
+      className="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_6px_30px_-10px_rgba(28,23,18,0.25)]"
+    >
+      <Image
+        src={womenBg}
+        alt="Женская парфюмерия"
+        fill
+        priority={false}
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+
+      <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 text-white">
+        <h3 className="font-display text-xl md:text-2xl mb-2">
+          Женская парфюмерия
+        </h3>
+
+        <span className="inline-flex items-center gap-2 eyebrow text-white/90 transition-all group-hover:gap-3">
+          Смотреть каталог
+          <ArrowRight size={15} />
+        </span>
+      </div>
+    </Link>
+
+    {/* Мужская */}
+    <Link
+      href="/catalog/men"
+      className="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_6px_30px_-10px_rgba(28,23,18,0.25)]"
+    >
+      <Image
+        src={menBg}
+        alt="Мужская парфюмерия"
+        fill
+        priority={false}
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+
+      <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 text-white">
+        <h3 className="font-display text-xl md:text-2xl mb-2">
+          Мужская парфюмерия
+        </h3>
+
+        <span className="inline-flex items-center gap-2 eyebrow text-white/90 transition-all group-hover:gap-3">
+          Смотреть каталог
+          <ArrowRight size={15} />
+        </span>
+      </div>
+    </Link>
+  </div>
+</section>
 
       {/* POPULAR BRANDS */}
       <section className="bg-ivory w-full pt-10 pb-14 md:pt-14 md:pb-20">

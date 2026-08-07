@@ -3,5 +3,6 @@
 /out/
 .env
 .env*.local
+docs/*.env
 .DS_Store
 *.log

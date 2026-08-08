@@ -5,7 +5,7 @@ import { fetchProductsByGender } from "@/contentful/data";
 export const metadata: Metadata = {
   title: "Мужская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
   description:
-    "Мужские нишевые ароматы: древесные, кожаные, свежие и восточные композиции. Объём 5 и 10 мл, доставка по РК.",
+    "Мужская нишевая парфюмерия на распив: древесные, кожаные, свежие и восточные ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
 };
 
 export default async function MenCatalogPage() {

@@ -24,6 +24,7 @@ export default function Footer() {
             <li><Link href="/catalog">Все ароматы</Link></li>
             <li><Link href="/catalog/women">Женские</Link></li>
             <li><Link href="/catalog/men">Мужские</Link></li>
+            <li><Link href="/brand">Бренды</Link></li>
           </ul>
         </div>
 

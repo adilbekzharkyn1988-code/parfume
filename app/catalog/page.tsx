@@ -5,7 +5,7 @@ import { fetchProducts } from "@/contentful/data";
 export const metadata: Metadata = {
   title: "Каталог ароматов — мужская и женская парфюмерия | JUPARFUME",
   description:
-    "Весь каталог оригинальной нишевой парфюмерии JUPARFUME: мужские, женские и унисекс ароматы в объёмах 5 и 10 мл.",
+    "Нишевая парфюмерия на распив: оригинальные мужские, женские и унисекс духи в отливантах 5 и 10 мл. Купить в Алматы и по Казахстану.",
 };
 
 export default async function CatalogPage() {

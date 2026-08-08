@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { familyColor } from "@/lib/data";
 import { fetchProducts, fetchProductBySlug } from "@/contentful/data";
+import { absoluteUrl } from "@/lib/site";
 import BottleArt from "@/components/BottleArt";
 import NotePyramid from "@/components/NotePyramid";
 import ProductPurchasePanel from "@/components/ProductPurchasePanel";
@@ -29,6 +30,9 @@ export async function generateMetadata({
   return {
     title: `${product.name} — ${product.brand} | JUPARFUME`,
     description: `${product.description} Объём 5 и 10 мл. ${product.familyLabel} аромат от ${product.brand}.`,
+    alternates: {
+      canonical: `/product/${product.slug}/`,
+    },
   };
 }
 
@@ -50,8 +54,57 @@ export default async function ProductPage({
   const genderLabel = product.gender === "men" ? "Мужское" : product.gender === "women" ? "Женское" : "Унисекс";
   const genderHref = product.gender === "men" ? "/catalog/men" : product.gender === "women" ? "/catalog/women" : "/catalog";
 
+  // Product JSON-LD — цена дана диапазоном (5 мл / 10 мл), поэтому
+  // используем AggregateOffer с low/highPrice, а не одну фиксированную цену.
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    brand: { "@type": "Brand", name: product.brand },
+    description: product.description,
+    ...(product.image
+      ? { image: [/^https?:\/\//.test(product.image) ? product.image : absoluteUrl(product.image)] }
+      : {}),
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "KZT",
+      lowPrice: Math.min(product.price5, product.price10),
+      highPrice: Math.max(product.price5, product.price10),
+      offerCount: 2,
+      availability: "https://schema.org/InStock",
+      url: absoluteUrl(`/product/${product.slug}/`),
+    },
+    ...(product.reviews > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: product.rating,
+            reviewCount: product.reviews,
+          },
+        }
+      : {}),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Главная", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: genderLabel, item: absoluteUrl(`${genderHref}/`) },
+      { "@type": "ListItem", position: 3, name: product.name, item: absoluteUrl(`/product/${product.slug}/`) },
+    ],
+  };
+
   return (
     <main className="container-x py-10 md:py-14">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <nav className="eyebrow text-stone mb-8 flex flex-wrap items-center gap-2" aria-label="Хлебные крошки">
         <Link href="/" className="hover:text-wine">Главная</Link>
         <span>/</span>

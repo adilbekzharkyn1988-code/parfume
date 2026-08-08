@@ -10,10 +10,12 @@
 // поставьте BASE_PATH = "" и задайте NEXT_PUBLIC_SITE_URL в .env.
 export const BASE_PATH = "/parfume";
 
-// ВАЖНО: подставьте сюда реальный домен (или задайте
-// NEXT_PUBLIC_SITE_URL в .env перед сборкой) — без этого sitemap.xml
-// и микроразметка будут генерироваться с доменом-заглушкой.
-const FALLBACK_SITE_URL = "https://juparfume.kz";
+// ВАЖНО: сейчас сайт живёт на GitHub Pages, поэтому здесь стоит его
+// текущий адрес. Когда переедете на juparfume.kz — раскомментируйте
+// вторую строку и закомментируйте/удалите первую (BASE_PATH тогда тоже
+// нужно будет поставить в "", см. комментарий выше).
+const FALLBACK_SITE_URL = "https://adilbekzharkyn1988-code.github.io";
+// const FALLBACK_SITE_URL = "https://juparfume.kz";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || FALLBACK_SITE_URL).replace(/\/+$/, "");
 

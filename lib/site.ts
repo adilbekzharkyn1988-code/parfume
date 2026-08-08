@@ -8,14 +8,14 @@
 // Когда переедете на свой домен без вложенного пути
 // (например juparfume.kz вместо username.github.io/parfume) —
 // поставьте BASE_PATH = "" и задайте NEXT_PUBLIC_SITE_URL в .env.
-export const BASE_PATH = "/parfume";
+export const BASE_PATH = "";
 
 // ВАЖНО: сейчас сайт живёт на GitHub Pages, поэтому здесь стоит его
 // текущий адрес. Когда переедете на juparfume.kz — раскомментируйте
 // вторую строку и закомментируйте/удалите первую (BASE_PATH тогда тоже
 // нужно будет поставить в "", см. комментарий выше).
-const FALLBACK_SITE_URL = "https://adilbekzharkyn1988-code.github.io";
-// const FALLBACK_SITE_URL = "https://juparfume.kz";
+// const FALLBACK_SITE_URL = "https://adilbekzharkyn1988-code.github.io";
+ const FALLBACK_SITE_URL = "https://juparfume.kz";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || FALLBACK_SITE_URL).replace(/\/+$/, "");
 

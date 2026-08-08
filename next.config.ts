@@ -1,13 +1,12 @@
 import type { NextConfig } from "next";
-
-const REPO = "/parfume";
+import { BASE_PATH } from "./lib/site";
 
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
-  basePath: REPO,
-  assetPrefix: REPO,
+  basePath: BASE_PATH,
+  assetPrefix: BASE_PATH,
 };
 
 export default nextConfig;

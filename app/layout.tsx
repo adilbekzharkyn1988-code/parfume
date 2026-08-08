@@ -62,6 +62,50 @@ const websiteJsonLd = {
   url: SITE_BASE_URL,
 };
 
+// LocalBusiness (Store) JSON-LD — физическая точка в Алматы: адрес,
+// координаты и часы работы совпадают с блоком "Контакты" на главной
+// (app/page.tsx) и с Footer. Помогает с локальным поиском/картами
+// и панелью знаний, отдельно от Organization (тот описывает бренд
+// в целом, без географии).
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "JUPARFUME",
+  url: SITE_BASE_URL,
+  telephone: "+77056868694",
+  priceRange: "10000–30000 ₸",
+  image: `${SITE_BASE_URL}/favicon.ico`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Досмухамедова 52",
+    addressLocality: "Алматы",
+    addressCountry: "KZ",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 43.252871,
+    longitude: 76.9243525,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "10:00",
+    closes: "22:00",
+  },
+  sameAs: [
+    "https://instagram.com/juparfume.kz",
+    "https://tiktok.com/@juparfume.kaz",
+  ],
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -84,6 +128,10 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <CartProvider>
           <Header searchIndex={searchIndex} />

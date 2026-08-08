@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { fetchProducts, fetchArticles } from "@/contentful/data";
+import { fetchProducts, fetchArticles, fetchBrands } from "@/contentful/data";
 import { absoluteUrl } from "@/lib/site";
 
 // Обязательно для output: "export" — иначе Next.js не знает, что этот
@@ -15,7 +15,11 @@ export const dynamic = "force-static";
 // лендинга) нужно будет добавить сюда одной строкой вручную — это
 // единственный случай, когда требуется правка.
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [products, articles] = await Promise.all([fetchProducts(), fetchArticles()]);
+  const [products, articles, brands] = await Promise.all([
+    fetchProducts(),
+    fetchArticles(),
+    fetchBrands(),
+  ]);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), changeFrequency: "daily", priority: 1 },
@@ -27,7 +31,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: absoluteUrl("/catalog/bestsellers/"), changeFrequency: "daily", priority: 0.7 },
     { url: absoluteUrl("/catalog/pick/"), changeFrequency: "weekly", priority: 0.6 },
     { url: absoluteUrl("/articles/"), changeFrequency: "weekly", priority: 0.6 },
+    { url: absoluteUrl("/brand/"), changeFrequency: "weekly", priority: 0.6 },
   ];
+
+  const brandRoutes: MetadataRoute.Sitemap = brands.map((b) => ({
+    url: absoluteUrl(`/brand/${b.slug}/`),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
 
   const productRoutes: MetadataRoute.Sitemap = products.map((p) => ({
     url: absoluteUrl(`/product/${p.slug}/`),
@@ -41,5 +52,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...productRoutes, ...articleRoutes];
+  return [...staticRoutes, ...brandRoutes, ...productRoutes, ...articleRoutes];
 }

@@ -4,6 +4,7 @@ import {
   Product,
   Article,
   Gender,
+  brandSlug,
 } from "@/lib/data";
 
 /**
@@ -54,6 +55,28 @@ export async function fetchProductsByGender(gender: Gender): Promise<Product[]> 
 export async function fetchProductBySlug(slug: string): Promise<Product | undefined> {
   const all = await fetchProducts();
   return all.find((p) => p.slug === slug);
+}
+
+export type Brand = { slug: string; name: string; count: number };
+
+// Список брендов выводится из товаров на лету (в Contentful бренд —
+// не отдельная сущность, а строковое поле товара) — поэтому просто
+// группируем и считаем, без похода за отдельным контент-типом.
+export async function fetchBrands(): Promise<Brand[]> {
+  const all = await fetchProducts();
+  const map = new Map<string, Brand>();
+  for (const p of all) {
+    const slug = brandSlug(p.brand);
+    const existing = map.get(slug);
+    if (existing) existing.count += 1;
+    else map.set(slug, { slug, name: p.brand, count: 1 });
+  }
+  return Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name, "ru"));
+}
+
+export async function fetchProductsByBrandSlug(slug: string): Promise<Product[]> {
+  const all = await fetchProducts();
+  return all.filter((p) => brandSlug(p.brand) === slug);
 }
 
 export async function fetchArticles(): Promise<Article[]> {

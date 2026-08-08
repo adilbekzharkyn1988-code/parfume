@@ -115,9 +115,7 @@ export default function ProductPurchasePanel({ product }: { product: Product }) 
           {added ? "Добавлено ✓" : <>Добавить<br />в корзину</>}
         </button>
       </div>
-      <p className="text-[11px] text-stone -mt-2">
-        Прототип: оплата не подключена, оформление демонстрационное
-      </p>
+      
     </div>
   );
 }

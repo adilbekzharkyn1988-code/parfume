@@ -96,7 +96,6 @@ const nextConfig: NextConfig = {
   { source: "/catalog/tproduct/372762574994-marc-antoine-barrois-ganymede", destination: "/product/marc-antoine-barrois-ganymede/", permanent: true },
   { source: "/catalog/tproduct/491784349674-clive-christian-crab-apple-blossom", destination: "/product/clive-christian-crab-apple-blossom/", permanent: true },
   { source: "/catalog/tproduct/781007631854-clive-christian-1872", destination: "/product/clive-christian-1872/", permanent: true },
-  { source: "/catalog", destination: "/catalog/", permanent: true },
   { source: "/brands/bvlgari", destination: "/brand/bvlgari/", permanent: true },
   { source: "/brands/maison-crivelli", destination: "/brand/maison-crivelli/", permanent: true },
   { source: "/catalog/tproduct/919780913334-louis-vuitton-meteore", destination: "/product/louis-vuitton-meteore/", permanent: true },

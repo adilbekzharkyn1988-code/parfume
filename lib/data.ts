@@ -10,6 +10,19 @@ export type Family =
 
 export type Gender = "men" | "women" | "unisex";
 
+// Слаг бренда для страниц /brand/<slug>/ и внутренних ссылок —
+// та же логика транслитерации, что Contentful использует для slug
+// товаров, только без обращения к CMS (бренды не хранятся отдельной
+// сущностью, поэтому слаг всегда выводится из названия на лету).
+export function brandSlug(brand: string): string {
+  return brand
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 // НОВЫЙ ТИП ДЛЯ ОТЗЫВОВ
 export type ReviewData = {
   user: string;

@@ -5,7 +5,7 @@ import { fetchProductsByGender } from "@/contentful/data";
 export const metadata: Metadata = {
   title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
   description:
-    "Женские нишевые ароматы: цветочные, гурманские и пудровые композиции. Объём 5 и 10 мл, доставка по РК.",
+    "Женская нишевая парфюмерия на распив: цветочные, гурманские и пудровые ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
 };
 
 export default async function WomenCatalogPage() {

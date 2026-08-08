@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { familyColor } from "@/lib/data";
+import { familyColor, brandSlug } from "@/lib/data";
 import { fetchProducts, fetchProductBySlug } from "@/contentful/data";
 import { absoluteUrl } from "@/lib/site";
 import BottleArt from "@/components/BottleArt";
@@ -29,7 +29,7 @@ export async function generateMetadata({
   if (!product) return {};
   return {
     title: `${product.name} — ${product.brand} | JUPARFUME`,
-    description: `${product.description} Объём 5 и 10 мл. ${product.familyLabel} аромат от ${product.brand}.`,
+    description: `${product.description} ${product.brand} на распив: оригинал в отливантах 5 и 10 мл. ${product.familyLabel} аромат.`,
     alternates: {
       canonical: `/product/${product.slug}/`,
     },
@@ -53,6 +53,7 @@ export default async function ProductPage({
 
   const genderLabel = product.gender === "men" ? "Мужское" : product.gender === "women" ? "Женское" : "Унисекс";
   const genderHref = product.gender === "men" ? "/catalog/men" : product.gender === "women" ? "/catalog/women" : "/catalog";
+  const brandHref = `/brand/${brandSlug(product.brand)}`;
 
   // Product JSON-LD — цена дана диапазоном (5 мл / 10 мл), поэтому
   // используем AggregateOffer с low/highPrice, а не одну фиксированную цену.
@@ -91,7 +92,8 @@ export default async function ProductPage({
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Главная", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: genderLabel, item: absoluteUrl(`${genderHref}/`) },
-      { "@type": "ListItem", position: 3, name: product.name, item: absoluteUrl(`/product/${product.slug}/`) },
+      { "@type": "ListItem", position: 3, name: product.brand, item: absoluteUrl(`${brandHref}/`) },
+      { "@type": "ListItem", position: 4, name: product.name, item: absoluteUrl(`/product/${product.slug}/`) },
     ],
   };
 
@@ -109,6 +111,8 @@ export default async function ProductPage({
         <Link href="/" className="hover:text-wine">Главная</Link>
         <span>/</span>
         <Link href={genderHref} className="hover:text-wine">{genderLabel}</Link>
+        <span>/</span>
+        <Link href={brandHref} className="hover:text-wine">{product.brand}</Link>
         <span>/</span>
         <span className="text-ink">{product.name}</span>
       </nav>

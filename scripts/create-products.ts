@@ -14,7 +14,7 @@
  *     "name": "Basso",
  *     "gender": "unisex",           // "men" | "women" | "unisex"
  *     "family": "woody",            // woody|fresh|oriental|citrus|floral|gourmand|musky|spicy
- *     "familyLabel": "Цитрусово-пряный древесный",
+ *     "familyLable": "Цитрусово-пряный древесный",
  *     "concentration": "Eau de Parfum",
  *     "description": "...",         // короткое описание (обычный текст)
  *     "story": "...",               // длинный текст (уйдёт в Rich Text одним абзацем)
@@ -86,7 +86,7 @@ type NewProduct = {
   name: string;
   gender: Gender;
   family: Family;
-  familyLabel: string;
+  familyLable: string;
   concentration: string;
   description: string;
   story: string;
@@ -294,7 +294,7 @@ async function main() {
         brand: { [locale]: item.brand },
         gender: { [locale]: item.gender },
         family: { [locale]: item.family },
-        familyLabel: { [locale]: item.familyLabel },
+        familyLable: { [locale]: item.familyLable },
         concentration: { [locale]: item.concentration },
         description: {
           [locale]: descriptionIsRichText ? toRichText(item.description) : item.description,

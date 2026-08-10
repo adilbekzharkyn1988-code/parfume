@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T17:00:57.793Z",
+  "generatedAt": "2026-08-10T17:08:10.585Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -637,22 +637,22 @@
       "concentration": "Eau de Parfum",
       "description": "Мощный шипровый аромат: резкий грейпфрутовый старт, кожисто-пряное сердце из лабданума и гвоздики, плотная древесно-мшистая база.",
       "story": {
-        "nodeType": "document",
         "data": {},
         "content": [
           {
-            "nodeType": "paragraph",
             "data": {},
             "content": [
               {
-                "nodeType": "text",
-                "value": "Страна: Италия (Sospiro Perfumes) Парфюмер: Christian Provenzano Год создания: 2022 Ноты: грейпфрут, гвоздика, лабданум, майский цвет, ветивер, кедр, чёрный перец, дубовый мох, сандал, гваяковое дерево Для кого: унисекс, пряно-древесный шипр Куда: вечер, осень/зима, выход в свет По ощущениям: резкий цитрусовый старт, кожисто-пряное сердце, плотная древесно-мшистая база с высокой стойкостью.",
+                "data": {},
                 "marks": [],
-                "data": {}
+                "value": "Страна: Италия (Sospiro Perfumes) Парфюмер: Christian Provenzano Год создания: 2022 Ноты: грейпфрут, гвоздика, лабданум, майский цвет, ветивер, кедр, чёрный перец, дубовый мох, сандал, гваяковое дерево Для кого: унисекс, пряно-древесный шипр Куда: вечер, осень/зима, выход в свет По ощущениям: резкий цитрусовый старт, кожисто-пряное сердце, плотная древесно-мшистая база с высокой стойкостью.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       },
       "notes": {
         "top": [
@@ -682,12 +682,13 @@
       "badge": "Новинка",
       "sillage": 4,
       "longevity": 5,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/2gCp3tEjKXptKJMmw42vaJ/eae152ff4cc0637ccb7944cf3724f27e/sospiro-basso.webp",
       "seasonality": {
-        "winter": 65,
+        "day": 60,
+        "autumn": 75,
         "spring": 55,
         "summer": 40,
-        "autumn": 75,
-        "day": 60,
+        "winter": 65,
         "evening": 75
       },
       "reviewsList": []
@@ -2886,22 +2887,22 @@
       "concentration": "Eau de Parfum",
       "description": "Древесно-пудровый унисекс-аромат из коллекции Journey to China: кремовый сандал, лёгкий ладан и тёплая амбра — минималистично и медитативно.",
       "story": {
-        "nodeType": "document",
         "data": {},
         "content": [
           {
-            "nodeType": "paragraph",
             "data": {},
             "content": [
               {
-                "nodeType": "text",
-                "value": "Страна: Франция (Louis Vuitton) Парфюмер: Jacques Cavallier Belletrud Год создания: 2025 Ноты: сандал, роза, ладан, амбра (официальная пирамида раскрыта брендом не полностью) Для кого: унисекс, oriental woody / powdery woody Куда: день, круглый год, для тихого выхода По ощущениям: кремовый сандаловый аромат, спокойный и медитативный, вдохновлённый искусством каллиграфии — часть коллекции Journey to China.",
+                "data": {},
                 "marks": [],
-                "data": {}
+                "value": "Страна: Франция (Louis Vuitton) Парфюмер: Jacques Cavallier Belletrud Год создания: 2025 Ноты: сандал, роза, ладан, амбра (официальная пирамида раскрыта брендом не полностью) Для кого: унисекс, oriental woody / powdery woody Куда: день, круглый год, для тихого выхода По ощущениям: кремовый сандаловый аромат, спокойный и медитативный, вдохновлённый искусством каллиграфии — часть коллекции Journey to China.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       },
       "notes": {
         "top": [],
@@ -2914,19 +2915,20 @@
           "Амбра"
         ]
       },
-      "price5": 17500,
-      "price10": 35000,
+      "price5": 35000,
+      "price10": 70000,
       "rating": 4,
       "reviews": 32,
       "badge": "Новинка",
       "sillage": 2,
       "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/5kv1dLnr4n0BY7h6Yozoh6/739b1e334d5dfba1a2cb35cfcd74e047/louis-vuitton-ink-mark.webp",
       "seasonality": {
-        "winter": 60,
+        "day": 70,
+        "autumn": 65,
         "spring": 50,
         "summer": 40,
-        "autumn": 65,
-        "day": 70,
+        "winter": 60,
         "evening": 50
       },
       "reviewsList": []
@@ -4101,22 +4103,22 @@
       "concentration": "Parfum",
       "description": "Кожано-табачный аромат, посвящённый Латинской Америке: пряно-цитрусовый старт, чайно-цветочное сердце, замшево-табачная база.",
       "story": {
-        "nodeType": "document",
         "data": {},
         "content": [
           {
-            "nodeType": "paragraph",
             "data": {},
             "content": [
               {
-                "nodeType": "text",
-                "value": "Страна: Великобритания (Ormonde Jayne) Парфюмер: Geza Schoen Год создания: 2012 Ноты: кардамон, горный воздух, можжевельник, бергамот, мускатный шалфей, апельсин, чай, гедион, фиалка, магнолия, роза, табачный лист, изо е супер, замша, амбра, сандал, мох, бобы тонка Для кого: унисекс, spicy woody (tobacco leather) Куда: вечер, осень/зима, формальные события По ощущениям: чувственный кожано-табачный аромат, посвящённый Латинской Америке — один из самых продаваемых в коллекции Four Corners of the Earth.",
+                "data": {},
                 "marks": [],
-                "data": {}
+                "value": "Страна: Великобритания (Ormonde Jayne) Парфюмер: Geza Schoen Год создания: 2012 Ноты: кардамон, горный воздух, можжевельник, бергамот, мускатный шалфей, апельсин, чай, гедион, фиалка, магнолия, роза, табачный лист, изо е супер, замша, амбра, сандал, мох, бобы тонка Для кого: унисекс, spicy woody (tobacco leather) Куда: вечер, осень/зима, формальные события По ощущениям: чувственный кожано-табачный аромат, посвящённый Латинской Америке — один из самых продаваемых в коллекции Four Corners of the Earth.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       },
       "notes": {
         "top": [
@@ -4151,12 +4153,13 @@
       "badge": "Хит продаж",
       "sillage": 4,
       "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/35hBYEW7eQqiI2cppIfyR1/c16fcf3906cd1d20aa2bbcd352522e62/ormonde-jayne-montobacco.webp",
       "seasonality": {
-        "winter": 75,
+        "day": 35,
+        "autumn": 70,
         "spring": 40,
         "summer": 55,
-        "autumn": 70,
-        "day": 35,
+        "winter": 75,
         "evening": 80
       },
       "reviewsList": []
@@ -5232,22 +5235,22 @@
       "concentration": "Extrait de Parfum",
       "description": "Тёплый гурманский аромат: обжаренный кофе с анисовой остротой, цветочное сердце из жасмина и флёрдоранжа, дымно-какаовая карамельная база.",
       "story": {
-        "nodeType": "document",
         "data": {},
         "content": [
           {
-            "nodeType": "paragraph",
             "data": {},
             "content": [
               {
-                "nodeType": "text",
-                "value": "Страна: Великобритания (Clive Christian) Парфюмер: Céline Herbette, Kamila Lelakova Год создания: 2026 Ноты: кофе, розовый перец, анис, флёрдоранж, жасмин, карамель, какао, ваниль, дым Для кого: унисекс, oriental vanilla / sweet gourmand Куда: вечер, осень/зима, статусный выход По ощущениям: тёплый кофейно-какаовый гурман с цветочным сердцем и дымной ванильной базой; часть коллекции Addictive Arts, флакон оформлен художником Domingo Zapata.",
+                "data": {},
                 "marks": [],
-                "data": {}
+                "value": "Страна: Великобритания (Clive Christian) Парфюмер: Céline Herbette, Kamila Lelakova Год создания: 2026 Ноты: кофе, розовый перец, анис, флёрдоранж, жасмин, карамель, какао, ваниль, дым Для кого: унисекс, oriental vanilla / sweet gourmand Куда: вечер, осень/зима, статусный выход По ощущениям: тёплый кофейно-какаовый гурман с цветочным сердцем и дымной ванильной базой; часть коллекции Addictive Arts, флакон оформлен художником Domingo Zapata.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       },
       "notes": {
         "top": [
@@ -5273,12 +5276,13 @@
       "badge": "Новинка",
       "sillage": 4,
       "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7ud1q2vmv9CwNZAaLanLEh/47876b24fad79b7bc6ec0ba86889aa10/clive-christian-out-of-the-blue.webp",
       "seasonality": {
-        "winter": 75,
+        "day": 35,
+        "autumn": 70,
         "spring": 40,
         "summer": 25,
-        "autumn": 70,
-        "day": 35,
+        "winter": 75,
         "evening": 80
       },
       "reviewsList": []
@@ -5518,22 +5522,22 @@
       "concentration": "Eau de Parfum",
       "description": "Свежая цитрусово-древесная интерпретация ветивера: перечный старт, розово-зелёное сердце, сухая ветиверово-кедровая база.",
       "story": {
-        "nodeType": "document",
         "data": {},
         "content": [
           {
-            "nodeType": "paragraph",
             "data": {},
             "content": [
               {
-                "nodeType": "text",
-                "value": "Страна: Франция/Великобритания (The House of Creed) Парфюмер: официально не раскрыт Год создания: 2026 Ноты: тимур, бергамот, розовый перец, роза центифолия, герань, чёрная смородина, ветивер, кедр, амбровое дерево Для кого: унисекс, citrus aromatic / woody floral Куда: день, весна/лето, повседневное ношение По ощущениям: свежий воздушный ветивер с зелёно-розовым сердцем и сухой древесной базой — более лёгкая версия классического Original Vetiver.",
+                "data": {},
                 "marks": [],
-                "data": {}
+                "value": "Страна: Франция/Великобритания (The House of Creed) Парфюмер: официально не раскрыт Год создания: 2026 Ноты: тимур, бергамот, розовый перец, роза центифолия, герань, чёрная смородина, ветивер, кедр, амбровое дерево Для кого: унисекс, citrus aromatic / woody floral Куда: день, весна/лето, повседневное ношение По ощущениям: свежий воздушный ветивер с зелёно-розовым сердцем и сухой древесной базой — более лёгкая версия классического Original Vetiver.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       },
       "notes": {
         "top": [
@@ -5559,12 +5563,13 @@
       "badge": "Новинка",
       "sillage": 3,
       "longevity": 3,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7oxOvUvkzP16G4p5ZSyQzg/7dc92be8de68abb8d2896e36b54821b5/creed-wild-vetiver.webp",
       "seasonality": {
-        "winter": 25,
+        "day": 80,
+        "autumn": 40,
         "spring": 80,
         "summer": 65,
-        "autumn": 40,
-        "day": 80,
+        "winter": 25,
         "evening": 35
       },
       "reviewsList": []

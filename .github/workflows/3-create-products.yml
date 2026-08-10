@@ -1,0 +1,74 @@
+name: 3. Создать новые товары в Contentful
+
+# Запускается вручную: Actions → "3. Создать новые товары в Contentful" → Run workflow.
+#
+# Что делает:
+#   1. Берёт data/new-products.json из репозитория (подготовьте его заранее
+#      по образцу data/new-products.example.json и закоммитьте в main)
+#   2. Создаёт в Contentful только НОВЫЕ товары — существующие (по совпадению
+#      slug) не трогает и не изменяет
+#   3. Подтягивает результат обратно в contentful/cache.json и коммитит —
+#      это автоматически обновит сайт при следующей пересборке (Pages/Vercel)
+#
+# Нужные секреты (Settings → Secrets and variables → Actions):
+#   CONTENTFUL_SPACE_ID
+#   CONTENTFUL_ACCESS_TOKEN         (Content Delivery API token)
+#   CONTENTFUL_MANAGEMENT_TOKEN     (Content Management API token —
+#                                    Contentful → Settings → API keys →
+#                                    Content management tokens)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Check secrets are set
+        run: |
+          missing=""
+          [ -z "${{ secrets.CONTENTFUL_SPACE_ID }}" ] && missing="$missing CONTENTFUL_SPACE_ID"
+          [ -z "${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" ] && missing="$missing CONTENTFUL_ACCESS_TOKEN"
+          [ -z "${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}" ] && missing="$missing CONTENTFUL_MANAGEMENT_TOKEN"
+          if [ -n "$missing" ]; then
+            echo "::error::Не заданы секреты:$missing — добавьте в Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Проверить, что файл с товарами существует
+        run: |
+          if [ ! -f data/new-products.json ]; then
+            echo "::error::Не найден data/new-products.json. Скопируйте data/new-products.example.json в data/new-products.json, заполните своими товарами и закоммитьте в main перед запуском этого workflow."
+            exit 1
+          fi
+
+      - name: Создать новые товары в Contentful
+        run: npm run create:products
+        env:
+          NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_MANAGEMENT_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_TOKEN }}
+
+      - name: Подтянуть результат обратно
+        run: npm run sync:contentful
+        env:
+          NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+
+      - name: Закоммитить обновлённый cache.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add contentful/cache.json
+          git diff --staged --quiet || git commit -m "chore: create new products"
+          git push

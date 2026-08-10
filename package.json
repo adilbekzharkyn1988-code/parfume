@@ -9,7 +9,8 @@
     "lint": "eslint",
     "sync:contentful": "tsx scripts/sync-contentful.ts",
     "generate:bulk": "tsx scripts/generate-bulk-content.ts",
-    "push:contentful": "tsx scripts/push-to-contentful.ts"
+    "push:contentful": "tsx scripts/push-to-contentful.ts",
+    "create:products": "tsx scripts/create-products.ts"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.2.2",

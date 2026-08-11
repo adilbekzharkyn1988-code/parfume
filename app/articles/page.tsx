@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: "Журнал JUPARFUME — гиды по парфюмерии и трендам",
   description:
     "Статьи о парфюмерии: как устроена ароматическая пирамида, как выбрать объём, тренды сезона и как отличить оригинал от подделки.",
+  alternates: { canonical: "/articles/" },
+  openGraph: {
+    title: "Журнал JUPARFUME — гиды по парфюмерии и трендам",
+    description:
+      "Статьи о парфюмерии: как устроена ароматическая пирамида, как выбрать объём, тренды сезона и как отличить оригинал от подделки.",
+    url: "/articles/",
+    type: "website",
+  },
 };
 
 export default async function ArticlesPage() {

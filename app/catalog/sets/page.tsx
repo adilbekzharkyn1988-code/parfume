@@ -5,6 +5,7 @@ import { ArrowRight, Gift } from "lucide-react";
 export const metadata: Metadata = {
   title: "Наборы — скоро | JUPARFUME",
   description: "Подарочные наборы ароматов появятся здесь совсем скоро.",
+  alternates: { canonical: "/catalog/sets/" },
 };
 
 export default function SetsCatalogPage() {

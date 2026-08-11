@@ -31,6 +31,7 @@ import Image from "next/image";
 import womenPhoto from "@/public/women.avif";
 import menPhoto from "@/public/men.avif";
 import { fetchProducts, fetchArticles } from "@/contentful/data";
+import { brandSlug } from "@/lib/data";
 import { toPlainText } from "@/lib/format";
 import bgReq from "@/public/bg-req.webp";
 import story1 from "@/public/story-1.webp";
@@ -352,7 +353,7 @@ export default async function Home() {
                 {popularBrands.map((b, i) => (
                   <Link
                     key={`${groupIndex}-${b}-${i}`}
-                    href={`/catalog?brand=${encodeURIComponent(b)}`}
+                    href={`/brand/${brandSlug(b)}/`}
                     className="font-body font-[300] text-lg md:text-xl text-ink/70 tracking-wide shrink-0 hover:text-wine transition-colors"
                     style={{ marginRight: "20px" }}
                     tabIndex={groupIndex === 1 ? -1 : 0}

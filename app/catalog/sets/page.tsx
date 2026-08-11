@@ -3,9 +3,15 @@ import Link from "next/link";
 import { ArrowRight, Gift } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Наборы — скоро | JUPARFUME",
+  title: "Наборы — скоро",
   description: "Подарочные наборы ароматов появятся здесь совсем скоро.",
   alternates: { canonical: "/catalog/sets/" },
+  openGraph: {
+    title: "Наборы — скоро | JUPARFUME",
+    description: "Подарочные наборы ароматов появятся здесь совсем скоро.",
+    url: "/catalog/sets/",
+    type: "website",
+  },
 };
 
 export default function SetsCatalogPage() {

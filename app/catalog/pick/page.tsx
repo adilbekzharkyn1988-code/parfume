@@ -5,6 +5,7 @@ import { fetchProducts } from "@/contentful/data";
 export const metadata: Metadata = {
   title: "Наш выбор — рекомендации JUPARFUME",
   description: "Подборка ароматов, которые рекомендует команда JUPARFUME.",
+  alternates: { canonical: "/catalog/pick/" },
 };
 
 export default async function OurPickPage() {

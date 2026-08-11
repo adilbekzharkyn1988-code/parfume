@@ -5,6 +5,7 @@ import { fetchProducts } from "@/contentful/data";
 export const metadata: Metadata = {
   title: "Хиты продаж — самые популярные ароматы | JUPARFUME",
   description: "Ароматы с наибольшим спросом у покупателей JUPARFUME. Объём 5 и 10 мл.",
+  alternates: { canonical: "/catalog/bestsellers/" },
 };
 
 export default async function BestsellersPage() {

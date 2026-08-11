@@ -3,9 +3,15 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Наш выбор — рекомендации JUPARFUME",
+  title: "Наш выбор — рекомендации",
   description: "Подборка ароматов, которые рекомендует команда JUPARFUME.",
   alternates: { canonical: "/catalog/pick/" },
+  openGraph: {
+    title: "Наш выбор — рекомендации JUPARFUME",
+    description: "Подборка ароматов, которые рекомендует команда JUPARFUME.",
+    url: "/catalog/pick/",
+    type: "website",
+  },
 };
 
 export default async function OurPickPage() {

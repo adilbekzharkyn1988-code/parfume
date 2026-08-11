@@ -22,9 +22,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = await fetchArticleBySlug(slug);
   if (!article) return {};
+  const title = `${toPlainText(article.title)} — Журнал JUPARFUME`;
+  const description = toPlainText(article.excerpt);
+  const url = `/articles/${slug}/`;
   return {
-    title: `${toPlainText(article.title)} | Журнал JUPARFUME`,
-    description: toPlainText(article.excerpt),
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: `${title} | JUPARFUME`, description, url, type: "article" },
+    twitter: { card: "summary_large_image", title: `${title} | JUPARFUME`, description },
   };
 }
 

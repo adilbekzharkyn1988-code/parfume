@@ -5,6 +5,7 @@ import { fetchProducts } from "@/contentful/data";
 export const metadata: Metadata = {
   title: "Новинки — новые ароматы в каталоге | JUPARFUME",
   description: "Свежие поступления в каталоге JUPARFUME. Объём 5 и 10 мл.",
+  alternates: { canonical: "/catalog/new/" },
 };
 
 export default async function NewArrivalsPage() {

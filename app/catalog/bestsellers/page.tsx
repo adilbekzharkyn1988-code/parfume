@@ -3,9 +3,15 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Хиты продаж — самые популярные ароматы | JUPARFUME",
+  title: "Хиты продаж — самые популярные ароматы",
   description: "Ароматы с наибольшим спросом у покупателей JUPARFUME. Объём 5 и 10 мл.",
   alternates: { canonical: "/catalog/bestsellers/" },
+  openGraph: {
+    title: "Хиты продаж — самые популярные ароматы | JUPARFUME",
+    description: "Ароматы с наибольшим спросом у покупателей JUPARFUME. Объём 5 и 10 мл.",
+    url: "/catalog/bestsellers/",
+    type: "website",
+  },
 };
 
 export default async function BestsellersPage() {

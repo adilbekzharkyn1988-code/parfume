@@ -27,11 +27,24 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = await fetchProductBySlug(slug);
   if (!product) return {};
+  const title = `${product.name} — ${product.brand}`;
+  const description = `${product.description} ${product.brand} на распив: оригинал в отливантах 5 и 10 мл. ${product.familyLabel ?? ""} аромат.`;
+  const url = `/product/${product.slug}/`;
   return {
-    title: `${product.name} — ${product.brand} | JUPARFUME`,
-    description: `${product.description} ${product.brand} на распив: оригинал в отливантах 5 и 10 мл. ${product.familyLabel} аромат.`,
-    alternates: {
-      canonical: `/product/${product.slug}/`,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | JUPARFUME`,
+      description,
+      url,
+      type: "website",
+      images: product.image ? [absoluteUrl(product.image)] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | JUPARFUME`,
+      description,
     },
   };
 }

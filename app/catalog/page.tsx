@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Каталог ароматов — мужская и женская парфюмерия | JUPARFUME",
   description:
     "Нишевая парфюмерия на распив: оригинальные мужские, женские и унисекс духи в отливантах 5 и 10 мл. Купить в Алматы и по Казахстану.",
+  alternates: { canonical: "/catalog/" },
 };
 
 export default async function CatalogPage() {

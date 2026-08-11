@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T17:08:10.585Z",
+  "generatedAt": "2026-08-11T19:51:23.393Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -7,6 +7,7 @@
       "brand": "Acqua di Parma",
       "gender": "men",
       "family": "spicy",
+      "familyLabel": "Пряный",
       "concentration": "Eau de Parfum",
       "description": "свежий цитрусово-зелёный аромат с пряной чистотой. Ощущается аккуратно, современно и очень «чисто».",
       "story": {
@@ -85,6 +86,7 @@
       "brand": "Arabian Oud",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "густой тёмный уд с амбровой сладостью и сухими специями; звучит мощно, насыщенно и «плотно восточно», с сильным шлейфом",
       "story": {
@@ -160,6 +162,7 @@
       "brand": "Marc-Antione Barrios",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "кремовая тубероза с зелёным мате и лёгкой сладостью бобов тонка; звучит современно, воздушно и «светло», без тяжести, но с характером",
       "story": {
@@ -236,6 +239,7 @@
       "brand": "Amouage",
       "gender": "men",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "очень тёмный пряно-удовый аромат с мощным ладаном и смолами; ощущается густо, сухо и «имперски», как дорогой восточный дым с кожано-древесной глубиной",
       "story": {
@@ -317,6 +321,7 @@
       "brand": "Amouage",
       "gender": "women",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "сливочно-цветочный аромат с грушей и ореховой мягкостью, тёплой ванилью и амбровой базой; звучит мягко, обволакивающе и очень «люксово-пудрово»",
       "story": {
@@ -398,6 +403,7 @@
       "brand": "Amouage",
       "gender": "women",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "более насыщенная и «воздушно-цветочная» версия Guidance с розовой водой и усиленной кремово-амбровой базой; звучит мягко, густо и очень обволакивающе",
       "story": {
@@ -480,6 +486,7 @@
       "brand": "Amouage",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "густой смолисто-пряный восточный аромат с ладаном и шафраном, цитрусовым стартом и тёмной амброво-удовой базой; звучит мощно, многослойно и «дорого дымно»",
       "story": {
@@ -561,6 +568,7 @@
       "brand": "Amouage",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "зелёный фиалково-древесный аромат с сухим можжевельником и ветивером; звучит минималистично, холодно и слегка ретро-элегантно",
       "story": {
@@ -634,6 +642,7 @@
       "brand": "Sospiro",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Цитрусово-пряный древесный",
       "concentration": "Eau de Parfum",
       "description": "Мощный шипровый аромат: резкий грейпфрутовый старт, кожисто-пряное сердце из лабданума и гвоздики, плотная древесно-мшистая база.",
       "story": {
@@ -699,6 +708,7 @@
       "brand": "Boadicea The Victorious",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "тёплый восточно-цветочный уд с шафраном и амбровой сладостью; звучит густо, дорого и насыщенно, с мягкой кремовой древесной базой",
       "story": {
@@ -780,6 +790,7 @@
       "brand": "Bvlgari",
       "gender": "unisex",
       "family": "spicy",
+      "familyLabel": "Пряный",
       "concentration": "Eau de Parfum",
       "description": "очень яркий сочный грейпфрут с имбирной остротой и чистой амброксановой базой; звучит минималистично, дорого и «искристо-свежо»",
       "story": {
@@ -853,6 +864,7 @@
       "brand": "Chopard",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "сухой зелёно-древесный ветивер с лёгкой табачной горчинкой; звучит строго, чисто и минималистично, с классическим «мужским» характером",
       "story": {
@@ -927,6 +939,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "Это стильный и спокойный аромат без лишней громкости. В начале чувствуется сладковатая ежевика с пряными и зелеными оттенками. Затем появляются теплые древесные ноты и немного специй, а в конце раскры",
       "story": {
@@ -1006,6 +1019,7 @@
       "brand": "Clive Christian",
       "gender": "men",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "яркий цитрусовый старт с травяной зеленью и мягкими специями; дальше становится более гладким, древесно-амбровым и «джентльменским», чистым и классически дорогим, без тяжести или сладости",
       "story": {
@@ -1096,6 +1110,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "тёплый амброво-табачный аромат с цитрусовым стартом и мягкой сладостью тонка; звучит густо, бархатно и «золотисто», с дорогим вечерним характером",
       "story": {
@@ -1172,6 +1187,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "нежный цветочно-фруктовый аромат с лёгкой кислинкой ревеня и мягкой древесной базой; звучит воздушно, свежо и очень «чисто весенне», без тяжести",
       "story": {
@@ -1246,6 +1262,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "тёплый табачно-смолистый аромат с зелёной горечью мате; звучит густо, слегка дымно и очень «интеллектуально сухо», без сладости, с глубоким вечерним характером",
       "story": {
@@ -1319,6 +1336,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "зелёно-пряный аромат с чайной горечью мате и цветочной прозрачностью жасмина; звучит свежо, сухо и элегантно, с древесно-амбровой глубиной в базе",
       "story": {
@@ -1399,6 +1417,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "свежий цитрусово-чайный аромат с лёгкой древесной сухостью ветивера; звучит чисто, воздушно и «спокойно минималистично», без сладости и тяжести",
       "story": {
@@ -1475,6 +1494,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -1549,6 +1569,7 @@
       "brand": "Creed",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "сочный ананасово-цитрусовый старт с дымной берёзовой древесностью и амброво-мускусной базой; звучит уверенно, дорого и харизматично, с узнаваемым «статусным» шлейфом",
       "story": {
@@ -1631,6 +1652,7 @@
       "brand": "Creed",
       "gender": "men",
       "family": "spicy",
+      "familyLabel": "Пряный",
       "concentration": "Eau de Parfum",
       "description": "более пряная и тёплая версия Aventus с усиленной специями (имбирь, корица) и менее «фруктовым» звучанием; ощущается плотнее, суше и более зрелым, с сохранением фирменной цитрусовой свежести",
       "story": {
@@ -1711,6 +1733,7 @@
       "brand": "Creed",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "глубокий пряно-смолистый уд с тёплым ладаном и мягкой сладостью амбры; звучит насыщенно, дорого и «густо восточно», с современной более гладкой подачей уда",
       "story": {
@@ -1792,6 +1815,7 @@
       "brand": "Creed",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "холодный «металлический» цитрус с зелёным чаем и чистым мускусом; звучит очень свежо, воздушно и минималистично, с ощущением горного воздуха и стерильной чистоты",
       "story": {
@@ -1871,6 +1895,7 @@
       "brand": "Essential Parfums",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "сухой пряно-древесный аромат с острым перцем тимут и фирменным «минеральным деревом» Akigalawood; звучит современно, чисто и немного колко, с очень узнаваемым технологичным шлейфом",
       "story": {
@@ -1949,6 +1974,7 @@
       "brand": "Ex Nihilo",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "очень чистый фруктово-цитрусовый старт с мягкой древесно-амбровой базой; звучит гладко, воздушно и «сияюще», с ощущением дорогой минималистичной свежести",
       "story": {
@@ -2027,6 +2053,7 @@
       "brand": "Ex Nihilo",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "свежий, древесно-фруктовый аромат с ярким цитрусовым стартом и сочным личи. Постепенно становится более сухим, древесным и мускусным благодаря акигалавуду и ветиверу. Звучит чисто, дорого и современно",
       "story": {
@@ -2106,6 +2133,7 @@
       "brand": "Marc-Antione Barrios",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "минерально-кожаный «космический» аромат с шафраном и сухой фруктово-цветочной сладостью; ощущается холодно, чисто и очень современно",
       "story": {
@@ -2182,6 +2210,7 @@
       "brand": "Hermès",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "сухой цитрусово-минеральный аромат с землисто-каменной базой и древесной теплотой; звучит строго, элегантно и «архитектурно», с ощущением чистого камня и свежего воздуха",
       "story": {
@@ -2261,6 +2290,7 @@
       "brand": "HFC",
       "gender": "women",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "кремово-цветочный аромат с османтусом и белым чаем, мягкой ванилью и древесной базой; звучит тёпло, интимно и слегка «пудрово-косметически», с эффектом дорогого уютного шлейфа",
       "story": {
@@ -2338,6 +2368,7 @@
       "brand": "Hormone Paris",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "яркий цитрусово-цветочный старт с мягкой лавандовой свежестью и амброво-древесной базой; звучит чисто, современно и слегка «молекулярно», с ощущением свежего воздуха после душа",
       "story": {
@@ -2416,6 +2447,7 @@
       "brand": "Hormone Paris",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "сладко-пряный древесный аромат с ванилью, корицей и мягкой амбровой базой; звучит тёпло, густо и «соблазнительно», с выраженным gourmand характером",
       "story": {
@@ -2496,6 +2528,7 @@
       "brand": "Initio",
       "gender": "women",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "очень мягкий кремово-мускусный аромат с цитрусовой свежестью и лёгкой цветочной прозрачностью; звучит чисто, «успокаивающе» и как дорогой эффект свежего тела после душа",
       "story": {
@@ -2574,6 +2607,7 @@
       "brand": "Initio",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -2655,6 +2689,7 @@
       "brand": "Initio",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "мощный пряно-удовый аромат с шафраном и лавандовой свежестью на старте; звучит густо, громко и «королевски», с тёмной древесно-амбровой базой и сильным шлейфом",
       "story": {
@@ -2731,6 +2766,7 @@
       "brand": "Initio",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -2808,6 +2844,7 @@
       "brand": "Initio",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -2884,6 +2921,7 @@
       "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесно-пудровый",
       "concentration": "Eau de Parfum",
       "description": "Древесно-пудровый унисекс-аромат из коллекции Journey to China: кремовый сандал, лёгкий ладан и тёплая амбра — минималистично и медитативно.",
       "story": {
@@ -2939,6 +2977,7 @@
       "brand": "Kilian",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -3017,6 +3056,7 @@
       "brand": "Kilian",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -3092,6 +3132,7 @@
       "brand": "Kilian",
       "gender": "women",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -3169,6 +3210,7 @@
       "brand": "Kilian",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -3245,6 +3287,7 @@
       "brand": "Le Labo",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "Это классический «skin scent» — аромат, который не столько пахнет духами, сколько создаёт ощущение «твоей кожи, но лучше». Тёплый, чистый, слегка пудровый и мускусный, с едва уловимой сладостью груши",
       "story": {
@@ -3325,6 +3368,7 @@
       "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "сочный апельсиновый фреш, солнечный, очень чистый и воздушный летний аромат с эффектом «дорогого цитрусового напитка»",
       "story": {
@@ -3401,6 +3445,7 @@
       "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "spicy",
+      "familyLabel": "Пряный",
       "concentration": "Eau de Parfum",
       "description": "чистый люксовый свежак с мыльно-чайным эффектом, цитрусами и амброксановой воздушностью; многие считают его одним из самых универсальных и комплиментарных LV",
       "story": {
@@ -3480,6 +3525,7 @@
       "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "свежий имбирно-грейпфрутовый аромат с морским воздухом и чистой амброксановой базой; ощущается очень современно, дорого и «clean»",
       "story": {
@@ -3558,6 +3604,7 @@
       "brand": "Louis Vuitton",
       "gender": "men",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "яркий цитрусово-пряный аромат с мыльной чистотой, нероли и свежим «после душа» эффектом; многим напоминает дорогой luxury shower gel",
       "story": {
@@ -3636,6 +3683,7 @@
       "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "очень сочный фруктово-минеральный «детокс-смузи» аромат с мятной свежестью и лёгкой сладостью фруктов; ощущается максимально расслабленно и летне",
       "story": {
@@ -3715,6 +3763,7 @@
       "brand": "Louis Vuitton",
       "gender": "unisex",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "максимально яркий цитрусовый взрыв с имбирной остротой и чистой амброксановой базой; ощущается как очень дорогой, «искрящийся» апельсиново-имбирный фреш с сильным эффектом свежести",
       "story": {
@@ -3791,6 +3840,7 @@
       "brand": "Maison Crivelli",
       "gender": "unisex",
       "family": "spicy",
+      "familyLabel": "Пряный",
       "concentration": "Eau de Parfum",
       "description": "тропический фруктово-цветочный аромат с пряной корицей и кремовой ванилью; ощущается как сладкий экзотический коктейль с тёплой специей и лёгкой кожаной глубиной",
       "story": {
@@ -3870,6 +3920,7 @@
       "brand": "Maison Crivelli",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "яркий кислосладкий маракуйя-старт с мощным удом и кожей в базе; контрастный, «дорогой фруктовый уд» с тропической свежестью и тёмной глубиной",
       "story": {
@@ -3948,6 +3999,7 @@
       "brand": "Maison Crivelli",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "тёплый шафраново-кожаный уд с пряной сухостью и амбровой глубиной; ощущается тёмно, дорого и «плотно», без сладости, больше про специи и кожу",
       "story": {
@@ -4025,6 +4077,7 @@
       "brand": "Dior",
       "gender": "women",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "очень нежный пудрово-цветочный аромат с акцентом на пионы и розу; ощущается чисто, воздушно и «ухоженно», как свежий букет в тёплый весенний день",
       "story": {
@@ -4100,6 +4153,7 @@
       "brand": "Ormonde Jayne",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Пряно-древесный табачный",
       "concentration": "Parfum",
       "description": "Кожано-табачный аромат, посвящённый Латинской Америке: пряно-цитрусовый старт, чайно-цветочное сердце, замшево-табачная база.",
       "story": {
@@ -4170,6 +4224,7 @@
       "brand": "Nishane",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "более свежая и воздушная версия Ani — ванильная сладость с пряным кардамоном и имбирём, но легче и «чище», с ярким цитрусово-зелёным стартом",
       "story": {
@@ -4253,6 +4308,7 @@
       "brand": "Nishane",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "",
       "story": {
@@ -4321,6 +4377,7 @@
       "brand": "Parfums de Marly",
       "gender": "men",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "тёплая ваниль с пряной корицей и кардамоном, сладкий, но не «сахарный»; ощущается как дорогой ванильно-древесный десерт с мягким амбровым шлейфом",
       "story": {
@@ -4401,6 +4458,7 @@
       "brand": "Parfums de Marly",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "очень свежий зелёно-яблочный аромат с цитрусами и древесной чистотой; ощущается как прохладный «зелёный воздух» с лёгкой кремовой базой",
       "story": {
@@ -4479,6 +4537,7 @@
       "brand": "Parfums de Marly",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "тёплый древесно-удовый аромат с мягкой сладостью пралине и пряным шафраном; ощущается дорого, сухо и «бархатно», без резкой тяжести уда",
       "story": {
@@ -4559,6 +4618,7 @@
       "brand": "Parfums de Marly",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "очень чистый цитрусово-мятный «ледяной» старт с мыльно-древесной базой; ощущается свежо, современно и максимально «дорого и аккуратно»",
       "story": {
@@ -4641,6 +4701,7 @@
       "brand": "Parfums de Marly",
       "gender": "women",
       "family": "citrus",
+      "familyLabel": "Цитрусовый",
       "concentration": "Eau de Parfum",
       "description": "очень чистый «кремовый мускус» с мягкими фруктами и цветами; ощущается как дорогая белая рубашка, свежесть после душа и лёгкий воздушный шлейф",
       "story": {
@@ -4721,6 +4782,7 @@
       "brand": "Roja",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "свежий ананасово-цитрусовый старт с мощной ароматической травяной базой и кожано-амбровой глубиной; ощущается как дорогой «чистый, но плотный» мужской аромат с характером",
       "story": {
@@ -4805,6 +4867,7 @@
       "brand": "Roja",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "цитрусово-ароматический старт с тёплой пряной и слегка сладкой древесной базой; ощущается очень «британски классически» — дорого, элегантно и структурно",
       "story": {
@@ -4890,6 +4953,7 @@
       "brand": "Roja",
       "gender": "men",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "очень яркий цитрусово-зелёный старт с чистой ароматической базой; ощущается свежо, дорого и «отполированно», как премиальный классический фужер с современной мягкостью",
       "story": {
@@ -4977,6 +5041,7 @@
       "brand": "Roja",
       "gender": "unisex",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "яркий цитрусово-фруктовый «морской» свежак с кремовой древесной базой; ощущается как дорогой летний воздух у воды, лёгкий, чистый и очень солнечный",
       "story": {
@@ -5064,6 +5129,7 @@
       "brand": "Roja",
       "gender": "unisex",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "очень чистый цитрусово-цветочный «океанический» аромат с мягкой кремовой древесной базой; ощущается как тёплый морской бриз, свежесть и лёгкая цветочная элегантность",
       "story": {
@@ -5150,6 +5216,7 @@
       "brand": "Sospiro",
       "gender": "unisex",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "очень яркий цитрусово-зелёный старт с имбирной остротой и чистой мускусной базой; ощущается свежо, «воздушно» и дорого, с эффектом чистого люксового сияния",
       "story": {
@@ -5232,6 +5299,7 @@
       "brand": "Clive Christian",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский кофейно-цветочный",
       "concentration": "Extrait de Parfum",
       "description": "Тёплый гурманский аромат: обжаренный кофе с анисовой остротой, цветочное сердце из жасмина и флёрдоранжа, дымно-какаовая карамельная база.",
       "story": {
@@ -5293,6 +5361,7 @@
       "brand": "Arabian Oud",
       "gender": "unisex",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "густой тёмный уд с амбровой сладостью и пряной древесностью; ощущается мощно, «густо» и очень восточно, с сильным шлейфом",
       "story": {
@@ -5368,6 +5437,7 @@
       "brand": "Marc-Antione Barrios",
       "gender": "women",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "мягкий «медово-цветочный воздух» с липой и лёгкой пудровостью; ощущается светло, спокойно и очень натурально, как тёплый летний ветер в парке",
       "story": {
@@ -5443,6 +5513,7 @@
       "brand": "Tom Ford",
       "gender": "men",
       "family": "oriental",
+      "familyLabel": "Восточный",
       "concentration": "Eau de Parfum",
       "description": "сухая чёрная кожа с лёгкой цветочной сладостью и пряным кардамоном; ощущается дорого, «плотно» и очень уверенно, как новая кожаная куртка в тёплом помещении",
       "story": {
@@ -5519,6 +5590,7 @@
       "brand": "Creed",
       "gender": "unisex",
       "family": "fresh",
+      "familyLabel": "Цитрусово-древесный (ветивер)",
       "concentration": "Eau de Parfum",
       "description": "Свежая цитрусово-древесная интерпретация ветивера: перечный старт, розово-зелёное сердце, сухая ветиверово-кедровая база.",
       "story": {
@@ -5580,6 +5652,7 @@
       "brand": "Xerjoff",
       "gender": "unisex",
       "family": "gourmand",
+      "familyLabel": "Гурманский",
       "concentration": "Eau de Parfum",
       "description": "тёплый медово-табачный аромат с пряной корицей и кремовой ванилью; ощущается сладко, густо и «дорого уютно», как тёплый десерт с табачной глубиной",
       "story": {
@@ -5661,6 +5734,7 @@
       "brand": "Xerjoff",
       "gender": "unisex",
       "family": "floral",
+      "familyLabel": "Цветочный",
       "concentration": "Eau de Parfum",
       "description": "яркий цитрусово-травяной аромат с насыщенной мятной свежестью и зелёными акцентами. В начале бодрит прохладой лимона и мяты, затем раскрывается ароматными травами и мягким жасмином. В базе становится",
       "story": {
@@ -5742,6 +5816,7 @@
       "brand": "Yves Saint Laurent",
       "gender": "men",
       "family": "woody",
+      "familyLabel": "Древесный",
       "concentration": "Eau de Parfum",
       "description": "современный древесно-фужерный аромат с ярким яблочно-имбирным стартом и чистым древесным шлейфом. Сочетает свежесть, лёгкую сладость и пряные оттенки, постепенно раскрываясь теплыми нотами амбры и боб",
       "story": {

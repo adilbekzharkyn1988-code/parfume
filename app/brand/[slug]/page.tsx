@@ -19,10 +19,15 @@ export async function generateMetadata({
   const brands = await fetchBrands();
   const brand = brands.find((b) => b.slug === slug);
   if (!brand) return {};
+  const title = `${brand.name} — купить оригинальную парфюмерию`;
+  const description = `Ароматы ${brand.name}: оригинальная парфюмерия на распив, 5 и 10 мл, с доставкой по Алматы и Казахстану. ${brand.count} ароматов в наличии.`;
+  const url = `/brand/${slug}/`;
   return {
-    title: `${brand.name} — купить оригинальную парфюмерию | JUPARFUME`,
-    description: `Ароматы ${brand.name}: оригинальная парфюмерия на распив, 5 и 10 мл, с доставкой по Алматы и Казахстану. ${brand.count} ароматов в наличии.`,
-    alternates: { canonical: `/brand/${slug}/` },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: `${title} | JUPARFUME`, description, url, type: "website" },
+    twitter: { card: "summary", title: `${title} | JUPARFUME`, description },
   };
 }
 

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Мужская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
   description:
     "Мужская нишевая парфюмерия на распив: древесные, кожаные, свежие и восточные ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
+  alternates: { canonical: "/catalog/men/" },
 };
 
 export default async function MenCatalogPage() {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fetchBrands, fetchProductsByBrandSlug } from "@/contentful/data";
 import { absoluteUrl } from "@/lib/site";
+import { brandStories } from "@/lib/brand-stories";
 import ProductCard from "@/components/ProductCard";
 
 export async function generateStaticParams() {
@@ -19,8 +20,13 @@ export async function generateMetadata({
   const brands = await fetchBrands();
   const brand = brands.find((b) => b.slug === slug);
   if (!brand) return {};
+  const story = brandStories[slug];
   const title = `${brand.name} — купить оригинальную парфюмерию`;
-  const description = `Ароматы ${brand.name}: оригинальная парфюмерия на распив, 5 и 10 мл, с доставкой по Алматы и Казахстану. ${brand.count} ароматов в наличии.`;
+  const description = story
+    ? `${story.text} Купить ${brand.name} в Алматы на распив, 5 и 10 мл — ${brand.count} ${
+        brand.count === 1 ? "аромат" : "ароматов"
+      } в наличии.`
+    : `Ароматы ${brand.name}: оригинальная парфюмерия на распив, 5 и 10 мл, с доставкой по Алматы и Казахстану. ${brand.count} ароматов в наличии.`;
   const url = `/brand/${slug}/`;
   return {
     title,
@@ -42,6 +48,7 @@ export default async function BrandPage({
   if (!brand) notFound();
 
   const products = await fetchProductsByBrandSlug(slug);
+  const story = brandStories[slug];
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
@@ -90,8 +97,11 @@ export default async function BrandPage({
       <header className="mb-10 max-w-2xl">
         <p className="eyebrow text-wine mb-2">Бренд</p>
         <h1 className="font-display text-4xl md:text-5xl mb-3">{brand.name}</h1>
+        {story && (
+          <p className="text-ink/65 leading-relaxed mb-3">{story.text}</p>
+        )}
         <p className="text-ink/65 leading-relaxed">
-          Оригинальная парфюмерия {brand.name} на распив — {brand.count}{" "}
+          Купить {brand.name} на распив можно в JUPARFUME — {brand.count}{" "}
           {brand.count === 1 ? "аромат" : "ароматов"} в объёме 5 и 10 мл, с доставкой по Алматы и Казахстану.
         </p>
       </header>

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
   description:
     "Женская нишевая парфюмерия на распив: цветочные, гурманские и пудровые ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
+  alternates: { canonical: "/catalog/women/" },
 };
 
 export default async function WomenCatalogPage() {

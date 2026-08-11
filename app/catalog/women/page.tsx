@@ -3,10 +3,17 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProductsByGender } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
+  title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл",
   description:
     "Женская нишевая парфюмерия на распив: цветочные, гурманские и пудровые ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
   alternates: { canonical: "/catalog/women/" },
+  openGraph: {
+    title: "Женская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
+    description:
+      "Женская нишевая парфюмерия на распив: цветочные, гурманские и пудровые ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
+    url: "/catalog/women/",
+    type: "website",
+  },
 };
 
 export default async function WomenCatalogPage() {

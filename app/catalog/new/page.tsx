@@ -3,9 +3,15 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Новинки — новые ароматы в каталоге | JUPARFUME",
+  title: "Новинки — новые ароматы в каталоге",
   description: "Свежие поступления в каталоге JUPARFUME. Объём 5 и 10 мл.",
   alternates: { canonical: "/catalog/new/" },
+  openGraph: {
+    title: "Новинки — новые ароматы в каталоге | JUPARFUME",
+    description: "Свежие поступления в каталоге JUPARFUME. Объём 5 и 10 мл.",
+    url: "/catalog/new/",
+    type: "website",
+  },
 };
 
 export default async function NewArrivalsPage() {

@@ -3,10 +3,17 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProducts } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Каталог ароматов — мужская и женская парфюмерия | JUPARFUME",
+  title: "Каталог ароматов — мужская и женская парфюмерия",
   description:
     "Нишевая парфюмерия на распив: оригинальные мужские, женские и унисекс духи в отливантах 5 и 10 мл. Купить в Алматы и по Казахстану.",
   alternates: { canonical: "/catalog/" },
+  openGraph: {
+    title: "Каталог ароматов — мужская и женская парфюмерия | JUPARFUME",
+    description:
+      "Нишевая парфюмерия на распив: оригинальные мужские, женские и унисекс духи в отливантах 5 и 10 мл. Купить в Алматы и по Казахстану.",
+    url: "/catalog/",
+    type: "website",
+  },
 };
 
 export default async function CatalogPage() {

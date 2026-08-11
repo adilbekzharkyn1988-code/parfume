@@ -54,7 +54,9 @@ function mapProduct(item: any) {
     brand: f.brand,
     gender: f.gender,
     family: f.family,
-    familyLabel: f.familyLabel,
+    // В Contentful поле называется "familyLable" (опечатка в схеме CMS),
+    // а не "familyLabel" — из-за этого раньше сюда прилетал undefined.
+    familyLabel: f.familyLable,
     concentration: f.concentration,
     description: richTextToPlain(f.description),
     story: f.story,

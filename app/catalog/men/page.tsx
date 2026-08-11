@@ -3,10 +3,17 @@ import CatalogGrid from "@/components/CatalogGrid";
 import { fetchProductsByGender } from "@/contentful/data";
 
 export const metadata: Metadata = {
-  title: "Мужская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
+  title: "Мужская парфюмерия — оригинальные ароматы 5 и 10 мл",
   description:
     "Мужская нишевая парфюмерия на распив: древесные, кожаные, свежие и восточные ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
   alternates: { canonical: "/catalog/men/" },
+  openGraph: {
+    title: "Мужская парфюмерия — оригинальные ароматы 5 и 10 мл | JUPARFUME",
+    description:
+      "Мужская нишевая парфюмерия на распив: древесные, кожаные, свежие и восточные ароматы. Оригинал, 5 и 10 мл, доставка по Алматы и Казахстану.",
+    url: "/catalog/men/",
+    type: "website",
+  },
 };
 
 export default async function MenCatalogPage() {

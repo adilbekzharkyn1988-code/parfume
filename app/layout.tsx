@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   },
   description:
     "Магазин оригинальной нишевой парфюмерии. Тестируйте ароматы в объёме 5 и 10 мл без переплаты за полный флакон. Мужские и женские ароматы, гид по нотам, доставка по РК.",
+  verification: {
+    google: "osARF9WRaLFD8yDMYcHTGJcS53aNTMawbb02pMwfi_Y",
+  },
   keywords: [
     "оригинальная парфюмерия",
     "нишевый парфюм",

@@ -506,12 +506,14 @@ export default async function Home() {
               href={`/articles/${a.slug}`}
               className="group flex flex-col rounded-md border border-ink/10 overflow-hidden bg-paper"
             >
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 {a.image ? (
-                  <img
+                  <Image
                     src={a.image}
                     alt={toPlainText(a.title)}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
                   <BottleArt family={a.cover} className="w-full h-full group-hover:scale-105 transition-transform duration-500" />

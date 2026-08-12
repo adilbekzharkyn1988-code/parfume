@@ -15,7 +15,24 @@ import type { NextConfig } from "next";
 // нужно, иначе появятся дубли адресов со слэшем и без.
 
 const nextConfig: NextConfig = {
-  images: { unoptimized: true },
+  // unoptimized: true было нужно только для GitHub Pages (там нет
+  // сервера, который может резать/конвертировать картинки на лету).
+  // На Vercel это ограничение не нужно — Next.js сам отдаёт WebP/AVIF,
+  // нужный размер под экран и лениво грузит картинки за пределами
+  // первого экрана.
+  //
+  // remotePatterns разрешает next/image оптимизировать картинки товаров
+  // и статей — они хранятся в Contentful (images.ctfassets.net), а не
+  // в /public. Без явного разрешения домена next/image откажется их
+  // обрабатывать.
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+      },
+    ],
+  },
   trailingSlash: true,
 
   // 301-редиректы со старого сайта (Tilda, juparfume.kz) на новую

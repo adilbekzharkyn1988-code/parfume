@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Product, familyColor } from "@/lib/data";
 import { formatPrice, stripBrandPrefix } from "@/lib/format";
 import { useCart } from "@/context/CartContext";
@@ -53,10 +54,12 @@ export default function ProductCard({ product }: { product: Product }) {
         </button>
 
         {product.image ? (
-          <img
+          <Image
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+            fill
+            sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         ) : (
           <BottleArt

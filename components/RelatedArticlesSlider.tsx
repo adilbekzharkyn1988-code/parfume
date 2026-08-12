@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Article } from "@/lib/data";
 import { toPlainText } from "@/lib/format";
 import BottleArt from "./BottleArt";
@@ -45,12 +46,14 @@ export default function RelatedArticlesSlider({ articles }: { articles: Article[
             href={`/articles/${a.slug}`}
             className="group flex flex-col shrink-0 snap-start w-[85%] sm:w-[380px] md:w-[420px] rounded-md border border-ink/10 overflow-hidden bg-paper"
           >
-            <div className="aspect-[16/9] overflow-hidden">
+            <div className="relative aspect-[16/9] overflow-hidden">
               {a.image ? (
-                <img
+                <Image
                   src={a.image}
                   alt={toPlainText(a.title)}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 640px) 85vw, (max-width: 768px) 380px, 420px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               ) : (
                 <BottleArt family={a.cover} className="w-full h-full group-hover:scale-105 transition-transform duration-500" />

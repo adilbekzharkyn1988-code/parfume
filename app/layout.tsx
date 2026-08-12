@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CartDrawer from "@/components/CartDrawer";
+import CartDrawer from "@/components/CartDrawerClient";
 import Preloader from "@/components/Preloader";
 import { CartProvider } from "@/context/CartContext";
 import { fetchProducts } from "@/contentful/data";
@@ -123,6 +123,26 @@ export default async function RootLayout({
 
   return (
     <html lang="ru">
+      <head>
+        {/* Шрифт (Inter Variable, latin + cyrillic) лежит локально в
+            public/fonts и описан через @font-face с unicode-range в
+            globals.css — так браузер сам решает, какой из двух файлов
+            ему нужен, и не грузит оба сразу. next/font/local тут не
+            подошёл: он не умеет делить один шрифт на файлы по
+            unicode-range (только по weight/style), а next/font/google
+            означал бы обращение к fonts.googleapis.com на этапе сборки
+            — нежелательно после истории с переездами хостинга.
+            Кириллица — основной алфавит контента сайта, поэтому именно
+            её файл получает preload; латиница дозагрузится сама по
+            unicode-range, когда встретится в тексте. */}
+        <link
+          rel="preload"
+          href="/fonts/inter-cyrillic-wght-normal.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="font-body antialiased">
         <script
           type="application/ld+json"

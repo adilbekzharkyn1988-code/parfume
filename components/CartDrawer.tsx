@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useCart, getUnitPrice } from "@/context/CartContext";
 import { formatPrice } from "@/lib/format";
 import { submitOrderInBackground, leadsEndpointConfigured } from "@/lib/leads";
-import { formatPhoneInput, isPhoneComplete } from "@/lib/phone";
+import { formatPhoneInput, isPhoneComplete, isValidOperatorCode } from "@/lib/phone";
 import { X, Trash2, Check, Heart } from "lucide-react";
 import Link from "next/link";
 
@@ -75,6 +75,10 @@ export default function CartDrawer() {
 
     if (!isPhoneComplete(phone)) {
       setPhoneError("Введите номер полностью");
+      return;
+    }
+    if (!isValidOperatorCode(phone)) {
+      setPhoneError("Проверьте код оператора — такого номера не существует");
       return;
     }
     setPhoneError("");
@@ -303,8 +307,11 @@ export default function CartDrawer() {
                   }
                 }}
                 onBlur={() => {
-                  if (phone !== "+7" && !isPhoneComplete(phone)) {
+                  if (phone === "+7") return;
+                  if (!isPhoneComplete(phone)) {
                     setPhoneError("Введите номер полностью");
+                  } else if (!isValidOperatorCode(phone)) {
+                    setPhoneError("Проверьте код оператора — такого номера не существует");
                   }
                 }}
                 placeholder="+7 (___) ___-__-__"

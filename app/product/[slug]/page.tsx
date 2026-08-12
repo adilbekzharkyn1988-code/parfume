@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { familyColor, brandSlug } from "@/lib/data";
 import { fetchProducts, fetchProductBySlug } from "@/contentful/data";
@@ -144,10 +145,13 @@ export default async function ProductPage({
             </span>
           )}
           {product.image ? (
-            <img
+            <Image
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
             />
           ) : (
             <BottleArt family={product.family} className="w-full h-full" />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -123,9 +124,16 @@ export default async function ArticlePage({
       </div>
 
       <div className="container-x py-10 md:py-14 max-w-3xl">
-        <div className="aspect-[21/9] rounded-md overflow-hidden mb-10">
+        <div className="relative aspect-[21/9] rounded-md overflow-hidden mb-10">
           {article.image ? (
-            <img src={article.image} alt={toPlainText(article.title)} className="w-full h-full object-cover" />
+            <Image
+              src={article.image}
+              alt={toPlainText(article.title)}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+            />
           ) : (
             <BottleArt family={article.cover} className="w-full h-full" />
           )}

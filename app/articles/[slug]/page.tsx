@@ -39,6 +39,16 @@ function isRichTextNode(x: unknown): x is { nodeType: string; data?: unknown; co
   return !!x && typeof x === "object" && typeof (x as any).nodeType === "string";
 }
 
+// Пытаемся угадать пол по заголовку/категории статьи ("Мужские ароматы 2026",
+// "женская парфюмерия" и т.п.), чтобы рекомендовать релевантные товары,
+// а не просто первые 4 по алфавиту.
+function detectGenderHint(title: string, category: string): "men" | "women" | null {
+  const text = `${title} ${category}`.toLowerCase();
+  if (/женск/.test(text)) return "women";
+  if (/мужск/.test(text)) return "men";
+  return null;
+}
+
 function ArticleBody({ content }: { content: unknown }) {
   if (!content) return null;
 
@@ -103,8 +113,37 @@ export default async function ArticlePage({
   if (!article) notFound();
 
   const allArticles = await fetchArticles();
-  const related = allArticles.filter((a) => a.slug !== article.slug).slice(0, 2);
-  const recommendedProducts = (await fetchProducts()).slice(0, 4);
+  const articleCategory = toPlainText(article.category);
+  // Сначала статьи той же категории (напр. "Гид парфюмерии"), остальные —
+  // в качестве добора, если в категории меньше двух других статей.
+  const sameCategoryArticles = allArticles.filter(
+    (a) => a.slug !== article.slug && toPlainText(a.category) === articleCategory
+  );
+  const otherArticles = allArticles.filter(
+    (a) => a.slug !== article.slug && toPlainText(a.category) !== articleCategory
+  );
+  const related = [...sameCategoryArticles, ...otherArticles].slice(0, 2);
+
+  const allProducts = await fetchProducts();
+  const genderHint = detectGenderHint(toPlainText(article.title), articleCategory);
+  // Сначала товары той же группы ароматов (cover совпадает с family),
+  // затем сужаем по полу, если он угадан из заголовка/категории.
+  // На каждом шаге, если товаров получилось меньше 4, откатываемся
+  // к более широкому пулу — блок "Может понравиться" никогда не должен
+  // оказаться пустым или урезанным без необходимости.
+  const sameFamily = allProducts.filter((p) => p.family === article.cover);
+  const sameFamilyAndGender = genderHint
+    ? sameFamily.filter((p) => p.gender === genderHint || p.gender === "unisex")
+    : sameFamily;
+  const productPool =
+    sameFamilyAndGender.length >= 4
+      ? sameFamilyAndGender
+      : sameFamily.length >= 4
+      ? sameFamily
+      : allProducts;
+  const recommendedProducts = [...productPool]
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 4);
 
   return (
     <main>

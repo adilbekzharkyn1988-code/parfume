@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T19:24:45.297Z",
+  "generatedAt": "2026-08-27T20:34:10.763Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -1263,6 +1263,122 @@
           "date": "2023-09-11"
         }
       ]
+    },
+    {
+      "slug": "borntostandout-fugazzi",
+      "name": "BORNTOSTANDOUT FUGAZZI",
+      "brand": "BORNTOSTANDOUT",
+      "gender": "unisex",
+      "family": "woody",
+      "familyLabel": "Восточно-древесный",
+      "concentration": "Eau de Parfum",
+      "description": "кремово-пряный восточно-древесный аромат с молочным цитрусовым стартом, пудровым ирисом, замшей и шафраном. Звучит современно, необычно и чувственно.",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "BORNTOSTANDOUT FUGAZZI — восточно-древесный аромат. Страна: Южная Корея. Парфюмер: Quentin Bisch. Год создания: 2024.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — молоко, грейпфрут, ладан, мандарин, кумин; сердце — ирис, замша, ветивер, гваяковое дерево, шафран; база — ваниль, стиракс, амброксан, мох, мускус.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс, с лёгким уклоном в masculine. Куда носить: день и вечер, осень/зима, весна, офис, свидания, мероприятия, повседневное ношение.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: кремово-пряный восточно-древесный аромат с молочным цитрусовым стартом, дымным ладаном и кумином, пудровым ирисом, мягкой замшей и тёплой ванильно-амброксановой базой; звучит необычно, современно, чувственно и слегка провокационно.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить BORNTOSTANDOUT FUGAZZI в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 15 000 ₸ за 5 мл и от 28 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "молоко",
+          "грейпфрут",
+          "ладан",
+          "мандарин",
+          "кумин"
+        ],
+        "heart": [
+          "ирис",
+          "замша",
+          "ветивер",
+          "гваяковое дерево",
+          "шафран"
+        ],
+        "base": [
+          "ваниль",
+          "стиракс",
+          "амброксан",
+          "мох",
+          "мускус"
+        ]
+      },
+      "price5": 15000,
+      "price10": 28000,
+      "rating": 4,
+      "reviews": 68,
+      "badge": "Новинка",
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/3XAFethY4UGBexZF2caK18/218782ced130d0a7003026f19f898f5c/btso-fugazzi.webp",
+      "seasonality": {
+        "day": 55,
+        "autumn": 85,
+        "spring": 55,
+        "summer": 35,
+        "winter": 80,
+        "evening": 85
+      },
+      "reviewsList": []
     },
     {
       "slug": "bvlgari-tygar",

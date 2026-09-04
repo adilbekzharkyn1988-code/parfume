@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T21:11:28.670Z",
+  "generatedAt": "2026-09-04T05:37:12.317Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -1021,6 +1021,115 @@
       ]
     },
     {
+      "slug": "amouage-sequence",
+      "name": "AMOUAGE SEQUENCE",
+      "brand": "AMOUAGE",
+      "gender": "unisex",
+      "family": "oriental",
+      "familyLabel": "Фруктово-восточный",
+      "concentration": "Essence de Parfum",
+      "description": "интенсивный фруктово-кожаный аромат с личи, малиной и шафраном на старте, розой и османтусом в сердце, на базе из уда, кожи и амбрового дерева. Звучит роскошно, тепло и насыщенно.",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "AMOUAGE SEQUENCE — фруктово-кожаный аромат коллекции The Essences. Страна: Оман. Парфюмер: Julien Rasquinet. Год создания: 2025.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — личи, малина, шафран; сердце — роза, османтус, тонка; база — кожа, уд, амбровое дерево.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс, для ценителей насыщенной нишевой парфюмерии. Куда носить: вечер, осень/зима, особые случаи — концентрация Essence de Parfum (30% масел) даёт долгое и плотное звучание.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: сочный старт из личи и малины со специфичной шафрановой остринкой переходит в пряно-цветочное сердце розы и османтуса, а дальше всё уходит в тёплую, слегка дымную базу из кожи, уда и амбрового дерева; звучит дорого, тягуче и по-восточному насыщенно, хотя часть аудитории находит композицию узнаваемой по духу линейки.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить AMOUAGE SEQUENCE в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 22 500 ₸ за 5 мл и от 40 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "личи",
+          "малина",
+          "шафран"
+        ],
+        "heart": [
+          "роза",
+          "османтус",
+          "тонка"
+        ],
+        "base": [
+          "кожа",
+          "уд",
+          "амбровое дерево"
+        ]
+      },
+      "price5": 22500,
+      "price10": 40000,
+      "rating": 4,
+      "reviews": 53,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4iqiaTWro4wWHtpkC5FENn/71ddeb31e0ebea2f30f90a03eaf8a15f/amouage-sequence.webp",
+      "seasonality": {
+        "day": 35,
+        "autumn": 75,
+        "spring": 40,
+        "summer": 20,
+        "winter": 85,
+        "evening": 90
+      },
+      "reviewsList": []
+    },
+    {
       "slug": "sospiro-basso",
       "name": "Basso",
       "brand": "Sospiro",
@@ -1263,6 +1372,119 @@
           "date": "2023-09-11"
         }
       ]
+    },
+    {
+      "slug": "borntostandout-black-creme",
+      "name": "BORNTOSTANDOUT BLACK CREME",
+      "brand": "BORNTOSTANDOUT",
+      "gender": "unisex",
+      "family": "oriental",
+      "familyLabel": "Восточно-ванильный",
+      "concentration": "Extrait de Parfum",
+      "description": "тёмный кремово-восковой аромат с молочно-ирисовым стартом, дымной кожей и уда в сердце, тающий в карамельно-сандаловую базу. Звучит decadent, чувственно и провокационно.",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "BORNTOSTANDOUT BLACK CREME — восточно-ванильный аромат линейки Extrait Extrême. Страна: Южная Корея. Парфюмер: Quentin Bisch. Год создания: 2025.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — воск свечи, ирис, молоко, амбретта, пряности; сердце — кожа, ваниль, уд (агарвуд), мирра; база — карамель, сандал, амбра, джорджвуд.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс, для тех, кто любит нетривиальные, насыщенные композиции. Куда носить: вечер, осень/зима, свидания, особые события — благодаря высокой концентрации масел раскрывается медленно и держится очень долго.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: густой, почти съедобный старт из тёплого воска, молока и пудрового ириса сменяется дымной кожей и уд-миррой в сердце, а затем всё тает в карамельно-сандаловую, янтарную базу; аромат ощущается как горящая свеча на коже — интимно, дерзко и очень запоминающеся.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить BORNTOSTANDOUT BLACK CREME в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 20 000 ₸ за 5 мл и от 40 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "воск свечи",
+          "ирис",
+          "молоко",
+          "амбретта",
+          "пряности"
+        ],
+        "heart": [
+          "кожа",
+          "ваниль",
+          "уд",
+          "мирра"
+        ],
+        "base": [
+          "карамель",
+          "сандал",
+          "амбра",
+          "джорджвуд"
+        ]
+      },
+      "price5": 20000,
+      "price10": 40000,
+      "rating": 4,
+      "reviews": 41,
+      "sillage": 4,
+      "longevity": 5,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1tZq2CCzEhQoFygf9dEWKT/31a846ef7742dc1b538b9d4a10eaceaa/black-creme.webp",
+      "seasonality": {
+        "day": 30,
+        "autumn": 80,
+        "spring": 40,
+        "summer": 20,
+        "winter": 90,
+        "evening": 95
+      },
+      "reviewsList": []
     },
     {
       "slug": "borntostandout-fugazzi",
@@ -4772,6 +4994,113 @@
           "date": "2023-02-02"
         }
       ]
+    },
+    {
+      "slug": "initio-sugar-blast",
+      "name": "INITIO SUGAR BLAST",
+      "brand": "INITIO",
+      "gender": "unisex",
+      "family": "gourmand",
+      "familyLabel": "Гурмано-амбровый",
+      "concentration": "Eau de Parfum",
+      "description": "сладкий гурмано-амбровый аромат с лавандой и кокосом на старте, пралине и ромом в сердце, на базе из кашмерана и амброксана. Звучит игриво, тепло и очень аппетитно.",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "INITIO SUGAR BLAST — гурмано-амбровый аромат коллекции Supercharged. Страна: Франция. Год создания: 2026.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — лаванда, кокос; сердце — пралине, ром, ваниль; база — кашмеран, амброксан.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс, для любителей ярких сладких гурманов. Куда носить: вечер, осень/зима, свидания, вечеринки — аромат заявлен как «функциональный», созданный вокруг ощущения удовольствия и уверенности.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: с первых минут — плотная сладость кокоса и пралине с лавандовым контрастом, дальше в сердце проступают ром и ваниль, а база из кашмерана и амброксана превращает всё в тёплый, обволакивающий кожный шлейф; звучит игриво, десертно и очень заметно, хотя часть парфюмеров находит его близким по духу к другим известным сладким ванильным ароматам.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить INITIO SUGAR BLAST в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 16 500 ₸ за 5 мл и от 30 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "лаванда",
+          "кокос"
+        ],
+        "heart": [
+          "пралине",
+          "ром",
+          "ваниль"
+        ],
+        "base": [
+          "кашмеран",
+          "амброксан"
+        ]
+      },
+      "price5": 16500,
+      "price10": 30000,
+      "rating": 3,
+      "reviews": 34,
+      "sillage": 4,
+      "longevity": 3,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/7f5wO3ldhsA9USNl8Sgv24/db995964a26aa2c1873b69c3a2e3910c/initio-sugar-blast.webp",
+      "seasonality": {
+        "day": 40,
+        "autumn": 65,
+        "spring": 35,
+        "summer": 30,
+        "winter": 75,
+        "evening": 80
+      },
+      "reviewsList": []
     },
     {
       "slug": "louis-vuitton-ink-mark",
@@ -8387,6 +8716,119 @@
           "date": "2023-03-30"
         }
       ]
+    },
+    {
+      "slug": "sora-dora-gladiator",
+      "name": "SORA DORA GLADIATOR",
+      "brand": "SORA DORA",
+      "gender": "unisex",
+      "family": "fresh",
+      "familyLabel": "Свежо-ароматический",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусово-мятный аромат с ананасом и грейпфрутом на старте, геранью и белыми цветами в сердце, на базе из ветивера, пачули и кедра. Звучит свежо, спортивно и уверенно.",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "SORA DORA GLADIATOR — древесно-ароматический аромат французского нишевого дома Sora Dora. Страна: Франция. Парфюмеры: Amelie Bourgeois, Anne-Sophie Behaghel, Camille Chemardin. Год создания: 2024.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — ветивер, ананас, зелёное яблоко, мята, лимон, грейпфрут, бигардия, бергамот; сердце — герань, кедр, белые цветы; база — пачули, кумарин.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс, с лёгким уклоном в masculine. Куда носить: день, весна/лето, спорт, офис, повседневное ношение — благодаря бодрящей мятно-цитрусовой структуре.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: яркий взрыв грейпфрута, ананаса и бергамота на старте быстро уступает место прохладной мяте и герани, а в базе всё оседает в благородный древесно-пачулиевый шлейф с ветивером и кедром; звучит свежо, энергично и уверенно, без излишней слащавости.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить SORA DORA GLADIATOR в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 12 500 ₸ за 5 мл и от 22 500 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "ветивер",
+          "ананас",
+          "зелёное яблоко",
+          "мята",
+          "лимон",
+          "грейпфрут",
+          "бигардия",
+          "бергамот"
+        ],
+        "heart": [
+          "герань",
+          "кедр",
+          "белые цветы"
+        ],
+        "base": [
+          "пачули",
+          "кумарин"
+        ]
+      },
+      "price5": 12500,
+      "price10": 22500,
+      "rating": 4,
+      "reviews": 97,
+      "sillage": 3,
+      "longevity": 3,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1C2oV3vk1IS1CPL8zxU0gk/76f44f739dc57802e6fde9b1064906cf/soradora-gladiator.webp",
+      "seasonality": {
+        "day": 90,
+        "autumn": 45,
+        "spring": 80,
+        "summer": 90,
+        "winter": 25,
+        "evening": 35
+      },
+      "reviewsList": []
     },
     {
       "slug": "sospiro-vibrato",

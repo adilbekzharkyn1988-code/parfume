@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T05:37:12.317Z",
+  "generatedAt": "2026-09-08T17:45:55.153Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -8960,69 +8960,69 @@
       "description": "Тёплый гурманский аромат: обжаренный кофе с анисовой остротой, цветочное сердце из жасмина и флёрдоранжа, дымно-какаовая карамельная база.",
       "story": {
         "data": {},
-        "nodeType": "document",
         "content": [
           {
             "data": {},
-            "nodeType": "paragraph",
             "content": [
               {
                 "data": {},
                 "marks": [],
-                "nodeType": "text",
-                "value": "Clive Christian Strange Heavens Out Of The Blue — гурманский кофейно-цветочный аромат. Страна: Великобритания (Clive Christian). Парфюмер: Céline Herbette, Kamila Lelakova. Год создания: 2026."
+                "value": "Clive Christian Strange Heavens Out Of The Blue — гурманский кофейно-цветочный аромат. Страна: Великобритания (Clive Christian). Парфюмер: Céline Herbette, Kamila Lelakova. Год создания: 2026.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           },
           {
             "data": {},
-            "nodeType": "paragraph",
             "content": [
               {
                 "data": {},
                 "marks": [],
-                "nodeType": "text",
-                "value": "Пирамида нот: верхние ноты — Кофе, Розовый перец, Анис; сердце — Флёрдоранж, Жасмин; база — Карамель, Какао, Ваниль, Дым."
+                "value": "Пирамида нот: верхние ноты — Кофе, Розовый перец, Анис; сердце — Флёрдоранж, Жасмин; база — Карамель, Какао, Ваниль, Дым.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           },
           {
             "data": {},
-            "nodeType": "paragraph",
             "content": [
               {
                 "data": {},
                 "marks": [],
-                "nodeType": "text",
-                "value": "Кому подойдёт: унисекс, oriental vanilla / sweet gourmand. Куда носить: вечер, осень/зима, статусный выход."
+                "value": "Кому подойдёт: унисекс, oriental vanilla / sweet gourmand. Куда носить: вечер, осень/зима, статусный выход.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           },
           {
             "data": {},
-            "nodeType": "paragraph",
             "content": [
               {
                 "data": {},
                 "marks": [],
-                "nodeType": "text",
-                "value": "По ощущениям: Тёплый гурманский аромат: обжаренный кофе с анисовой остротой, цветочное сердце из жасмина и флёрдоранжа, дымно-какаовая карамельная база.."
+                "value": "По ощущениям: Тёплый гурманский аромат: обжаренный кофе с анисовой остротой, цветочное сердце из жасмина и флёрдоранжа, дымно-какаовая карамельная база..",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           },
           {
             "data": {},
-            "nodeType": "paragraph",
             "content": [
               {
                 "data": {},
                 "marks": [],
-                "nodeType": "text",
-                "value": "Купить Clive Christian Strange Heavens Out Of The Blue в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 35 000 ₸ за 5 мл и от 60 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану."
+                "value": "Купить Clive Christian Strange Heavens Out Of The Blue в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 35 000 ₸ за 5 мл и от 60 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       },
       "notes": {
         "top": [
@@ -9041,8 +9041,8 @@
           "Дым"
         ]
       },
-      "price5": 35000,
-      "price10": 60000,
+      "price5": 50000,
+      "price10": 100000,
       "rating": 5,
       "reviews": 21,
       "badge": "Новинка",

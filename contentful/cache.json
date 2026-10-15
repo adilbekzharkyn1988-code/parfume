@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T18:51:11.732Z",
+  "generatedAt": "2026-10-15T19:04:40.587Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -6387,6 +6387,7 @@
       "price10": 40000,
       "rating": 0,
       "reviews": 0,
+      "badge": "Новинка",
       "sillage": 4,
       "longevity": 5,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/1WP1OnbyljgG95fsuaqZDX/541b234fc25f095cdd6a71cef58ebef1/IMG_5373.jpeg",
@@ -7126,6 +7127,7 @@
       "price10": 13500,
       "rating": 0,
       "reviews": 0,
+      "badge": "Новинка",
       "sillage": 4,
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/1KBaKHaS5Exovi5PmHdBFA/7d3502ec2fd6b9bf2b37c681e11b4f9f/IMG_5372.jpeg",
@@ -8084,6 +8086,7 @@
       "price10": 22500,
       "rating": 0,
       "reviews": 0,
+      "badge": "Новинка",
       "sillage": 4,
       "longevity": 4,
       "image": "https://images.ctfassets.net/e8y2nngpr6yc/4xKnviTpc6NbG1ODPT1Wa2/93842c428a2096451a6fdb16bf5fbf9a/IMG_5375.jpeg",

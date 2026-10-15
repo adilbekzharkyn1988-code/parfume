@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T16:35:56.915Z",
+  "generatedAt": "2026-10-15T18:51:11.732Z",
   "products": [
     {
       "slug": "acqua-di-parma-colonia-c-l-u-b",
@@ -6297,6 +6297,102 @@
       ]
     },
     {
+      "slug": "louis-vuitton-ombre-nomade",
+      "name": "Louis Vuitton Ombre Nomade",
+      "brand": "Louis Vuitton",
+      "gender": "unisex",
+      "family": "oriental",
+      "familyLabel": "Восточный",
+      "concentration": "Eau de Parfum",
+      "description": "тёмный дымный уд с бензоином и ладаном и яркой малиновой ноткой; плотный насыщенный вечерний аромат",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Louis Vuitton Ombre Nomade — восточный аромат. Страна: Louis Vuitton — Франция. Парфюмер: Jacques Cavallier Belletrud (официально). Год создания: 2018.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — малина; сердце — уд; база — бензоин, ладан.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс. Куда носить: вечер, осень/зима.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: тёмный дымный уд с бензоином и ладаном и яркой малиновой ноткой; плотный насыщенный вечерний аромат.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить Louis Vuitton Ombre Nomade в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 22 500 ₸ за 5 мл и от 40 000 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "малина"
+        ],
+        "heart": [
+          "уд"
+        ],
+        "base": [
+          "бензоин",
+          "ладан"
+        ]
+      },
+      "price5": 22500,
+      "price10": 40000,
+      "rating": 0,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 5,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1WP1OnbyljgG95fsuaqZDX/541b234fc25f095cdd6a71cef58ebef1/IMG_5373.jpeg",
+      "reviewsList": []
+    },
+    {
       "slug": "louis-vuitton-pacific-chill",
       "name": "Louis Vuitton Pacific Chill",
       "brand": "Louis Vuitton",
@@ -6929,6 +7025,111 @@
           "date": "2024-04-02"
         }
       ]
+    },
+    {
+      "slug": "mancera-cedrat-boise",
+      "name": "Mancera Cedrat Boise",
+      "brand": "Mancera",
+      "gender": "unisex",
+      "family": "citrus",
+      "familyLabel": "Цитрусовый",
+      "concentration": "Eau de Parfum",
+      "description": "яркий цитрусовый старт с лимоном, бергамотом и чёрной смородиной, сердце из жасмина и пачули и древесно-ванильная база с кожей и мускусом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Mancera Cedrat Boise — цитрусовый аромат. Страна: Mancera — Франция. Парфюмер: Pierre Montale (официально). Год создания: 2011.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — сицилийский лимон, бергамот, чёрная смородина, пряные ноты; сердце — фруктовые ноты, лист пачули, водяной жасмин; база — кедр, кожа, сандал, ваниль, белый мускус, мох.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс. Куда носить: весна/лето/осень, повседневное ношение.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: яркий цитрусовый старт с лимоном, бергамотом и чёрной смородиной, сердце из жасмина и пачули и древесно-ванильная база с кожей и мускусом.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить Mancera Cedrat Boise в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 7 500 ₸ за 5 мл и от 13 500 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "сицилийский лимон",
+          "бергамот",
+          "чёрная смородина",
+          "пряные ноты"
+        ],
+        "heart": [
+          "фруктовые ноты",
+          "лист пачули",
+          "водяной жасмин"
+        ],
+        "base": [
+          "кедр",
+          "кожа",
+          "сандал",
+          "ваниль",
+          "белый мускус",
+          "мох"
+        ]
+      },
+      "price5": 7500,
+      "price10": 13500,
+      "rating": 0,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/1KBaKHaS5Exovi5PmHdBFA/7d3502ec2fd6b9bf2b37c681e11b4f9f/IMG_5372.jpeg",
+      "reviewsList": []
     },
     {
       "slug": "miss-dior-blooming-bouquet",
@@ -7782,6 +7983,111 @@
           "date": "2023-02-10"
         }
       ]
+    },
+    {
+      "slug": "parfums-de-marly-layton",
+      "name": "Parfums de Marly Layton",
+      "brand": "Parfums de Marly",
+      "gender": "unisex",
+      "family": "oriental",
+      "familyLabel": "Восточный",
+      "concentration": "Eau de Parfum",
+      "description": "яркое яблочно-лавандовое открытие и тёплая ванильная база с кардамоном, сандалом и гваяковым деревом",
+      "story": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Parfums de Marly Layton — восточный аромат. Страна: Parfums de Marly — Франция. Парфюмер: Hamid Merati-Kashani (официально). Год создания: 2016.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Пирамида нот: верхние ноты — яблоко, лаванда, бергамот, мандарин; сердце — герань, фиалка, жасмин; база — ваниль, кардамон, сандал, перец, гваяковое дерево, пачули.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Кому подойдёт: унисекс. Куда носить: круглый год, особенно осень/зима.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "По ощущениям: яркое яблочно-лавандовое открытие и тёплая ванильная база с кардамоном, сандалом и гваяковым деревом.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Купить Parfums de Marly Layton в Алматы можно на распив — в отливантах 5 и 10 мл, без переплаты за полный флакон. Цена: от 12 500 ₸ за 5 мл и от 22 500 ₸ за 10 мл. Оригинал, доставка по Алматы и Казахстану.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "notes": {
+        "top": [
+          "яблоко",
+          "лаванда",
+          "бергамот",
+          "мандарин"
+        ],
+        "heart": [
+          "герань",
+          "фиалка",
+          "жасмин"
+        ],
+        "base": [
+          "ваниль",
+          "кардамон",
+          "сандал",
+          "перец",
+          "гваяковое дерево",
+          "пачули"
+        ]
+      },
+      "price5": 12500,
+      "price10": 22500,
+      "rating": 0,
+      "reviews": 0,
+      "sillage": 4,
+      "longevity": 4,
+      "image": "https://images.ctfassets.net/e8y2nngpr6yc/4xKnviTpc6NbG1ODPT1Wa2/93842c428a2096451a6fdb16bf5fbf9a/IMG_5375.jpeg",
+      "reviewsList": []
     },
     {
       "slug": "parfums-de-marly-sedley",
